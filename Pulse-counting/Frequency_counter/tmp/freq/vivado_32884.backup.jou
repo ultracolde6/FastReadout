@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Jul 31 13:39:14 2024
+# Process ID: 32884
+# Current directory: C:/Users/Purcell/Documents/RedPitayaProjects/RedPitaya-FPGA/prj/Examples/Frequency_counter/tmp/freq
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26160 C:\Users\Purcell\Documents\RedPitayaProjects\RedPitaya-FPGA\prj\Examples\Frequency_counter\tmp\freq\freq.xpr
+# Log file: C:/Users/Purcell/Documents/RedPitayaProjects/RedPitaya-FPGA/prj/Examples/Frequency_counter/tmp/freq/vivado.log
+# Journal file: C:/Users/Purcell/Documents/RedPitayaProjects/RedPitaya-FPGA/prj/Examples/Frequency_counter/tmp/freq\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Purcell/Documents/RedPitayaProjects/RedPitaya-FPGA/prj/Examples/Frequency_counter/tmp/freq/freq.xpr
+update_compile_order -fileset sources_1
+ts/RedPitayaProjects/RedPitaya-FPGA/prj/Examples/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/Purcell/Documents/RedPitayaProjects/RedPitaya-FPGA/prj/Examples/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
+set_property location {1 229 251} [get_bd_cells square_wave_0]
