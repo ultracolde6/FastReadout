@@ -4,9 +4,9 @@
 module frequency_counter #
 (
     parameter COUNT_WIDTH = 32,
-    parameter signed [13:0] HIGH_THRESHOLD = 14'd8000,
-    parameter signed [13:0] LOW_THRESHOLD = 14'd4000,
-    parameter PULSE_DURATION = 1000000000,
+    parameter signed [13:0] HIGH_THRESHOLD = 14'd6000,
+    parameter signed [13:0] LOW_THRESHOLD = 14'd2000,
+    parameter PULSE_DURATION = 125000000,
     parameter ADC_WIDTH = 14,
     parameter AXIS_TDATA_WIDTH = 32
 )
@@ -14,12 +14,11 @@ module frequency_counter #
    (* X_INTERFACE_PARAMETER = "FREQ_HZ 125000000" *)
     input [AXIS_TDATA_WIDTH-1:0]   S_AXIS_IN_tdata, // this is the actual signal input that we care about
     input                          S_AXIS_IN_tvalid,
-    (* X_INTERFACE_PARAMETER = "FREQ_HZ 125000000" *)
+    input                          clk,
+    input                          rst,                                                                                                                                                                                                     
     output [AXIS_TDATA_WIDTH-1:0]  M_AXIS_OUT_tdata,
     output                         M_AXIS_OUT_tvalid,
         // ADC data that contains info on the input pulse
-    input                          clk,
-    input                          rst,
     
     // Ncounts can be set by the user to see how many photons counted will trigger the output
 //    input [COUNT_WIDTH-1:0]        Ncounts,
@@ -27,7 +26,7 @@ module frequency_counter #
 	output reg [COUNT_WIDTH-1:0]       counter_output,
 	//output reg [COUNT_WIDTH-1:0]       clock_counter,
 	output reg [31:0] clock_counter, //testing
-	output reg [1:0]                   pulse,  //high voltage pulse here
+	output reg [1:0]                       pulse,  //high voltage pulse here
 	output reg signed [13:0]            data_access
 	//output reg  [0:0]                          state, state_next
 );
@@ -38,7 +37,7 @@ module frequency_counter #
     reg [COUNT_WIDTH-1:0]          cycle=0, cycle_next=0;
    //reg [31:0]                      clock_counter=0, clock_counter_next=0;
     reg [COUNT_WIDTH-1:0]           clock_counter_next=0;
-    reg [14:0]                      pulse_count = 0; 
+     reg [13:0]                   pulse_count=0;
     //reg [1:0]                       pulse=0;
     wire signed [ADC_WIDTH-1:0]    data;
     
@@ -96,29 +95,32 @@ module frequency_counter #
     //generating pulse
     always @(posedge clk)
     begin
-        if (clock_counter_next> clock_counter) begin
+        if (counter_output_next==0) begin
             pulse_count <= PULSE_DURATION;
-            pulse <= 1;          
+            pulse <= 0;          
             end else if (pulse_count > 0) begin
             pulse_count <= pulse_count - 1;
-            pulse <= 1;           
+            pulse <= 0;           
             end     
             else begin
-            pulse <= 0;
+            pulse <= 1;
+            pulse_count <= pulse_count;
         end
     end
 
     always @* // logic for counter, counter_output, and cycle buffer
     begin
+        counter_output_next = counter_output;
+        clock_counter_next = clock_counter;
         if (state < state_next) // high to low signal transition
         begin
            // increment counter_output_next
-            counter_output_next = counter_output + 1;
-        end
-        if (counter_output_next >= 15)
-        begin
-            clock_counter_next = clock_counter + 1;
-            counter_output_next = 0;
+            counter_output_next = counter_output + 1;    
+            if (counter_output_next >= 2)
+            begin
+              clock_counter_next = clock_counter + 1;
+              counter_output_next = 0;
+            end
         end   
     end
     

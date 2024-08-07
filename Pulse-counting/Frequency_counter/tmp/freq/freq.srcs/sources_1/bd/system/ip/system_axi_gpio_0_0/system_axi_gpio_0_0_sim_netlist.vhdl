@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Thu Aug  1 11:41:30 2024
+-- Date        : Wed Aug  7 13:19:02 2024
 -- Host        : DESKTOP-RDVR7FP running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top system_axi_gpio_0_0 -prefix
---               system_axi_gpio_0_0_ system_axi_gpio_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_sim_netlist.vhdl
 -- Design      : system_axi_gpio_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,10 +16,12 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity system_axi_gpio_0_0_cdc_sync is
   port (
-    scndry_vect_out : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    gpio_io_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    scndry_vect_out : out STD_LOGIC_VECTOR ( 13 downto 0 );
+    gpio_io_i : in STD_LOGIC_VECTOR ( 13 downto 0 );
     s_axi_aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_gpio_0_0_cdc_sync : entity is "cdc_sync";
 end system_axi_gpio_0_0_cdc_sync;
 
 architecture STRUCTURE of system_axi_gpio_0_0_cdc_sync is
@@ -29,26 +31,8 @@ architecture STRUCTURE of system_axi_gpio_0_0_cdc_sync is
   signal s_level_out_bus_d1_cdc_to_11 : STD_LOGIC;
   signal s_level_out_bus_d1_cdc_to_12 : STD_LOGIC;
   signal s_level_out_bus_d1_cdc_to_13 : STD_LOGIC;
-  signal s_level_out_bus_d1_cdc_to_14 : STD_LOGIC;
-  signal s_level_out_bus_d1_cdc_to_15 : STD_LOGIC;
-  signal s_level_out_bus_d1_cdc_to_16 : STD_LOGIC;
-  signal s_level_out_bus_d1_cdc_to_17 : STD_LOGIC;
-  signal s_level_out_bus_d1_cdc_to_18 : STD_LOGIC;
-  signal s_level_out_bus_d1_cdc_to_19 : STD_LOGIC;
   signal s_level_out_bus_d1_cdc_to_2 : STD_LOGIC;
-  signal s_level_out_bus_d1_cdc_to_20 : STD_LOGIC;
-  signal s_level_out_bus_d1_cdc_to_21 : STD_LOGIC;
-  signal s_level_out_bus_d1_cdc_to_22 : STD_LOGIC;
-  signal s_level_out_bus_d1_cdc_to_23 : STD_LOGIC;
-  signal s_level_out_bus_d1_cdc_to_24 : STD_LOGIC;
-  signal s_level_out_bus_d1_cdc_to_25 : STD_LOGIC;
-  signal s_level_out_bus_d1_cdc_to_26 : STD_LOGIC;
-  signal s_level_out_bus_d1_cdc_to_27 : STD_LOGIC;
-  signal s_level_out_bus_d1_cdc_to_28 : STD_LOGIC;
-  signal s_level_out_bus_d1_cdc_to_29 : STD_LOGIC;
   signal s_level_out_bus_d1_cdc_to_3 : STD_LOGIC;
-  signal s_level_out_bus_d1_cdc_to_30 : STD_LOGIC;
-  signal s_level_out_bus_d1_cdc_to_31 : STD_LOGIC;
   signal s_level_out_bus_d1_cdc_to_4 : STD_LOGIC;
   signal s_level_out_bus_d1_cdc_to_5 : STD_LOGIC;
   signal s_level_out_bus_d1_cdc_to_6 : STD_LOGIC;
@@ -61,26 +45,8 @@ architecture STRUCTURE of system_axi_gpio_0_0_cdc_sync is
   signal s_level_out_bus_d2_11 : STD_LOGIC;
   signal s_level_out_bus_d2_12 : STD_LOGIC;
   signal s_level_out_bus_d2_13 : STD_LOGIC;
-  signal s_level_out_bus_d2_14 : STD_LOGIC;
-  signal s_level_out_bus_d2_15 : STD_LOGIC;
-  signal s_level_out_bus_d2_16 : STD_LOGIC;
-  signal s_level_out_bus_d2_17 : STD_LOGIC;
-  signal s_level_out_bus_d2_18 : STD_LOGIC;
-  signal s_level_out_bus_d2_19 : STD_LOGIC;
   signal s_level_out_bus_d2_2 : STD_LOGIC;
-  signal s_level_out_bus_d2_20 : STD_LOGIC;
-  signal s_level_out_bus_d2_21 : STD_LOGIC;
-  signal s_level_out_bus_d2_22 : STD_LOGIC;
-  signal s_level_out_bus_d2_23 : STD_LOGIC;
-  signal s_level_out_bus_d2_24 : STD_LOGIC;
-  signal s_level_out_bus_d2_25 : STD_LOGIC;
-  signal s_level_out_bus_d2_26 : STD_LOGIC;
-  signal s_level_out_bus_d2_27 : STD_LOGIC;
-  signal s_level_out_bus_d2_28 : STD_LOGIC;
-  signal s_level_out_bus_d2_29 : STD_LOGIC;
   signal s_level_out_bus_d2_3 : STD_LOGIC;
-  signal s_level_out_bus_d2_30 : STD_LOGIC;
-  signal s_level_out_bus_d2_31 : STD_LOGIC;
   signal s_level_out_bus_d2_4 : STD_LOGIC;
   signal s_level_out_bus_d2_5 : STD_LOGIC;
   signal s_level_out_bus_d2_6 : STD_LOGIC;
@@ -93,26 +59,8 @@ architecture STRUCTURE of system_axi_gpio_0_0_cdc_sync is
   signal s_level_out_bus_d3_11 : STD_LOGIC;
   signal s_level_out_bus_d3_12 : STD_LOGIC;
   signal s_level_out_bus_d3_13 : STD_LOGIC;
-  signal s_level_out_bus_d3_14 : STD_LOGIC;
-  signal s_level_out_bus_d3_15 : STD_LOGIC;
-  signal s_level_out_bus_d3_16 : STD_LOGIC;
-  signal s_level_out_bus_d3_17 : STD_LOGIC;
-  signal s_level_out_bus_d3_18 : STD_LOGIC;
-  signal s_level_out_bus_d3_19 : STD_LOGIC;
   signal s_level_out_bus_d3_2 : STD_LOGIC;
-  signal s_level_out_bus_d3_20 : STD_LOGIC;
-  signal s_level_out_bus_d3_21 : STD_LOGIC;
-  signal s_level_out_bus_d3_22 : STD_LOGIC;
-  signal s_level_out_bus_d3_23 : STD_LOGIC;
-  signal s_level_out_bus_d3_24 : STD_LOGIC;
-  signal s_level_out_bus_d3_25 : STD_LOGIC;
-  signal s_level_out_bus_d3_26 : STD_LOGIC;
-  signal s_level_out_bus_d3_27 : STD_LOGIC;
-  signal s_level_out_bus_d3_28 : STD_LOGIC;
-  signal s_level_out_bus_d3_29 : STD_LOGIC;
   signal s_level_out_bus_d3_3 : STD_LOGIC;
-  signal s_level_out_bus_d3_30 : STD_LOGIC;
-  signal s_level_out_bus_d3_31 : STD_LOGIC;
   signal s_level_out_bus_d3_4 : STD_LOGIC;
   signal s_level_out_bus_d3_5 : STD_LOGIC;
   signal s_level_out_bus_d3_6 : STD_LOGIC;
@@ -137,66 +85,12 @@ architecture STRUCTURE of system_axi_gpio_0_0_cdc_sync is
   attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[13].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
   attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[13].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
   attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[13].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[14].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[14].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[14].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[15].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[15].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[15].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[16].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[16].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[16].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[17].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[17].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[17].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[18].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[18].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[18].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[19].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[19].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[19].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
   attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
   attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
   attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[20].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[20].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[20].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[21].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[21].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[21].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[22].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[22].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[22].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[23].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[23].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[23].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[24].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[24].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[24].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[25].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[25].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[25].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[26].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[26].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[26].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[27].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[27].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[27].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[28].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[28].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[28].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[29].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[29].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[29].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
   attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
   attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
   attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[30].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[30].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[30].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[31].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[31].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[31].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
   attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
   attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "FDR";
   attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is "PRIMITIVE";
@@ -233,66 +127,12 @@ architecture STRUCTURE of system_axi_gpio_0_0_cdc_sync is
   attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[13].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
   attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[13].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
   attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[13].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[14].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[14].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[14].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[15].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[15].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[15].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[16].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[16].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[16].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[17].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[17].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[17].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[18].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[18].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[18].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[19].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[19].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[19].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
   attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
   attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
   attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[20].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[20].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[20].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[21].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[21].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[21].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[22].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[22].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[22].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[23].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[23].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[23].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[24].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[24].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[24].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[25].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[25].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[25].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[26].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[26].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[26].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[27].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[27].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[27].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[28].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[28].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[28].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[29].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[29].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[29].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
   attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
   attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
   attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[30].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[30].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[30].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[31].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[31].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[31].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
   attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is std.standard.true;
   attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "FDR";
   attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\ : label is "PRIMITIVE";
@@ -329,66 +169,12 @@ architecture STRUCTURE of system_axi_gpio_0_0_cdc_sync is
   attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[13].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
   attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[13].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
   attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[13].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[14].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[14].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[14].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[15].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[15].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[15].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[16].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[16].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[16].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[17].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[17].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[17].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[18].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[18].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[18].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[19].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[19].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[19].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
   attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
   attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
   attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[20].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[20].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[20].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[21].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[21].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[21].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[22].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[22].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[22].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[23].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[23].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[23].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[24].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[24].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[24].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[25].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[25].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[25].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[26].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[26].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[26].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[27].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[27].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[27].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[28].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[28].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[28].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[29].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[29].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[29].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
   attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
   attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
   attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[30].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[30].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[30].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[31].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[31].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[31].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
   attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is std.standard.true;
   attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "FDR";
   attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\ : label is "PRIMITIVE";
@@ -425,66 +211,12 @@ architecture STRUCTURE of system_axi_gpio_0_0_cdc_sync is
   attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[13].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
   attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[13].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
   attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[13].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[14].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[14].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[14].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[15].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[15].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[15].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[16].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[16].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[16].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[17].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[17].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[17].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[18].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[18].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[18].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[19].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[19].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[19].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
   attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[1].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
   attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[1].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
   attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[1].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[20].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[20].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[20].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[21].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[21].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[21].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[22].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[22].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[22].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[23].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[23].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[23].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[24].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[24].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[24].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[25].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[25].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[25].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[26].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[26].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[26].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[27].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[27].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[27].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[28].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[28].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[28].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[29].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[29].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[29].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
   attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[2].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
   attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[2].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
   attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[2].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[30].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[30].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[30].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
-  attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[31].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
-  attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[31].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
-  attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[31].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
   attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[3].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is std.standard.true;
   attribute XILINX_LEGACY_PRIM of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[3].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "FDR";
   attribute box_type of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[3].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\ : label is "PRIMITIVE";
@@ -562,72 +294,6 @@ begin
       Q => s_level_out_bus_d2_13,
       R => '0'
     );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[14].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d1_cdc_to_14,
-      Q => s_level_out_bus_d2_14,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[15].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d1_cdc_to_15,
-      Q => s_level_out_bus_d2_15,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[16].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d1_cdc_to_16,
-      Q => s_level_out_bus_d2_16,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[17].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d1_cdc_to_17,
-      Q => s_level_out_bus_d2_17,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[18].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d1_cdc_to_18,
-      Q => s_level_out_bus_d2_18,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[19].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d1_cdc_to_19,
-      Q => s_level_out_bus_d2_19,
-      R => '0'
-    );
 \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -639,116 +305,6 @@ begin
       Q => s_level_out_bus_d2_1,
       R => '0'
     );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[20].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d1_cdc_to_20,
-      Q => s_level_out_bus_d2_20,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[21].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d1_cdc_to_21,
-      Q => s_level_out_bus_d2_21,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[22].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d1_cdc_to_22,
-      Q => s_level_out_bus_d2_22,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[23].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d1_cdc_to_23,
-      Q => s_level_out_bus_d2_23,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[24].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d1_cdc_to_24,
-      Q => s_level_out_bus_d2_24,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[25].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d1_cdc_to_25,
-      Q => s_level_out_bus_d2_25,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[26].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d1_cdc_to_26,
-      Q => s_level_out_bus_d2_26,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[27].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d1_cdc_to_27,
-      Q => s_level_out_bus_d2_27,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[28].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d1_cdc_to_28,
-      Q => s_level_out_bus_d2_28,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[29].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d1_cdc_to_29,
-      Q => s_level_out_bus_d2_29,
-      R => '0'
-    );
 \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -758,28 +314,6 @@ begin
       CE => '1',
       D => s_level_out_bus_d1_cdc_to_2,
       Q => s_level_out_bus_d2_2,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[30].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d1_cdc_to_30,
-      Q => s_level_out_bus_d2_30,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[31].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d1_cdc_to_31,
-      Q => s_level_out_bus_d2_31,
       R => '0'
     );
 \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\: unisim.vcomponents.FDRE
@@ -914,72 +448,6 @@ begin
       Q => s_level_out_bus_d3_13,
       R => '0'
     );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[14].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d2_14,
-      Q => s_level_out_bus_d3_14,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[15].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d2_15,
-      Q => s_level_out_bus_d3_15,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[16].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d2_16,
-      Q => s_level_out_bus_d3_16,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[17].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d2_17,
-      Q => s_level_out_bus_d3_17,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[18].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d2_18,
-      Q => s_level_out_bus_d3_18,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[19].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d2_19,
-      Q => s_level_out_bus_d3_19,
-      R => '0'
-    );
 \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -991,116 +459,6 @@ begin
       Q => s_level_out_bus_d3_1,
       R => '0'
     );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[20].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d2_20,
-      Q => s_level_out_bus_d3_20,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[21].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d2_21,
-      Q => s_level_out_bus_d3_21,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[22].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d2_22,
-      Q => s_level_out_bus_d3_22,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[23].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d2_23,
-      Q => s_level_out_bus_d3_23,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[24].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d2_24,
-      Q => s_level_out_bus_d3_24,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[25].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d2_25,
-      Q => s_level_out_bus_d3_25,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[26].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d2_26,
-      Q => s_level_out_bus_d3_26,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[27].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d2_27,
-      Q => s_level_out_bus_d3_27,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[28].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d2_28,
-      Q => s_level_out_bus_d3_28,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[29].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d2_29,
-      Q => s_level_out_bus_d3_29,
-      R => '0'
-    );
 \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -1110,28 +468,6 @@ begin
       CE => '1',
       D => s_level_out_bus_d2_2,
       Q => s_level_out_bus_d3_2,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[30].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d2_30,
-      Q => s_level_out_bus_d3_30,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[31].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d2_31,
-      Q => s_level_out_bus_d3_31,
       R => '0'
     );
 \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
@@ -1266,72 +602,6 @@ begin
       Q => scndry_vect_out(13),
       R => '0'
     );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[14].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d3_14,
-      Q => scndry_vect_out(14),
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[15].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d3_15,
-      Q => scndry_vect_out(15),
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[16].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d3_16,
-      Q => scndry_vect_out(16),
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[17].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d3_17,
-      Q => scndry_vect_out(17),
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[18].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d3_18,
-      Q => scndry_vect_out(18),
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[19].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d3_19,
-      Q => scndry_vect_out(19),
-      R => '0'
-    );
 \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[1].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -1343,116 +613,6 @@ begin
       Q => scndry_vect_out(1),
       R => '0'
     );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[20].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d3_20,
-      Q => scndry_vect_out(20),
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[21].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d3_21,
-      Q => scndry_vect_out(21),
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[22].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d3_22,
-      Q => scndry_vect_out(22),
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[23].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d3_23,
-      Q => scndry_vect_out(23),
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[24].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d3_24,
-      Q => scndry_vect_out(24),
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[25].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d3_25,
-      Q => scndry_vect_out(25),
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[26].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d3_26,
-      Q => scndry_vect_out(26),
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[27].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d3_27,
-      Q => scndry_vect_out(27),
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[28].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d3_28,
-      Q => scndry_vect_out(28),
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[29].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d3_29,
-      Q => scndry_vect_out(29),
-      R => '0'
-    );
 \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[2].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -1462,28 +622,6 @@ begin
       CE => '1',
       D => s_level_out_bus_d3_2,
       Q => scndry_vect_out(2),
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[30].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d3_30,
-      Q => scndry_vect_out(30),
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[31].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => s_level_out_bus_d3_31,
-      Q => scndry_vect_out(31),
       R => '0'
     );
 \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[3].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
@@ -1618,72 +756,6 @@ begin
       Q => s_level_out_bus_d1_cdc_to_13,
       R => '0'
     );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[14].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i(14),
-      Q => s_level_out_bus_d1_cdc_to_14,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[15].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i(15),
-      Q => s_level_out_bus_d1_cdc_to_15,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[16].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i(16),
-      Q => s_level_out_bus_d1_cdc_to_16,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[17].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i(17),
-      Q => s_level_out_bus_d1_cdc_to_17,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[18].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i(18),
-      Q => s_level_out_bus_d1_cdc_to_18,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[19].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i(19),
-      Q => s_level_out_bus_d1_cdc_to_19,
-      R => '0'
-    );
 \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[1].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -1695,116 +767,6 @@ begin
       Q => s_level_out_bus_d1_cdc_to_1,
       R => '0'
     );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[20].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i(20),
-      Q => s_level_out_bus_d1_cdc_to_20,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[21].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i(21),
-      Q => s_level_out_bus_d1_cdc_to_21,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[22].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i(22),
-      Q => s_level_out_bus_d1_cdc_to_22,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[23].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i(23),
-      Q => s_level_out_bus_d1_cdc_to_23,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[24].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i(24),
-      Q => s_level_out_bus_d1_cdc_to_24,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[25].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i(25),
-      Q => s_level_out_bus_d1_cdc_to_25,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[26].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i(26),
-      Q => s_level_out_bus_d1_cdc_to_26,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[27].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i(27),
-      Q => s_level_out_bus_d1_cdc_to_27,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[28].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i(28),
-      Q => s_level_out_bus_d1_cdc_to_28,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[29].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i(29),
-      Q => s_level_out_bus_d1_cdc_to_29,
-      R => '0'
-    );
 \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[2].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -1814,28 +776,6 @@ begin
       CE => '1',
       D => gpio_io_i(2),
       Q => s_level_out_bus_d1_cdc_to_2,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[30].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i(30),
-      Q => s_level_out_bus_d1_cdc_to_30,
-      R => '0'
-    );
-\GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[31].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i(31),
-      Q => s_level_out_bus_d1_cdc_to_31,
       R => '0'
     );
 \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_IN_cdc_to[3].CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to\: unisim.vcomponents.FDRE
@@ -2063,6 +1003,8 @@ entity system_axi_gpio_0_0_pselect_f is
     ce_expnd_i_3 : out STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_gpio_0_0_pselect_f : entity is "pselect_f";
 end system_axi_gpio_0_0_pselect_f;
 
 architecture STRUCTURE of system_axi_gpio_0_0_pselect_f is
@@ -2109,119 +1051,59 @@ use UNISIM.VCOMPONENTS.ALL;
 entity system_axi_gpio_0_0_GPIO_Core is
   port (
     reg3 : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[31].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[30].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[29].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[28].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[27].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[26].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[25].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[24].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[23].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[22].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[21].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[20].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[19].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[18].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[17].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[16].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[15].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[14].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1_reg\ : out STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg\ : out STD_LOGIC;
+    reg1 : out STD_LOGIC_VECTOR ( 13 downto 0 );
     GPIO_xferAck_i : out STD_LOGIC;
     gpio_xferAck_Reg : out STD_LOGIC;
     ip2bus_wrack_i : out STD_LOGIC;
     ip2bus_rdack_i : out STD_LOGIC;
-    gpio_io_t : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    gpio_io_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    gpio_io_o : out STD_LOGIC_VECTOR ( 13 downto 0 );
+    gpio_io_t : out STD_LOGIC_VECTOR ( 13 downto 0 );
     gpio2_io_o : out STD_LOGIC_VECTOR ( 1 downto 0 );
     gpio2_io_t : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\ : in STD_LOGIC;
+    \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]_0\ : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC;
     bus2ip_reset : in STD_LOGIC;
     bus2ip_cs : in STD_LOGIC;
     bus2ip_rnw : in STD_LOGIC;
-    gpio_io_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    gpio_io_i : in STD_LOGIC_VECTOR ( 13 downto 0 );
     gpio2_io_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
-    D : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    \Dual.gpio_Data_Out_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    D : in STD_LOGIC_VECTOR ( 13 downto 0 );
+    \Dual.gpio_OE_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_wdata : in STD_LOGIC_VECTOR ( 3 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \Dual.gpio2_Data_Out_reg[0]_0\ : in STD_LOGIC;
     \Dual.gpio2_OE_reg[0]_0\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_gpio_0_0_GPIO_Core : entity is "GPIO_Core";
 end system_axi_gpio_0_0_GPIO_Core;
 
 architecture STRUCTURE of system_axi_gpio_0_0_GPIO_Core is
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1[0]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1[10]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1[11]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1[12]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1[13]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[14].reg1[14]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[15].reg1[15]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[16].reg1[16]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[17].reg1[17]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[18].reg1[18]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[19].reg1[19]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1[1]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[20].reg1[20]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[21].reg1[21]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[22].reg1[22]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[23].reg1[23]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[24].reg1[24]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[25].reg1[25]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[26].reg1[26]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[27].reg1[27]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[28].reg1[28]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[29].reg1[29]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1[2]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[31].reg1[31]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1[3]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1[4]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1[5]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1[6]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1[7]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1[8]_i_1_n_0\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1[9]_i_1_n_0\ : STD_LOGIC;
   signal \Dual.gpio2_Data_Out[0]_i_1_n_0\ : STD_LOGIC;
   signal \Dual.gpio2_Data_Out[1]_i_1_n_0\ : STD_LOGIC;
   signal \Dual.gpio2_OE[0]_i_1_n_0\ : STD_LOGIC;
   signal \Dual.gpio2_OE[1]_i_1_n_0\ : STD_LOGIC;
   signal \^gpio_xferack_i\ : STD_LOGIC;
   signal Read_Reg2_In : STD_LOGIC_VECTOR ( 0 to 1 );
+  signal Read_Reg_In : STD_LOGIC_VECTOR ( 0 to 13 );
   signal gpio2_Data_In : STD_LOGIC_VECTOR ( 0 to 1 );
   signal gpio2_io_i_d2 : STD_LOGIC_VECTOR ( 0 to 1 );
   signal \^gpio2_io_o\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \^gpio2_io_t\ : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal gpio_Data_In : STD_LOGIC_VECTOR ( 0 to 31 );
-  signal gpio_io_i_d2 : STD_LOGIC_VECTOR ( 0 to 31 );
-  signal \^gpio_io_t\ : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal gpio_Data_In : STD_LOGIC_VECTOR ( 0 to 13 );
+  signal gpio_io_i_d2 : STD_LOGIC_VECTOR ( 0 to 13 );
+  signal \^gpio_io_t\ : STD_LOGIC_VECTOR ( 13 downto 0 );
   signal \^gpio_xferack_reg\ : STD_LOGIC;
   signal iGPIO_xferAck : STD_LOGIC;
-  signal p_0_in : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \/i_\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of ip2bus_wrack_i_D1_i_1 : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \/i_\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of ip2bus_wrack_i_D1_i_1 : label is "soft_lutpair14";
 begin
   GPIO_xferAck_i <= \^gpio_xferack_i\;
   gpio2_io_o(1 downto 0) <= \^gpio2_io_o\(1 downto 0);
   gpio2_io_t(1 downto 0) <= \^gpio2_io_t\(1 downto 0);
-  gpio_io_t(31 downto 0) <= \^gpio_io_t\(31 downto 0);
+  gpio_io_t(13 downto 0) <= \^gpio_io_t\(13 downto 0);
   gpio_xferAck_Reg <= \^gpio_xferack_reg\;
 \/i_\: unisim.vcomponents.LUT3
     generic map(
@@ -2233,7 +1115,7 @@ begin
       I2 => \^gpio_xferack_i\,
       O => iGPIO_xferAck
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1[0]_i_1\: unisim.vcomponents.LUT5
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1[18]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"03020002"
     )
@@ -2242,18 +1124,18 @@ begin
       I1 => Q(2),
       I2 => Q(1),
       I3 => Q(0),
-      I4 => \^gpio_io_t\(31),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1[0]_i_1_n_0\
+      I4 => \^gpio_io_t\(13),
+      O => Read_Reg_In(0)
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\: unisim.vcomponents.FDRE
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1[0]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
+      D => Read_Reg_In(0),
+      Q => reg1(13),
+      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]_0\
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1[10]_i_1\: unisim.vcomponents.LUT5
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1[28]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"03020002"
     )
@@ -2262,18 +1144,18 @@ begin
       I1 => Q(2),
       I2 => Q(1),
       I3 => Q(0),
-      I4 => \^gpio_io_t\(21),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1[10]_i_1_n_0\
+      I4 => \^gpio_io_t\(3),
+      O => Read_Reg_In(10)
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1_reg[10]\: unisim.vcomponents.FDRE
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1_reg[28]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1[10]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
+      D => Read_Reg_In(10),
+      Q => reg1(3),
+      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]_0\
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1[11]_i_1\: unisim.vcomponents.LUT5
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1[29]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"03020002"
     )
@@ -2282,18 +1164,18 @@ begin
       I1 => Q(2),
       I2 => Q(1),
       I3 => Q(0),
-      I4 => \^gpio_io_t\(20),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1[11]_i_1_n_0\
+      I4 => \^gpio_io_t\(2),
+      O => Read_Reg_In(11)
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1_reg[11]\: unisim.vcomponents.FDRE
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1_reg[29]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1[11]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
+      D => Read_Reg_In(11),
+      Q => reg1(2),
+      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]_0\
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1[12]_i_1\: unisim.vcomponents.LUT5
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1[30]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"03020002"
     )
@@ -2302,18 +1184,18 @@ begin
       I1 => Q(2),
       I2 => Q(1),
       I3 => Q(0),
-      I4 => \^gpio_io_t\(19),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1[12]_i_1_n_0\
+      I4 => \^gpio_io_t\(1),
+      O => Read_Reg_In(12)
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1_reg[12]\: unisim.vcomponents.FDRE
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1_reg[30]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1[12]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
+      D => Read_Reg_In(12),
+      Q => reg1(1),
+      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]_0\
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1[13]_i_1\: unisim.vcomponents.LUT5
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1[31]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"03020002"
     )
@@ -2322,138 +1204,18 @@ begin
       I1 => Q(2),
       I2 => Q(1),
       I3 => Q(0),
-      I4 => \^gpio_io_t\(18),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1[13]_i_1_n_0\
+      I4 => \^gpio_io_t\(0),
+      O => Read_Reg_In(13)
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1_reg[13]\: unisim.vcomponents.FDRE
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1_reg[31]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1[13]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
+      D => Read_Reg_In(13),
+      Q => reg1(0),
+      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]_0\
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[14].reg1[14]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"03020002"
-    )
-        port map (
-      I0 => gpio_Data_In(14),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(0),
-      I4 => \^gpio_io_t\(17),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[14].reg1[14]_i_1_n_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[14].reg1_reg[14]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[14].reg1[14]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[14].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[15].reg1[15]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"03020002"
-    )
-        port map (
-      I0 => gpio_Data_In(15),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(0),
-      I4 => \^gpio_io_t\(16),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[15].reg1[15]_i_1_n_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[15].reg1_reg[15]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[15].reg1[15]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[15].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[16].reg1[16]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"03020002"
-    )
-        port map (
-      I0 => gpio_Data_In(16),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(0),
-      I4 => \^gpio_io_t\(15),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[16].reg1[16]_i_1_n_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[16].reg1_reg[16]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[16].reg1[16]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[16].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[17].reg1[17]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"03020002"
-    )
-        port map (
-      I0 => gpio_Data_In(17),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(0),
-      I4 => \^gpio_io_t\(14),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[17].reg1[17]_i_1_n_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[17].reg1_reg[17]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[17].reg1[17]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[17].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[18].reg1[18]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"03020002"
-    )
-        port map (
-      I0 => gpio_Data_In(18),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(0),
-      I4 => \^gpio_io_t\(13),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[18].reg1[18]_i_1_n_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[18].reg1_reg[18]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[18].reg1[18]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[18].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[19].reg1[19]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"03020002"
-    )
-        port map (
-      I0 => gpio_Data_In(19),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(0),
-      I4 => \^gpio_io_t\(12),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[19].reg1[19]_i_1_n_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[19].reg1_reg[19]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[19].reg1[19]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[19].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1[1]_i_1\: unisim.vcomponents.LUT5
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1[19]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"03020002"
     )
@@ -2462,218 +1224,18 @@ begin
       I1 => Q(2),
       I2 => Q(1),
       I3 => Q(0),
-      I4 => \^gpio_io_t\(30),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1[1]_i_1_n_0\
+      I4 => \^gpio_io_t\(12),
+      O => Read_Reg_In(1)
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1_reg[1]\: unisim.vcomponents.FDRE
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1_reg[19]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1[1]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
+      D => Read_Reg_In(1),
+      Q => reg1(12),
+      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]_0\
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[20].reg1[20]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"03020002"
-    )
-        port map (
-      I0 => gpio_Data_In(20),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(0),
-      I4 => \^gpio_io_t\(11),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[20].reg1[20]_i_1_n_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[20].reg1_reg[20]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[20].reg1[20]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[20].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[21].reg1[21]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"03020002"
-    )
-        port map (
-      I0 => gpio_Data_In(21),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(0),
-      I4 => \^gpio_io_t\(10),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[21].reg1[21]_i_1_n_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[21].reg1_reg[21]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[21].reg1[21]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[21].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[22].reg1[22]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"03020002"
-    )
-        port map (
-      I0 => gpio_Data_In(22),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(0),
-      I4 => \^gpio_io_t\(9),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[22].reg1[22]_i_1_n_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[22].reg1_reg[22]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[22].reg1[22]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[22].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[23].reg1[23]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"03020002"
-    )
-        port map (
-      I0 => gpio_Data_In(23),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(0),
-      I4 => \^gpio_io_t\(8),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[23].reg1[23]_i_1_n_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[23].reg1_reg[23]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[23].reg1[23]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[23].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[24].reg1[24]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"03020002"
-    )
-        port map (
-      I0 => gpio_Data_In(24),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(0),
-      I4 => \^gpio_io_t\(7),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[24].reg1[24]_i_1_n_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[24].reg1_reg[24]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[24].reg1[24]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[24].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[25].reg1[25]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"03020002"
-    )
-        port map (
-      I0 => gpio_Data_In(25),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(0),
-      I4 => \^gpio_io_t\(6),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[25].reg1[25]_i_1_n_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[25].reg1_reg[25]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[25].reg1[25]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[25].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[26].reg1[26]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"03020002"
-    )
-        port map (
-      I0 => gpio_Data_In(26),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(0),
-      I4 => \^gpio_io_t\(5),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[26].reg1[26]_i_1_n_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[26].reg1_reg[26]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[26].reg1[26]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[26].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[27].reg1[27]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"03020002"
-    )
-        port map (
-      I0 => gpio_Data_In(27),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(0),
-      I4 => \^gpio_io_t\(4),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[27].reg1[27]_i_1_n_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[27].reg1_reg[27]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[27].reg1[27]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[27].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[28].reg1[28]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"03020002"
-    )
-        port map (
-      I0 => gpio_Data_In(28),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(0),
-      I4 => \^gpio_io_t\(3),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[28].reg1[28]_i_1_n_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[28].reg1_reg[28]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[28].reg1[28]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[28].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[29].reg1[29]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"03020002"
-    )
-        port map (
-      I0 => gpio_Data_In(29),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(0),
-      I4 => \^gpio_io_t\(2),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[29].reg1[29]_i_1_n_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[29].reg1_reg[29]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[29].reg1[29]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[29].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1[2]_i_1\: unisim.vcomponents.LUT5
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1[20]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"03020002"
     )
@@ -2682,58 +1244,18 @@ begin
       I1 => Q(2),
       I2 => Q(1),
       I3 => Q(0),
-      I4 => \^gpio_io_t\(29),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1[2]_i_1_n_0\
+      I4 => \^gpio_io_t\(11),
+      O => Read_Reg_In(2)
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1_reg[2]\: unisim.vcomponents.FDRE
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1_reg[20]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1[2]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
+      D => Read_Reg_In(2),
+      Q => reg1(11),
+      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]_0\
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[30].reg1[30]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"03020002"
-    )
-        port map (
-      I0 => gpio_Data_In(30),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(0),
-      I4 => \^gpio_io_t\(1),
-      O => p_0_in
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[30].reg1_reg[30]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => p_0_in,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[30].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[31].reg1[31]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"03020002"
-    )
-        port map (
-      I0 => gpio_Data_In(31),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(0),
-      I4 => \^gpio_io_t\(0),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[31].reg1[31]_i_1_n_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[31].reg1_reg[31]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[31].reg1[31]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[31].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
-    );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1[3]_i_1\: unisim.vcomponents.LUT5
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1[21]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"03020002"
     )
@@ -2742,18 +1264,18 @@ begin
       I1 => Q(2),
       I2 => Q(1),
       I3 => Q(0),
-      I4 => \^gpio_io_t\(28),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1[3]_i_1_n_0\
+      I4 => \^gpio_io_t\(10),
+      O => Read_Reg_In(3)
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1_reg[3]\: unisim.vcomponents.FDRE
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1_reg[21]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1[3]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
+      D => Read_Reg_In(3),
+      Q => reg1(10),
+      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]_0\
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1[4]_i_1\: unisim.vcomponents.LUT5
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1[22]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"03020002"
     )
@@ -2762,18 +1284,18 @@ begin
       I1 => Q(2),
       I2 => Q(1),
       I3 => Q(0),
-      I4 => \^gpio_io_t\(27),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1[4]_i_1_n_0\
+      I4 => \^gpio_io_t\(9),
+      O => Read_Reg_In(4)
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1_reg[4]\: unisim.vcomponents.FDRE
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1_reg[22]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1[4]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
+      D => Read_Reg_In(4),
+      Q => reg1(9),
+      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]_0\
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1[5]_i_1\: unisim.vcomponents.LUT5
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1[23]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"03020002"
     )
@@ -2782,18 +1304,18 @@ begin
       I1 => Q(2),
       I2 => Q(1),
       I3 => Q(0),
-      I4 => \^gpio_io_t\(26),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1[5]_i_1_n_0\
+      I4 => \^gpio_io_t\(8),
+      O => Read_Reg_In(5)
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1_reg[5]\: unisim.vcomponents.FDRE
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1_reg[23]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1[5]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
+      D => Read_Reg_In(5),
+      Q => reg1(8),
+      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]_0\
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1[6]_i_1\: unisim.vcomponents.LUT5
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1[24]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"03020002"
     )
@@ -2802,18 +1324,18 @@ begin
       I1 => Q(2),
       I2 => Q(1),
       I3 => Q(0),
-      I4 => \^gpio_io_t\(25),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1[6]_i_1_n_0\
+      I4 => \^gpio_io_t\(7),
+      O => Read_Reg_In(6)
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1_reg[6]\: unisim.vcomponents.FDRE
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1_reg[24]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1[6]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
+      D => Read_Reg_In(6),
+      Q => reg1(7),
+      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]_0\
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1[7]_i_1\: unisim.vcomponents.LUT5
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1[25]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"03020002"
     )
@@ -2822,18 +1344,18 @@ begin
       I1 => Q(2),
       I2 => Q(1),
       I3 => Q(0),
-      I4 => \^gpio_io_t\(24),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1[7]_i_1_n_0\
+      I4 => \^gpio_io_t\(6),
+      O => Read_Reg_In(7)
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1_reg[7]\: unisim.vcomponents.FDRE
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1_reg[25]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1[7]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
+      D => Read_Reg_In(7),
+      Q => reg1(6),
+      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]_0\
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1[8]_i_1\: unisim.vcomponents.LUT5
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1[26]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"03020002"
     )
@@ -2842,18 +1364,18 @@ begin
       I1 => Q(2),
       I2 => Q(1),
       I3 => Q(0),
-      I4 => \^gpio_io_t\(23),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1[8]_i_1_n_0\
+      I4 => \^gpio_io_t\(5),
+      O => Read_Reg_In(8)
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1_reg[8]\: unisim.vcomponents.FDRE
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1_reg[26]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1[8]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
+      D => Read_Reg_In(8),
+      Q => reg1(5),
+      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]_0\
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1[9]_i_1\: unisim.vcomponents.LUT5
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1[27]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"03020002"
     )
@@ -2862,16 +1384,16 @@ begin
       I1 => Q(2),
       I2 => Q(1),
       I3 => Q(0),
-      I4 => \^gpio_io_t\(22),
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1[9]_i_1_n_0\
+      I4 => \^gpio_io_t\(4),
+      O => Read_Reg_In(9)
     );
-\Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1_reg[9]\: unisim.vcomponents.FDRE
+\Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1_reg[27]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1[9]_i_1_n_0\,
-      Q => \Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1_reg\,
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
+      D => Read_Reg_In(9),
+      Q => reg1(4),
+      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]_0\
     );
 \Dual.ALLIN0_ND_G2.READ_REG2_GEN[0].reg3[30]_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -2891,7 +1413,7 @@ begin
       CE => '1',
       D => Read_Reg2_In(0),
       Q => reg3(1),
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
+      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]_0\
     );
 \Dual.ALLIN0_ND_G2.READ_REG2_GEN[1].reg3[31]_i_2\: unisim.vcomponents.LUT5
     generic map(
@@ -2911,44 +1433,26 @@ begin
       CE => '1',
       D => Read_Reg2_In(1),
       Q => reg3(0),
-      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\
+      R => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]_0\
     );
 \Dual.INPUT_DOUBLE_REGS4\: entity work.system_axi_gpio_0_0_cdc_sync
      port map (
-      gpio_io_i(31 downto 0) => gpio_io_i(31 downto 0),
+      gpio_io_i(13 downto 0) => gpio_io_i(13 downto 0),
       s_axi_aclk => s_axi_aclk,
-      scndry_vect_out(31) => gpio_io_i_d2(0),
-      scndry_vect_out(30) => gpio_io_i_d2(1),
-      scndry_vect_out(29) => gpio_io_i_d2(2),
-      scndry_vect_out(28) => gpio_io_i_d2(3),
-      scndry_vect_out(27) => gpio_io_i_d2(4),
-      scndry_vect_out(26) => gpio_io_i_d2(5),
-      scndry_vect_out(25) => gpio_io_i_d2(6),
-      scndry_vect_out(24) => gpio_io_i_d2(7),
-      scndry_vect_out(23) => gpio_io_i_d2(8),
-      scndry_vect_out(22) => gpio_io_i_d2(9),
-      scndry_vect_out(21) => gpio_io_i_d2(10),
-      scndry_vect_out(20) => gpio_io_i_d2(11),
-      scndry_vect_out(19) => gpio_io_i_d2(12),
-      scndry_vect_out(18) => gpio_io_i_d2(13),
-      scndry_vect_out(17) => gpio_io_i_d2(14),
-      scndry_vect_out(16) => gpio_io_i_d2(15),
-      scndry_vect_out(15) => gpio_io_i_d2(16),
-      scndry_vect_out(14) => gpio_io_i_d2(17),
-      scndry_vect_out(13) => gpio_io_i_d2(18),
-      scndry_vect_out(12) => gpio_io_i_d2(19),
-      scndry_vect_out(11) => gpio_io_i_d2(20),
-      scndry_vect_out(10) => gpio_io_i_d2(21),
-      scndry_vect_out(9) => gpio_io_i_d2(22),
-      scndry_vect_out(8) => gpio_io_i_d2(23),
-      scndry_vect_out(7) => gpio_io_i_d2(24),
-      scndry_vect_out(6) => gpio_io_i_d2(25),
-      scndry_vect_out(5) => gpio_io_i_d2(26),
-      scndry_vect_out(4) => gpio_io_i_d2(27),
-      scndry_vect_out(3) => gpio_io_i_d2(28),
-      scndry_vect_out(2) => gpio_io_i_d2(29),
-      scndry_vect_out(1) => gpio_io_i_d2(30),
-      scndry_vect_out(0) => gpio_io_i_d2(31)
+      scndry_vect_out(13) => gpio_io_i_d2(0),
+      scndry_vect_out(12) => gpio_io_i_d2(1),
+      scndry_vect_out(11) => gpio_io_i_d2(2),
+      scndry_vect_out(10) => gpio_io_i_d2(3),
+      scndry_vect_out(9) => gpio_io_i_d2(4),
+      scndry_vect_out(8) => gpio_io_i_d2(5),
+      scndry_vect_out(7) => gpio_io_i_d2(6),
+      scndry_vect_out(6) => gpio_io_i_d2(7),
+      scndry_vect_out(5) => gpio_io_i_d2(8),
+      scndry_vect_out(4) => gpio_io_i_d2(9),
+      scndry_vect_out(3) => gpio_io_i_d2(10),
+      scndry_vect_out(2) => gpio_io_i_d2(11),
+      scndry_vect_out(1) => gpio_io_i_d2(12),
+      scndry_vect_out(0) => gpio_io_i_d2(13)
     );
 \Dual.INPUT_DOUBLE_REGS5\: entity work.\system_axi_gpio_0_0_cdc_sync__parameterized0\
      port map (
@@ -3109,54 +1613,6 @@ begin
       Q => gpio_Data_In(13),
       R => '0'
     );
-\Dual.gpio_Data_In_reg[14]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i_d2(14),
-      Q => gpio_Data_In(14),
-      R => '0'
-    );
-\Dual.gpio_Data_In_reg[15]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i_d2(15),
-      Q => gpio_Data_In(15),
-      R => '0'
-    );
-\Dual.gpio_Data_In_reg[16]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i_d2(16),
-      Q => gpio_Data_In(16),
-      R => '0'
-    );
-\Dual.gpio_Data_In_reg[17]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i_d2(17),
-      Q => gpio_Data_In(17),
-      R => '0'
-    );
-\Dual.gpio_Data_In_reg[18]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i_d2(18),
-      Q => gpio_Data_In(18),
-      R => '0'
-    );
-\Dual.gpio_Data_In_reg[19]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i_d2(19),
-      Q => gpio_Data_In(19),
-      R => '0'
-    );
 \Dual.gpio_Data_In_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
@@ -3165,108 +1621,12 @@ begin
       Q => gpio_Data_In(1),
       R => '0'
     );
-\Dual.gpio_Data_In_reg[20]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i_d2(20),
-      Q => gpio_Data_In(20),
-      R => '0'
-    );
-\Dual.gpio_Data_In_reg[21]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i_d2(21),
-      Q => gpio_Data_In(21),
-      R => '0'
-    );
-\Dual.gpio_Data_In_reg[22]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i_d2(22),
-      Q => gpio_Data_In(22),
-      R => '0'
-    );
-\Dual.gpio_Data_In_reg[23]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i_d2(23),
-      Q => gpio_Data_In(23),
-      R => '0'
-    );
-\Dual.gpio_Data_In_reg[24]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i_d2(24),
-      Q => gpio_Data_In(24),
-      R => '0'
-    );
-\Dual.gpio_Data_In_reg[25]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i_d2(25),
-      Q => gpio_Data_In(25),
-      R => '0'
-    );
-\Dual.gpio_Data_In_reg[26]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i_d2(26),
-      Q => gpio_Data_In(26),
-      R => '0'
-    );
-\Dual.gpio_Data_In_reg[27]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i_d2(27),
-      Q => gpio_Data_In(27),
-      R => '0'
-    );
-\Dual.gpio_Data_In_reg[28]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i_d2(28),
-      Q => gpio_Data_In(28),
-      R => '0'
-    );
-\Dual.gpio_Data_In_reg[29]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i_d2(29),
-      Q => gpio_Data_In(29),
-      R => '0'
-    );
 \Dual.gpio_Data_In_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
       D => gpio_io_i_d2(2),
       Q => gpio_Data_In(2),
-      R => '0'
-    );
-\Dual.gpio_Data_In_reg[30]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i_d2(30),
-      Q => gpio_Data_In(30),
-      R => '0'
-    );
-\Dual.gpio_Data_In_reg[31]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => gpio_io_i_d2(31),
-      Q => gpio_Data_In(31),
       R => '0'
     );
 \Dual.gpio_Data_In_reg[3]\: unisim.vcomponents.FDRE
@@ -3331,9 +1691,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(31),
-      Q => gpio_io_o(31),
+      CE => E(0),
+      D => D(13),
+      Q => gpio_io_o(13),
       R => bus2ip_reset
     );
 \Dual.gpio_Data_Out_reg[10]\: unisim.vcomponents.FDRE
@@ -3342,9 +1702,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(21),
-      Q => gpio_io_o(21),
+      CE => E(0),
+      D => D(3),
+      Q => gpio_io_o(3),
       R => bus2ip_reset
     );
 \Dual.gpio_Data_Out_reg[11]\: unisim.vcomponents.FDRE
@@ -3353,9 +1713,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(20),
-      Q => gpio_io_o(20),
+      CE => E(0),
+      D => D(2),
+      Q => gpio_io_o(2),
       R => bus2ip_reset
     );
 \Dual.gpio_Data_Out_reg[12]\: unisim.vcomponents.FDRE
@@ -3364,9 +1724,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(19),
-      Q => gpio_io_o(19),
+      CE => E(0),
+      D => D(1),
+      Q => gpio_io_o(1),
       R => bus2ip_reset
     );
 \Dual.gpio_Data_Out_reg[13]\: unisim.vcomponents.FDRE
@@ -3375,75 +1735,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(18),
-      Q => gpio_io_o(18),
-      R => bus2ip_reset
-    );
-\Dual.gpio_Data_Out_reg[14]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(17),
-      Q => gpio_io_o(17),
-      R => bus2ip_reset
-    );
-\Dual.gpio_Data_Out_reg[15]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(16),
-      Q => gpio_io_o(16),
-      R => bus2ip_reset
-    );
-\Dual.gpio_Data_Out_reg[16]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(15),
-      Q => gpio_io_o(15),
-      R => bus2ip_reset
-    );
-\Dual.gpio_Data_Out_reg[17]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(14),
-      Q => gpio_io_o(14),
-      R => bus2ip_reset
-    );
-\Dual.gpio_Data_Out_reg[18]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(13),
-      Q => gpio_io_o(13),
-      R => bus2ip_reset
-    );
-\Dual.gpio_Data_Out_reg[19]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(12),
-      Q => gpio_io_o(12),
+      CE => E(0),
+      D => D(0),
+      Q => gpio_io_o(0),
       R => bus2ip_reset
     );
 \Dual.gpio_Data_Out_reg[1]\: unisim.vcomponents.FDRE
@@ -3452,119 +1746,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(30),
-      Q => gpio_io_o(30),
-      R => bus2ip_reset
-    );
-\Dual.gpio_Data_Out_reg[20]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(11),
-      Q => gpio_io_o(11),
-      R => bus2ip_reset
-    );
-\Dual.gpio_Data_Out_reg[21]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(10),
-      Q => gpio_io_o(10),
-      R => bus2ip_reset
-    );
-\Dual.gpio_Data_Out_reg[22]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(9),
-      Q => gpio_io_o(9),
-      R => bus2ip_reset
-    );
-\Dual.gpio_Data_Out_reg[23]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(8),
-      Q => gpio_io_o(8),
-      R => bus2ip_reset
-    );
-\Dual.gpio_Data_Out_reg[24]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(7),
-      Q => gpio_io_o(7),
-      R => bus2ip_reset
-    );
-\Dual.gpio_Data_Out_reg[25]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(6),
-      Q => gpio_io_o(6),
-      R => bus2ip_reset
-    );
-\Dual.gpio_Data_Out_reg[26]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(5),
-      Q => gpio_io_o(5),
-      R => bus2ip_reset
-    );
-\Dual.gpio_Data_Out_reg[27]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(4),
-      Q => gpio_io_o(4),
-      R => bus2ip_reset
-    );
-\Dual.gpio_Data_Out_reg[28]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(3),
-      Q => gpio_io_o(3),
-      R => bus2ip_reset
-    );
-\Dual.gpio_Data_Out_reg[29]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(2),
-      Q => gpio_io_o(2),
+      CE => E(0),
+      D => D(12),
+      Q => gpio_io_o(12),
       R => bus2ip_reset
     );
 \Dual.gpio_Data_Out_reg[2]\: unisim.vcomponents.FDRE
@@ -3573,31 +1757,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(29),
-      Q => gpio_io_o(29),
-      R => bus2ip_reset
-    );
-\Dual.gpio_Data_Out_reg[30]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(1),
-      Q => gpio_io_o(1),
-      R => bus2ip_reset
-    );
-\Dual.gpio_Data_Out_reg[31]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(0),
-      Q => gpio_io_o(0),
+      CE => E(0),
+      D => D(11),
+      Q => gpio_io_o(11),
       R => bus2ip_reset
     );
 \Dual.gpio_Data_Out_reg[3]\: unisim.vcomponents.FDRE
@@ -3606,9 +1768,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(28),
-      Q => gpio_io_o(28),
+      CE => E(0),
+      D => D(10),
+      Q => gpio_io_o(10),
       R => bus2ip_reset
     );
 \Dual.gpio_Data_Out_reg[4]\: unisim.vcomponents.FDRE
@@ -3617,9 +1779,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(27),
-      Q => gpio_io_o(27),
+      CE => E(0),
+      D => D(9),
+      Q => gpio_io_o(9),
       R => bus2ip_reset
     );
 \Dual.gpio_Data_Out_reg[5]\: unisim.vcomponents.FDRE
@@ -3628,9 +1790,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(26),
-      Q => gpio_io_o(26),
+      CE => E(0),
+      D => D(8),
+      Q => gpio_io_o(8),
       R => bus2ip_reset
     );
 \Dual.gpio_Data_Out_reg[6]\: unisim.vcomponents.FDRE
@@ -3639,9 +1801,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(25),
-      Q => gpio_io_o(25),
+      CE => E(0),
+      D => D(7),
+      Q => gpio_io_o(7),
       R => bus2ip_reset
     );
 \Dual.gpio_Data_Out_reg[7]\: unisim.vcomponents.FDRE
@@ -3650,9 +1812,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(24),
-      Q => gpio_io_o(24),
+      CE => E(0),
+      D => D(6),
+      Q => gpio_io_o(6),
       R => bus2ip_reset
     );
 \Dual.gpio_Data_Out_reg[8]\: unisim.vcomponents.FDRE
@@ -3661,9 +1823,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(23),
-      Q => gpio_io_o(23),
+      CE => E(0),
+      D => D(5),
+      Q => gpio_io_o(5),
       R => bus2ip_reset
     );
 \Dual.gpio_Data_Out_reg[9]\: unisim.vcomponents.FDRE
@@ -3672,9 +1834,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => \Dual.gpio_Data_Out_reg[0]_0\(0),
-      D => D(22),
-      Q => gpio_io_o(22),
+      CE => E(0),
+      D => D(4),
+      Q => gpio_io_o(4),
       R => bus2ip_reset
     );
 \Dual.gpio_OE_reg[0]\: unisim.vcomponents.FDSE
@@ -3683,9 +1845,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => E(0),
-      D => D(31),
-      Q => \^gpio_io_t\(31),
+      CE => \Dual.gpio_OE_reg[0]_0\(0),
+      D => D(13),
+      Q => \^gpio_io_t\(13),
       S => bus2ip_reset
     );
 \Dual.gpio_OE_reg[10]\: unisim.vcomponents.FDSE
@@ -3694,9 +1856,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => E(0),
-      D => D(21),
-      Q => \^gpio_io_t\(21),
+      CE => \Dual.gpio_OE_reg[0]_0\(0),
+      D => D(3),
+      Q => \^gpio_io_t\(3),
       S => bus2ip_reset
     );
 \Dual.gpio_OE_reg[11]\: unisim.vcomponents.FDSE
@@ -3705,9 +1867,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => E(0),
-      D => D(20),
-      Q => \^gpio_io_t\(20),
+      CE => \Dual.gpio_OE_reg[0]_0\(0),
+      D => D(2),
+      Q => \^gpio_io_t\(2),
       S => bus2ip_reset
     );
 \Dual.gpio_OE_reg[12]\: unisim.vcomponents.FDSE
@@ -3716,9 +1878,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => E(0),
-      D => D(19),
-      Q => \^gpio_io_t\(19),
+      CE => \Dual.gpio_OE_reg[0]_0\(0),
+      D => D(1),
+      Q => \^gpio_io_t\(1),
       S => bus2ip_reset
     );
 \Dual.gpio_OE_reg[13]\: unisim.vcomponents.FDSE
@@ -3727,75 +1889,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => E(0),
-      D => D(18),
-      Q => \^gpio_io_t\(18),
-      S => bus2ip_reset
-    );
-\Dual.gpio_OE_reg[14]\: unisim.vcomponents.FDSE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => E(0),
-      D => D(17),
-      Q => \^gpio_io_t\(17),
-      S => bus2ip_reset
-    );
-\Dual.gpio_OE_reg[15]\: unisim.vcomponents.FDSE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => E(0),
-      D => D(16),
-      Q => \^gpio_io_t\(16),
-      S => bus2ip_reset
-    );
-\Dual.gpio_OE_reg[16]\: unisim.vcomponents.FDSE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => E(0),
-      D => D(15),
-      Q => \^gpio_io_t\(15),
-      S => bus2ip_reset
-    );
-\Dual.gpio_OE_reg[17]\: unisim.vcomponents.FDSE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => E(0),
-      D => D(14),
-      Q => \^gpio_io_t\(14),
-      S => bus2ip_reset
-    );
-\Dual.gpio_OE_reg[18]\: unisim.vcomponents.FDSE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => E(0),
-      D => D(13),
-      Q => \^gpio_io_t\(13),
-      S => bus2ip_reset
-    );
-\Dual.gpio_OE_reg[19]\: unisim.vcomponents.FDSE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => E(0),
-      D => D(12),
-      Q => \^gpio_io_t\(12),
+      CE => \Dual.gpio_OE_reg[0]_0\(0),
+      D => D(0),
+      Q => \^gpio_io_t\(0),
       S => bus2ip_reset
     );
 \Dual.gpio_OE_reg[1]\: unisim.vcomponents.FDSE
@@ -3804,119 +1900,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => E(0),
-      D => D(30),
-      Q => \^gpio_io_t\(30),
-      S => bus2ip_reset
-    );
-\Dual.gpio_OE_reg[20]\: unisim.vcomponents.FDSE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => E(0),
-      D => D(11),
-      Q => \^gpio_io_t\(11),
-      S => bus2ip_reset
-    );
-\Dual.gpio_OE_reg[21]\: unisim.vcomponents.FDSE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => E(0),
-      D => D(10),
-      Q => \^gpio_io_t\(10),
-      S => bus2ip_reset
-    );
-\Dual.gpio_OE_reg[22]\: unisim.vcomponents.FDSE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => E(0),
-      D => D(9),
-      Q => \^gpio_io_t\(9),
-      S => bus2ip_reset
-    );
-\Dual.gpio_OE_reg[23]\: unisim.vcomponents.FDSE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => E(0),
-      D => D(8),
-      Q => \^gpio_io_t\(8),
-      S => bus2ip_reset
-    );
-\Dual.gpio_OE_reg[24]\: unisim.vcomponents.FDSE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => E(0),
-      D => D(7),
-      Q => \^gpio_io_t\(7),
-      S => bus2ip_reset
-    );
-\Dual.gpio_OE_reg[25]\: unisim.vcomponents.FDSE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => E(0),
-      D => D(6),
-      Q => \^gpio_io_t\(6),
-      S => bus2ip_reset
-    );
-\Dual.gpio_OE_reg[26]\: unisim.vcomponents.FDSE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => E(0),
-      D => D(5),
-      Q => \^gpio_io_t\(5),
-      S => bus2ip_reset
-    );
-\Dual.gpio_OE_reg[27]\: unisim.vcomponents.FDSE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => E(0),
-      D => D(4),
-      Q => \^gpio_io_t\(4),
-      S => bus2ip_reset
-    );
-\Dual.gpio_OE_reg[28]\: unisim.vcomponents.FDSE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => E(0),
-      D => D(3),
-      Q => \^gpio_io_t\(3),
-      S => bus2ip_reset
-    );
-\Dual.gpio_OE_reg[29]\: unisim.vcomponents.FDSE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => E(0),
-      D => D(2),
-      Q => \^gpio_io_t\(2),
+      CE => \Dual.gpio_OE_reg[0]_0\(0),
+      D => D(12),
+      Q => \^gpio_io_t\(12),
       S => bus2ip_reset
     );
 \Dual.gpio_OE_reg[2]\: unisim.vcomponents.FDSE
@@ -3925,31 +1911,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => E(0),
-      D => D(29),
-      Q => \^gpio_io_t\(29),
-      S => bus2ip_reset
-    );
-\Dual.gpio_OE_reg[30]\: unisim.vcomponents.FDSE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => E(0),
-      D => D(1),
-      Q => \^gpio_io_t\(1),
-      S => bus2ip_reset
-    );
-\Dual.gpio_OE_reg[31]\: unisim.vcomponents.FDSE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => E(0),
-      D => D(0),
-      Q => \^gpio_io_t\(0),
+      CE => \Dual.gpio_OE_reg[0]_0\(0),
+      D => D(11),
+      Q => \^gpio_io_t\(11),
       S => bus2ip_reset
     );
 \Dual.gpio_OE_reg[3]\: unisim.vcomponents.FDSE
@@ -3958,9 +1922,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => E(0),
-      D => D(28),
-      Q => \^gpio_io_t\(28),
+      CE => \Dual.gpio_OE_reg[0]_0\(0),
+      D => D(10),
+      Q => \^gpio_io_t\(10),
       S => bus2ip_reset
     );
 \Dual.gpio_OE_reg[4]\: unisim.vcomponents.FDSE
@@ -3969,9 +1933,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => E(0),
-      D => D(27),
-      Q => \^gpio_io_t\(27),
+      CE => \Dual.gpio_OE_reg[0]_0\(0),
+      D => D(9),
+      Q => \^gpio_io_t\(9),
       S => bus2ip_reset
     );
 \Dual.gpio_OE_reg[5]\: unisim.vcomponents.FDSE
@@ -3980,9 +1944,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => E(0),
-      D => D(26),
-      Q => \^gpio_io_t\(26),
+      CE => \Dual.gpio_OE_reg[0]_0\(0),
+      D => D(8),
+      Q => \^gpio_io_t\(8),
       S => bus2ip_reset
     );
 \Dual.gpio_OE_reg[6]\: unisim.vcomponents.FDSE
@@ -3991,9 +1955,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => E(0),
-      D => D(25),
-      Q => \^gpio_io_t\(25),
+      CE => \Dual.gpio_OE_reg[0]_0\(0),
+      D => D(7),
+      Q => \^gpio_io_t\(7),
       S => bus2ip_reset
     );
 \Dual.gpio_OE_reg[7]\: unisim.vcomponents.FDSE
@@ -4002,9 +1966,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => E(0),
-      D => D(24),
-      Q => \^gpio_io_t\(24),
+      CE => \Dual.gpio_OE_reg[0]_0\(0),
+      D => D(6),
+      Q => \^gpio_io_t\(6),
       S => bus2ip_reset
     );
 \Dual.gpio_OE_reg[8]\: unisim.vcomponents.FDSE
@@ -4013,9 +1977,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => E(0),
-      D => D(23),
-      Q => \^gpio_io_t\(23),
+      CE => \Dual.gpio_OE_reg[0]_0\(0),
+      D => D(5),
+      Q => \^gpio_io_t\(5),
       S => bus2ip_reset
     );
 \Dual.gpio_OE_reg[9]\: unisim.vcomponents.FDSE
@@ -4024,9 +1988,9 @@ begin
     )
         port map (
       C => s_axi_aclk,
-      CE => E(0),
-      D => D(22),
-      Q => \^gpio_io_t\(22),
+      CE => \Dual.gpio_OE_reg[0]_0\(0),
+      D => D(4),
+      Q => \^gpio_io_t\(4),
       S => bus2ip_reset
     );
 gpio_xferAck_Reg_reg: unisim.vcomponents.FDRE
@@ -4078,13 +2042,13 @@ entity system_axi_gpio_0_0_address_decoder is
     ip2bus_rdack_i_D1_reg : out STD_LOGIC;
     ip2bus_wrack_i_D1_reg : out STD_LOGIC;
     bus2ip_rnw_i_reg_0 : out STD_LOGIC;
-    D : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 13 downto 0 );
+    \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0\ : out STD_LOGIC_VECTOR ( 14 downto 0 );
     Q : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC;
-    \Dual.gpio_OE_reg[0]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \Dual.gpio2_Data_Out_reg[0]\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\ : in STD_LOGIC;
+    \Dual.gpio_Data_Out_reg[0]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    \Dual.gpio2_OE_reg[0]\ : in STD_LOGIC;
+    \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]\ : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC;
     GPIO_xferAck_i : in STD_LOGIC;
     gpio_xferAck_Reg : in STD_LOGIC;
@@ -4093,41 +2057,12 @@ entity system_axi_gpio_0_0_address_decoder is
     s_axi_arready_0 : in STD_LOGIC_VECTOR ( 3 downto 0 );
     ip2bus_wrack_i_D1 : in STD_LOGIC;
     s_axi_wready : in STD_LOGIC;
-    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_wdata : in STD_LOGIC_VECTOR ( 13 downto 0 );
     reg3 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[31].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[30].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[29].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[28].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[27].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[26].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[25].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[24].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[23].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[22].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[21].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[20].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[19].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[18].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[17].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[16].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[15].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[14].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg\ : in STD_LOGIC
+    reg1 : in STD_LOGIC_VECTOR ( 13 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_gpio_0_0_address_decoder : entity is "address_decoder";
 end system_axi_gpio_0_0_address_decoder;
 
 architecture STRUCTURE of system_axi_gpio_0_0_address_decoder is
@@ -4152,40 +2087,22 @@ architecture STRUCTURE of system_axi_gpio_0_0_address_decoder is
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[0]_i_1\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[0]_i_2\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[10]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[11]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[12]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[13]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[14]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[15]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[16]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[17]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[18]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[19]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[10]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[11]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[12]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[13]_i_1\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[1]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[20]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[21]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[22]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[23]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[24]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[25]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[26]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[27]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[28]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[29]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[2]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[30]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[31]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[3]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[4]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[5]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[6]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[7]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[8]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[9]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[2]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[3]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[4]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[5]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[6]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[7]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[8]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[9]_i_1\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \Dual.gpio_OE[0]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \GEN_BKEND_CE_REGISTERS[1].ce_out_i[1]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \GEN_BKEND_CE_REGISTERS[3].ce_out_i[3]_i_2\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \GEN_BKEND_CE_REGISTERS[1].ce_out_i[1]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \GEN_BKEND_CE_REGISTERS[3].ce_out_i[3]_i_2\ : label is "soft_lutpair9";
   attribute SOFT_HLUTNM of \ip2bus_data_i_D1[30]_i_2\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \ip2bus_data_i_D1[31]_i_2\ : label is "soft_lutpair1";
 begin
@@ -4197,7 +2114,7 @@ Bus_RNW_reg_i_1: unisim.vcomponents.LUT3
       INIT => X"B8"
     )
         port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\,
+      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]\,
       I1 => Q,
       I2 => Bus_RNW_reg,
       O => Bus_RNW_reg_i_1_n_0
@@ -4215,7 +2132,7 @@ Bus_RNW_reg_reg: unisim.vcomponents.FDRE
       INIT => X"FDFF"
     )
         port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\,
+      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]\,
       I1 => GPIO_xferAck_i,
       I2 => gpio_xferAck_Reg,
       I3 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
@@ -4226,372 +2143,192 @@ Bus_RNW_reg_reg: unisim.vcomponents.FDRE
       INIT => X"AAAAABAAAAAAAAAA"
     )
         port map (
-      I0 => \Dual.gpio2_Data_Out_reg[0]\,
-      I1 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\,
-      I2 => \Dual.gpio_OE_reg[0]\(2),
+      I0 => \Dual.gpio2_OE_reg[0]\,
+      I1 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]\,
+      I2 => \Dual.gpio_Data_Out_reg[0]\(2),
       I3 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I4 => \Dual.gpio_OE_reg[0]\(0),
-      I5 => \Dual.gpio_OE_reg[0]\(1),
-      O => rst_reg
+      I4 => \Dual.gpio_Data_Out_reg[0]\(0),
+      I5 => \Dual.gpio_Data_Out_reg[0]\(1),
+      O => rst_reg_0
     );
 \Dual.gpio2_OE[0]_i_2\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"ABAAAAAAAAAAAAAA"
     )
         port map (
-      I0 => \Dual.gpio2_Data_Out_reg[0]\,
-      I1 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\,
-      I2 => \Dual.gpio_OE_reg[0]\(2),
+      I0 => \Dual.gpio2_OE_reg[0]\,
+      I1 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]\,
+      I2 => \Dual.gpio_Data_Out_reg[0]\(2),
       I3 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I4 => \Dual.gpio_OE_reg[0]\(1),
-      I5 => \Dual.gpio_OE_reg[0]\(0),
-      O => rst_reg_0
+      I4 => \Dual.gpio_Data_Out_reg[0]\(1),
+      I5 => \Dual.gpio_Data_Out_reg[0]\(0),
+      O => rst_reg
     );
 \Dual.gpio_Data_Out[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00000010"
     )
         port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\,
-      I1 => \Dual.gpio_OE_reg[0]\(2),
+      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]\,
+      I1 => \Dual.gpio_Data_Out_reg[0]\(2),
       I2 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I3 => \Dual.gpio_OE_reg[0]\(1),
-      I4 => \Dual.gpio_OE_reg[0]\(0),
-      O => bus2ip_rnw_i_reg(0)
+      I3 => \Dual.gpio_Data_Out_reg[0]\(1),
+      I4 => \Dual.gpio_Data_Out_reg[0]\(0),
+      O => E(0)
     );
 \Dual.gpio_Data_Out[0]_i_2\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"FB08"
     )
         port map (
-      I0 => s_axi_wdata(31),
+      I0 => s_axi_wdata(13),
       I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => \Dual.gpio_OE_reg[0]\(1),
+      I2 => \Dual.gpio_Data_Out_reg[0]\(1),
       I3 => s_axi_wdata(1),
-      O => D(31)
+      O => D(13)
     );
 \Dual.gpio_Data_Out[10]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"40"
     )
         port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
+      I0 => \Dual.gpio_Data_Out_reg[0]\(1),
       I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(21),
-      O => D(21)
+      I2 => s_axi_wdata(3),
+      O => D(3)
     );
 \Dual.gpio_Data_Out[11]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"40"
     )
         port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
+      I0 => \Dual.gpio_Data_Out_reg[0]\(1),
       I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(20),
-      O => D(20)
+      I2 => s_axi_wdata(2),
+      O => D(2)
     );
 \Dual.gpio_Data_Out[12]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"40"
     )
         port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
+      I0 => \Dual.gpio_Data_Out_reg[0]\(1),
       I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(19),
-      O => D(19)
+      I2 => s_axi_wdata(1),
+      O => D(1)
     );
 \Dual.gpio_Data_Out[13]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"40"
     )
         port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
+      I0 => \Dual.gpio_Data_Out_reg[0]\(1),
       I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(18),
-      O => D(18)
-    );
-\Dual.gpio_Data_Out[14]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"40"
-    )
-        port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
-      I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(17),
-      O => D(17)
-    );
-\Dual.gpio_Data_Out[15]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"40"
-    )
-        port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
-      I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(16),
-      O => D(16)
-    );
-\Dual.gpio_Data_Out[16]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"40"
-    )
-        port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
-      I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(15),
-      O => D(15)
-    );
-\Dual.gpio_Data_Out[17]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"40"
-    )
-        port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
-      I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(14),
-      O => D(14)
-    );
-\Dual.gpio_Data_Out[18]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"40"
-    )
-        port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
-      I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(13),
-      O => D(13)
-    );
-\Dual.gpio_Data_Out[19]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"40"
-    )
-        port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
-      I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(12),
-      O => D(12)
+      I2 => s_axi_wdata(0),
+      O => D(0)
     );
 \Dual.gpio_Data_Out[1]_i_1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"FB08"
     )
         port map (
-      I0 => s_axi_wdata(30),
+      I0 => s_axi_wdata(12),
       I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => \Dual.gpio_OE_reg[0]\(1),
+      I2 => \Dual.gpio_Data_Out_reg[0]\(1),
       I3 => s_axi_wdata(0),
-      O => D(30)
-    );
-\Dual.gpio_Data_Out[20]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"40"
-    )
-        port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
-      I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(11),
-      O => D(11)
-    );
-\Dual.gpio_Data_Out[21]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"40"
-    )
-        port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
-      I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(10),
-      O => D(10)
-    );
-\Dual.gpio_Data_Out[22]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"40"
-    )
-        port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
-      I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(9),
-      O => D(9)
-    );
-\Dual.gpio_Data_Out[23]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"40"
-    )
-        port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
-      I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(8),
-      O => D(8)
-    );
-\Dual.gpio_Data_Out[24]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"40"
-    )
-        port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
-      I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(7),
-      O => D(7)
-    );
-\Dual.gpio_Data_Out[25]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"40"
-    )
-        port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
-      I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(6),
-      O => D(6)
-    );
-\Dual.gpio_Data_Out[26]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"40"
-    )
-        port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
-      I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(5),
-      O => D(5)
-    );
-\Dual.gpio_Data_Out[27]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"40"
-    )
-        port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
-      I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(4),
-      O => D(4)
-    );
-\Dual.gpio_Data_Out[28]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"40"
-    )
-        port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
-      I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(3),
-      O => D(3)
-    );
-\Dual.gpio_Data_Out[29]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"40"
-    )
-        port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
-      I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(2),
-      O => D(2)
+      O => D(12)
     );
 \Dual.gpio_Data_Out[2]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"40"
     )
         port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
+      I0 => \Dual.gpio_Data_Out_reg[0]\(1),
       I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(29),
-      O => D(29)
-    );
-\Dual.gpio_Data_Out[30]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"40"
-    )
-        port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
-      I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(1),
-      O => D(1)
-    );
-\Dual.gpio_Data_Out[31]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"40"
-    )
-        port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
-      I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(0),
-      O => D(0)
+      I2 => s_axi_wdata(11),
+      O => D(11)
     );
 \Dual.gpio_Data_Out[3]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"40"
     )
         port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
+      I0 => \Dual.gpio_Data_Out_reg[0]\(1),
       I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(28),
-      O => D(28)
+      I2 => s_axi_wdata(10),
+      O => D(10)
     );
 \Dual.gpio_Data_Out[4]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"40"
     )
         port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
+      I0 => \Dual.gpio_Data_Out_reg[0]\(1),
       I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(27),
-      O => D(27)
+      I2 => s_axi_wdata(9),
+      O => D(9)
     );
 \Dual.gpio_Data_Out[5]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"40"
     )
         port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
+      I0 => \Dual.gpio_Data_Out_reg[0]\(1),
       I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(26),
-      O => D(26)
+      I2 => s_axi_wdata(8),
+      O => D(8)
     );
 \Dual.gpio_Data_Out[6]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"40"
     )
         port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
+      I0 => \Dual.gpio_Data_Out_reg[0]\(1),
       I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(25),
-      O => D(25)
+      I2 => s_axi_wdata(7),
+      O => D(7)
     );
 \Dual.gpio_Data_Out[7]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"40"
     )
         port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
+      I0 => \Dual.gpio_Data_Out_reg[0]\(1),
       I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(24),
-      O => D(24)
+      I2 => s_axi_wdata(6),
+      O => D(6)
     );
 \Dual.gpio_Data_Out[8]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"40"
     )
         port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
+      I0 => \Dual.gpio_Data_Out_reg[0]\(1),
       I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(23),
-      O => D(23)
+      I2 => s_axi_wdata(5),
+      O => D(5)
     );
 \Dual.gpio_Data_Out[9]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"40"
     )
         port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
+      I0 => \Dual.gpio_Data_Out_reg[0]\(1),
       I1 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I2 => s_axi_wdata(22),
-      O => D(22)
+      I2 => s_axi_wdata(4),
+      O => D(4)
     );
 \Dual.gpio_OE[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00100000"
     )
         port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\,
-      I1 => \Dual.gpio_OE_reg[0]\(2),
+      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]\,
+      I1 => \Dual.gpio_Data_Out_reg[0]\(2),
       I2 => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
-      I3 => \Dual.gpio_OE_reg[0]\(1),
-      I4 => \Dual.gpio_OE_reg[0]\(0),
-      O => E(0)
+      I3 => \Dual.gpio_Data_Out_reg[0]\(1),
+      I4 => \Dual.gpio_Data_Out_reg[0]\(0),
+      O => bus2ip_rnw_i_reg(0)
     );
 \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -4606,8 +2343,8 @@ Bus_RNW_reg_reg: unisim.vcomponents.FDRE
       INIT => X"2"
     )
         port map (
-      I0 => \Dual.gpio_OE_reg[0]\(0),
-      I1 => \Dual.gpio_OE_reg[0]\(1),
+      I0 => \Dual.gpio_Data_Out_reg[0]\(0),
+      I1 => \Dual.gpio_Data_Out_reg[0]\(1),
       O => ce_expnd_i_2
     );
 \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]\: unisim.vcomponents.FDRE
@@ -4641,8 +2378,8 @@ Bus_RNW_reg_reg: unisim.vcomponents.FDRE
       INIT => X"8"
     )
         port map (
-      I0 => \Dual.gpio_OE_reg[0]\(1),
-      I1 => \Dual.gpio_OE_reg[0]\(0),
+      I0 => \Dual.gpio_Data_Out_reg[0]\(1),
+      I1 => \Dual.gpio_Data_Out_reg[0]\(0),
       O => ce_expnd_i_0
     );
 \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg[3]\: unisim.vcomponents.FDRE
@@ -4655,12 +2392,12 @@ Bus_RNW_reg_reg: unisim.vcomponents.FDRE
     );
 \MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I\: entity work.system_axi_gpio_0_0_pselect_f
      port map (
-      \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]\(1 downto 0) => \Dual.gpio_OE_reg[0]\(1 downto 0),
+      \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]\(1 downto 0) => \Dual.gpio_Data_Out_reg[0]\(1 downto 0),
       ce_expnd_i_3 => ce_expnd_i_3
     );
 \MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I\: entity work.\system_axi_gpio_0_0_pselect_f__parameterized1\
      port map (
-      \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg[2]\(1 downto 0) => \Dual.gpio_OE_reg[0]\(1 downto 0),
+      \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg[2]\(1 downto 0) => \Dual.gpio_Data_Out_reg[0]\(1 downto 0),
       ce_expnd_i_1 => ce_expnd_i_1
     );
 \MEM_DECODE_GEN[0].cs_out_i[0]_i_1\: unisim.vcomponents.LUT5
@@ -4683,304 +2420,173 @@ Bus_RNW_reg_reg: unisim.vcomponents.FDRE
       Q => \^mem_decode_gen[0].cs_out_i_reg[0]_0\,
       R => '0'
     );
-\ip2bus_data_i_D1[0]_i_1\: unisim.vcomponents.LUT6
+\ip2bus_data_i_D1[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000000000303080"
+      INIT => X"00000408"
     )
         port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg\,
-      I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
-      I2 => Bus_RNW_reg,
-      I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
-      I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
-      I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(31)
-    );
-\ip2bus_data_i_D1[10]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000303080"
-    )
-        port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1_reg\,
-      I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
-      I2 => Bus_RNW_reg,
-      I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
-      I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
-      I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(21)
-    );
-\ip2bus_data_i_D1[11]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000303080"
-    )
-        port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1_reg\,
-      I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
-      I2 => Bus_RNW_reg,
-      I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
-      I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
-      I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(20)
-    );
-\ip2bus_data_i_D1[12]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000303080"
-    )
-        port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1_reg\,
-      I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
-      I2 => Bus_RNW_reg,
-      I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
-      I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
-      I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(19)
-    );
-\ip2bus_data_i_D1[13]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000303080"
-    )
-        port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1_reg\,
-      I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
-      I2 => Bus_RNW_reg,
-      I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
-      I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
-      I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(18)
-    );
-\ip2bus_data_i_D1[14]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000303080"
-    )
-        port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[14].reg1_reg\,
-      I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
-      I2 => Bus_RNW_reg,
-      I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
-      I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
-      I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(17)
-    );
-\ip2bus_data_i_D1[15]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000303080"
-    )
-        port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[15].reg1_reg\,
-      I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
-      I2 => Bus_RNW_reg,
-      I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
-      I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
-      I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(16)
-    );
-\ip2bus_data_i_D1[16]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000303080"
-    )
-        port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[16].reg1_reg\,
-      I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
-      I2 => Bus_RNW_reg,
-      I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
-      I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
-      I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(15)
-    );
-\ip2bus_data_i_D1[17]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000303080"
-    )
-        port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[17].reg1_reg\,
-      I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
-      I2 => Bus_RNW_reg,
-      I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
-      I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
-      I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(14)
+      I0 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
+      I1 => Bus_RNW_reg,
+      I2 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
+      I3 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
+      I4 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
+      O => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0\(14)
     );
 \ip2bus_data_i_D1[18]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000000000303080"
     )
         port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[18].reg1_reg\,
+      I0 => reg1(13),
       I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
       I2 => Bus_RNW_reg,
       I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
       I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
       I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(13)
+      O => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0\(13)
     );
 \ip2bus_data_i_D1[19]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000000000303080"
     )
         port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[19].reg1_reg\,
+      I0 => reg1(12),
       I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
       I2 => Bus_RNW_reg,
       I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
       I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
       I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(12)
-    );
-\ip2bus_data_i_D1[1]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000303080"
-    )
-        port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1_reg\,
-      I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
-      I2 => Bus_RNW_reg,
-      I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
-      I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
-      I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(30)
+      O => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0\(12)
     );
 \ip2bus_data_i_D1[20]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000000000303080"
     )
         port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[20].reg1_reg\,
+      I0 => reg1(11),
       I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
       I2 => Bus_RNW_reg,
       I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
       I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
       I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(11)
+      O => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0\(11)
     );
 \ip2bus_data_i_D1[21]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000000000303080"
     )
         port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[21].reg1_reg\,
+      I0 => reg1(10),
       I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
       I2 => Bus_RNW_reg,
       I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
       I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
       I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(10)
+      O => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0\(10)
     );
 \ip2bus_data_i_D1[22]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000000000303080"
     )
         port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[22].reg1_reg\,
+      I0 => reg1(9),
       I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
       I2 => Bus_RNW_reg,
       I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
       I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
       I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(9)
+      O => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0\(9)
     );
 \ip2bus_data_i_D1[23]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000000000303080"
     )
         port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[23].reg1_reg\,
+      I0 => reg1(8),
       I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
       I2 => Bus_RNW_reg,
       I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
       I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
       I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(8)
+      O => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0\(8)
     );
 \ip2bus_data_i_D1[24]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000000000303080"
     )
         port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[24].reg1_reg\,
+      I0 => reg1(7),
       I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
       I2 => Bus_RNW_reg,
       I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
       I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
       I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(7)
+      O => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0\(7)
     );
 \ip2bus_data_i_D1[25]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000000000303080"
     )
         port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[25].reg1_reg\,
+      I0 => reg1(6),
       I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
       I2 => Bus_RNW_reg,
       I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
       I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
       I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(6)
+      O => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0\(6)
     );
 \ip2bus_data_i_D1[26]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000000000303080"
     )
         port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[26].reg1_reg\,
+      I0 => reg1(5),
       I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
       I2 => Bus_RNW_reg,
       I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
       I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
       I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(5)
+      O => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0\(5)
     );
 \ip2bus_data_i_D1[27]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000000000303080"
     )
         port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[27].reg1_reg\,
+      I0 => reg1(4),
       I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
       I2 => Bus_RNW_reg,
       I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
       I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
       I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(4)
+      O => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0\(4)
     );
 \ip2bus_data_i_D1[28]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000000000303080"
     )
         port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[28].reg1_reg\,
+      I0 => reg1(3),
       I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
       I2 => Bus_RNW_reg,
       I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
       I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
       I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(3)
+      O => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0\(3)
     );
 \ip2bus_data_i_D1[29]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000000000303080"
     )
         port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[29].reg1_reg\,
+      I0 => reg1(2),
       I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
       I2 => Bus_RNW_reg,
       I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
       I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
       I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(2)
-    );
-\ip2bus_data_i_D1[2]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000303080"
-    )
-        port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1_reg\,
-      I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
-      I2 => Bus_RNW_reg,
-      I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
-      I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
-      I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(29)
+      O => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0\(2)
     );
 \ip2bus_data_i_D1[30]_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -4992,7 +2598,7 @@ Bus_RNW_reg_reg: unisim.vcomponents.FDRE
       I2 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
       I3 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
       I4 => \ip2bus_data_i_D1[30]_i_3_n_0\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(1)
+      O => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0\(1)
     );
 \ip2bus_data_i_D1[30]_i_2\: unisim.vcomponents.LUT3
     generic map(
@@ -5013,7 +2619,7 @@ Bus_RNW_reg_reg: unisim.vcomponents.FDRE
       I1 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
       I2 => Bus_RNW_reg,
       I3 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
-      I4 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[30].reg1_reg\,
+      I4 => reg1(1),
       O => \ip2bus_data_i_D1[30]_i_3_n_0\
     );
 \ip2bus_data_i_D1[31]_i_1\: unisim.vcomponents.LUT5
@@ -5026,7 +2632,7 @@ Bus_RNW_reg_reg: unisim.vcomponents.FDRE
       I2 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
       I3 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
       I4 => \ip2bus_data_i_D1[31]_i_2_n_0\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(0)
+      O => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0\(0)
     );
 \ip2bus_data_i_D1[31]_i_2\: unisim.vcomponents.LUT5
     generic map(
@@ -5037,99 +2643,8 @@ Bus_RNW_reg_reg: unisim.vcomponents.FDRE
       I1 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
       I2 => Bus_RNW_reg,
       I3 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
-      I4 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[31].reg1_reg\,
+      I4 => reg1(0),
       O => \ip2bus_data_i_D1[31]_i_2_n_0\
-    );
-\ip2bus_data_i_D1[3]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000303080"
-    )
-        port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1_reg\,
-      I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
-      I2 => Bus_RNW_reg,
-      I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
-      I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
-      I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(28)
-    );
-\ip2bus_data_i_D1[4]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000303080"
-    )
-        port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1_reg\,
-      I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
-      I2 => Bus_RNW_reg,
-      I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
-      I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
-      I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(27)
-    );
-\ip2bus_data_i_D1[5]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000303080"
-    )
-        port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1_reg\,
-      I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
-      I2 => Bus_RNW_reg,
-      I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
-      I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
-      I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(26)
-    );
-\ip2bus_data_i_D1[6]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000303080"
-    )
-        port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1_reg\,
-      I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
-      I2 => Bus_RNW_reg,
-      I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
-      I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
-      I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(25)
-    );
-\ip2bus_data_i_D1[7]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000303080"
-    )
-        port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1_reg\,
-      I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
-      I2 => Bus_RNW_reg,
-      I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
-      I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
-      I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(24)
-    );
-\ip2bus_data_i_D1[8]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000303080"
-    )
-        port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1_reg\,
-      I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
-      I2 => Bus_RNW_reg,
-      I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
-      I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
-      I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(23)
-    );
-\ip2bus_data_i_D1[9]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000303080"
-    )
-        port map (
-      I0 => \Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1_reg\,
-      I1 => \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\,
-      I2 => Bus_RNW_reg,
-      I3 => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
-      I4 => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
-      I5 => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
-      O => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(22)
     );
 s_axi_arready_INST_0: unisim.vcomponents.LUT6
     generic map(
@@ -5177,9 +2692,9 @@ entity system_axi_gpio_0_0_slave_attachment is
     ip2bus_rdack_i_D1_reg : out STD_LOGIC;
     ip2bus_wrack_i_D1_reg : out STD_LOGIC;
     bus2ip_rnw_i_reg_2 : out STD_LOGIC;
-    s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    D : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_rdata : out STD_LOGIC_VECTOR ( 14 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 13 downto 0 );
+    \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]\ : out STD_LOGIC_VECTOR ( 14 downto 0 );
     s_axi_aclk : in STD_LOGIC;
     s_axi_arvalid : in STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
@@ -5189,46 +2704,17 @@ entity system_axi_gpio_0_0_slave_attachment is
     s_axi_wvalid : in STD_LOGIC;
     GPIO_xferAck_i : in STD_LOGIC;
     gpio_xferAck_Reg : in STD_LOGIC;
-    \s_axi_rdata_i_reg[31]_0\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    \s_axi_rdata_i_reg[31]_0\ : in STD_LOGIC_VECTOR ( 14 downto 0 );
+    s_axi_wdata : in STD_LOGIC_VECTOR ( 13 downto 0 );
     reg3 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[31].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[30].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[29].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[28].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[27].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[26].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[25].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[24].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[23].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[22].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[21].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[20].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[19].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[18].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[17].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[16].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[15].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[14].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg\ : in STD_LOGIC;
+    reg1 : in STD_LOGIC_VECTOR ( 13 downto 0 );
     ip2bus_rdack_i_D1 : in STD_LOGIC;
     ip2bus_wrack_i_D1 : in STD_LOGIC;
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_gpio_0_0_slave_attachment : entity is "slave_attachment";
 end system_axi_gpio_0_0_slave_attachment;
 
 architecture STRUCTURE of system_axi_gpio_0_0_slave_attachment is
@@ -5251,11 +2737,11 @@ architecture STRUCTURE of system_axi_gpio_0_0_slave_attachment is
   signal is_write_i_1_n_0 : STD_LOGIC;
   signal is_write_i_2_n_0 : STD_LOGIC;
   signal is_write_reg_n_0 : STD_LOGIC;
+  signal p_0_in : STD_LOGIC;
   signal p_0_out : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal p_1_in : STD_LOGIC_VECTOR ( 8 downto 2 );
   signal p_5_in : STD_LOGIC;
   signal plusOp : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal rst_i_1_n_0 : STD_LOGIC;
   signal s_axi_bresp_i : STD_LOGIC;
   signal s_axi_bvalid_i_i_1_n_0 : STD_LOGIC;
   signal \^s_axi_bvalid_i_reg_0\ : STD_LOGIC;
@@ -5272,14 +2758,14 @@ architecture STRUCTURE of system_axi_gpio_0_0_slave_attachment is
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[2]\ : label is "iSTATE:0010,iSTATE0:0100,iSTATE1:1000,iSTATE2:0001";
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[3]\ : label is "iSTATE:0010,iSTATE0:0100,iSTATE1:1000,iSTATE2:0001";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[0]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[1]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[2]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[3]_i_2\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \bus2ip_addr_i[3]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \bus2ip_addr_i[8]_i_2\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of start2_i_1 : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \state[1]_i_2\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[0]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[1]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[2]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[3]_i_2\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \bus2ip_addr_i[3]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \bus2ip_addr_i[8]_i_2\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of start2_i_1 : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \state[1]_i_2\ : label is "soft_lutpair10";
 begin
   Q(2 downto 0) <= \^q\(2 downto 0);
   SR(0) <= \^sr\(0);
@@ -5474,44 +2960,12 @@ begin
     );
 I_DECODER: entity work.system_axi_gpio_0_0_address_decoder
      port map (
-      D(31 downto 0) => D(31 downto 0),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(31 downto 0) => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(31 downto 0),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\ => \^bus2ip_rnw_i_reg_0\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[14].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[14].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[15].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[15].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[16].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[16].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[17].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[17].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[18].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[18].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[19].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[19].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[20].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[20].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[21].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[21].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[22].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[22].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[23].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[23].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[24].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[24].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[25].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[25].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[26].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[26].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[27].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[27].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[28].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[28].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[29].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[29].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[30].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[30].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[31].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[31].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1_reg\,
-      \Dual.gpio2_Data_Out_reg[0]\ => \^sr\(0),
-      \Dual.gpio_OE_reg[0]\(2 downto 0) => \^q\(2 downto 0),
+      D(13 downto 0) => D(13 downto 0),
+      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]\ => \^bus2ip_rnw_i_reg_0\,
+      \Dual.gpio2_OE_reg[0]\ => \^sr\(0),
+      \Dual.gpio_Data_Out_reg[0]\(2 downto 0) => \^q\(2 downto 0),
       E(0) => E(0),
+      \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0\(14 downto 0) => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]\(14 downto 0),
       GPIO_xferAck_i => GPIO_xferAck_i,
       \MEM_DECODE_GEN[0].cs_out_i_reg[0]_0\ => \MEM_DECODE_GEN[0].cs_out_i_reg[0]\,
       Q => start2,
@@ -5522,6 +2976,7 @@ I_DECODER: entity work.system_axi_gpio_0_0_address_decoder
       ip2bus_rdack_i_D1_reg => \^ip2bus_rdack_i_d1_reg\,
       ip2bus_wrack_i_D1 => ip2bus_wrack_i_D1,
       ip2bus_wrack_i_D1_reg => \^ip2bus_wrack_i_d1_reg\,
+      reg1(13 downto 0) => reg1(13 downto 0),
       reg3(1 downto 0) => reg3(1 downto 0),
       rst_reg => rst_reg_0,
       rst_reg_0 => rst_reg_1,
@@ -5529,7 +2984,7 @@ I_DECODER: entity work.system_axi_gpio_0_0_address_decoder
       s_axi_aresetn => s_axi_aresetn,
       s_axi_arready => is_read_reg_n_0,
       s_axi_arready_0(3 downto 0) => \INCLUDE_DPHASE_TIMER.dpto_cnt_reg\(3 downto 0),
-      s_axi_wdata(31 downto 0) => s_axi_wdata(31 downto 0),
+      s_axi_wdata(13 downto 0) => s_axi_wdata(13 downto 0),
       s_axi_wready => is_write_reg_n_0
     );
 \bus2ip_addr_i[2]_i_1\: unisim.vcomponents.LUT3
@@ -5666,13 +3121,13 @@ rst_i_1: unisim.vcomponents.LUT1
     )
         port map (
       I0 => s_axi_aresetn,
-      O => rst_i_1_n_0
+      O => p_0_in
     );
 rst_reg: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => rst_i_1_n_0,
+      D => p_0_in,
       Q => \^sr\(0),
       R => '0'
     );
@@ -5754,72 +3209,6 @@ s_axi_bvalid_i_reg: unisim.vcomponents.FDRE
       Q => s_axi_rdata(13),
       R => \^sr\(0)
     );
-\s_axi_rdata_i_reg[14]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => s_axi_rresp_i,
-      D => \s_axi_rdata_i_reg[31]_0\(14),
-      Q => s_axi_rdata(14),
-      R => \^sr\(0)
-    );
-\s_axi_rdata_i_reg[15]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => s_axi_rresp_i,
-      D => \s_axi_rdata_i_reg[31]_0\(15),
-      Q => s_axi_rdata(15),
-      R => \^sr\(0)
-    );
-\s_axi_rdata_i_reg[16]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => s_axi_rresp_i,
-      D => \s_axi_rdata_i_reg[31]_0\(16),
-      Q => s_axi_rdata(16),
-      R => \^sr\(0)
-    );
-\s_axi_rdata_i_reg[17]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => s_axi_rresp_i,
-      D => \s_axi_rdata_i_reg[31]_0\(17),
-      Q => s_axi_rdata(17),
-      R => \^sr\(0)
-    );
-\s_axi_rdata_i_reg[18]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => s_axi_rresp_i,
-      D => \s_axi_rdata_i_reg[31]_0\(18),
-      Q => s_axi_rdata(18),
-      R => \^sr\(0)
-    );
-\s_axi_rdata_i_reg[19]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => s_axi_rresp_i,
-      D => \s_axi_rdata_i_reg[31]_0\(19),
-      Q => s_axi_rdata(19),
-      R => \^sr\(0)
-    );
 \s_axi_rdata_i_reg[1]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -5829,116 +3218,6 @@ s_axi_bvalid_i_reg: unisim.vcomponents.FDRE
       CE => s_axi_rresp_i,
       D => \s_axi_rdata_i_reg[31]_0\(1),
       Q => s_axi_rdata(1),
-      R => \^sr\(0)
-    );
-\s_axi_rdata_i_reg[20]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => s_axi_rresp_i,
-      D => \s_axi_rdata_i_reg[31]_0\(20),
-      Q => s_axi_rdata(20),
-      R => \^sr\(0)
-    );
-\s_axi_rdata_i_reg[21]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => s_axi_rresp_i,
-      D => \s_axi_rdata_i_reg[31]_0\(21),
-      Q => s_axi_rdata(21),
-      R => \^sr\(0)
-    );
-\s_axi_rdata_i_reg[22]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => s_axi_rresp_i,
-      D => \s_axi_rdata_i_reg[31]_0\(22),
-      Q => s_axi_rdata(22),
-      R => \^sr\(0)
-    );
-\s_axi_rdata_i_reg[23]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => s_axi_rresp_i,
-      D => \s_axi_rdata_i_reg[31]_0\(23),
-      Q => s_axi_rdata(23),
-      R => \^sr\(0)
-    );
-\s_axi_rdata_i_reg[24]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => s_axi_rresp_i,
-      D => \s_axi_rdata_i_reg[31]_0\(24),
-      Q => s_axi_rdata(24),
-      R => \^sr\(0)
-    );
-\s_axi_rdata_i_reg[25]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => s_axi_rresp_i,
-      D => \s_axi_rdata_i_reg[31]_0\(25),
-      Q => s_axi_rdata(25),
-      R => \^sr\(0)
-    );
-\s_axi_rdata_i_reg[26]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => s_axi_rresp_i,
-      D => \s_axi_rdata_i_reg[31]_0\(26),
-      Q => s_axi_rdata(26),
-      R => \^sr\(0)
-    );
-\s_axi_rdata_i_reg[27]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => s_axi_rresp_i,
-      D => \s_axi_rdata_i_reg[31]_0\(27),
-      Q => s_axi_rdata(27),
-      R => \^sr\(0)
-    );
-\s_axi_rdata_i_reg[28]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => s_axi_rresp_i,
-      D => \s_axi_rdata_i_reg[31]_0\(28),
-      Q => s_axi_rdata(28),
-      R => \^sr\(0)
-    );
-\s_axi_rdata_i_reg[29]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => s_axi_rresp_i,
-      D => \s_axi_rdata_i_reg[31]_0\(29),
-      Q => s_axi_rdata(29),
       R => \^sr\(0)
     );
 \s_axi_rdata_i_reg[2]\: unisim.vcomponents.FDRE
@@ -5952,17 +3231,6 @@ s_axi_bvalid_i_reg: unisim.vcomponents.FDRE
       Q => s_axi_rdata(2),
       R => \^sr\(0)
     );
-\s_axi_rdata_i_reg[30]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => s_axi_rresp_i,
-      D => \s_axi_rdata_i_reg[31]_0\(30),
-      Q => s_axi_rdata(30),
-      R => \^sr\(0)
-    );
 \s_axi_rdata_i_reg[31]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -5970,8 +3238,8 @@ s_axi_bvalid_i_reg: unisim.vcomponents.FDRE
         port map (
       C => s_axi_aclk,
       CE => s_axi_rresp_i,
-      D => \s_axi_rdata_i_reg[31]_0\(31),
-      Q => s_axi_rdata(31),
+      D => \s_axi_rdata_i_reg[31]_0\(14),
+      Q => s_axi_rdata(14),
       R => \^sr\(0)
     );
 \s_axi_rdata_i_reg[3]\: unisim.vcomponents.FDRE
@@ -6164,9 +3432,9 @@ entity system_axi_gpio_0_0_axi_lite_ipif is
     ip2bus_rdack_i_D1_reg : out STD_LOGIC;
     ip2bus_wrack_i_D1_reg : out STD_LOGIC;
     bus2ip_rnw_i_reg_0 : out STD_LOGIC;
-    s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    D : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\ : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_rdata : out STD_LOGIC_VECTOR ( 14 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 13 downto 0 );
+    \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]\ : out STD_LOGIC_VECTOR ( 14 downto 0 );
     s_axi_aclk : in STD_LOGIC;
     s_axi_arvalid : in STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
@@ -6176,87 +3444,26 @@ entity system_axi_gpio_0_0_axi_lite_ipif is
     s_axi_wvalid : in STD_LOGIC;
     GPIO_xferAck_i : in STD_LOGIC;
     gpio_xferAck_Reg : in STD_LOGIC;
-    \s_axi_rdata_i_reg[31]\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    \s_axi_rdata_i_reg[31]\ : in STD_LOGIC_VECTOR ( 14 downto 0 );
+    s_axi_wdata : in STD_LOGIC_VECTOR ( 13 downto 0 );
     reg3 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[31].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[30].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[29].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[28].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[27].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[26].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[25].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[24].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[23].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[22].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[21].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[20].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[19].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[18].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[17].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[16].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[15].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[14].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1_reg\ : in STD_LOGIC;
-    \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg\ : in STD_LOGIC;
+    reg1 : in STD_LOGIC_VECTOR ( 13 downto 0 );
     ip2bus_rdack_i_D1 : in STD_LOGIC;
     ip2bus_wrack_i_D1 : in STD_LOGIC;
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_gpio_0_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end system_axi_gpio_0_0_axi_lite_ipif;
 
 architecture STRUCTURE of system_axi_gpio_0_0_axi_lite_ipif is
 begin
 I_SLAVE_ATTACHMENT: entity work.system_axi_gpio_0_0_slave_attachment
      port map (
-      D(31 downto 0) => D(31 downto 0),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(31 downto 0) => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(31 downto 0),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[14].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[14].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[15].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[15].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[16].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[16].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[17].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[17].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[18].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[18].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[19].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[19].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[20].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[20].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[21].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[21].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[22].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[22].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[23].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[23].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[24].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[24].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[25].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[25].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[26].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[26].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[27].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[27].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[28].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[28].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[29].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[29].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[30].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[30].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[31].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[31].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1_reg\,
+      D(13 downto 0) => D(13 downto 0),
       E(0) => E(0),
+      \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]\(14 downto 0) => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]\(14 downto 0),
       GPIO_xferAck_i => GPIO_xferAck_i,
       \MEM_DECODE_GEN[0].cs_out_i_reg[0]\ => bus2ip_cs,
       Q(2 downto 0) => Q(2 downto 0),
@@ -6269,6 +3476,7 @@ I_SLAVE_ATTACHMENT: entity work.system_axi_gpio_0_0_slave_attachment
       ip2bus_rdack_i_D1_reg => ip2bus_rdack_i_D1_reg,
       ip2bus_wrack_i_D1 => ip2bus_wrack_i_D1,
       ip2bus_wrack_i_D1_reg => ip2bus_wrack_i_D1_reg,
+      reg1(13 downto 0) => reg1(13 downto 0),
       reg3(1 downto 0) => reg3(1 downto 0),
       rst_reg_0 => rst_reg,
       rst_reg_1 => rst_reg_0,
@@ -6280,11 +3488,11 @@ I_SLAVE_ATTACHMENT: entity work.system_axi_gpio_0_0_slave_attachment
       s_axi_awvalid => s_axi_awvalid,
       s_axi_bready => s_axi_bready,
       s_axi_bvalid_i_reg_0 => s_axi_bvalid_i_reg,
-      s_axi_rdata(31 downto 0) => s_axi_rdata(31 downto 0),
-      \s_axi_rdata_i_reg[31]_0\(31 downto 0) => \s_axi_rdata_i_reg[31]\(31 downto 0),
+      s_axi_rdata(14 downto 0) => s_axi_rdata(14 downto 0),
+      \s_axi_rdata_i_reg[31]_0\(14 downto 0) => \s_axi_rdata_i_reg[31]\(14 downto 0),
       s_axi_rready => s_axi_rready,
       s_axi_rvalid_i_reg_0 => s_axi_rvalid_i_reg,
-      s_axi_wdata(31 downto 0) => s_axi_wdata(31 downto 0),
+      s_axi_wdata(13 downto 0) => s_axi_wdata(13 downto 0),
       s_axi_wvalid => s_axi_wvalid
     );
 end STRUCTURE;
@@ -6314,9 +3522,9 @@ entity system_axi_gpio_0_0_axi_gpio is
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
     ip2intc_irpt : out STD_LOGIC;
-    gpio_io_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    gpio_io_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    gpio_io_t : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    gpio_io_i : in STD_LOGIC_VECTOR ( 13 downto 0 );
+    gpio_io_o : out STD_LOGIC_VECTOR ( 13 downto 0 );
+    gpio_io_t : out STD_LOGIC_VECTOR ( 13 downto 0 );
     gpio2_io_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
     gpio2_io_o : out STD_LOGIC_VECTOR ( 1 downto 0 );
     gpio2_io_t : out STD_LOGIC_VECTOR ( 1 downto 0 )
@@ -6338,7 +3546,7 @@ entity system_axi_gpio_0_0_axi_gpio is
   attribute C_GPIO2_WIDTH : integer;
   attribute C_GPIO2_WIDTH of system_axi_gpio_0_0_axi_gpio : entity is 2;
   attribute C_GPIO_WIDTH : integer;
-  attribute C_GPIO_WIDTH of system_axi_gpio_0_0_axi_gpio : entity is 32;
+  attribute C_GPIO_WIDTH of system_axi_gpio_0_0_axi_gpio : entity is 14;
   attribute C_INTERRUPT_PRESENT : integer;
   attribute C_INTERRUPT_PRESENT of system_axi_gpio_0_0_axi_gpio : entity is 0;
   attribute C_IS_DUAL : integer;
@@ -6351,6 +3559,8 @@ entity system_axi_gpio_0_0_axi_gpio is
   attribute C_TRI_DEFAULT of system_axi_gpio_0_0_axi_gpio : entity is -1;
   attribute C_TRI_DEFAULT_2 : integer;
   attribute C_TRI_DEFAULT_2 of system_axi_gpio_0_0_axi_gpio : entity is -1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of system_axi_gpio_0_0_axi_gpio : entity is "axi_gpio";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of system_axi_gpio_0_0_axi_gpio : entity is "yes";
   attribute ip_group : string;
@@ -6362,70 +3572,9 @@ architecture STRUCTURE of system_axi_gpio_0_0_axi_gpio is
   signal AXI_LITE_IPIF_I_n_10 : STD_LOGIC;
   signal AXI_LITE_IPIF_I_n_11 : STD_LOGIC;
   signal AXI_LITE_IPIF_I_n_14 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_49 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_50 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_51 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_52 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_53 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_54 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_55 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_56 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_57 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_58 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_59 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_60 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_61 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_62 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_63 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_64 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_65 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_66 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_67 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_68 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_69 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_70 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_71 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_72 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_73 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_74 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_75 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_76 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_77 : STD_LOGIC;
-  signal AXI_LITE_IPIF_I_n_78 : STD_LOGIC;
   signal AXI_LITE_IPIF_I_n_8 : STD_LOGIC;
   signal AXI_LITE_IPIF_I_n_9 : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[14].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[15].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[16].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[17].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[18].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[19].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[20].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[21].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[22].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[23].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[24].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[25].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[26].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[27].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[28].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[29].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[30].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[31].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1_reg\ : STD_LOGIC;
-  signal \Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1_reg\ : STD_LOGIC;
+  signal DBus_Reg : STD_LOGIC_VECTOR ( 0 to 13 );
   signal GPIO_xferAck_i : STD_LOGIC;
   signal bus2ip_addr : STD_LOGIC_VECTOR ( 0 to 6 );
   signal bus2ip_cs : STD_LOGIC;
@@ -6438,8 +3587,9 @@ architecture STRUCTURE of system_axi_gpio_0_0_axi_gpio is
   signal ip2bus_rdack_i_D1 : STD_LOGIC;
   signal ip2bus_wrack_i : STD_LOGIC;
   signal ip2bus_wrack_i_D1 : STD_LOGIC;
-  signal p_2_out : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal reg1 : STD_LOGIC_VECTOR ( 18 to 31 );
   signal reg3 : STD_LOGIC_VECTOR ( 30 to 31 );
+  signal \^s_axi_rdata\ : STD_LOGIC_VECTOR ( 30 downto 0 );
   signal \^s_axi_wready\ : STD_LOGIC;
   attribute sigis : string;
   attribute sigis of ip2intc_irpt : signal is "INTR_LEVEL_HIGH";
@@ -6450,107 +3600,60 @@ begin
   s_axi_awready <= \^s_axi_wready\;
   s_axi_bresp(1) <= \<const0>\;
   s_axi_bresp(0) <= \<const0>\;
+  s_axi_rdata(31) <= \^s_axi_rdata\(30);
+  s_axi_rdata(30) <= \^s_axi_rdata\(30);
+  s_axi_rdata(29) <= \^s_axi_rdata\(30);
+  s_axi_rdata(28) <= \^s_axi_rdata\(30);
+  s_axi_rdata(27) <= \^s_axi_rdata\(30);
+  s_axi_rdata(26) <= \^s_axi_rdata\(30);
+  s_axi_rdata(25) <= \^s_axi_rdata\(30);
+  s_axi_rdata(24) <= \^s_axi_rdata\(30);
+  s_axi_rdata(23) <= \^s_axi_rdata\(30);
+  s_axi_rdata(22) <= \^s_axi_rdata\(30);
+  s_axi_rdata(21) <= \^s_axi_rdata\(30);
+  s_axi_rdata(20) <= \^s_axi_rdata\(30);
+  s_axi_rdata(19) <= \^s_axi_rdata\(30);
+  s_axi_rdata(18) <= \^s_axi_rdata\(30);
+  s_axi_rdata(17) <= \^s_axi_rdata\(30);
+  s_axi_rdata(16) <= \^s_axi_rdata\(30);
+  s_axi_rdata(15) <= \^s_axi_rdata\(30);
+  s_axi_rdata(14) <= \^s_axi_rdata\(30);
+  s_axi_rdata(13 downto 0) <= \^s_axi_rdata\(13 downto 0);
   s_axi_rresp(1) <= \<const0>\;
   s_axi_rresp(0) <= \<const0>\;
   s_axi_wready <= \^s_axi_wready\;
 AXI_LITE_IPIF_I: entity work.system_axi_gpio_0_0_axi_lite_ipif
      port map (
-      D(31 downto 30) => p_2_out(1 downto 0),
-      D(29) => AXI_LITE_IPIF_I_n_49,
-      D(28) => AXI_LITE_IPIF_I_n_50,
-      D(27) => AXI_LITE_IPIF_I_n_51,
-      D(26) => AXI_LITE_IPIF_I_n_52,
-      D(25) => AXI_LITE_IPIF_I_n_53,
-      D(24) => AXI_LITE_IPIF_I_n_54,
-      D(23) => AXI_LITE_IPIF_I_n_55,
-      D(22) => AXI_LITE_IPIF_I_n_56,
-      D(21) => AXI_LITE_IPIF_I_n_57,
-      D(20) => AXI_LITE_IPIF_I_n_58,
-      D(19) => AXI_LITE_IPIF_I_n_59,
-      D(18) => AXI_LITE_IPIF_I_n_60,
-      D(17) => AXI_LITE_IPIF_I_n_61,
-      D(16) => AXI_LITE_IPIF_I_n_62,
-      D(15) => AXI_LITE_IPIF_I_n_63,
-      D(14) => AXI_LITE_IPIF_I_n_64,
-      D(13) => AXI_LITE_IPIF_I_n_65,
-      D(12) => AXI_LITE_IPIF_I_n_66,
-      D(11) => AXI_LITE_IPIF_I_n_67,
-      D(10) => AXI_LITE_IPIF_I_n_68,
-      D(9) => AXI_LITE_IPIF_I_n_69,
-      D(8) => AXI_LITE_IPIF_I_n_70,
-      D(7) => AXI_LITE_IPIF_I_n_71,
-      D(6) => AXI_LITE_IPIF_I_n_72,
-      D(5) => AXI_LITE_IPIF_I_n_73,
-      D(4) => AXI_LITE_IPIF_I_n_74,
-      D(3) => AXI_LITE_IPIF_I_n_75,
-      D(2) => AXI_LITE_IPIF_I_n_76,
-      D(1) => AXI_LITE_IPIF_I_n_77,
-      D(0) => AXI_LITE_IPIF_I_n_78,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(31) => ip2bus_data(0),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(30) => ip2bus_data(1),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(29) => ip2bus_data(2),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(28) => ip2bus_data(3),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(27) => ip2bus_data(4),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(26) => ip2bus_data(5),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(25) => ip2bus_data(6),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(24) => ip2bus_data(7),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(23) => ip2bus_data(8),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(22) => ip2bus_data(9),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(21) => ip2bus_data(10),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(20) => ip2bus_data(11),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(19) => ip2bus_data(12),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(18) => ip2bus_data(13),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(17) => ip2bus_data(14),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(16) => ip2bus_data(15),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(15) => ip2bus_data(16),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(14) => ip2bus_data(17),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(13) => ip2bus_data(18),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(12) => ip2bus_data(19),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(11) => ip2bus_data(20),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(10) => ip2bus_data(21),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(9) => ip2bus_data(22),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(8) => ip2bus_data(23),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(7) => ip2bus_data(24),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(6) => ip2bus_data(25),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(5) => ip2bus_data(26),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(4) => ip2bus_data(27),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(3) => ip2bus_data(28),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(2) => ip2bus_data(29),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(1) => ip2bus_data(30),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]\(0) => ip2bus_data(31),
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[14].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[14].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[15].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[15].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[16].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[16].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[17].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[17].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[18].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[18].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[19].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[19].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[20].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[20].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[21].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[21].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[22].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[22].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[23].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[23].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[24].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[24].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[25].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[25].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[26].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[26].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[27].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[27].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[28].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[28].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[29].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[29].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[30].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[30].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[31].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[31].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1_reg\,
+      D(13) => DBus_Reg(0),
+      D(12) => DBus_Reg(1),
+      D(11) => DBus_Reg(2),
+      D(10) => DBus_Reg(3),
+      D(9) => DBus_Reg(4),
+      D(8) => DBus_Reg(5),
+      D(7) => DBus_Reg(6),
+      D(6) => DBus_Reg(7),
+      D(5) => DBus_Reg(8),
+      D(4) => DBus_Reg(9),
+      D(3) => DBus_Reg(10),
+      D(2) => DBus_Reg(11),
+      D(1) => DBus_Reg(12),
+      D(0) => DBus_Reg(13),
       E(0) => AXI_LITE_IPIF_I_n_10,
+      \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]\(14) => ip2bus_data(0),
+      \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]\(13) => ip2bus_data(18),
+      \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]\(12) => ip2bus_data(19),
+      \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]\(11) => ip2bus_data(20),
+      \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]\(10) => ip2bus_data(21),
+      \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]\(9) => ip2bus_data(22),
+      \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]\(8) => ip2bus_data(23),
+      \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]\(7) => ip2bus_data(24),
+      \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]\(6) => ip2bus_data(25),
+      \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]\(5) => ip2bus_data(26),
+      \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]\(4) => ip2bus_data(27),
+      \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]\(3) => ip2bus_data(28),
+      \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]\(2) => ip2bus_data(29),
+      \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]\(1) => ip2bus_data(30),
+      \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]\(0) => ip2bus_data(31),
       GPIO_xferAck_i => GPIO_xferAck_i,
       Q(2) => bus2ip_addr(0),
       Q(1) => bus2ip_addr(5),
@@ -6565,6 +3668,20 @@ AXI_LITE_IPIF_I: entity work.system_axi_gpio_0_0_axi_lite_ipif
       ip2bus_rdack_i_D1_reg => s_axi_arready,
       ip2bus_wrack_i_D1 => ip2bus_wrack_i_D1,
       ip2bus_wrack_i_D1_reg => \^s_axi_wready\,
+      reg1(13) => reg1(18),
+      reg1(12) => reg1(19),
+      reg1(11) => reg1(20),
+      reg1(10) => reg1(21),
+      reg1(9) => reg1(22),
+      reg1(8) => reg1(23),
+      reg1(7) => reg1(24),
+      reg1(6) => reg1(25),
+      reg1(5) => reg1(26),
+      reg1(4) => reg1(27),
+      reg1(3) => reg1(28),
+      reg1(2) => reg1(29),
+      reg1(1) => reg1(30),
+      reg1(0) => reg1(31),
       reg3(1) => reg3(30),
       reg3(0) => reg3(31),
       rst_reg => AXI_LITE_IPIF_I_n_8,
@@ -6579,25 +3696,9 @@ AXI_LITE_IPIF_I: entity work.system_axi_gpio_0_0_axi_lite_ipif
       s_axi_awvalid => s_axi_awvalid,
       s_axi_bready => s_axi_bready,
       s_axi_bvalid_i_reg => s_axi_bvalid,
-      s_axi_rdata(31 downto 0) => s_axi_rdata(31 downto 0),
-      \s_axi_rdata_i_reg[31]\(31) => ip2bus_data_i_D1(0),
-      \s_axi_rdata_i_reg[31]\(30) => ip2bus_data_i_D1(1),
-      \s_axi_rdata_i_reg[31]\(29) => ip2bus_data_i_D1(2),
-      \s_axi_rdata_i_reg[31]\(28) => ip2bus_data_i_D1(3),
-      \s_axi_rdata_i_reg[31]\(27) => ip2bus_data_i_D1(4),
-      \s_axi_rdata_i_reg[31]\(26) => ip2bus_data_i_D1(5),
-      \s_axi_rdata_i_reg[31]\(25) => ip2bus_data_i_D1(6),
-      \s_axi_rdata_i_reg[31]\(24) => ip2bus_data_i_D1(7),
-      \s_axi_rdata_i_reg[31]\(23) => ip2bus_data_i_D1(8),
-      \s_axi_rdata_i_reg[31]\(22) => ip2bus_data_i_D1(9),
-      \s_axi_rdata_i_reg[31]\(21) => ip2bus_data_i_D1(10),
-      \s_axi_rdata_i_reg[31]\(20) => ip2bus_data_i_D1(11),
-      \s_axi_rdata_i_reg[31]\(19) => ip2bus_data_i_D1(12),
-      \s_axi_rdata_i_reg[31]\(18) => ip2bus_data_i_D1(13),
-      \s_axi_rdata_i_reg[31]\(17) => ip2bus_data_i_D1(14),
-      \s_axi_rdata_i_reg[31]\(16) => ip2bus_data_i_D1(15),
-      \s_axi_rdata_i_reg[31]\(15) => ip2bus_data_i_D1(16),
-      \s_axi_rdata_i_reg[31]\(14) => ip2bus_data_i_D1(17),
+      s_axi_rdata(14) => \^s_axi_rdata\(30),
+      s_axi_rdata(13 downto 0) => \^s_axi_rdata\(13 downto 0),
+      \s_axi_rdata_i_reg[31]\(14) => ip2bus_data_i_D1(0),
       \s_axi_rdata_i_reg[31]\(13) => ip2bus_data_i_D1(18),
       \s_axi_rdata_i_reg[31]\(12) => ip2bus_data_i_D1(19),
       \s_axi_rdata_i_reg[31]\(11) => ip2bus_data_i_D1(20),
@@ -6614,7 +3715,7 @@ AXI_LITE_IPIF_I: entity work.system_axi_gpio_0_0_axi_lite_ipif
       \s_axi_rdata_i_reg[31]\(0) => ip2bus_data_i_D1(31),
       s_axi_rready => s_axi_rready,
       s_axi_rvalid_i_reg => s_axi_rvalid,
-      s_axi_wdata(31 downto 0) => s_axi_wdata(31 downto 0),
+      s_axi_wdata(13 downto 0) => s_axi_wdata(13 downto 0),
       s_axi_wvalid => s_axi_wvalid
     );
 GND: unisim.vcomponents.GND
@@ -6623,73 +3724,24 @@ GND: unisim.vcomponents.GND
     );
 gpio_core_1: entity work.system_axi_gpio_0_0_GPIO_Core
      port map (
-      D(31 downto 30) => p_2_out(1 downto 0),
-      D(29) => AXI_LITE_IPIF_I_n_49,
-      D(28) => AXI_LITE_IPIF_I_n_50,
-      D(27) => AXI_LITE_IPIF_I_n_51,
-      D(26) => AXI_LITE_IPIF_I_n_52,
-      D(25) => AXI_LITE_IPIF_I_n_53,
-      D(24) => AXI_LITE_IPIF_I_n_54,
-      D(23) => AXI_LITE_IPIF_I_n_55,
-      D(22) => AXI_LITE_IPIF_I_n_56,
-      D(21) => AXI_LITE_IPIF_I_n_57,
-      D(20) => AXI_LITE_IPIF_I_n_58,
-      D(19) => AXI_LITE_IPIF_I_n_59,
-      D(18) => AXI_LITE_IPIF_I_n_60,
-      D(17) => AXI_LITE_IPIF_I_n_61,
-      D(16) => AXI_LITE_IPIF_I_n_62,
-      D(15) => AXI_LITE_IPIF_I_n_63,
-      D(14) => AXI_LITE_IPIF_I_n_64,
-      D(13) => AXI_LITE_IPIF_I_n_65,
-      D(12) => AXI_LITE_IPIF_I_n_66,
-      D(11) => AXI_LITE_IPIF_I_n_67,
-      D(10) => AXI_LITE_IPIF_I_n_68,
-      D(9) => AXI_LITE_IPIF_I_n_69,
-      D(8) => AXI_LITE_IPIF_I_n_70,
-      D(7) => AXI_LITE_IPIF_I_n_71,
-      D(6) => AXI_LITE_IPIF_I_n_72,
-      D(5) => AXI_LITE_IPIF_I_n_73,
-      D(4) => AXI_LITE_IPIF_I_n_74,
-      D(3) => AXI_LITE_IPIF_I_n_75,
-      D(2) => AXI_LITE_IPIF_I_n_76,
-      D(1) => AXI_LITE_IPIF_I_n_77,
-      D(0) => AXI_LITE_IPIF_I_n_78,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[0]_0\ => AXI_LITE_IPIF_I_n_14,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[10].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[11].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[12].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[13].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[14].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[14].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[15].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[15].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[16].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[16].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[17].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[17].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[18].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[18].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[19].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[19].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[1].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[20].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[20].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[21].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[21].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[22].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[22].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[23].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[23].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[24].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[24].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[25].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[25].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[26].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[26].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[27].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[27].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[28].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[28].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[29].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[29].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[2].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[30].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[30].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[31].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[31].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[3].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[4].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[5].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[6].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[7].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[8].reg1_reg\,
-      \Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1_reg\ => \Dual.ALLIN0_ND_G0.READ_REG_GEN[9].reg1_reg\,
-      \Dual.gpio2_Data_Out_reg[0]_0\ => AXI_LITE_IPIF_I_n_8,
-      \Dual.gpio2_OE_reg[0]_0\ => AXI_LITE_IPIF_I_n_9,
-      \Dual.gpio_Data_Out_reg[0]_0\(0) => AXI_LITE_IPIF_I_n_11,
+      D(13) => DBus_Reg(0),
+      D(12) => DBus_Reg(1),
+      D(11) => DBus_Reg(2),
+      D(10) => DBus_Reg(3),
+      D(9) => DBus_Reg(4),
+      D(8) => DBus_Reg(5),
+      D(7) => DBus_Reg(6),
+      D(6) => DBus_Reg(7),
+      D(5) => DBus_Reg(8),
+      D(4) => DBus_Reg(9),
+      D(3) => DBus_Reg(10),
+      D(2) => DBus_Reg(11),
+      D(1) => DBus_Reg(12),
+      D(0) => DBus_Reg(13),
+      \Dual.ALLIN0_ND_G0.READ_REG_GEN[0].reg1_reg[18]_0\ => AXI_LITE_IPIF_I_n_14,
+      \Dual.gpio2_Data_Out_reg[0]_0\ => AXI_LITE_IPIF_I_n_9,
+      \Dual.gpio2_OE_reg[0]_0\ => AXI_LITE_IPIF_I_n_8,
+      \Dual.gpio_OE_reg[0]_0\(0) => AXI_LITE_IPIF_I_n_11,
       E(0) => AXI_LITE_IPIF_I_n_10,
       GPIO_xferAck_i => GPIO_xferAck_i,
       Q(2) => bus2ip_addr(0),
@@ -6701,16 +3753,30 @@ gpio_core_1: entity work.system_axi_gpio_0_0_GPIO_Core
       gpio2_io_i(1 downto 0) => gpio2_io_i(1 downto 0),
       gpio2_io_o(1 downto 0) => gpio2_io_o(1 downto 0),
       gpio2_io_t(1 downto 0) => gpio2_io_t(1 downto 0),
-      gpio_io_i(31 downto 0) => gpio_io_i(31 downto 0),
-      gpio_io_o(31 downto 0) => gpio_io_o(31 downto 0),
-      gpio_io_t(31 downto 0) => gpio_io_t(31 downto 0),
+      gpio_io_i(13 downto 0) => gpio_io_i(13 downto 0),
+      gpio_io_o(13 downto 0) => gpio_io_o(13 downto 0),
+      gpio_io_t(13 downto 0) => gpio_io_t(13 downto 0),
       gpio_xferAck_Reg => gpio_xferAck_Reg,
       ip2bus_rdack_i => ip2bus_rdack_i,
       ip2bus_wrack_i => ip2bus_wrack_i,
+      reg1(13) => reg1(18),
+      reg1(12) => reg1(19),
+      reg1(11) => reg1(20),
+      reg1(10) => reg1(21),
+      reg1(9) => reg1(22),
+      reg1(8) => reg1(23),
+      reg1(7) => reg1(24),
+      reg1(6) => reg1(25),
+      reg1(5) => reg1(26),
+      reg1(4) => reg1(27),
+      reg1(3) => reg1(28),
+      reg1(2) => reg1(29),
+      reg1(1) => reg1(30),
+      reg1(0) => reg1(31),
       reg3(1) => reg3(30),
       reg3(0) => reg3(31),
       s_axi_aclk => s_axi_aclk,
-      s_axi_wdata(3 downto 2) => s_axi_wdata(31 downto 30),
+      s_axi_wdata(3 downto 2) => s_axi_wdata(13 downto 12),
       s_axi_wdata(1 downto 0) => s_axi_wdata(1 downto 0)
     );
 \ip2bus_data_i_D1_reg[0]\: unisim.vcomponents.FDRE
@@ -6719,70 +3785,6 @@ gpio_core_1: entity work.system_axi_gpio_0_0_GPIO_Core
       CE => '1',
       D => ip2bus_data(0),
       Q => ip2bus_data_i_D1(0),
-      R => bus2ip_reset
-    );
-\ip2bus_data_i_D1_reg[10]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => ip2bus_data(10),
-      Q => ip2bus_data_i_D1(10),
-      R => bus2ip_reset
-    );
-\ip2bus_data_i_D1_reg[11]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => ip2bus_data(11),
-      Q => ip2bus_data_i_D1(11),
-      R => bus2ip_reset
-    );
-\ip2bus_data_i_D1_reg[12]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => ip2bus_data(12),
-      Q => ip2bus_data_i_D1(12),
-      R => bus2ip_reset
-    );
-\ip2bus_data_i_D1_reg[13]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => ip2bus_data(13),
-      Q => ip2bus_data_i_D1(13),
-      R => bus2ip_reset
-    );
-\ip2bus_data_i_D1_reg[14]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => ip2bus_data(14),
-      Q => ip2bus_data_i_D1(14),
-      R => bus2ip_reset
-    );
-\ip2bus_data_i_D1_reg[15]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => ip2bus_data(15),
-      Q => ip2bus_data_i_D1(15),
-      R => bus2ip_reset
-    );
-\ip2bus_data_i_D1_reg[16]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => ip2bus_data(16),
-      Q => ip2bus_data_i_D1(16),
-      R => bus2ip_reset
-    );
-\ip2bus_data_i_D1_reg[17]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => ip2bus_data(17),
-      Q => ip2bus_data_i_D1(17),
       R => bus2ip_reset
     );
 \ip2bus_data_i_D1_reg[18]\: unisim.vcomponents.FDRE
@@ -6799,14 +3801,6 @@ gpio_core_1: entity work.system_axi_gpio_0_0_GPIO_Core
       CE => '1',
       D => ip2bus_data(19),
       Q => ip2bus_data_i_D1(19),
-      R => bus2ip_reset
-    );
-\ip2bus_data_i_D1_reg[1]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => ip2bus_data(1),
-      Q => ip2bus_data_i_D1(1),
       R => bus2ip_reset
     );
 \ip2bus_data_i_D1_reg[20]\: unisim.vcomponents.FDRE
@@ -6889,14 +3883,6 @@ gpio_core_1: entity work.system_axi_gpio_0_0_GPIO_Core
       Q => ip2bus_data_i_D1(29),
       R => bus2ip_reset
     );
-\ip2bus_data_i_D1_reg[2]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => ip2bus_data(2),
-      Q => ip2bus_data_i_D1(2),
-      R => bus2ip_reset
-    );
 \ip2bus_data_i_D1_reg[30]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
@@ -6911,62 +3897,6 @@ gpio_core_1: entity work.system_axi_gpio_0_0_GPIO_Core
       CE => '1',
       D => ip2bus_data(31),
       Q => ip2bus_data_i_D1(31),
-      R => bus2ip_reset
-    );
-\ip2bus_data_i_D1_reg[3]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => ip2bus_data(3),
-      Q => ip2bus_data_i_D1(3),
-      R => bus2ip_reset
-    );
-\ip2bus_data_i_D1_reg[4]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => ip2bus_data(4),
-      Q => ip2bus_data_i_D1(4),
-      R => bus2ip_reset
-    );
-\ip2bus_data_i_D1_reg[5]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => ip2bus_data(5),
-      Q => ip2bus_data_i_D1(5),
-      R => bus2ip_reset
-    );
-\ip2bus_data_i_D1_reg[6]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => ip2bus_data(6),
-      Q => ip2bus_data_i_D1(6),
-      R => bus2ip_reset
-    );
-\ip2bus_data_i_D1_reg[7]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => ip2bus_data(7),
-      Q => ip2bus_data_i_D1(7),
-      R => bus2ip_reset
-    );
-\ip2bus_data_i_D1_reg[8]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => ip2bus_data(8),
-      Q => ip2bus_data_i_D1(8),
-      R => bus2ip_reset
-    );
-\ip2bus_data_i_D1_reg[9]\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => ip2bus_data(9),
-      Q => ip2bus_data_i_D1(9),
       R => bus2ip_reset
     );
 ip2bus_rdack_i_D1_reg: unisim.vcomponents.FDRE
@@ -7011,7 +3941,7 @@ entity system_axi_gpio_0_0 is
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
-    gpio_io_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    gpio_io_i : in STD_LOGIC_VECTOR ( 13 downto 0 );
     gpio2_io_i : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   attribute NotValidForBitStream : boolean;
@@ -7028,8 +3958,8 @@ architecture STRUCTURE of system_axi_gpio_0_0 is
   signal NLW_U0_ip2intc_irpt_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_gpio2_io_o_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_U0_gpio2_io_t_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal NLW_U0_gpio_io_o_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal NLW_U0_gpio_io_t_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal NLW_U0_gpio_io_o_UNCONNECTED : STD_LOGIC_VECTOR ( 13 downto 0 );
+  signal NLW_U0_gpio_io_t_UNCONNECTED : STD_LOGIC_VECTOR ( 13 downto 0 );
   attribute C_ALL_INPUTS : integer;
   attribute C_ALL_INPUTS of U0 : label is 1;
   attribute C_ALL_INPUTS_2 : integer;
@@ -7047,7 +3977,7 @@ architecture STRUCTURE of system_axi_gpio_0_0 is
   attribute C_GPIO2_WIDTH : integer;
   attribute C_GPIO2_WIDTH of U0 : label is 2;
   attribute C_GPIO_WIDTH : integer;
-  attribute C_GPIO_WIDTH of U0 : label is 32;
+  attribute C_GPIO_WIDTH of U0 : label is 14;
   attribute C_INTERRUPT_PRESENT : integer;
   attribute C_INTERRUPT_PRESENT of U0 : label is 0;
   attribute C_IS_DUAL : integer;
@@ -7097,9 +4027,9 @@ U0: entity work.system_axi_gpio_0_0_axi_gpio
       gpio2_io_i(1 downto 0) => gpio2_io_i(1 downto 0),
       gpio2_io_o(1 downto 0) => NLW_U0_gpio2_io_o_UNCONNECTED(1 downto 0),
       gpio2_io_t(1 downto 0) => NLW_U0_gpio2_io_t_UNCONNECTED(1 downto 0),
-      gpio_io_i(31 downto 0) => gpio_io_i(31 downto 0),
-      gpio_io_o(31 downto 0) => NLW_U0_gpio_io_o_UNCONNECTED(31 downto 0),
-      gpio_io_t(31 downto 0) => NLW_U0_gpio_io_t_UNCONNECTED(31 downto 0),
+      gpio_io_i(13 downto 0) => gpio_io_i(13 downto 0),
+      gpio_io_o(13 downto 0) => NLW_U0_gpio_io_o_UNCONNECTED(13 downto 0),
+      gpio_io_t(13 downto 0) => NLW_U0_gpio_io_t_UNCONNECTED(13 downto 0),
       ip2intc_irpt => NLW_U0_ip2intc_irpt_UNCONNECTED,
       s_axi_aclk => s_axi_aclk,
       s_axi_araddr(8 downto 0) => s_axi_araddr(8 downto 0),

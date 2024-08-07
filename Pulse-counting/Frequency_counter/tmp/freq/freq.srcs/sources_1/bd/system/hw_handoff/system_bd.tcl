@@ -898,7 +898,7 @@ proc create_hier_cell_FrequencyCounter { parentCell nameHier } {
   create_bd_pin -dir O -from 31 -to 0 counter_output
   create_bd_pin -dir O -from 13 -to 0 data_access
   create_bd_pin -dir O -from 1 -to 0 pulse
-  create_bd_pin -dir O -from 14 -to 0 pulse_count
+  create_bd_pin -dir O -from 13 -to 0 pulse_count
   create_bd_pin -dir I -type rst rst
 
   # Create instance: frequency_counter_0, and set properties
@@ -921,6 +921,7 @@ proc create_hier_cell_FrequencyCounter { parentCell nameHier } {
   connect_bd_net -net frequency_counter_0_counter_output [get_bd_pins counter_output] [get_bd_pins frequency_counter_0/counter_output]
   connect_bd_net -net frequency_counter_0_data_access [get_bd_pins data_access] [get_bd_pins frequency_counter_0/data_access]
   connect_bd_net -net frequency_counter_0_pulse [get_bd_pins pulse] [get_bd_pins frequency_counter_0/pulse]
+  connect_bd_net -net frequency_counter_0_pulse_count -boundary_type lower [get_bd_pins pulse_count]
   connect_bd_net -net rst_1 [get_bd_pins rst] [get_bd_pins frequency_counter_0/rst]
 
   # Restore current instance
@@ -1090,7 +1091,7 @@ proc create_root_design { parentCell } {
    CONFIG.C_ALL_INPUTS_2 {1} \
    CONFIG.C_ALL_OUTPUTS_2 {0} \
    CONFIG.C_GPIO2_WIDTH {2} \
-   CONFIG.C_GPIO_WIDTH {32} \
+   CONFIG.C_GPIO_WIDTH {14} \
    CONFIG.C_IS_DUAL {1} \
  ] $axi_gpio_0
 
@@ -1118,7 +1119,7 @@ proc create_root_design { parentCell } {
 
   # Create port connections
   connect_bd_net -net DataAcquisition_adc_clk [get_bd_pins DataAcquisition/adc_clk] [get_bd_pins FrequencyCounter/clk]
-  connect_bd_net -net FrequencyCounter_counter_output [get_bd_pins FrequencyCounter/counter_output] [get_bd_pins axi_gpio_0/gpio_io_i]
+  connect_bd_net -net FrequencyCounter_data_access [get_bd_pins FrequencyCounter/data_access] [get_bd_pins axi_gpio_0/gpio_io_i]
   connect_bd_net -net FrequencyCounter_pulse [get_bd_pins FrequencyCounter/pulse] [get_bd_pins axi_gpio_0/gpio2_io_i]
   connect_bd_net -net adc_clk_n_i_1 [get_bd_ports adc_clk_n_i] [get_bd_pins DataAcquisition/adc_clk_n_i]
   connect_bd_net -net adc_clk_p_i_1 [get_bd_ports adc_clk_p_i] [get_bd_pins DataAcquisition/adc_clk_p_i]

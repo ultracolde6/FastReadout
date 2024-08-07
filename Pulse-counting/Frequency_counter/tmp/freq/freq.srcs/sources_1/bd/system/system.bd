@@ -313,7 +313,7 @@
             "value": "2"
           },
           "C_GPIO_WIDTH": {
-            "value": "32"
+            "value": "14"
           },
           "C_IS_DUAL": {
             "value": "1"
@@ -605,11 +605,6 @@
             "left": "1",
             "right": "0"
           },
-          "pulse_count": {
-            "direction": "O",
-            "left": "14",
-            "right": "0"
-          },
           "counter_output": {
             "direction": "O",
             "left": "31",
@@ -624,6 +619,11 @@
             "direction": "I"
           },
           "data_access": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          },
+          "pulse_count": {
             "direction": "O",
             "left": "13",
             "right": "0"
@@ -643,10 +643,6 @@
                 "mode": "Master",
                 "vlnv": "xilinx.com:interface:axis_rtl:1.0",
                 "parameters": {
-                  "FREQ_HZ": {
-                    "value": "125000000",
-                    "value_src": "const_prop"
-                  },
                   "TDATA_NUM_BYTES": {
                     "value": "4",
                     "value_src": "auto"
@@ -678,6 +674,10 @@
                   "HAS_TLAST": {
                     "value": "0",
                     "value_src": "constant"
+                  },
+                  "FREQ_HZ": {
+                    "value": "125000000",
+                    "value_src": "const_prop"
                   },
                   "CLK_DOMAIN": {
                     "value": "system_axis_red_pitaya_adc_0_0_adc_clk",
@@ -849,6 +849,11 @@
             "ports": [
               "frequency_counter_0/pulse",
               "pulse"
+            ]
+          },
+          "frequency_counter_0_pulse_count": {
+            "ports": [
+              "pulse_count"
             ]
           }
         }
@@ -2504,16 +2509,16 @@
                   }
                 },
                 "interface_nets": {
-                  "s00_couplers_to_auto_pc": {
-                    "interface_ports": [
-                      "S_AXI",
-                      "auto_pc/S_AXI"
-                    ]
-                  },
                   "auto_pc_to_s00_couplers": {
                     "interface_ports": [
                       "M_AXI",
                       "auto_pc/M_AXI"
+                    ]
+                  },
+                  "s00_couplers_to_auto_pc": {
+                    "interface_ports": [
+                      "S_AXI",
+                      "auto_pc/S_AXI"
                     ]
                   }
                 },
@@ -2576,12 +2581,6 @@
           }
         },
         "interface_nets": {
-          "processing_system7_0_M_AXI_GP0": {
-            "interface_ports": [
-              "processing_system7_0/M_AXI_GP0",
-              "ps7_0_axi_periph/S00_AXI"
-            ]
-          },
           "processing_system7_0_FIXED_IO": {
             "interface_ports": [
               "FIXED_IO",
@@ -2598,6 +2597,12 @@
             "interface_ports": [
               "M00_AXI",
               "ps7_0_axi_periph/M00_AXI"
+            ]
+          },
+          "processing_system7_0_M_AXI_GP0": {
+            "interface_ports": [
+              "processing_system7_0/M_AXI_GP0",
+              "ps7_0_axi_periph/S00_AXI"
             ]
           }
         },
@@ -2633,12 +2638,6 @@
       }
     },
     "interface_nets": {
-      "processing_system7_0_FIXED_IO": {
-        "interface_ports": [
-          "FIXED_IO",
-          "PS7/FIXED_IO"
-        ]
-      },
       "signal_split_0_M_AXIS_PORT1": {
         "interface_ports": [
           "FrequencyCounter/S_AXIS_IN",
@@ -2655,6 +2654,12 @@
         "interface_ports": [
           "PS7/M00_AXI",
           "axi_gpio_0/S_AXI"
+        ]
+      },
+      "processing_system7_0_FIXED_IO": {
+        "interface_ports": [
+          "FIXED_IO",
+          "PS7/FIXED_IO"
         ]
       }
     },
@@ -2743,16 +2748,16 @@
           "FrequencyCounter/rst"
         ]
       },
-      "FrequencyCounter_counter_output": {
-        "ports": [
-          "FrequencyCounter/counter_output",
-          "axi_gpio_0/gpio_io_i"
-        ]
-      },
       "FrequencyCounter_pulse": {
         "ports": [
           "FrequencyCounter/pulse",
           "axi_gpio_0/gpio2_io_i"
+        ]
+      },
+      "FrequencyCounter_data_access": {
+        "ports": [
+          "FrequencyCounter/data_access",
+          "axi_gpio_0/gpio_io_i"
         ]
       }
     },

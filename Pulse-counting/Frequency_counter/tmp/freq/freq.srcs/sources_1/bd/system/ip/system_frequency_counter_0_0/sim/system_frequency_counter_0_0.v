@@ -57,10 +57,10 @@
 module system_frequency_counter_0_0 (
   S_AXIS_IN_tdata,
   S_AXIS_IN_tvalid,
-  M_AXIS_OUT_tdata,
-  M_AXIS_OUT_tvalid,
   clk,
   rst,
+  M_AXIS_OUT_tdata,
+  M_AXIS_OUT_tvalid,
   counter_output,
   clock_counter,
   pulse,
@@ -72,17 +72,17 @@ input wire [31 : 0] S_AXIS_IN_tdata;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXIS_IN, FREQ_HZ 125000000, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, PHASE 0.000, CLK_DOMAIN system_axis_red_pitaya_adc_0_0_adc_clk, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_IN TVALID" *)
 input wire S_AXIS_IN_tvalid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_OUT TDATA" *)
-output wire [31 : 0] M_AXIS_OUT_tdata;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS_OUT, FREQ_HZ 125000000, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, PHASE 0.000, CLK_DOMAIN system_axis_red_pitaya_adc_0_0_adc_clk, LAYERED_METADATA undef, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_OUT TVALID" *)
-output wire M_AXIS_OUT_tvalid;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF M_AXIS_OUT:S_AXIS_IN, ASSOCIATED_RESET rst, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN system_axis_red_pitaya_adc_0_0_adc_clk, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
 input wire rst;
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_OUT TDATA" *)
+output wire [31 : 0] M_AXIS_OUT_tdata;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS_OUT, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 125000000, PHASE 0.000, CLK_DOMAIN system_axis_red_pitaya_adc_0_0_adc_clk, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_OUT TVALID" *)
+output wire M_AXIS_OUT_tvalid;
 output wire [31 : 0] counter_output;
 output wire [31 : 0] clock_counter;
 output wire [1 : 0] pulse;
@@ -90,18 +90,18 @@ output wire [13 : 0] data_access;
 
   frequency_counter #(
     .COUNT_WIDTH(32),
-    .HIGH_THRESHOLD(14'B01111101000000),
-    .LOW_THRESHOLD(14'B00111110100000),
-    .PULSE_DURATION(1000000000),
+    .HIGH_THRESHOLD(14'B01011101110000),
+    .LOW_THRESHOLD(14'B00011111010000),
+    .PULSE_DURATION(125000000),
     .ADC_WIDTH(14),
     .AXIS_TDATA_WIDTH(32)
   ) inst (
     .S_AXIS_IN_tdata(S_AXIS_IN_tdata),
     .S_AXIS_IN_tvalid(S_AXIS_IN_tvalid),
-    .M_AXIS_OUT_tdata(M_AXIS_OUT_tdata),
-    .M_AXIS_OUT_tvalid(M_AXIS_OUT_tvalid),
     .clk(clk),
     .rst(rst),
+    .M_AXIS_OUT_tdata(M_AXIS_OUT_tdata),
+    .M_AXIS_OUT_tvalid(M_AXIS_OUT_tvalid),
     .counter_output(counter_output),
     .clock_counter(clock_counter),
     .pulse(pulse),
