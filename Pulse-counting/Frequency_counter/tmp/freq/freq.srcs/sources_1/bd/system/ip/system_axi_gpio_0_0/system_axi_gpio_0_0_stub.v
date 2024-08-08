@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Thu Aug  1 11:41:30 2024
+// Date        : Fri Aug  2 13:03:40 2024
 // Host        : DESKTOP-RDVR7FP running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top system_axi_gpio_0_0 -prefix
 //               system_axi_gpio_0_0_ system_axi_gpio_0_0_stub.v
@@ -18,7 +18,7 @@ module system_axi_gpio_0_0(s_axi_aclk, s_axi_aresetn, s_axi_awaddr,
   s_axi_awvalid, s_axi_awready, s_axi_wdata, s_axi_wstrb, s_axi_wvalid, s_axi_wready, 
   s_axi_bresp, s_axi_bvalid, s_axi_bready, s_axi_araddr, s_axi_arvalid, s_axi_arready, 
   s_axi_rdata, s_axi_rresp, s_axi_rvalid, s_axi_rready, gpio_io_i, gpio2_io_i)
-/* synthesis syn_black_box black_box_pad_pin="s_axi_aclk,s_axi_aresetn,s_axi_awaddr[8:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,s_axi_araddr[8:0],s_axi_arvalid,s_axi_arready,s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rvalid,s_axi_rready,gpio_io_i[31:0],gpio2_io_i[1:0]" */;
+/* synthesis syn_black_box black_box_pad_pin="s_axi_aclk,s_axi_aresetn,s_axi_awaddr[8:0],s_axi_awvalid,s_axi_awready,s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wvalid,s_axi_wready,s_axi_bresp[1:0],s_axi_bvalid,s_axi_bready,s_axi_araddr[8:0],s_axi_arvalid,s_axi_arready,s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rvalid,s_axi_rready,gpio_io_i[31:0],gpio2_io_i[13:0]" */;
   input s_axi_aclk;
   input s_axi_aresetn;
   input [8:0]s_axi_awaddr;
@@ -39,5 +39,5 @@ module system_axi_gpio_0_0(s_axi_aclk, s_axi_aresetn, s_axi_awaddr,
   output s_axi_rvalid;
   input s_axi_rready;
   input [31:0]gpio_io_i;
-  input [1:0]gpio2_io_i;
+  input [13:0]gpio2_io_i;
 endmodule

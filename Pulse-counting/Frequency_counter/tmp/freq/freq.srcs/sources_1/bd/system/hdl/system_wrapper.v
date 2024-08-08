@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Wed Aug  7 17:31:47 2024
+//Date        : Thu Aug  8 14:49:29 2024
 //Host        : DESKTOP-RDVR7FP running 64-bit major release  (build 9200)
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
@@ -36,8 +36,6 @@ module system_wrapper
     adc_csn_o,
     adc_dat_a_i,
     adc_dat_b_i,
-    adc_enc_n_o,
-    adc_enc_p_o,
     dac_clk_o,
     dac_dat_o,
     dac_pwm_o,
@@ -47,10 +45,7 @@ module system_wrapper
     daisy_n_i,
     daisy_n_o,
     daisy_p_i,
-    daisy_p_o,
-    exp_n_tri_io,
-    exp_p_tri_io,
-    led_o);
+    daisy_p_o);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -77,8 +72,6 @@ module system_wrapper
   output adc_csn_o;
   input [13:0]adc_dat_a_i;
   input [13:0]adc_dat_b_i;
-  output adc_enc_n_o;
-  output adc_enc_p_o;
   output dac_clk_o;
   output [13:0]dac_dat_o;
   output [3:0]dac_pwm_o;
@@ -89,9 +82,6 @@ module system_wrapper
   output [1:0]daisy_n_o;
   input [1:0]daisy_p_i;
   output [1:0]daisy_p_o;
-  inout [7:0]exp_n_tri_io;
-  inout [7:0]exp_p_tri_io;
-  output [1:0]led_o;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -119,8 +109,6 @@ module system_wrapper
   wire adc_csn_o;
   wire [13:0]adc_dat_a_i;
   wire [13:0]adc_dat_b_i;
-  wire adc_enc_n_o;
-  wire adc_enc_p_o;
   wire dac_clk_o;
   wire [13:0]dac_dat_o;
   wire [3:0]dac_pwm_o;
@@ -131,9 +119,6 @@ module system_wrapper
   wire [1:0]daisy_n_o;
   wire [1:0]daisy_p_i;
   wire [1:0]daisy_p_o;
-  wire [7:0]exp_n_tri_io;
-  wire [7:0]exp_p_tri_io;
-  wire [1:0]led_o;
 
   system system_i
        (.DDR_addr(DDR_addr),
@@ -162,8 +147,6 @@ module system_wrapper
         .adc_csn_o(adc_csn_o),
         .adc_dat_a_i(adc_dat_a_i),
         .adc_dat_b_i(adc_dat_b_i),
-        .adc_enc_n_o(adc_enc_n_o),
-        .adc_enc_p_o(adc_enc_p_o),
         .dac_clk_o(dac_clk_o),
         .dac_dat_o(dac_dat_o),
         .dac_pwm_o(dac_pwm_o),
@@ -173,8 +156,5 @@ module system_wrapper
         .daisy_n_i(daisy_n_i),
         .daisy_n_o(daisy_n_o),
         .daisy_p_i(daisy_p_i),
-        .daisy_p_o(daisy_p_o),
-        .exp_n_tri_io(exp_n_tri_io),
-        .exp_p_tri_io(exp_p_tri_io),
-        .led_o(led_o));
+        .daisy_p_o(daisy_p_o));
 endmodule

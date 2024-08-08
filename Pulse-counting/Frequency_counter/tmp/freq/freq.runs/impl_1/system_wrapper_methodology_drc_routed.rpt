@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Wed Aug  7 17:36:14 2024
+| Date         : Thu Aug  8 14:54:07 2024
 | Host         : DESKTOP-RDVR7FP running 64-bit major release  (build 9200)
 | Command      : report_methodology -file system_wrapper_methodology_drc_routed.rpt -pb system_wrapper_methodology_drc_routed.pb -rpx system_wrapper_methodology_drc_routed.rpx
 | Design       : system_wrapper
@@ -23,16 +23,28 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 18
-+-----------+----------+-------------------------------------------------+------------+
-| Rule      | Severity | Description                                     | Violations |
-+-----------+----------+-------------------------------------------------+------------+
-| TIMING-18 | Warning  | Missing input or output delay                   | 14         |
-| XDCC-5    | Warning  | User Non-Timing constraint/property overwritten | 4          |
-+-----------+----------+-------------------------------------------------+------------+
+             Violations found: 36
++-----------+------------------+----------------------------------------------------+------------+
+| Rule      | Severity         | Description                                        | Violations |
++-----------+------------------+----------------------------------------------------+------------+
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 1          |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 1          |
+| TIMING-18 | Warning          | Missing input or output delay                      | 30         |
+| XDCC-5    | Warning          | User Non-Timing constraint/property overwritten    | 4          |
++-----------+------------------+----------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+TIMING-4#1 Critical Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock system_i/Output_pulse/clk_wiz_0/inst/clk_in1 is defined downstream of clock adc_clk and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-27#1 Critical Warning
+Invalid primary clock on hierarchical pin  
+A primary clock system_i/Output_pulse/clk_wiz_0/inst/clk_in1 is created on an inappropriate internal pin system_i/Output_pulse/clk_wiz_0/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
 TIMING-18#1 Warning
 Missing input or output delay  
 An input delay is missing on adc_dat_a_i[0] relative to clock(s) adc_clk
@@ -103,32 +115,112 @@ Missing input or output delay
 An input delay is missing on adc_dat_a_i[9] relative to clock(s) adc_clk
 Related violations: <none>
 
+TIMING-18#15 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[0] relative to clock(s) adc_clk
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[10] relative to clock(s) adc_clk
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[11] relative to clock(s) adc_clk
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[12] relative to clock(s) adc_clk
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[13] relative to clock(s) adc_clk
+Related violations: <none>
+
+TIMING-18#20 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[1] relative to clock(s) adc_clk
+Related violations: <none>
+
+TIMING-18#21 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[2] relative to clock(s) adc_clk
+Related violations: <none>
+
+TIMING-18#22 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[3] relative to clock(s) adc_clk
+Related violations: <none>
+
+TIMING-18#23 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[4] relative to clock(s) adc_clk
+Related violations: <none>
+
+TIMING-18#24 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[5] relative to clock(s) adc_clk
+Related violations: <none>
+
+TIMING-18#25 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[6] relative to clock(s) adc_clk
+Related violations: <none>
+
+TIMING-18#26 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[7] relative to clock(s) adc_clk
+Related violations: <none>
+
+TIMING-18#27 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[8] relative to clock(s) adc_clk
+Related violations: <none>
+
+TIMING-18#28 Warning
+Missing input or output delay  
+An output delay is missing on dac_dat_o[9] relative to clock(s) adc_clk
+Related violations: <none>
+
+TIMING-18#29 Warning
+Missing input or output delay  
+An output delay is missing on dac_rst_o relative to clock(s) adc_clk
+Related violations: <none>
+
+TIMING-18#30 Warning
+Missing input or output delay  
+An output delay is missing on dac_sel_o relative to clock(s) adc_clk
+Related violations: <none>
+
 XDCC-5#1 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on dac_pwm_o[0] overrides a previous user property.
-New Source: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 111)
-Previous Source: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 99)
+New Source: C:/Users/Purcell/Documents/RedPitayaPractice/FastReadout/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 111)
+Previous Source: C:/Users/Purcell/Documents/RedPitayaPractice/FastReadout/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 99)
 Related violations: <none>
 
 XDCC-5#2 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on dac_pwm_o[1] overrides a previous user property.
-New Source: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 111)
-Previous Source: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 99)
+New Source: C:/Users/Purcell/Documents/RedPitayaPractice/FastReadout/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 111)
+Previous Source: C:/Users/Purcell/Documents/RedPitayaPractice/FastReadout/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 99)
 Related violations: <none>
 
 XDCC-5#3 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on dac_pwm_o[2] overrides a previous user property.
-New Source: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 111)
-Previous Source: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 99)
+New Source: C:/Users/Purcell/Documents/RedPitayaPractice/FastReadout/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 111)
+Previous Source: C:/Users/Purcell/Documents/RedPitayaPractice/FastReadout/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 99)
 Related violations: <none>
 
 XDCC-5#4 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on dac_pwm_o[3] overrides a previous user property.
-New Source: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 111)
-Previous Source: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 99)
+New Source: C:/Users/Purcell/Documents/RedPitayaPractice/FastReadout/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 111)
+Previous Source: C:/Users/Purcell/Documents/RedPitayaPractice/FastReadout/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 99)
 Related violations: <none>
 
 

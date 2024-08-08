@@ -26,7 +26,7 @@ module frequency_counter #
 	output reg [COUNT_WIDTH-1:0]       counter_output,
 	//output reg [COUNT_WIDTH-1:0]       clock_counter,
 	output reg [31:0] clock_counter, //testing
-	output reg [1:0]                   pulse,  //high voltage pulse here
+	output reg [31:0]                   pulse,  //high voltage pulse here
 	output reg signed [ADC_WIDTH-1:0]            data_access
 	//output reg  [0:0]                          state, state_next
 );
@@ -103,7 +103,7 @@ module frequency_counter #
             pulse <= 0;           
             end     
             else begin
-            pulse <= 1;
+            pulse <=10000;
             pulse_count <= pulse_count;
         end
     end

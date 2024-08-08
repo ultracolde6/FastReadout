@@ -59,6 +59,23 @@
 						"TVALID": { "actual": "S_AXIS_IN_tvalid"}
 					}
 				},
+				"/Output_pulse/axis_constant_0/M_AXIS": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "aclk"},
+						"TDATA": { "actual": "m_axis_tdata"},
+						"TVALID": { "actual": "m_axis_tvalid"}
+					}
+				},
+				"/Output_pulse/axis_red_pitaya_dac_0/S_AXIS": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "aclk"},
+						"TDATA": { "actual": "s_axis_tdata"},
+						"TREADY": { "actual": "s_axis_tready"},
+						"TVALID": { "actual": "s_axis_tvalid"}
+					}
+				},
 				"/PS7/M00_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {

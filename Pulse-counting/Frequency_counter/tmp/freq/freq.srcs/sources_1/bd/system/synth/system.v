@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Wed Aug  7 17:31:47 2024
+//Date        : Thu Aug  8 14:49:29 2024
 //Host        : DESKTOP-RDVR7FP running 64-bit major release  (build 9200)
 //Command     : generate_target system.bd
 //Design      : system
@@ -65,22 +65,22 @@ endmodule
 module FrequencyCounter_imp_MPHDEJ
    (M_AXIS_OUT_tdata,
     M_AXIS_OUT_tvalid,
+    Pulse,
     S_AXIS_IN_tdata,
     S_AXIS_IN_tvalid,
     clk,
     counter_output,
     data_access,
-    pulse,
     pulse_count,
     rst);
   output M_AXIS_OUT_tdata;
   output M_AXIS_OUT_tvalid;
+  output [31:0]Pulse;
   input [31:0]S_AXIS_IN_tdata;
   input S_AXIS_IN_tvalid;
   input clk;
   output [31:0]counter_output;
   output [13:0]data_access;
-  output [1:0]pulse;
   output [31:0]pulse_count;
   input rst;
 
@@ -91,17 +91,17 @@ module FrequencyCounter_imp_MPHDEJ
   wire frequency_counter_0_M_AXIS_OUT_TVALID;
   wire [31:0]frequency_counter_0_counter_output;
   wire [13:0]frequency_counter_0_data_access;
-  wire [1:0]frequency_counter_0_pulse;
+  wire [31:0]frequency_counter_0_pulse;
   wire rst_1;
 
   assign M_AXIS_OUT_tdata = frequency_counter_0_M_AXIS_OUT_TDATA[0];
   assign M_AXIS_OUT_tvalid = frequency_counter_0_M_AXIS_OUT_TVALID;
+  assign Pulse[31:0] = frequency_counter_0_pulse;
   assign S_AXIS_IN_1_TDATA = S_AXIS_IN_tdata[31:0];
   assign S_AXIS_IN_1_TVALID = S_AXIS_IN_tvalid;
   assign clk_1 = clk;
   assign counter_output[31:0] = frequency_counter_0_counter_output;
   assign data_access[13:0] = frequency_counter_0_data_access;
-  assign pulse[1:0] = frequency_counter_0_pulse;
   assign rst_1 = rst;
   system_frequency_counter_0_0 frequency_counter_0
        (.M_AXIS_OUT_tdata(frequency_counter_0_M_AXIS_OUT_TDATA),
@@ -113,6 +113,64 @@ module FrequencyCounter_imp_MPHDEJ
         .data_access(frequency_counter_0_data_access),
         .pulse(frequency_counter_0_pulse),
         .rst(rst_1));
+endmodule
+
+module Output_pulse_imp_1R2SGC1
+   (cfg_data,
+    clk,
+    dac_clk,
+    dac_dat,
+    dac_rst,
+    dac_sel,
+    dac_wrt);
+  input [31:0]cfg_data;
+  input clk;
+  output dac_clk;
+  output [13:0]dac_dat;
+  output dac_rst;
+  output dac_sel;
+  output dac_wrt;
+
+  wire [31:0]axis_constant_0_M_AXIS_TDATA;
+  wire axis_constant_0_M_AXIS_TVALID;
+  wire axis_red_pitaya_dac_0_dac_clk;
+  wire [13:0]axis_red_pitaya_dac_0_dac_dat;
+  wire axis_red_pitaya_dac_0_dac_rst;
+  wire axis_red_pitaya_dac_0_dac_sel;
+  wire axis_red_pitaya_dac_0_dac_wrt;
+  wire [31:0]cfg_data_1;
+  wire clk_1;
+  wire clk_wiz_0_clk_out1;
+  wire clk_wiz_0_locked;
+
+  assign cfg_data_1 = cfg_data[31:0];
+  assign clk_1 = clk;
+  assign dac_clk = axis_red_pitaya_dac_0_dac_clk;
+  assign dac_dat[13:0] = axis_red_pitaya_dac_0_dac_dat;
+  assign dac_rst = axis_red_pitaya_dac_0_dac_rst;
+  assign dac_sel = axis_red_pitaya_dac_0_dac_sel;
+  assign dac_wrt = axis_red_pitaya_dac_0_dac_wrt;
+  system_axis_constant_0_0 axis_constant_0
+       (.aclk(clk_1),
+        .cfg_data(cfg_data_1),
+        .m_axis_tdata(axis_constant_0_M_AXIS_TDATA),
+        .m_axis_tvalid(axis_constant_0_M_AXIS_TVALID));
+  system_axis_red_pitaya_dac_0_0 axis_red_pitaya_dac_0
+       (.aclk(clk_1),
+        .dac_clk(axis_red_pitaya_dac_0_dac_clk),
+        .dac_dat(axis_red_pitaya_dac_0_dac_dat),
+        .dac_rst(axis_red_pitaya_dac_0_dac_rst),
+        .dac_sel(axis_red_pitaya_dac_0_dac_sel),
+        .dac_wrt(axis_red_pitaya_dac_0_dac_wrt),
+        .ddr_clk(clk_wiz_0_clk_out1),
+        .locked(clk_wiz_0_locked),
+        .s_axis_tdata(axis_constant_0_M_AXIS_TDATA),
+        .s_axis_tvalid(axis_constant_0_M_AXIS_TVALID));
+  system_clk_wiz_0_0 clk_wiz_0
+       (.clk_in1(clk_1),
+        .clk_out1(clk_wiz_0_clk_out1),
+        .locked(clk_wiz_0_locked),
+        .reset(1'b0));
 endmodule
 
 module PS7_imp_1QJPAX8
@@ -761,7 +819,7 @@ module s00_couplers_imp_15HE6GA
         .s_axi_wvalid(s00_couplers_to_auto_pc_WVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=15,numReposBlks=10,numNonXlnxBlks=1,numHierBlks=5,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_clkrst_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "system.hwdef" *) 
+(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=19,numReposBlks=13,numNonXlnxBlks=3,numHierBlks=6,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_clkrst_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "system.hwdef" *) 
 module system
    (DDR_addr,
     DDR_ba,
@@ -789,8 +847,6 @@ module system
     adc_csn_o,
     adc_dat_a_i,
     adc_dat_b_i,
-    adc_enc_n_o,
-    adc_enc_p_o,
     dac_clk_o,
     dac_dat_o,
     dac_pwm_o,
@@ -800,10 +856,7 @@ module system
     daisy_n_i,
     daisy_n_o,
     daisy_p_i,
-    daisy_p_o,
-    exp_n_tri_io,
-    exp_p_tri_io,
-    led_o);
+    daisy_p_o);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -830,8 +883,6 @@ module system
   output adc_csn_o;
   input [13:0]adc_dat_a_i;
   input [13:0]adc_dat_b_i;
-  output adc_enc_n_o;
-  output adc_enc_p_o;
   output dac_clk_o;
   output [13:0]dac_dat_o;
   output [3:0]dac_pwm_o;
@@ -842,13 +893,16 @@ module system
   output [1:0]daisy_n_o;
   input [1:0]daisy_p_i;
   output [1:0]daisy_p_o;
-  inout [7:0]exp_n_tri_io;
-  inout [7:0]exp_p_tri_io;
-  output [1:0]led_o;
 
   wire DataAcquisition_adc_clk;
+  wire [31:0]FrequencyCounter_Pulse;
   wire [31:0]FrequencyCounter_counter_output;
-  wire [1:0]FrequencyCounter_pulse;
+  wire [13:0]FrequencyCounter_data_access;
+  wire Output_pulse_dac_clk;
+  wire [13:0]Output_pulse_dac_dat;
+  wire Output_pulse_dac_rst;
+  wire Output_pulse_dac_sel;
+  wire Output_pulse_dac_wrt;
   wire adc_clk_n_i_1;
   wire adc_clk_p_i_1;
   wire [13:0]adc_dat_a_i_1;
@@ -908,6 +962,11 @@ module system
   assign adc_csn_o = axis_red_pitaya_adc_0_adc_csn;
   assign adc_dat_a_i_1 = adc_dat_a_i[13:0];
   assign adc_dat_b_i_1 = adc_dat_b_i[13:0];
+  assign dac_clk_o = Output_pulse_dac_clk;
+  assign dac_dat_o[13:0] = Output_pulse_dac_dat;
+  assign dac_rst_o = Output_pulse_dac_rst;
+  assign dac_sel_o = Output_pulse_dac_sel;
+  assign dac_wrt_o = Output_pulse_dac_wrt;
   assign daisy_n_i_1 = daisy_n_i[1:0];
   assign daisy_n_o[1:0] = util_ds_buf_2_OBUF_DS_N;
   assign daisy_p_i_1 = daisy_p_i[1:0];
@@ -922,12 +981,21 @@ module system
         .adc_dat_a_i(adc_dat_a_i_1),
         .adc_dat_b_i(adc_dat_b_i_1));
   FrequencyCounter_imp_MPHDEJ FrequencyCounter
-       (.S_AXIS_IN_tdata(signal_split_0_M_AXIS_PORT1_TDATA),
+       (.Pulse(FrequencyCounter_Pulse),
+        .S_AXIS_IN_tdata(signal_split_0_M_AXIS_PORT1_TDATA),
         .S_AXIS_IN_tvalid(signal_split_0_M_AXIS_PORT1_TVALID),
         .clk(DataAcquisition_adc_clk),
         .counter_output(FrequencyCounter_counter_output),
-        .pulse(FrequencyCounter_pulse),
+        .data_access(FrequencyCounter_data_access),
         .rst(xlc_reset_dout));
+  Output_pulse_imp_1R2SGC1 Output_pulse
+       (.cfg_data(FrequencyCounter_Pulse),
+        .clk(DataAcquisition_adc_clk),
+        .dac_clk(Output_pulse_dac_clk),
+        .dac_dat(Output_pulse_dac_dat),
+        .dac_rst(Output_pulse_dac_rst),
+        .dac_sel(Output_pulse_dac_sel),
+        .dac_wrt(Output_pulse_dac_wrt));
   PS7_imp_1QJPAX8 PS7
        (.DDR_addr(DDR_addr[14:0]),
         .DDR_ba(DDR_ba[2:0]),
@@ -970,7 +1038,7 @@ module system
         .M00_AXI_wvalid(ps7_0_axi_periph_M00_AXI_WVALID),
         .S00_ARESETN(rst_ps7_0_125M_peripheral_aresetn));
   system_axi_gpio_0_0 axi_gpio_0
-       (.gpio2_io_i(FrequencyCounter_pulse),
+       (.gpio2_io_i(FrequencyCounter_data_access),
         .gpio_io_i(FrequencyCounter_counter_output),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M00_AXI_ARADDR[8:0]),

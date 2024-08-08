@@ -1,82 +1,101 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.6245",
-   "Default View_TopLeft":"1352,145",
-   "ExpandedHierarchyInLayout":"/FrequencyCounter|/Output_pulse",
+   "Default View_ScaleFactor":"0.999996",
+   "Default View_TopLeft":"833,270",
+   "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port Vp_Vn -pg 1 -lvl 0 -x -290 -y 100 -defaultsOSRD
-preplace port Vaux0 -pg 1 -lvl 0 -x -290 -y 20 -defaultsOSRD
-preplace port Vaux1 -pg 1 -lvl 0 -x -290 -y 40 -defaultsOSRD
-preplace port Vaux9 -pg 1 -lvl 0 -x -290 -y 80 -defaultsOSRD
-preplace port Vaux8 -pg 1 -lvl 0 -x -290 -y 60 -defaultsOSRD
-preplace port DDR -pg 1 -lvl 5 -x 3110 -y 60 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 5 -x 3110 -y 80 -defaultsOSRD
-preplace port adc_clk_p_i -pg 1 -lvl 0 -x -290 -y 470 -defaultsOSRD
-preplace port adc_clk_n_i -pg 1 -lvl 0 -x -290 -y 490 -defaultsOSRD
-preplace port adc_enc_p_o -pg 1 -lvl 5 -x 3110 -y 40 -defaultsOSRD
-preplace port adc_enc_n_o -pg 1 -lvl 5 -x 3110 -y 20 -defaultsOSRD
-preplace port adc_csn_o -pg 1 -lvl 5 -x 3110 -y 420 -defaultsOSRD
-preplace port dac_clk_o -pg 1 -lvl 5 -x 3110 -y 100 -defaultsOSRD
-preplace port dac_rst_o -pg 1 -lvl 5 -x 3110 -y 160 -defaultsOSRD
-preplace port dac_sel_o -pg 1 -lvl 5 -x 3110 -y 180 -defaultsOSRD
-preplace port dac_wrt_o -pg 1 -lvl 5 -x 3110 -y 200 -defaultsOSRD
-preplace portBus adc_dat_a_i -pg 1 -lvl 0 -x -290 -y 510 -defaultsOSRD
-preplace portBus adc_dat_b_i -pg 1 -lvl 0 -x -290 -y 530 -defaultsOSRD
-preplace portBus dac_dat_o -pg 1 -lvl 5 -x 3110 -y 120 -defaultsOSRD
-preplace portBus dac_pwm_o -pg 1 -lvl 5 -x 3110 -y 140 -defaultsOSRD
-preplace portBus exp_p_tri_io -pg 1 -lvl 5 -x 3110 -y 240 -defaultsOSRD
-preplace portBus exp_n_tri_io -pg 1 -lvl 5 -x 3110 -y 220 -defaultsOSRD
-preplace portBus daisy_p_o -pg 1 -lvl 5 -x 3110 -y 660 -defaultsOSRD
-preplace portBus daisy_n_o -pg 1 -lvl 5 -x 3110 -y 680 -defaultsOSRD
-preplace portBus daisy_p_i -pg 1 -lvl 0 -x -290 -y 670 -defaultsOSRD
-preplace portBus daisy_n_i -pg 1 -lvl 0 -x -290 -y 690 -defaultsOSRD
-preplace portBus led_o -pg 1 -lvl 5 -x 3110 -y 500 -defaultsOSRD
-preplace inst util_ds_buf_1 -pg 1 -lvl 2 -x 1518 -y 982 -defaultsOSRD
-preplace inst util_ds_buf_2 -pg 1 -lvl 4 -x 2925 -y 1230 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 4 -x 2925 -y 450 -defaultsOSRD
-preplace inst xlc_reset -pg 1 -lvl 1 -x 0 -y 370 -defaultsOSRD
-preplace inst DataAcquisition -pg 1 -lvl 1 -x 0 -y 504 -defaultsOSRD
-preplace inst FrequencyCounter -pg 1 -lvl 2 -x 1518 -y 304 -defaultsOSRD
-preplace inst PS7 -pg 1 -lvl 2 -x 1518 -y 100 -defaultsOSRD
-preplace inst Output_pulse -pg 1 -lvl 3 -x 2390 -y 25 -defaultsOSRD -resize 167 182
-preplace inst FrequencyCounter|frequency_counter_0 -pg 1 -lvl 1 -x 1598 -y 334 -defaultsOSRD
-preplace inst Output_pulse|axis_red_pitaya_adc_0 -pg 1 -lvl 1 -x 2390 -y 55 -defaultsOSRD
-preplace inst Output_pulse|axis_constant_0 -pg 1 -lvl 1 -x 2390 -y -90 -defaultsOSRD
-preplace netloc daisy_p_i_1 1 0 2 NJ 670 170J
-preplace netloc daisy_n_i_1 1 0 2 NJ 690 160J
-preplace netloc util_ds_buf_2_OBUF_DS_P 1 4 1 3070J 660n
-preplace netloc util_ds_buf_2_OBUF_DS_N 1 4 1 3090J 680n
-preplace netloc util_ds_buf_1_IBUF_OUT 1 2 2 N 982 2550
-preplace netloc adc_clk_p_i_1 1 0 1 -270J 470n
-preplace netloc adc_clk_n_i_1 1 0 1 -270J 490n
-preplace netloc adc_dat_a_i_1 1 0 1 -270J 510n
-preplace netloc adc_dat_b_i_1 1 0 1 -270J 530n
-preplace netloc axis_red_pitaya_adc_0_adc_csn 1 1 4 NJ 524 1960J 420 2560 360 3090J
-preplace netloc rst_ps7_0_125M_peripheral_aresetn 1 2 2 1920 470 N
-preplace netloc processing_system7_0_FCLK_CLK0 1 2 2 1930 450 N
-preplace netloc DataAcquisition_adc_clk 1 1 1 170 334n
-preplace netloc xlc_reset_dout 1 1 1 160 354n
-preplace netloc FrequencyCounter_counter_output 1 2 3 NJ 354 2550 350 3070
-preplace netloc FrequencyCounter_pulse 1 2 3 NJ 334 N 334 3080
-preplace netloc signal_split_0_M_AXIS_PORT1 1 1 1 150 314n
-preplace netloc processing_system7_0_DDR 1 2 3 1960J 165 2550 60 NJ
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 2 1940 430 N
-preplace netloc processing_system7_0_FIXED_IO 1 2 3 1950J 175 2560 80 NJ
-preplace netloc FrequencyCounter|frequency_counter_0_counter_output 1 1 1 1768 314n
-preplace netloc FrequencyCounter|rst_1 1 0 1 N 354
-preplace netloc FrequencyCounter|clk_1 1 0 1 N 334
-preplace netloc FrequencyCounter|frequency_counter_0_pulse 1 1 1 1758 334n
-preplace netloc FrequencyCounter|frequency_counter_0_data_access 1 1 1 N 374
-preplace netloc FrequencyCounter|frequency_counter_0_pulse_count 1 1 1 N 394
-preplace netloc FrequencyCounter|S_AXIS_IN_1 1 0 1 N 314
-preplace netloc FrequencyCounter|frequency_counter_0_M_AXIS_OUT 1 1 1 N 294
-levelinfo -pg 1 -290 0 1518 2390 2925 3110
-levelinfo -hier FrequencyCounter * 1598 *
-levelinfo -hier Output_pulse * 2390 *
-pagesize -pg 1 -db -bbox -sgen -460 -210 3270 1300
-pagesize -hier FrequencyCounter -db -bbox -sgen 1408 234 1798 434
-pagesize -hier Output_pulse -db -bbox -sgen 2250 -165 2520 145
+preplace port DDR -pg 1 -lvl 5 -x 2600 -y 330 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 2600 -y 350 -defaultsOSRD
+preplace port adc_clk_p_i -pg 1 -lvl 0 -x -120 -y 510 -defaultsOSRD
+preplace port adc_clk_n_i -pg 1 -lvl 0 -x -120 -y 530 -defaultsOSRD
+preplace port adc_csn_o -pg 1 -lvl 5 -x 2600 -y 710 -defaultsOSRD
+preplace port dac_clk_o -pg 1 -lvl 5 -x 2600 -y 60 -defaultsOSRD
+preplace port dac_rst_o -pg 1 -lvl 5 -x 2600 -y 120 -defaultsOSRD
+preplace port dac_sel_o -pg 1 -lvl 5 -x 2600 -y 140 -defaultsOSRD
+preplace port dac_wrt_o -pg 1 -lvl 5 -x 2600 -y 160 -defaultsOSRD
+preplace portBus adc_dat_a_i -pg 1 -lvl 0 -x -120 -y 550 -defaultsOSRD
+preplace portBus adc_dat_b_i -pg 1 -lvl 0 -x -120 -y 570 -defaultsOSRD
+preplace portBus dac_dat_o -pg 1 -lvl 5 -x 2600 -y 80 -defaultsOSRD
+preplace portBus dac_pwm_o -pg 1 -lvl 5 -x 2600 -y 100 -defaultsOSRD
+preplace portBus daisy_p_o -pg 1 -lvl 5 -x 2600 -y 780 -defaultsOSRD
+preplace portBus daisy_n_o -pg 1 -lvl 5 -x 2600 -y 800 -defaultsOSRD
+preplace portBus daisy_p_i -pg 1 -lvl 0 -x -120 -y 790 -defaultsOSRD
+preplace portBus daisy_n_i -pg 1 -lvl 0 -x -120 -y 810 -defaultsOSRD
+preplace inst util_ds_buf_1 -pg 1 -lvl 2 -x 1024 -y 854 -defaultsOSRD
+preplace inst util_ds_buf_2 -pg 1 -lvl 4 -x 2440 -y 790 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 3 -x 1670 -y 640 -defaultsOSRD
+preplace inst xlc_reset -pg 1 -lvl 1 -x 170 -y 410 -defaultsOSRD
+preplace inst DataAcquisition -pg 1 -lvl 1 -x 170 -y 542 -defaultsOSRD
+preplace inst FrequencyCounter -pg 1 -lvl 2 -x 1024 -y 542 -defaultsOSRD
+preplace inst PS7 -pg 1 -lvl 2 -x 1024 -y 362 -defaultsOSRD
+preplace inst Output_pulse -pg 1 -lvl 3 -x 1670 -y 130 -defaultsOSRD -resize 167 182
+preplace inst DataAcquisition|axis_red_pitaya_adc_0 -pg 1 -lvl 1 -x 200 -y 572 -defaultsOSRD
+preplace inst DataAcquisition|signal_split_0 -pg 1 -lvl 2 -x 480 -y 552 -defaultsOSRD
+preplace inst FrequencyCounter|frequency_counter_0 -pg 1 -lvl 1 -x 1104 -y 572 -defaultsOSRD
+preplace inst Output_pulse|axis_constant_0 -pg 1 -lvl 1 -x 1740 -y 120 -defaultsOSRD
+preplace inst Output_pulse|clk_wiz_0 -pg 1 -lvl 1 -x 1740 -y 240 -defaultsOSRD
+preplace inst Output_pulse|axis_red_pitaya_dac_0 -pg 1 -lvl 2 -x 1990 -y 150 -defaultsOSRD
+preplace netloc daisy_p_i_1 1 0 2 NJ 790 810J
+preplace netloc daisy_n_i_1 1 0 2 NJ 810 790J
+preplace netloc util_ds_buf_2_OBUF_DS_P 1 4 1 NJ 780
+preplace netloc util_ds_buf_2_OBUF_DS_N 1 4 1 NJ 800
+preplace netloc util_ds_buf_1_IBUF_OUT 1 2 2 1450 790 N
+preplace netloc adc_clk_p_i_1 1 0 1 -70J 510n
+preplace netloc adc_clk_n_i_1 1 0 1 -80J 530n
+preplace netloc adc_dat_a_i_1 1 0 1 -90J 550n
+preplace netloc adc_dat_b_i_1 1 0 1 -100J 570n
+preplace netloc axis_red_pitaya_adc_0_adc_csn 1 1 4 800J 692 1460J 530 2300 710 NJ
+preplace netloc rst_ps7_0_125M_peripheral_aresetn 1 2 1 1430 402n
+preplace netloc processing_system7_0_FCLK_CLK0 1 2 1 1450 382n
+preplace netloc DataAcquisition_adc_clk 1 1 2 790 60 N
+preplace netloc xlc_reset_dout 1 1 1 810 410n
+preplace netloc FrequencyCounter_counter_output 1 2 2 1440J 540 2290
+preplace netloc Output_pulse_dac_dat 1 3 2 NJ 110 2580
+preplace netloc Output_pulse_dac_clk 1 3 2 2280 60 NJ
+preplace netloc Output_pulse_dac_rst 1 3 2 2290J 120 N
+preplace netloc Output_pulse_dac_sel 1 3 2 2300 140 NJ
+preplace netloc Output_pulse_dac_wrt 1 3 2 NJ 130 2580
+preplace netloc FrequencyCounter_data_access 1 2 2 1470 550 2280
+preplace netloc FrequencyCounter_Pulse 1 2 1 1420 130n
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 1480 362n
+preplace netloc processing_system7_0_FIXED_IO 1 2 3 NJ 342 2290 350 NJ
+preplace netloc signal_split_0_M_AXIS_PORT1 1 1 1 800 542n
+preplace netloc processing_system7_0_DDR 1 2 3 1480J 330 N 330 NJ
+preplace netloc DataAcquisition|axis_red_pitaya_adc_0_adc_clk 1 1 2 330 622 NJ
+preplace netloc DataAcquisition|axis_red_pitaya_adc_0_adc_csn 1 1 2 320 642 NJ
+preplace netloc DataAcquisition|adc_clk_p_i_1 1 0 1 N 542
+preplace netloc DataAcquisition|adc_clk_n_i_1 1 0 1 N 562
+preplace netloc DataAcquisition|adc_dat_a_i_1 1 0 1 N 582
+preplace netloc DataAcquisition|adc_dat_b_i_1 1 0 1 N 602
+preplace netloc DataAcquisition|axis_red_pitaya_adc_0_M_AXIS 1 1 1 N 552
+preplace netloc DataAcquisition|signal_split_0_M_AXIS_PORT1 1 2 1 NJ 542
+preplace netloc FrequencyCounter|frequency_counter_0_counter_output 1 1 1 N 552
+preplace netloc FrequencyCounter|rst_1 1 0 1 N 592
+preplace netloc FrequencyCounter|clk_1 1 0 1 N 572
+preplace netloc FrequencyCounter|frequency_counter_0_data_access 1 1 1 N 612
+preplace netloc FrequencyCounter|frequency_counter_0_pulse_count 1 1 1 N 632
+preplace netloc FrequencyCounter|frequency_counter_0_pulse 1 1 1 1264 592n
+preplace netloc FrequencyCounter|frequency_counter_0_M_AXIS_OUT 1 1 1 N 532
+preplace netloc FrequencyCounter|S_AXIS_IN_1 1 0 1 N 552
+preplace netloc Output_pulse|clk_1 1 0 2 1620 50 1860
+preplace netloc Output_pulse|axis_red_pitaya_dac_0_dac_dat 1 2 1 2130 110n
+preplace netloc Output_pulse|axis_red_pitaya_dac_0_dac_wrt 1 2 1 2140 130n
+preplace netloc Output_pulse|axis_red_pitaya_dac_0_dac_sel 1 2 1 N 150
+preplace netloc Output_pulse|axis_red_pitaya_dac_0_dac_rst 1 2 1 2110 130n
+preplace netloc Output_pulse|axis_red_pitaya_dac_0_dac_clk 1 2 1 2120 110n
+preplace netloc Output_pulse|clk_wiz_0_locked 1 1 1 1870 180n
+preplace netloc Output_pulse|clk_wiz_0_clk_out1 1 1 1 1860 160n
+preplace netloc Output_pulse|cfg_data_1 1 0 1 N 130
+preplace netloc Output_pulse|axis_constant_0_M_AXIS 1 1 1 N 120
+levelinfo -pg 1 -120 170 1024 1670 2440 2600
+levelinfo -hier DataAcquisition * 200 480 *
+levelinfo -hier FrequencyCounter * 1104 *
+levelinfo -hier Output_pulse * 1740 1990 *
+pagesize -pg 1 -db -bbox -sgen -290 0 2760 950
+pagesize -hier DataAcquisition -db -bbox -sgen 50 482 660 662
+pagesize -hier FrequencyCounter -db -bbox -sgen 914 472 1294 672
+pagesize -hier Output_pulse -db -bbox -sgen 1590 40 2170 310
 "
 }
 {

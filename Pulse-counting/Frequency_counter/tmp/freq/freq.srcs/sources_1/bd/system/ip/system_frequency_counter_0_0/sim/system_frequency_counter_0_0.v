@@ -85,7 +85,7 @@ output wire [31 : 0] M_AXIS_OUT_tdata;
 output wire M_AXIS_OUT_tvalid;
 output wire [31 : 0] counter_output;
 output wire [31 : 0] clock_counter;
-output wire [1 : 0] pulse;
+output wire [31 : 0] pulse;
 output wire [13 : 0] data_access;
 
   frequency_counter #(

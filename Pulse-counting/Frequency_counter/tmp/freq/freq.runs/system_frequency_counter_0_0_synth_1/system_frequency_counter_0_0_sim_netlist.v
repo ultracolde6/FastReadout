@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Wed Aug  7 17:32:35 2024
+// Date        : Thu Aug  8 14:50:10 2024
 // Host        : DESKTOP-RDVR7FP running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ system_frequency_counter_0_0_sim_netlist.v
@@ -29,6 +29,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_counter
   input clk;
 
   wire [13:0]S_AXIS_IN_tdata;
+  wire clear;
   wire clk;
   wire [31:0]clock_counter;
   wire \clock_counter[3]_i_2_n_0 ;
@@ -212,17 +213,16 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_counter
   wire i__carry_i_6_n_0;
   wire i__carry_i_7_n_0;
   wire i__carry_i_8_n_0;
-  wire [0:0]p_1_in;
   wire [0:0]pulse;
-  wire \pulse[0]_i_1_n_0 ;
-  wire \pulse[0]_i_2_n_0 ;
-  wire \pulse[0]_i_3_n_0 ;
-  wire \pulse[0]_i_4_n_0 ;
-  wire \pulse[0]_i_5_n_0 ;
-  wire \pulse[0]_i_6_n_0 ;
-  wire \pulse[0]_i_7_n_0 ;
-  wire \pulse[0]_i_8_n_0 ;
-  wire \pulse[0]_i_9_n_0 ;
+  wire \pulse[13]_i_1_n_0 ;
+  wire \pulse[13]_i_2_n_0 ;
+  wire \pulse[13]_i_3_n_0 ;
+  wire \pulse[13]_i_4_n_0 ;
+  wire \pulse[13]_i_5_n_0 ;
+  wire \pulse[13]_i_6_n_0 ;
+  wire \pulse[13]_i_7_n_0 ;
+  wire \pulse[13]_i_8_n_0 ;
+  wire \pulse[13]_i_9_n_0 ;
   wire pulse_count0_carry__0_i_10_n_0;
   wire pulse_count0_carry__0_i_10_n_1;
   wire pulse_count0_carry__0_i_10_n_2;
@@ -278,7 +278,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_counter
   wire pulse_count0_carry__2_i_9_n_1;
   wire pulse_count0_carry__2_i_9_n_2;
   wire pulse_count0_carry__2_i_9_n_3;
-  wire pulse_count0_carry__2_n_0;
   wire pulse_count0_carry__2_n_1;
   wire pulse_count0_carry__2_n_2;
   wire pulse_count0_carry__2_n_3;
@@ -400,6 +399,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_counter
   wire \pulse_count_reg[8]_i_1_n_6 ;
   wire \pulse_count_reg[8]_i_1_n_7 ;
   wire rst;
+  wire sel;
   wire state;
   wire state_i_1_n_0;
   wire state_next1_carry__0_i_1_n_0;
@@ -1255,81 +1255,81 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_counter
         .O(i__carry_i_8_n_0));
   LUT5 #(
     .INIT(32'h00000001)) 
-    \pulse[0]_i_1 
-       (.I0(\pulse[0]_i_2_n_0 ),
-        .I1(\pulse[0]_i_3_n_0 ),
-        .I2(\pulse[0]_i_4_n_0 ),
-        .I3(\pulse[0]_i_5_n_0 ),
-        .I4(pulse_count0_carry__2_n_0),
-        .O(\pulse[0]_i_1_n_0 ));
+    \pulse[13]_i_1 
+       (.I0(\pulse[13]_i_2_n_0 ),
+        .I1(\pulse[13]_i_3_n_0 ),
+        .I2(\pulse[13]_i_4_n_0 ),
+        .I3(\pulse[13]_i_5_n_0 ),
+        .I4(clear),
+        .O(\pulse[13]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
-    \pulse[0]_i_2 
+    \pulse[13]_i_2 
        (.I0(pulse_count_reg[11]),
         .I1(pulse_count_reg[12]),
         .I2(pulse_count_reg[9]),
         .I3(pulse_count_reg[10]),
-        .I4(\pulse[0]_i_6_n_0 ),
-        .O(\pulse[0]_i_2_n_0 ));
+        .I4(\pulse[13]_i_6_n_0 ),
+        .O(\pulse[13]_i_2_n_0 ));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
-    \pulse[0]_i_3 
+    \pulse[13]_i_3 
        (.I0(pulse_count_reg[3]),
         .I1(pulse_count_reg[4]),
         .I2(pulse_count_reg[1]),
         .I3(pulse_count_reg[2]),
-        .I4(\pulse[0]_i_7_n_0 ),
-        .O(\pulse[0]_i_3_n_0 ));
+        .I4(\pulse[13]_i_7_n_0 ),
+        .O(\pulse[13]_i_3_n_0 ));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
-    \pulse[0]_i_4 
+    \pulse[13]_i_4 
        (.I0(pulse_count_reg[27]),
         .I1(pulse_count_reg[28]),
         .I2(pulse_count_reg[25]),
         .I3(pulse_count_reg[26]),
-        .I4(\pulse[0]_i_8_n_0 ),
-        .O(\pulse[0]_i_4_n_0 ));
+        .I4(\pulse[13]_i_8_n_0 ),
+        .O(\pulse[13]_i_4_n_0 ));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
-    \pulse[0]_i_5 
+    \pulse[13]_i_5 
        (.I0(pulse_count_reg[19]),
         .I1(pulse_count_reg[20]),
         .I2(pulse_count_reg[17]),
         .I3(pulse_count_reg[18]),
-        .I4(\pulse[0]_i_9_n_0 ),
-        .O(\pulse[0]_i_5_n_0 ));
+        .I4(\pulse[13]_i_9_n_0 ),
+        .O(\pulse[13]_i_5_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \pulse[0]_i_6 
+    \pulse[13]_i_6 
        (.I0(pulse_count_reg[14]),
         .I1(pulse_count_reg[13]),
         .I2(pulse_count_reg[16]),
         .I3(pulse_count_reg[15]),
-        .O(\pulse[0]_i_6_n_0 ));
+        .O(\pulse[13]_i_6_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \pulse[0]_i_7 
+    \pulse[13]_i_7 
        (.I0(pulse_count_reg[6]),
         .I1(pulse_count_reg[5]),
         .I2(pulse_count_reg[8]),
         .I3(pulse_count_reg[7]),
-        .O(\pulse[0]_i_7_n_0 ));
+        .O(\pulse[13]_i_7_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \pulse[0]_i_8 
+    \pulse[13]_i_8 
        (.I0(pulse_count_reg[30]),
         .I1(pulse_count_reg[29]),
         .I2(pulse_count_reg[0]),
         .I3(pulse_count_reg[31]),
-        .O(\pulse[0]_i_8_n_0 ));
+        .O(\pulse[13]_i_8_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \pulse[0]_i_9 
+    \pulse[13]_i_9 
        (.I0(pulse_count_reg[22]),
         .I1(pulse_count_reg[21]),
         .I2(pulse_count_reg[24]),
         .I3(pulse_count_reg[23]),
-        .O(\pulse[0]_i_9_n_0 ));
+        .O(\pulse[13]_i_9_n_0 ));
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 pulse_count0_carry
        (.CI(1'b0),
@@ -1517,7 +1517,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_counter
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 pulse_count0_carry__2
        (.CI(pulse_count0_carry__1_n_0),
-        .CO({pulse_count0_carry__2_n_0,pulse_count0_carry__2_n_1,pulse_count0_carry__2_n_2,pulse_count0_carry__2_n_3}),
+        .CO({clear,pulse_count0_carry__2_n_1,pulse_count0_carry__2_n_2,pulse_count0_carry__2_n_3}),
         .CYINIT(1'b0),
         .DI({pulse_count0_carry__2_i_1_n_0,pulse_count0_carry__2_i_2_n_0,pulse_count0_carry__2_i_3_n_0,pulse_count0_carry__2_i_4_n_0}),
         .O(NLW_pulse_count0_carry__2_O_UNCONNECTED[3:0]),
@@ -1695,11 +1695,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_counter
   LUT4 #(
     .INIT(16'hFFFE)) 
     \pulse_count[0]_i_1 
-       (.I0(\pulse[0]_i_2_n_0 ),
-        .I1(\pulse[0]_i_3_n_0 ),
-        .I2(\pulse[0]_i_4_n_0 ),
-        .I3(\pulse[0]_i_5_n_0 ),
-        .O(p_1_in));
+       (.I0(\pulse[13]_i_2_n_0 ),
+        .I1(\pulse[13]_i_3_n_0 ),
+        .I2(\pulse[13]_i_4_n_0 ),
+        .I3(\pulse[13]_i_5_n_0 ),
+        .O(sel));
   LUT1 #(
     .INIT(2'h1)) 
     \pulse_count[0]_i_3 
@@ -1864,10 +1864,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_counter
     .INIT(1'b0)) 
     \pulse_count_reg[0] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[0]_i_2_n_7 ),
         .Q(pulse_count_reg[0]),
-        .R(pulse_count0_carry__2_n_0));
+        .R(clear));
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \pulse_count_reg[0]_i_2 
        (.CI(1'b0),
@@ -1880,26 +1880,26 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_counter
     .INIT(1'b0)) 
     \pulse_count_reg[10] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[8]_i_1_n_5 ),
         .Q(pulse_count_reg[10]),
-        .R(pulse_count0_carry__2_n_0));
+        .R(clear));
   FDRE #(
     .INIT(1'b0)) 
     \pulse_count_reg[11] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[8]_i_1_n_4 ),
         .Q(pulse_count_reg[11]),
-        .R(pulse_count0_carry__2_n_0));
+        .R(clear));
   FDRE #(
     .INIT(1'b0)) 
     \pulse_count_reg[12] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[12]_i_1_n_7 ),
         .Q(pulse_count_reg[12]),
-        .R(pulse_count0_carry__2_n_0));
+        .R(clear));
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \pulse_count_reg[12]_i_1 
        (.CI(\pulse_count_reg[8]_i_1_n_0 ),
@@ -1912,34 +1912,34 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_counter
     .INIT(1'b0)) 
     \pulse_count_reg[13] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[12]_i_1_n_6 ),
         .Q(pulse_count_reg[13]),
-        .S(pulse_count0_carry__2_n_0));
+        .S(clear));
   FDSE #(
     .INIT(1'b0)) 
     \pulse_count_reg[14] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[12]_i_1_n_5 ),
         .Q(pulse_count_reg[14]),
-        .S(pulse_count0_carry__2_n_0));
+        .S(clear));
   FDSE #(
     .INIT(1'b0)) 
     \pulse_count_reg[15] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[12]_i_1_n_4 ),
         .Q(pulse_count_reg[15]),
-        .S(pulse_count0_carry__2_n_0));
+        .S(clear));
   FDSE #(
     .INIT(1'b0)) 
     \pulse_count_reg[16] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[16]_i_1_n_7 ),
         .Q(pulse_count_reg[16]),
-        .S(pulse_count0_carry__2_n_0));
+        .S(clear));
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \pulse_count_reg[16]_i_1 
        (.CI(\pulse_count_reg[12]_i_1_n_0 ),
@@ -1952,42 +1952,42 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_counter
     .INIT(1'b0)) 
     \pulse_count_reg[17] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[16]_i_1_n_6 ),
         .Q(pulse_count_reg[17]),
-        .R(pulse_count0_carry__2_n_0));
+        .R(clear));
   FDSE #(
     .INIT(1'b0)) 
     \pulse_count_reg[18] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[16]_i_1_n_5 ),
         .Q(pulse_count_reg[18]),
-        .S(pulse_count0_carry__2_n_0));
+        .S(clear));
   FDRE #(
     .INIT(1'b0)) 
     \pulse_count_reg[19] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[16]_i_1_n_4 ),
         .Q(pulse_count_reg[19]),
-        .R(pulse_count0_carry__2_n_0));
+        .R(clear));
   FDRE #(
     .INIT(1'b0)) 
     \pulse_count_reg[1] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[0]_i_2_n_6 ),
         .Q(pulse_count_reg[1]),
-        .R(pulse_count0_carry__2_n_0));
+        .R(clear));
   FDSE #(
     .INIT(1'b0)) 
     \pulse_count_reg[20] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[20]_i_1_n_7 ),
         .Q(pulse_count_reg[20]),
-        .S(pulse_count0_carry__2_n_0));
+        .S(clear));
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \pulse_count_reg[20]_i_1 
        (.CI(\pulse_count_reg[16]_i_1_n_0 ),
@@ -2000,34 +2000,34 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_counter
     .INIT(1'b0)) 
     \pulse_count_reg[21] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[20]_i_1_n_6 ),
         .Q(pulse_count_reg[21]),
-        .S(pulse_count0_carry__2_n_0));
+        .S(clear));
   FDSE #(
     .INIT(1'b0)) 
     \pulse_count_reg[22] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[20]_i_1_n_5 ),
         .Q(pulse_count_reg[22]),
-        .S(pulse_count0_carry__2_n_0));
+        .S(clear));
   FDSE #(
     .INIT(1'b0)) 
     \pulse_count_reg[23] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[20]_i_1_n_4 ),
         .Q(pulse_count_reg[23]),
-        .S(pulse_count0_carry__2_n_0));
+        .S(clear));
   FDSE #(
     .INIT(1'b0)) 
     \pulse_count_reg[24] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[24]_i_1_n_7 ),
         .Q(pulse_count_reg[24]),
-        .S(pulse_count0_carry__2_n_0));
+        .S(clear));
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \pulse_count_reg[24]_i_1 
        (.CI(\pulse_count_reg[20]_i_1_n_0 ),
@@ -2040,34 +2040,34 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_counter
     .INIT(1'b0)) 
     \pulse_count_reg[25] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[24]_i_1_n_6 ),
         .Q(pulse_count_reg[25]),
-        .R(pulse_count0_carry__2_n_0));
+        .R(clear));
   FDSE #(
     .INIT(1'b0)) 
     \pulse_count_reg[26] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[24]_i_1_n_5 ),
         .Q(pulse_count_reg[26]),
-        .S(pulse_count0_carry__2_n_0));
+        .S(clear));
   FDRE #(
     .INIT(1'b0)) 
     \pulse_count_reg[27] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[24]_i_1_n_4 ),
         .Q(pulse_count_reg[27]),
-        .R(pulse_count0_carry__2_n_0));
+        .R(clear));
   FDRE #(
     .INIT(1'b0)) 
     \pulse_count_reg[28] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[28]_i_1_n_7 ),
         .Q(pulse_count_reg[28]),
-        .R(pulse_count0_carry__2_n_0));
+        .R(clear));
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \pulse_count_reg[28]_i_1 
        (.CI(\pulse_count_reg[24]_i_1_n_0 ),
@@ -2080,50 +2080,50 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_counter
     .INIT(1'b0)) 
     \pulse_count_reg[29] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[28]_i_1_n_6 ),
         .Q(pulse_count_reg[29]),
-        .R(pulse_count0_carry__2_n_0));
+        .R(clear));
   FDRE #(
     .INIT(1'b0)) 
     \pulse_count_reg[2] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[0]_i_2_n_5 ),
         .Q(pulse_count_reg[2]),
-        .R(pulse_count0_carry__2_n_0));
+        .R(clear));
   FDRE #(
     .INIT(1'b0)) 
     \pulse_count_reg[30] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[28]_i_1_n_5 ),
         .Q(pulse_count_reg[30]),
-        .R(pulse_count0_carry__2_n_0));
+        .R(clear));
   FDRE #(
     .INIT(1'b0)) 
     \pulse_count_reg[31] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[28]_i_1_n_4 ),
         .Q(pulse_count_reg[31]),
-        .R(pulse_count0_carry__2_n_0));
+        .R(clear));
   FDRE #(
     .INIT(1'b0)) 
     \pulse_count_reg[3] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[0]_i_2_n_4 ),
         .Q(pulse_count_reg[3]),
-        .R(pulse_count0_carry__2_n_0));
+        .R(clear));
   FDRE #(
     .INIT(1'b0)) 
     \pulse_count_reg[4] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[4]_i_1_n_7 ),
         .Q(pulse_count_reg[4]),
-        .R(pulse_count0_carry__2_n_0));
+        .R(clear));
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \pulse_count_reg[4]_i_1 
        (.CI(\pulse_count_reg[0]_i_2_n_0 ),
@@ -2136,34 +2136,34 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_counter
     .INIT(1'b0)) 
     \pulse_count_reg[5] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[4]_i_1_n_6 ),
         .Q(pulse_count_reg[5]),
-        .R(pulse_count0_carry__2_n_0));
+        .R(clear));
   FDRE #(
     .INIT(1'b0)) 
     \pulse_count_reg[6] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[4]_i_1_n_5 ),
         .Q(pulse_count_reg[6]),
-        .R(pulse_count0_carry__2_n_0));
+        .R(clear));
   FDRE #(
     .INIT(1'b0)) 
     \pulse_count_reg[7] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[4]_i_1_n_4 ),
         .Q(pulse_count_reg[7]),
-        .R(pulse_count0_carry__2_n_0));
+        .R(clear));
   FDSE #(
     .INIT(1'b0)) 
     \pulse_count_reg[8] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[8]_i_1_n_7 ),
         .Q(pulse_count_reg[8]),
-        .S(pulse_count0_carry__2_n_0));
+        .S(clear));
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \pulse_count_reg[8]_i_1 
        (.CI(\pulse_count_reg[4]_i_1_n_0 ),
@@ -2176,14 +2176,14 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_counter
     .INIT(1'b0)) 
     \pulse_count_reg[9] 
        (.C(clk),
-        .CE(p_1_in),
+        .CE(sel),
         .D(\pulse_count_reg[8]_i_1_n_6 ),
         .Q(pulse_count_reg[9]),
-        .R(pulse_count0_carry__2_n_0));
-  FDRE \pulse_reg[0] 
+        .R(clear));
+  FDRE \pulse_reg[13] 
        (.C(clk),
         .CE(1'b1),
-        .D(\pulse[0]_i_1_n_0 ),
+        .D(\pulse[13]_i_1_n_0 ),
         .Q(pulse),
         .R(1'b0));
   LUT4 #(
@@ -2312,7 +2312,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_OUT TVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS_OUT, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 125000000, PHASE 0.000, CLK_DOMAIN system_axis_red_pitaya_adc_0_0_adc_clk, LAYERED_METADATA undef, INSERT_VIP 0" *) output M_AXIS_OUT_tvalid;
   output [31:0]counter_output;
   output [31:0]clock_counter;
-  output [1:0]pulse;
+  output [31:0]pulse;
   output [13:0]data_access;
 
   wire \<const0> ;
@@ -2322,7 +2322,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   wire [31:0]clock_counter;
   wire [31:0]counter_output;
   wire [13:0]data_access;
-  wire [0:0]\^pulse ;
+  wire [10:10]\^pulse ;
   wire rst;
 
   assign M_AXIS_OUT_tdata[31] = \<const0> ;
@@ -2345,8 +2345,38 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   assign M_AXIS_OUT_tdata[14] = \<const0> ;
   assign M_AXIS_OUT_tdata[13:0] = S_AXIS_IN_tdata[13:0];
   assign M_AXIS_OUT_tvalid = S_AXIS_IN_tvalid;
+  assign pulse[31] = \<const0> ;
+  assign pulse[30] = \<const0> ;
+  assign pulse[29] = \<const0> ;
+  assign pulse[28] = \<const0> ;
+  assign pulse[27] = \<const0> ;
+  assign pulse[26] = \<const0> ;
+  assign pulse[25] = \<const0> ;
+  assign pulse[24] = \<const0> ;
+  assign pulse[23] = \<const0> ;
+  assign pulse[22] = \<const0> ;
+  assign pulse[21] = \<const0> ;
+  assign pulse[20] = \<const0> ;
+  assign pulse[19] = \<const0> ;
+  assign pulse[18] = \<const0> ;
+  assign pulse[17] = \<const0> ;
+  assign pulse[16] = \<const0> ;
+  assign pulse[15] = \<const0> ;
+  assign pulse[14] = \<const0> ;
+  assign pulse[13] = \^pulse [10];
+  assign pulse[12] = \<const0> ;
+  assign pulse[11] = \<const0> ;
+  assign pulse[10] = \^pulse [10];
+  assign pulse[9] = \^pulse [10];
+  assign pulse[8] = \^pulse [10];
+  assign pulse[7] = \<const0> ;
+  assign pulse[6] = \<const0> ;
+  assign pulse[5] = \<const0> ;
+  assign pulse[4] = \^pulse [10];
+  assign pulse[3] = \<const0> ;
+  assign pulse[2] = \<const0> ;
   assign pulse[1] = \<const0> ;
-  assign pulse[0] = \^pulse [0];
+  assign pulse[0] = \<const0> ;
   GND GND
        (.G(\<const0> ));
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_counter inst

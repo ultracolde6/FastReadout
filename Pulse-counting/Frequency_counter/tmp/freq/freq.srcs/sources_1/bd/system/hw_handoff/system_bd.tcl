@@ -853,6 +853,81 @@ proc create_hier_cell_PS7 { parentCell nameHier } {
   current_bd_instance $oldCurInst
 }
 
+# Hierarchical cell: Output_pulse
+proc create_hier_cell_Output_pulse { parentCell nameHier } {
+
+  variable script_folder
+
+  if { $parentCell eq "" || $nameHier eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2092 -severity "ERROR" "create_hier_cell_Output_pulse() - Empty argument(s)!"}
+     return
+  }
+
+  # Get object for parentCell
+  set parentObj [get_bd_cells $parentCell]
+  if { $parentObj == "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2090 -severity "ERROR" "Unable to find parent cell <$parentCell>!"}
+     return
+  }
+
+  # Make sure parentObj is hier blk
+  set parentType [get_property TYPE $parentObj]
+  if { $parentType ne "hier" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2091 -severity "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     return
+  }
+
+  # Save current instance; Restore later
+  set oldCurInst [current_bd_instance .]
+
+  # Set parent object as current
+  current_bd_instance $parentObj
+
+  # Create cell and set as current instance
+  set hier_obj [create_bd_cell -type hier $nameHier]
+  current_bd_instance $hier_obj
+
+  # Create interface pins
+
+  # Create pins
+  create_bd_pin -dir I -from 31 -to 0 cfg_data
+  create_bd_pin -dir I clk
+  create_bd_pin -dir O dac_clk
+  create_bd_pin -dir O -from 13 -to 0 dac_dat
+  create_bd_pin -dir O dac_rst
+  create_bd_pin -dir O dac_sel
+  create_bd_pin -dir O dac_wrt
+
+  # Create instance: axis_constant_0, and set properties
+  set axis_constant_0 [ create_bd_cell -type ip -vlnv pavel-demin:user:axis_constant:1.0 axis_constant_0 ]
+  set_property -dict [ list \
+   CONFIG.AXIS_TDATA_WIDTH {32} \
+ ] $axis_constant_0
+
+  # Create instance: axis_red_pitaya_dac_0, and set properties
+  set axis_red_pitaya_dac_0 [ create_bd_cell -type ip -vlnv pavel-demin:user:axis_red_pitaya_dac:1.0 axis_red_pitaya_dac_0 ]
+
+  # Create instance: clk_wiz_0, and set properties
+  set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
+
+  # Create interface connections
+  connect_bd_intf_net -intf_net axis_constant_0_M_AXIS [get_bd_intf_pins axis_constant_0/M_AXIS] [get_bd_intf_pins axis_red_pitaya_dac_0/S_AXIS]
+
+  # Create port connections
+  connect_bd_net -net axis_red_pitaya_dac_0_dac_clk [get_bd_pins dac_clk] [get_bd_pins axis_red_pitaya_dac_0/dac_clk]
+  connect_bd_net -net axis_red_pitaya_dac_0_dac_dat [get_bd_pins dac_dat] [get_bd_pins axis_red_pitaya_dac_0/dac_dat]
+  connect_bd_net -net axis_red_pitaya_dac_0_dac_rst [get_bd_pins dac_rst] [get_bd_pins axis_red_pitaya_dac_0/dac_rst]
+  connect_bd_net -net axis_red_pitaya_dac_0_dac_sel [get_bd_pins dac_sel] [get_bd_pins axis_red_pitaya_dac_0/dac_sel]
+  connect_bd_net -net axis_red_pitaya_dac_0_dac_wrt [get_bd_pins dac_wrt] [get_bd_pins axis_red_pitaya_dac_0/dac_wrt]
+  connect_bd_net -net cfg_data_1 [get_bd_pins cfg_data] [get_bd_pins axis_constant_0/cfg_data]
+  connect_bd_net -net clk_1 [get_bd_pins clk] [get_bd_pins axis_constant_0/aclk] [get_bd_pins axis_red_pitaya_dac_0/aclk] [get_bd_pins clk_wiz_0/clk_in1]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins axis_red_pitaya_dac_0/ddr_clk] [get_bd_pins clk_wiz_0/clk_out1]
+  connect_bd_net -net clk_wiz_0_locked [get_bd_pins axis_red_pitaya_dac_0/locked] [get_bd_pins clk_wiz_0/locked]
+
+  # Restore current instance
+  current_bd_instance $oldCurInst
+}
+
 # Hierarchical cell: FrequencyCounter
 proc create_hier_cell_FrequencyCounter { parentCell nameHier } {
 
@@ -894,10 +969,10 @@ proc create_hier_cell_FrequencyCounter { parentCell nameHier } {
 
 
   # Create pins
+  create_bd_pin -dir O -from 31 -to 0 Pulse
   create_bd_pin -dir I -type clk clk
   create_bd_pin -dir O -from 31 -to 0 counter_output
   create_bd_pin -dir O -from 13 -to 0 data_access
-  create_bd_pin -dir O -from 1 -to 0 pulse
   create_bd_pin -dir O -from 31 -to 0 pulse_count
   create_bd_pin -dir I -type rst rst
 
@@ -920,7 +995,7 @@ proc create_hier_cell_FrequencyCounter { parentCell nameHier } {
   connect_bd_net -net clk_1 [get_bd_pins clk] [get_bd_pins frequency_counter_0/clk]
   connect_bd_net -net frequency_counter_0_counter_output [get_bd_pins counter_output] [get_bd_pins frequency_counter_0/counter_output]
   connect_bd_net -net frequency_counter_0_data_access [get_bd_pins data_access] [get_bd_pins frequency_counter_0/data_access]
-  connect_bd_net -net frequency_counter_0_pulse [get_bd_pins pulse] [get_bd_pins frequency_counter_0/pulse]
+  connect_bd_net -net frequency_counter_0_pulse [get_bd_pins Pulse] [get_bd_pins frequency_counter_0/pulse]
   connect_bd_net -net frequency_counter_0_pulse_count -boundary_type lower [get_bd_pins pulse_count]
   connect_bd_net -net rst_1 [get_bd_pins rst] [get_bd_pins frequency_counter_0/rst]
 
@@ -1042,16 +1117,6 @@ proc create_root_design { parentCell } {
 
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
 
-  set Vaux0 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vaux0 ]
-
-  set Vaux1 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vaux1 ]
-
-  set Vaux8 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vaux8 ]
-
-  set Vaux9 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vaux9 ]
-
-  set Vp_Vn [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vp_Vn ]
-
 
   # Create ports
   set adc_clk_n_i [ create_bd_port -dir I adc_clk_n_i ]
@@ -1059,8 +1124,6 @@ proc create_root_design { parentCell } {
   set adc_csn_o [ create_bd_port -dir O adc_csn_o ]
   set adc_dat_a_i [ create_bd_port -dir I -from 13 -to 0 adc_dat_a_i ]
   set adc_dat_b_i [ create_bd_port -dir I -from 13 -to 0 adc_dat_b_i ]
-  set adc_enc_n_o [ create_bd_port -dir O adc_enc_n_o ]
-  set adc_enc_p_o [ create_bd_port -dir O adc_enc_p_o ]
   set dac_clk_o [ create_bd_port -dir O dac_clk_o ]
   set dac_dat_o [ create_bd_port -dir O -from 13 -to 0 dac_dat_o ]
   set dac_pwm_o [ create_bd_port -dir O -from 3 -to 0 dac_pwm_o ]
@@ -1071,15 +1134,15 @@ proc create_root_design { parentCell } {
   set daisy_n_o [ create_bd_port -dir O -from 1 -to 0 daisy_n_o ]
   set daisy_p_i [ create_bd_port -dir I -from 1 -to 0 daisy_p_i ]
   set daisy_p_o [ create_bd_port -dir O -from 1 -to 0 daisy_p_o ]
-  set exp_n_tri_io [ create_bd_port -dir IO -from 7 -to 0 exp_n_tri_io ]
-  set exp_p_tri_io [ create_bd_port -dir IO -from 7 -to 0 exp_p_tri_io ]
-  set led_o [ create_bd_port -dir O -from 1 -to 0 led_o ]
 
   # Create instance: DataAcquisition
   create_hier_cell_DataAcquisition [current_bd_instance .] DataAcquisition
 
   # Create instance: FrequencyCounter
   create_hier_cell_FrequencyCounter [current_bd_instance .] FrequencyCounter
+
+  # Create instance: Output_pulse
+  create_hier_cell_Output_pulse [current_bd_instance .] Output_pulse
 
   # Create instance: PS7
   create_hier_cell_PS7 [current_bd_instance .] PS7
@@ -1090,7 +1153,7 @@ proc create_root_design { parentCell } {
    CONFIG.C_ALL_INPUTS {1} \
    CONFIG.C_ALL_INPUTS_2 {1} \
    CONFIG.C_ALL_OUTPUTS_2 {0} \
-   CONFIG.C_GPIO2_WIDTH {2} \
+   CONFIG.C_GPIO2_WIDTH {14} \
    CONFIG.C_GPIO_WIDTH {32} \
    CONFIG.C_IS_DUAL {1} \
  ] $axi_gpio_0
@@ -1118,9 +1181,15 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net signal_split_0_M_AXIS_PORT1 [get_bd_intf_pins DataAcquisition/M_AXIS_PORT1] [get_bd_intf_pins FrequencyCounter/S_AXIS_IN]
 
   # Create port connections
-  connect_bd_net -net DataAcquisition_adc_clk [get_bd_pins DataAcquisition/adc_clk] [get_bd_pins FrequencyCounter/clk]
+  connect_bd_net -net DataAcquisition_adc_clk [get_bd_pins DataAcquisition/adc_clk] [get_bd_pins FrequencyCounter/clk] [get_bd_pins Output_pulse/clk]
+  connect_bd_net -net FrequencyCounter_Pulse [get_bd_pins FrequencyCounter/Pulse] [get_bd_pins Output_pulse/cfg_data]
   connect_bd_net -net FrequencyCounter_counter_output [get_bd_pins FrequencyCounter/counter_output] [get_bd_pins axi_gpio_0/gpio_io_i]
-  connect_bd_net -net FrequencyCounter_pulse [get_bd_pins FrequencyCounter/pulse] [get_bd_pins axi_gpio_0/gpio2_io_i]
+  connect_bd_net -net FrequencyCounter_data_access [get_bd_pins FrequencyCounter/data_access] [get_bd_pins axi_gpio_0/gpio2_io_i]
+  connect_bd_net -net Output_pulse_dac_clk [get_bd_ports dac_clk_o] [get_bd_pins Output_pulse/dac_clk]
+  connect_bd_net -net Output_pulse_dac_dat [get_bd_ports dac_dat_o] [get_bd_pins Output_pulse/dac_dat]
+  connect_bd_net -net Output_pulse_dac_rst [get_bd_ports dac_rst_o] [get_bd_pins Output_pulse/dac_rst]
+  connect_bd_net -net Output_pulse_dac_sel [get_bd_ports dac_sel_o] [get_bd_pins Output_pulse/dac_sel]
+  connect_bd_net -net Output_pulse_dac_wrt [get_bd_ports dac_wrt_o] [get_bd_pins Output_pulse/dac_wrt]
   connect_bd_net -net adc_clk_n_i_1 [get_bd_ports adc_clk_n_i] [get_bd_pins DataAcquisition/adc_clk_n_i]
   connect_bd_net -net adc_clk_p_i_1 [get_bd_ports adc_clk_p_i] [get_bd_pins DataAcquisition/adc_clk_p_i]
   connect_bd_net -net adc_dat_a_i_1 [get_bd_ports adc_dat_a_i] [get_bd_pins DataAcquisition/adc_dat_a_i]
