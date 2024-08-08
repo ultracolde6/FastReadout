@@ -6,7 +6,7 @@ module frequency_counter #
     parameter COUNT_WIDTH = 32,
     parameter signed [13:0] HIGH_THRESHOLD = 14'd6000,
     parameter signed [13:0] LOW_THRESHOLD = 14'd2000,
-    parameter PULSE_DURATION = 125000000,
+    parameter PULSE_DURATION = 100000000,
     parameter ADC_WIDTH = 14,
     parameter AXIS_TDATA_WIDTH = 32
 )
@@ -26,8 +26,8 @@ module frequency_counter #
 	output reg [COUNT_WIDTH-1:0]       counter_output,
 	//output reg [COUNT_WIDTH-1:0]       clock_counter,
 	output reg [31:0] clock_counter, //testing
-	output reg [1:0]                       pulse,  //high voltage pulse here
-	output reg signed [13:0]            data_access
+	output reg [1:0]                   pulse,  //high voltage pulse here
+	output reg signed [ADC_WIDTH-1:0]            data_access
 	//output reg  [0:0]                          state, state_next
 );
     // registers used to perform thresholding
@@ -37,8 +37,8 @@ module frequency_counter #
     reg [COUNT_WIDTH-1:0]          cycle=0, cycle_next=0;
    //reg [31:0]                      clock_counter=0, clock_counter_next=0;
     reg [COUNT_WIDTH-1:0]           clock_counter_next=0;
-     reg [13:0]                   pulse_count=0;
-    //reg [1:0]                       pulse=0;
+   reg [31:0]                   pulse_count=0;
+   // reg [1:0]                       pulse=0;
     wire signed [ADC_WIDTH-1:0]    data;
     
     
@@ -95,7 +95,7 @@ module frequency_counter #
     //generating pulse
     always @(posedge clk)
     begin
-        if (counter_output_next==0) begin
+        if (clock_counter_next > clock_counter) begin
             pulse_count <= PULSE_DURATION;
             pulse <= 0;          
             end else if (pulse_count > 0) begin

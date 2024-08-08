@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-141,-211",
+   "Default View_ScaleFactor":"3.53553",
+   "Default View_TopLeft":"664,-1",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
@@ -17,8 +17,8 @@ preplace inst frequency_counter_0 -pg 1 -lvl 1 -x 660 -y 10 -defaultsOSRD
 preplace netloc frequency_counter_0_counter_output 1 1 1 NJ -10
 preplace netloc rst_1 1 0 1 20J 10n
 preplace netloc clk_1 1 0 1 40 10n
-preplace netloc frequency_counter_0_data_access 1 1 1 N 50
 preplace netloc frequency_counter_0_pulse 1 1 1 820 30n
+preplace netloc frequency_counter_0_data_access 1 1 1 N 50
 preplace netloc frequency_counter_0_pulse_count 1 1 1 N 30
 preplace netloc S_AXIS_IN_1 1 0 1 30 -10n
 preplace netloc frequency_counter_0_M_AXIS_OUT 1 1 1 830 -30n

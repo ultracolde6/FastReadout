@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Wed Aug  7 13:18:18 2024
+//Date        : Wed Aug  7 17:31:47 2024
 //Host        : DESKTOP-RDVR7FP running 64-bit major release  (build 9200)
 //Command     : generate_target system.bd
 //Design      : system
@@ -81,7 +81,7 @@ module FrequencyCounter_imp_MPHDEJ
   output [31:0]counter_output;
   output [13:0]data_access;
   output [1:0]pulse;
-  output [13:0]pulse_count;
+  output [31:0]pulse_count;
   input rst;
 
   wire [31:0]S_AXIS_IN_1_TDATA;
@@ -847,7 +847,7 @@ module system
   output [1:0]led_o;
 
   wire DataAcquisition_adc_clk;
-  wire [13:0]FrequencyCounter_data_access;
+  wire [31:0]FrequencyCounter_counter_output;
   wire [1:0]FrequencyCounter_pulse;
   wire adc_clk_n_i_1;
   wire adc_clk_p_i_1;
@@ -925,7 +925,7 @@ module system
        (.S_AXIS_IN_tdata(signal_split_0_M_AXIS_PORT1_TDATA),
         .S_AXIS_IN_tvalid(signal_split_0_M_AXIS_PORT1_TVALID),
         .clk(DataAcquisition_adc_clk),
-        .data_access(FrequencyCounter_data_access),
+        .counter_output(FrequencyCounter_counter_output),
         .pulse(FrequencyCounter_pulse),
         .rst(xlc_reset_dout));
   PS7_imp_1QJPAX8 PS7
@@ -971,7 +971,7 @@ module system
         .S00_ARESETN(rst_ps7_0_125M_peripheral_aresetn));
   system_axi_gpio_0_0 axi_gpio_0
        (.gpio2_io_i(FrequencyCounter_pulse),
-        .gpio_io_i(FrequencyCounter_data_access),
+        .gpio_io_i(FrequencyCounter_counter_output),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M00_AXI_ARADDR[8:0]),
         .s_axi_aresetn(rst_ps7_0_125M_peripheral_aresetn),

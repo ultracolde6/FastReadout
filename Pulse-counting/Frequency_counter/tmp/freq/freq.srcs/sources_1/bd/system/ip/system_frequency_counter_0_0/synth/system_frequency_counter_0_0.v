@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "frequency_counter,Vivado 2020.1" *)
 (* CHECK_LICENSE_TYPE = "system_frequency_counter_0_0,frequency_counter,{}" *)
-(* CORE_GENERATION_INFO = "system_frequency_counter_0_0,frequency_counter,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=frequency_counter,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,COUNT_WIDTH=32,HIGH_THRESHOLD=01011101110000,LOW_THRESHOLD=00011111010000,PULSE_DURATION=125000000,ADC_WIDTH=14,AXIS_TDATA_WIDTH=32}" *)
+(* CORE_GENERATION_INFO = "system_frequency_counter_0_0,frequency_counter,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=frequency_counter,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,COUNT_WIDTH=32,HIGH_THRESHOLD=01011101110000,LOW_THRESHOLD=00011111010000,PULSE_DURATION=100000000,ADC_WIDTH=14,AXIS_TDATA_WIDTH=32}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module system_frequency_counter_0_0 (
@@ -93,7 +93,7 @@ output wire [13 : 0] data_access;
     .COUNT_WIDTH(32),
     .HIGH_THRESHOLD(14'B01011101110000),
     .LOW_THRESHOLD(14'B00011111010000),
-    .PULSE_DURATION(125000000),
+    .PULSE_DURATION(100000000),
     .ADC_WIDTH(14),
     .AXIS_TDATA_WIDTH(32)
   ) inst (

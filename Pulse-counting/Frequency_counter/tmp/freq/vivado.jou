@@ -2,74 +2,18 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Wed Jul 31 14:04:01 2024
-# Process ID: 32928
+# Start of session at: Wed Aug  7 16:14:29 2024
+# Process ID: 25772
 # Current directory: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14136 C:\Users\Purcell\Documents\RedPitayaPractice\Pulse-counting\Frequency_counter\tmp\freq\freq.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9408 C:\Users\Purcell\Documents\RedPitayaPractice\Pulse-counting\Frequency_counter\tmp\freq\freq.xpr
 # Log file: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/vivado.log
 # Journal file: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.xpr
-open_bd_design {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
-regenerate_bd_layout -routing
-regenerate_bd_layout
 update_compile_order -fileset sources_1
-set_property location {3 844 512} [get_bd_cells signal_decoder_0]
-set_property location {3 839 504} [get_bd_cells signal_decoder_0]
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-create_bd_cell -type module -reference frequency_counter frequency_counter_0
-delete_bd_objs [get_bd_nets FrequencyCounter/axis_red_pitaya_adc_0_adc_clk] [get_bd_nets FrequencyCounter/xlc_reset_dout] [get_bd_nets FrequencyCounter/frequency_counter_0_counter_output] [get_bd_nets FrequencyCounter/frequency_counter_0_activate_trigger] [get_bd_intf_nets FrequencyCounter/frequency_counter_0_M_AXIS_OUT] [get_bd_intf_nets FrequencyCounter/signal_split_0_M_AXIS_PORT1] [get_bd_cells FrequencyCounter/frequency_counter_0]
+ts/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
 update_compile_order -fileset sources_1
-undo
-set_property location {2 809 644} [get_bd_cells frequency_counter_0]
-set_property location {2 749 644} [get_bd_cells frequency_counter_0]
-move_bd_cells [get_bd_cells FrequencyCounter] [get_bd_cells frequency_counter_0]
-delete_bd_objs [get_bd_cells FrequencyCounter/frequency_counter_1]
-update_module_reference system_frequency_counter_0_0
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-open_project C:/Users/Purcell/Documents/RedPitayaProjects/RedPitaya-FPGA/prj/Examples/Frequency_counter/tmp/freq/freq.xpr
-open_bd_design {C:/Users/Purcell/Documents/RedPitayaProjects/RedPitaya-FPGA/prj/Examples/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
-update_compile_order -fileset sources_1
-current_project freq
-update_module_reference {system_frequency_counter_0_0 system_frequency_counter_0_1}
-connect_bd_net [get_bd_pins FrequencyCounter/trigger_bool] [get_bd_pins FrequencyCounter/frequency_counter_0/pulse]
-save_bd_design
-generate_target Simulation [get_files C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd]
-export_ip_user_files -of_objects [get_files C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd] -directory C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.ip_user_files -ipstatic_source_dir C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.cache/compile_simlib/modelsim} {questa=C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.cache/compile_simlib/questa} {riviera=C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.cache/compile_simlib/riviera} {activehdl=C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-launch_simulation
-delete_bd_objs [get_bd_nets FrequencyCounter_trigger_bool] [get_bd_nets square_wave_0_sq_wave] [get_bd_cells square_wave_0]
-connect_bd_net [get_bd_pins axi_gpio_0/gpio2_io_i] [get_bd_pins FrequencyCounter/trigger_bool]
-update_compile_order -fileset sources_1
-save_bd_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-launch_simulation
-update_module_reference system_frequency_counter_0_0
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-update_module_reference system_frequency_counter_0_0
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-current_project freq(2)
-launch_simulation
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-current_project freq
-launch_simulation
-update_module_reference system_frequency_counter_0_0
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
 update_module_reference system_frequency_counter_0_0
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 4
@@ -84,442 +28,51 @@ reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 4
 wait_on_run impl_1
 update_module_reference system_frequency_counter_0_0
-update_module_reference system_frequency_counter_0_0
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-launch_simulation
-launch_simulation
-delete_bd_objs [get_bd_nets signal_decoder_0_led_out] [get_bd_intf_nets frequency_counter_0_M_AXIS_OUT] [get_bd_cells signal_decoder_0]
-update_compile_order -fileset sources_1
-set_property LEFT 0 [get_bd_ports /led_o]
-connect_bd_net [get_bd_ports led_o] [get_bd_pins FrequencyCounter/frequency_counter_0/pulse]
-update_module_reference system_frequency_counter_0_0
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-launch_simulation
-open_run impl_1
-open_bd_design {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
-open_bd_design {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
-set_property is_enabled false [get_files  C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/new/output_generator.v]
-launch_simulation
-update_module_reference system_frequency_counter_0_0
-update_module_reference system_frequency_counter_0_0
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-reset_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-update_module_reference system_frequency_counter_0_0
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-launch_simulation
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-update_module_reference system_frequency_counter_0_0
-update_module_reference system_frequency_counter_0_0
-delete_bd_objs [get_bd_nets FrequencyCounter_trigger_bool]
-connect_bd_net [get_bd_pins FrequencyCounter/trigger_bool] [get_bd_pins axi_gpio_0/gpio2_io_i]
-set_property name pulse [get_bd_nets FrequencyCounter_trigger_bool]
-set_property name pulse [get_bd_pins FrequencyCounter/trigger_bool]
-delete_bd_objs [get_bd_nets FrequencyCounter/frequency_counter_0_activate_trigger] [get_bd_nets pulse] [get_bd_pins FrequencyCounter/pulse]
-create_bd_pin -dir O FrequencyCounter/pulse
-connect_bd_net [get_bd_pins FrequencyCounter/pulse] [get_bd_pins FrequencyCounter/frequency_counter_0/pulse]
-set_property location {894 125} [get_bd_pins FrequencyCounter/pulse]
-connect_bd_net [get_bd_ports led_o] [get_bd_pins FrequencyCounter/pulse]
-connect_bd_net [get_bd_pins axi_gpio_0/gpio2_io_i] [get_bd_pins FrequencyCounter/pulse]
-save_bd_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-reset_run impl_1
-startgroup
-set_property -dict [list CONFIG.C_GPIO2_WIDTH {2}] [get_bd_cells axi_gpio_0]
-endgroup
-save_bd_design
-reset_run synth_1
-reset_run system_axi_gpio_0_0_synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-startgroup
-set_property -dict [list CONFIG.C_ALL_INPUTS_2 {0} CONFIG.C_ALL_OUTPUTS_2 {1}] [get_bd_cells axi_gpio_0]
-endgroup
-startgroup
-set_property -dict [list CONFIG.C_ALL_INPUTS_2 {1} CONFIG.C_ALL_OUTPUTS_2 {0}] [get_bd_cells axi_gpio_0]
-endgroup
-connect_bd_net [get_bd_pins axi_gpio_0/gpio2_io_i] [get_bd_pins FrequencyCounter/pulse]
-delete_bd_objs [get_bd_nets frequency_counter_0_counter_output]
-delete_bd_objs [get_bd_nets FrequencyCounter_pulse]
-connect_bd_net [get_bd_pins axi_gpio_0/gpio2_io_i] [get_bd_pins FrequencyCounter/counter_output]
-connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_i] [get_bd_pins FrequencyCounter/pulse]
-connect_bd_net [get_bd_ports led_o] [get_bd_pins FrequencyCounter/pulse]
-update_module_reference system_frequency_counter_0_0
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-startgroup
-set_property -dict [list CONFIG.C_GPIO_WIDTH {2} CONFIG.C_GPIO2_WIDTH {31}] [get_bd_cells axi_gpio_0]
-endgroup
-startgroup
-set_property -dict [list CONFIG.C_GPIO2_WIDTH {32}] [get_bd_cells axi_gpio_0]
-endgroup
-reset_run synth_1
-save_bd_design
-reset_run system_axi_gpio_0_0_synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-delete_bd_objs [get_bd_nets FrequencyCounter_counter_output]
-delete_bd_objs [get_bd_nets FrequencyCounter_pulse]
-connect_bd_net [get_bd_pins axi_gpio_0/gpio_io_i] [get_bd_pins FrequencyCounter/counter_output]
-connect_bd_net [get_bd_ports led_o] [get_bd_pins FrequencyCounter/pulse]
-connect_bd_net [get_bd_pins axi_gpio_0/gpio2_io_i] [get_bd_pins FrequencyCounter/pulse]
-update_module_reference system_frequency_counter_0_0
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-reset_run synth_1
-reset_run system_frequency_counter_0_0_synth_1
-startgroup
-set_property -dict [list CONFIG.C_GPIO_WIDTH {32} CONFIG.C_GPIO2_WIDTH {2}] [get_bd_cells axi_gpio_0]
-endgroup
-update_module_reference system_frequency_counter_0_0
-reset_run system_axi_gpio_0_0_synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-update_module_reference system_frequency_counter_0_0
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-current_project freq(2)
-close_project
-update_module_reference system_frequency_counter_0_0
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
 update_module_reference system_frequency_counter_0_0
 delete_bd_objs [get_bd_nets FrequencyCounter_pulse]
-connect_bd_net [get_bd_ports led_o] [get_bd_pins FrequencyCounter/pulse]
-create_bd_pin -dir I FrequencyCounter/clock_counter
-delete_bd_objs [get_bd_pins FrequencyCounter/clock_counter]
-create_bd_pin -dir O FrequencyCounter/clock_counter
-connect_bd_net [get_bd_pins FrequencyCounter/clock_counter] [get_bd_pins FrequencyCounter/frequency_counter_0/clock_counter]
-connect_bd_net [get_bd_pins axi_gpio_0/gpio2_io_i] [get_bd_pins FrequencyCounter/clock_counter]
-open_hw_manager
-save_bd_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-reset_run synth_1
-reset_run system_frequency_counter_0_0_synth_1
-close_hw_manager
-open_bd_design {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
-startgroup
-set_property -dict [list CONFIG.C_GPIO2_WIDTH {32}] [get_bd_cells axi_gpio_0]
-endgroup
-save_bd_design
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-launch_simulation -mode post-synthesis -type functional
-source system_wrapper.tcl
-launch_simulation
-open_bd_design {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
+connect_bd_net [get_bd_pins FrequencyCounter/pulse_count] [get_bd_pins axi_gpio_0/gpio2_io_i]
 update_module_reference system_frequency_counter_0_0
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-delete_bd_objs [get_bd_nets FrequencyCounter_clock_counter]
-delete_bd_objs [get_bd_nets FrequencyCounter_pulse]
-connect_bd_net [get_bd_pins axi_gpio_0/gpio2_io_i] [get_bd_pins FrequencyCounter/pulse]
-connect_bd_net [get_bd_ports led_o] [get_bd_pins FrequencyCounter/pulse]
-startgroup
-set_property -dict [list CONFIG.C_GPIO2_WIDTH {2}] [get_bd_cells axi_gpio_0]
-endgroup
-update_module_reference system_frequency_counter_0_0
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-launch_simulation
-open_bd_design {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
-file mkdir C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sim_1/new
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sim_1/new/pulse_counter_tb.v w ]
-add_files -fileset sim_1 C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sim_1/new/pulse_counter_tb.v
-update_compile_order -fileset sim_1
-delete_bd_objs [get_bd_nets FrequencyCounter_pulse]
-connect_bd_net [get_bd_ports led_o] [get_bd_pins FrequencyCounter/pulse]
-delete_bd_objs [get_bd_nets FrequencyCounter_counter_output]
-connect_bd_net [get_bd_pins FrequencyCounter/counter_output] [get_bd_pins axi_gpio_0/gpio_io_i]
-connect_bd_net [get_bd_pins axi_gpio_0/gpio2_io_i] [get_bd_pins FrequencyCounter/pulse]
-update_module_reference system_frequency_counter_0_0
-connect_bd_net [get_bd_pins FrequencyCounter/pulse] [get_bd_pins FrequencyCounter/frequency_counter_0/pulse_count]
-create_bd_pin -dir I FrequencyCounter/pulse_count
-delete_bd_objs [get_bd_pins FrequencyCounter/pulse_count]
+connect_bd_net [get_bd_pins FrequencyCounter/pulse_count] [get_bd_pins FrequencyCounter/frequency_counter_0/pulse_count]
+delete_bd_objs [get_bd_nets FrequencyCounter_pulse_count] [get_bd_nets FrequencyCounter/frequency_counter_0_pulse_count] [get_bd_pins FrequencyCounter/pulse_count]
 create_bd_pin -dir O FrequencyCounter/pulse_count
-delete_bd_objs [get_bd_nets FrequencyCounter/frequency_counter_0_pulse]
 connect_bd_net [get_bd_pins FrequencyCounter/pulse_count] [get_bd_pins FrequencyCounter/frequency_counter_0/pulse_count]
-delete_bd_objs [get_bd_nets FrequencyCounter_pulse]
-connect_bd_net [get_bd_ports led_o] [get_bd_pins FrequencyCounter/clock_counter]
-delete_bd_objs [get_bd_nets FrequencyCounter_clock_counter]
 connect_bd_net [get_bd_pins axi_gpio_0/gpio2_io_i] [get_bd_pins FrequencyCounter/pulse_count]
-update_module_reference system_frequency_counter_0_0
-update_module_reference system_frequency_counter_0_0
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
 startgroup
-set_property -dict [list CONFIG.C_GPIO2_WIDTH {14}] [get_bd_cells axi_gpio_0]
-endgroup
-save_bd_design
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-startgroup
-set_property -dict [list CONFIG.C_GPIO2_WIDTH {15}] [get_bd_cells axi_gpio_0]
-endgroup
-save_bd_design
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-update_module_reference system_frequency_counter_0_0
-reset_run system_axi_gpio_0_0_synth_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-open_bd_design {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
-open_bd_design {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
-close [ open C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/new/axis-breakdown.v w ]
-add_files C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/new/axis-breakdown.v
-update_compile_order -fileset sources_1
-update_module_reference system_frequency_counter_0_0
-set_property source_mgmt_mode DisplayOnly [current_project]
-reorder_files -after C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/new/output_generator.v C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/new/axis-breakdown.v
-set_property source_mgmt_mode All [current_project]
-update_module_reference system_signal_split_0_0
-update_module_reference system_frequency_counter_0_0
-update_compile_order -fileset sim_1
-update_compile_order -fileset sources_1
-update_module_reference system_frequency_counter_0_0
-update_module_reference system_frequency_counter_0_0
-create_bd_cell -type module -reference axisbreakdown FrequencyCounter/axisbreakdown_0
-connect_bd_intf_net -boundary_type upper [get_bd_intf_pins FrequencyCounter/S_AXIS_IN] [get_bd_intf_pins FrequencyCounter/axisbreakdown_0/S_AXIS_IN]
-connect_bd_intf_net [get_bd_intf_pins FrequencyCounter/M_AXIS_OUT] [get_bd_intf_pins FrequencyCounter/axisbreakdown_0/M_AXIS_OUT]
-move_bd_cells [get_bd_cells /] [get_bd_cells FrequencyCounter/frequency_counter_0]
-move_bd_cells [get_bd_cells FrequencyCounter] [get_bd_cells frequency_counter_0]
-connect_bd_net [get_bd_pins FrequencyCounter/axisbreakdown_0/data] [get_bd_pins FrequencyCounter/frequency_counter_0/data]
-save_bd_design
-update_module_reference system_frequency_counter_0_0
-update_compile_order -fileset sources_1
-generate_target Simulation [get_files C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd]
-open_bd_design {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
-startgroup
-set_property -dict [list CONFIG.ADC_WIDTH {16}] [get_bd_cells FrequencyCounter/axisbreakdown_0]
-endgroup
-open_project C:/Users/Purcell/Documents/RedPitayaProjects/RedPitaya-FPGA/prj/Examples/Frequency_counter/tmp/freq/freq.xpr
-open_bd_design {C:/Users/Purcell/Documents/RedPitayaProjects/RedPitaya-FPGA/prj/Examples/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
-update_compile_order -fileset sources_1
-set_property location {2 659 257} [get_bd_cells FrequencyCounter]
-startgroup
-current_project freq
-set_property -dict [list CONFIG.ADC_WIDTH {14}] [get_bd_cells FrequencyCounter/axisbreakdown_0]
+set_property -dict [list CONFIG.C_GPIO2_WIDTH {32}] [get_bd_cells axi_gpio_0]
 endgroup
 save_bd_design
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 4
-save_bd_design
-generate_target Simulation [get_files C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd]
-open_bd_design {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
-update_module_reference system_axisbreakdown_0_0
-delete_bd_objs [get_bd_nets FrequencyCounter/clk_1]
-connect_bd_net [get_bd_pins FrequencyCounter/clk] [get_bd_pins FrequencyCounter/axisbreakdown_0/clk]
-connect_bd_net [get_bd_pins FrequencyCounter/clk] [get_bd_pins FrequencyCounter/frequency_counter_0/clk]
-save_bd_design
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-update_module_reference system_axisbreakdown_0_0
-update_module_reference system_axisbreakdown_0_0
-update_module_reference system_axisbreakdown_0_0
-connect_bd_net [get_bd_pins FrequencyCounter/clk] [get_bd_pins FrequencyCounter/axisbreakdown_0/clk]
-save_bd_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-update_module_reference system_axisbreakdown_0_0
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-launch_simulation
-open_bd_design {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
-open_bd_design {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
-launch_simulation
-launch_simulation
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top pulse_counter_tb [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sim_1
-set_property is_enabled false [get_files  {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/pow2.v C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/new/axis-breakdown.v C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/signal_split.v C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/signal_decoder.v}]
-set_property is_enabled true [get_files  C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/new/axis-breakdown.v]
-set_property is_enabled true [get_files  C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/pow2.v]
-set_property is_enabled true [get_files  C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/signal_split.v]
-launch_simulation
-update_compile_order -fileset sources_1
-launch_simulation
-source pulse_counter_tb.tcl
-close_sim
-launch_simulation
-open_bd_design {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
-open_bd_design {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
-launch_simulation
-source pulse_counter_tb.tcl
-close_sim
-launch_simulation
-source pulse_counter_tb.tcl
-add_bp {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} 27
-remove_bps -file {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} -line 27
-add_bp {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} 27
-add_bp {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} 32
-remove_bps -file {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} -line 32
-remove_bps -file {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} -line 27
-add_bp {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sim_1/new/pulse_counter_tb.v} 35
-remove_bps -file {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sim_1/new/pulse_counter_tb.v} -line 35
-add_bp {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} 27
-remove_bps -file {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} -line 27
-add_bp {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} 27
-add_bp {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} 30
-remove_bps -file {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} -line 30
-add_bp {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} 32
-remove_bps -file {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} -line 32
-add_bp {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} 30
-remove_bps -file {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} -line 30
-close_sim
-launch_simulation
-launch_simulation
-launch_simulation
-source pulse_counter_tb.tcl
-add_bp {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} 31
-add_bp {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sim_1/new/pulse_counter_tb.v} 36
-remove_bps -file {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sim_1/new/pulse_counter_tb.v} -line 36
-remove_bps -file {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} -line 31
-add_bp {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} 81
-current_sim simulation_1
-current_sim simulation_5
-close_sim
-launch_simulation
-source pulse_counter_tb.tcl
-close_sim
-launch_simulation
-source pulse_counter_tb.tcl
-current_sim simulation_1
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-open_bd_design {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
-open_bd_design {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
-update_module_reference system_signal_split_0_0
-update_module_reference system_frequency_counter_0_0
-update_module_reference system_frequency_counter_0_0
-connect_bd_net [get_bd_pins FrequencyCounter/pulse_count] [get_bd_pins FrequencyCounter/frequency_counter_0/pulse_count]
-current_sim simulation_7
-close_sim
-save_bd_design
-launch_simulation
-source pulse_counter_tb.tcl
-remove_bps -file {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} -line 27
-add_bp {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} 80
-remove_bps -file {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} -line 80
-remove_bps -file {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/frequency_counter.v} -line 81
-close_sim
-launch_simulation
-source pulse_counter_tb.tcl
-update_compile_order -fileset sources_1
-close_sim
-launch_simulation
-update_compile_order -fileset sources_1
-launch_simulation
-source pulse_counter_tb.tcl
-close_sim
-launch_simulation
-source pulse_counter_tb.tcl
-close_sim
-launch_simulation
-source pulse_counter_tb.tcl
-close_sim
-launch_simulation
-source pulse_counter_tb.tcl
-close_sim
-launch_simulation
-source pulse_counter_tb.tcl
-close_sim
-launch_simulation
-source pulse_counter_tb.tcl
-close_sim
-launch_simulation
-source pulse_counter_tb.tcl
-update_compile_order -fileset sources_1
-open_bd_design {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
-update_module_reference system_frequency_counter_0_0
-open_bd_design {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
-delete_bd_objs [get_bd_nets FrequencyCounter/axisbreakdown_0_data] [get_bd_intf_nets FrequencyCounter/frequency_counter_0_M_AXIS_OUT] [get_bd_intf_nets FrequencyCounter/signal_split_0_M_AXIS_PORT1] [get_bd_cells FrequencyCounter/axisbreakdown_0]
-update_compile_order -fileset sources_1
-save_bd_design
-update_compile_order -fileset sources_1
-update_module_reference system_frequency_counter_0_0
-connect_bd_intf_net -boundary_type upper [get_bd_intf_pins FrequencyCounter/S_AXIS_IN] [get_bd_intf_pins FrequencyCounter/frequency_counter_0/S_AXIS_IN]
-connect_bd_intf_net [get_bd_intf_pins FrequencyCounter/M_AXIS_OUT] [get_bd_intf_pins FrequencyCounter/frequency_counter_0/M_AXIS_OUT]
-update_module_reference system_frequency_counter_0_0
-create_bd_pin -dir O FrequencyCounter/data_access
-connect_bd_net [get_bd_pins FrequencyCounter/data_access] [get_bd_pins FrequencyCounter/frequency_counter_0/data_access]
-update_module_reference system_frequency_counter_0_0
-update_module_reference system_frequency_counter_0_0
-update_module_reference system_frequency_counter_0_0
-delete_bd_objs [get_bd_nets FrequencyCounter_pulse_count] [get_bd_nets FrequencyCounter/frequency_counter_0_pulse_count]
-connect_bd_net [get_bd_pins axi_gpio_0/gpio2_io_i] [get_bd_pins FrequencyCounter/data_access]
-save_bd_design
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-reset_run impl_1
-startgroup
-set_property -dict [list CONFIG.C_GPIO2_WIDTH {14}] [get_bd_cells axi_gpio_0]
-endgroup
-save_bd_design
-reset_run synth_1
-reset_run system_axi_gpio_0_0_synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
 wait_on_run impl_1
 update_module_reference system_frequency_counter_0_0
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-update_module_reference system_frequency_counter_0_0
-update_module_reference system_frequency_counter_0_0
-update_module_reference system_frequency_counter_0_0
+connect_bd_net [get_bd_pins FrequencyCounter/pulse] [get_bd_pins FrequencyCounter/frequency_counter_0/pulse]
+delete_bd_objs [get_bd_nets FrequencyCounter_pulse_count]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio2_io_i] [get_bd_pins FrequencyCounter/pulse]
 startgroup
 set_property -dict [list CONFIG.C_GPIO2_WIDTH {2}] [get_bd_cells axi_gpio_0]
 endgroup
-delete_bd_objs [get_bd_nets FrequencyCounter_counter_output]
-undo
-delete_bd_objs [get_bd_nets FrequencyCounter_data_access]
-connect_bd_net [get_bd_pins axi_gpio_0/gpio2_io_i] [get_bd_pins FrequencyCounter/pulse]
-connect_bd_net [get_bd_pins FrequencyCounter/pulse] [get_bd_pins FrequencyCounter/frequency_counter_0/pulse]
-update_module_reference system_frequency_counter_0_0
-reset_run synth_1
-reset_run system_axi_gpio_0_0_synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-update_module_reference system_frequency_counter_0_0
-update_module_reference system_frequency_counter_0_0
+save_bd_design
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 4
 wait_on_run impl_1
-close_sim
-close_sim
-close_project
+startgroup
+create_bd_cell -type ip -vlnv pavel-demin:user:axis_red_pitaya_adc:1.0 axis_red_pitaya_adc_0
+endgroup
+set_property location {3.5 2395 219} [get_bd_cells axis_red_pitaya_adc_0]
+create_bd_cell -type hier Output_pulse
+set_property screensize {167 182} [get_bd_cells Output_pulse]
+move_bd_cells [get_bd_cells Output_pulse] [get_bd_cells axis_red_pitaya_adc_0]
+startgroup
+create_bd_cell -type ip -vlnv pavel-demin:user:axis_constant:1.0 Output_pulse/axis_constant_0
+endgroup
+create_fileset -simset sim_2
+set_property SOURCE_SET sources_1 [get_filesets sim_2]
+file mkdir C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sim_2/new
+close [ open C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sim_2/new/testbench.v w ]
+add_files -fileset sim_2 C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sim_2/new/testbench.v
+update_compile_order -fileset sim_2
+save_bd_design
+launch_simulation
+current_fileset -simset [ get_filesets sim_2 ]
+generate_target Simulation [get_files C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd]
+generate_target Simulation [get_files C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd]

@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Wed Aug  7 13:19:48 2024
-# Process ID: 37756
+# Start of session at: Wed Aug  7 17:33:19 2024
+# Process ID: 21764
 # Current directory: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.runs/impl_1
 # Command line: vivado.exe -log system_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source system_wrapper.tcl -notrace
 # Log file: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.runs/impl_1/system_wrapper.vdi
@@ -28,8 +28,8 @@ INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Purcell/Documents/RedP
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.dcp' for cell 'system_i/PS7/processing_system7_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/ip/system_rst_ps7_0_125M_0/system_rst_ps7_0_125M_0.dcp' for cell 'system_i/PS7/rst_ps7_0_125M'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0.dcp' for cell 'system_i/PS7/ps7_0_axi_periph/s00_couplers/auto_pc'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 1024.426 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 1025.270 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 71 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2020.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -169,14 +169,14 @@ CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/cfg/ports.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1024.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1025.270 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 2 instances
 
 19 Infos, 44 Warnings, 37 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 1024.426 ; gain = 0.000
+link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 1025.270 ; gain = 0.000
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
@@ -203,54 +203,54 @@ WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port exp_p_tri_io[
 INFO: [Project 1-461] DRC finished with 0 Errors, 16 Warnings
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.851 . Memory (MB): peak = 1024.426 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.801 . Memory (MB): peak = 1025.270 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 1b5a0c415
+Ending Cache Timing Information Task | Checksum: 1af81d412
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1356.559 ; gain = 332.133
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1370.258 ; gain = 344.988
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 13 inverter(s) to 34 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 11274f00d
+Phase 1 Retarget | Checksum: fd659ad9
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.159 . Memory (MB): peak = 1552.395 ; gain = 0.000
-INFO: [Opt 31-389] Phase Retarget created 35 cells and removed 32 cells
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.158 . Memory (MB): peak = 1576.969 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 34 cells and removed 31 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 121e1c12b
+Phase 2 Constant propagation | Checksum: eef667fb
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.176 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.175 . Memory (MB): peak = 1576.969 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 8 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 1b41711dd
+Phase 3 Sweep | Checksum: f051553f
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.569 . Memory (MB): peak = 1552.395 ; gain = 0.000
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 388 cells
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.561 . Memory (MB): peak = 1576.969 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 389 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: 1b41711dd
+Phase 4 BUFG optimization | Checksum: f051553f
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.602 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.599 . Memory (MB): peak = 1576.969 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 1b41711dd
+Phase 5 Shift Register Optimization | Checksum: f051553f
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.634 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.632 . Memory (MB): peak = 1576.969 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 1b41711dd
+Phase 6 Post Processing Netlist | Checksum: f051553f
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.666 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.661 . Memory (MB): peak = 1576.969 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -259,9 +259,9 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |              35  |              32  |                                              0  |
+|  Retarget                     |              34  |              31  |                                              0  |
 |  Constant propagation         |               0  |               8  |                                              0  |
-|  Sweep                        |               0  |             388  |                                              0  |
+|  Sweep                        |               0  |             389  |                                              0  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
 |  Post Processing Netlist      |               0  |               0  |                                              0  |
@@ -271,37 +271,37 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1552.395 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 18504920a
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1576.969 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1f8f554eb
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.748 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.756 . Memory (MB): peak = 1576.969 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: 18504920a
+Ending Power Optimization Task | Checksum: 1f8f554eb
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1576.969 ; gain = 0.000
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 18504920a
+Ending Final Cleanup Task | Checksum: 1f8f554eb
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1576.969 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1552.395 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 18504920a
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1576.969 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1f8f554eb
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1576.969 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 36 Infos, 60 Warnings, 37 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1552.395 ; gain = 527.969
+opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1576.969 ; gain = 551.699
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1576.969 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.runs/impl_1/system_wrapper_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx
 Command: report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx
@@ -327,55 +327,60 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1552.395 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1037b7d00
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1576.969 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 117f442fa
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1552.395 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1576.969 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1576.969 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 19b764898
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 106ceca5f
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.695 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.705 . Memory (MB): peak = 1576.969 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 11e83fbfe
+Phase 1.3 Build Placer Netlist Model | Checksum: 2288e9d7a
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.934 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.977 . Memory (MB): peak = 1576.969 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 11e83fbfe
+Phase 1.4 Constrain Clocks/Macros | Checksum: 2288e9d7a
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.938 . Memory (MB): peak = 1552.395 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 11e83fbfe
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.981 . Memory (MB): peak = 1576.969 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 2288e9d7a
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.944 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.987 . Memory (MB): peak = 1576.969 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 13b1fd996
+Phase 2.1 Floorplanning | Checksum: 1b08bf5ba
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1576.969 ; gain = 0.000
 
 Phase 2.2 Global Placement Core
 
 Phase 2.2.1 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 18 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 22 LUT instances to create LUTNM shape
 INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
-INFO: [Physopt 32-775] End 1 Pass. Optimized 9 nets or cells. Created 0 new cell, deleted 9 existing cells and moved 0 existing cell
+INFO: [Physopt 32-775] End 1 Pass. Optimized 11 nets or cells. Created 0 new cell, deleted 11 existing cells and moved 0 existing cell
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
-INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
-INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
-INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
-INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for HD net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1576.969 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -384,67 +389,77 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            0  |              9  |                     9  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |            0  |             11  |                    11  |           0  |           1  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            0  |              9  |                     9  |           0  |           3  |  00:00:00  |
+|  Total                                            |            0  |             11  |                    11  |           0  |           8  |  00:00:00  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2.1 Physical Synthesis In Placer | Checksum: 2192c481a
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 18211e3c3
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1552.395 ; gain = 0.000
-Phase 2.2 Global Placement Core | Checksum: 24f341bbf
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1576.969 ; gain = 0.000
+Phase 2.2 Global Placement Core | Checksum: 1b1f43942
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1552.395 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 24f341bbf
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1576.969 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 1b1f43942
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1576.969 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 192dc65ce
+Phase 3.1 Commit Multi Column Macros | Checksum: 16be269e2
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1576.969 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1f80a1219
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 208c46a41
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1576.969 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1354c2cf0
+Phase 3.3 Area Swap Optimization | Checksum: 250dbf85b
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1576.969 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 1e11617ba
+Phase 3.4 Pipeline Register Optimization | Checksum: 1ef64927b
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1576.969 ; gain = 0.000
 
-Phase 3.5 Small Shape Detail Placement
-Phase 3.5 Small Shape Detail Placement | Checksum: 193b013c7
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 261065e3a
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1576.969 ; gain = 0.000
 
-Phase 3.6 Re-assign LUT pins
-Phase 3.6 Re-assign LUT pins | Checksum: 247e21bd1
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 16d2c8dd6
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1576.969 ; gain = 0.000
 
-Phase 3.7 Pipeline Register Optimization
-Phase 3.7 Pipeline Register Optimization | Checksum: 21c283227
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 1f942ac28
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1552.395 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 21c283227
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1576.969 ; gain = 0.000
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1552.395 ; gain = 0.000
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 166a28c7d
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1576.969 ; gain = 0.000
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 1d087aed0
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1576.969 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1d087aed0
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1576.969 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -453,7 +468,7 @@ INFO: [Place 46-20] Placer is running with the ExtraNetDelay_high directive. Pos
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 1e2dd7b0b
+Post Placement Optimization Initialization | Checksum: 106a71c45
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -461,80 +476,903 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=1.871 | TNS=0.000 |
-Phase 1 Physical Synthesis Initialization | Checksum: 17a14a5f2
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.768 | TNS=-21.055 |
+Phase 1 Physical Synthesis Initialization | Checksum: 19bc04756
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 1567.102 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 1577.617 ; gain = 0.000
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Ending Physical Synthesis Task | Checksum: 1aa098de1
+Ending Physical Synthesis Task | Checksum: 1a3d0c2ed
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1567.102 ; gain = 0.000
-Phase 4.1.1.1 BUFG Insertion | Checksum: 1e2dd7b0b
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 1577.617 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 106a71c45
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1567.102 ; gain = 14.707
-INFO: [Place 30-746] Post Placement Timing Summary WNS=1.871. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 17bdd0f6a
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1577.617 ; gain = 0.648
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.521. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 9f7550c4
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1567.102 ; gain = 14.707
-Phase 4.1 Post Commit Optimization | Checksum: 17bdd0f6a
+Time (s): cpu = 00:00:56 ; elapsed = 00:01:31 . Memory (MB): peak = 1577.617 ; gain = 0.648
+Phase 4.1 Post Commit Optimization | Checksum: 9f7550c4
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1567.102 ; gain = 14.707
+Time (s): cpu = 00:00:56 ; elapsed = 00:01:31 . Memory (MB): peak = 1577.617 ; gain = 0.648
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 17bdd0f6a
+Phase 4.2 Post Placement Cleanup | Checksum: 9f7550c4
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1567.102 ; gain = 14.707
+Time (s): cpu = 00:00:56 ; elapsed = 00:01:31 . Memory (MB): peak = 1577.617 ; gain = 0.648
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 17bdd0f6a
+Phase 4.3 Placer Reporting | Checksum: 9f7550c4
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1567.102 ; gain = 14.707
+Time (s): cpu = 00:00:56 ; elapsed = 00:01:31 . Memory (MB): peak = 1577.617 ; gain = 0.648
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1567.102 ; gain = 0.000
-Phase 4.4 Final Placement Cleanup | Checksum: 1b306da1d
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1577.617 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: 852dd8bc
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1567.102 ; gain = 14.707
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1b306da1d
+Time (s): cpu = 00:00:56 ; elapsed = 00:01:31 . Memory (MB): peak = 1577.617 ; gain = 0.648
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 852dd8bc
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1567.102 ; gain = 14.707
-Ending Placer Task | Checksum: 15faa438a
+Time (s): cpu = 00:00:56 ; elapsed = 00:01:31 . Memory (MB): peak = 1577.617 ; gain = 0.648
+Ending Placer Task | Checksum: 81b784ef
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1567.102 ; gain = 14.707
+Time (s): cpu = 00:00:56 ; elapsed = 00:01:31 . Memory (MB): peak = 1577.617 ; gain = 0.648
 INFO: [Common 17-83] Releasing license: Implementation
-72 Infos, 60 Warnings, 37 Critical Warnings and 0 Errors encountered.
+77 Infos, 60 Warnings, 37 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
+place_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:32 . Memory (MB): peak = 1577.617 ; gain = 0.648
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.125 . Memory (MB): peak = 1567.133 ; gain = 0.031
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.150 . Memory (MB): peak = 1577.617 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.runs/impl_1/system_wrapper_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file system_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 1567.133 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 1577.617 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file system_wrapper_utilization_placed.rpt -pb system_wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file system_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1567.133 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1577.617 ; gain = 0.000
 Command: phys_opt_design -directive AggressiveExplore
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
 INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AggressiveExplore
-INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
-INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1592.449 ; gain = 0.000
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.521 | TNS=-12.867 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1d61f6df9
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.647 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 2 SLR Crossing Optimization
+Phase 2 SLR Crossing Optimization | Checksum: 1d61f6df9
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.653 . Memory (MB): peak = 1592.469 ; gain = 0.020
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.521 | TNS=-12.867 |
+
+Phase 3 Fanout Optimization
+INFO: [Physopt 32-64] No nets found for fanout-optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 3 Fanout Optimization | Checksum: 1d61f6df9
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.675 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 4 Single Cell Placement Optimization
+INFO: [Physopt 32-660] Identified 94 candidate nets for placement-based optimization.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_8_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_8
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_11_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_11
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_6
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[0].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[0]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[1].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[1]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[2].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[2]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[3].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[3]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_5
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[24].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[24]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[25].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[25]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[26].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[26]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[27].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[27]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[28].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[28]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[29].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[29]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[30].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[30]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[31].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[31]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_4
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_7
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_3
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_8_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_8
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_3
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[4].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[4]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[5].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[5]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[6].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[6]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[7].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[7]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_5
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[10].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[10]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[11].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[11]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[8].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[8]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[9].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[9]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_5
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[16].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[16]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[17].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[17]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[18].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[18]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[19].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[19]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[20].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[20]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[21].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[21]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[22].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[22]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[23].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[23]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_4
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_7
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_5
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_7
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_8_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_8
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_4
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_3
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_3
+INFO: [Physopt 32-662] Processed net system_i/DataAcquisition/axis_red_pitaya_adc_0/inst/m_axis_tdata[7].  Did not re-place instance system_i/DataAcquisition/axis_red_pitaya_adc_0/inst/m_axis_tdata[7]_INST_0
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[12].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[12]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[13].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[13]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[14].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[14]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[15].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[15]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[1].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[1]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_7
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_14_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_14
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_3
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_5
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_7
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_5
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_12_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_12
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[0].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[0]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[2].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[2]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_3
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_4
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[5].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[5]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[4].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[4]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse[0]_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse[0]_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse[0].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_reg[0]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_9_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_9
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[6].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[6]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[3].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[3]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[9].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[9]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[7].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[7]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[10].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[10]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[8].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[8]
+INFO: [Physopt 32-661] Optimized 28 nets.  Re-placed 28 instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 28 nets or cells. Created 0 new cell, deleted 0 existing cell and moved 28 existing cells
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.309 | TNS=-8.263 |
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1592.469 ; gain = 0.000
+Phase 4 Single Cell Placement Optimization | Checksum: 29cbead7a
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 5 Multi Cell Placement Optimization
+INFO: [Physopt 32-660] Identified 90 candidate nets for placement-based optimization.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse[0]_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse[0]_i_1/O
+INFO: [Physopt 32-661] Optimized 0 net.  Re-placed 0 instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1592.469 ; gain = 0.000
+Phase 5 Multi Cell Placement Optimization | Checksum: 29cbead7a
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 6 Rewire
+INFO: [Physopt 32-246] Starting Signal Push optimization...
+INFO: [Physopt 32-241] No nets found for rewiring () optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1592.469 ; gain = 0.000
+Phase 6 Rewire | Checksum: 29cbead7a
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 7 Critical Cell Optimization
+INFO: [Physopt 32-46] Identified 6 candidate nets for critical-cell optimization.
+INFO: [Physopt 32-571] Net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[1] was not replicated.
+INFO: [Physopt 32-571] Net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0 was not replicated.
+INFO: [Physopt 32-571] Net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_6_n_0 was not replicated.
+INFO: [Physopt 32-571] Net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_5_n_0 was not replicated.
+INFO: [Physopt 32-571] Net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[0] was not replicated.
+INFO: [Physopt 32-571] Net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[2] was not replicated.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 7 Critical Cell Optimization | Checksum: 29cbead7a
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 8 Fanout Optimization
+INFO: [Physopt 32-64] No nets found for fanout-optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 8 Fanout Optimization | Checksum: 29cbead7a
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 9 Single Cell Placement Optimization
+INFO: [Physopt 32-660] Identified 94 candidate nets for placement-based optimization.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_8_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_8
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_11_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_11
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[28].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[28]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[29].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[29]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[30].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[30]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[31].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[31]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[4].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[4]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[5].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[5]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[6].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[6]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[7].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[7]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_5
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[0].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[0]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[1].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[1]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[24].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[24]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[25].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[25]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[26].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[26]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[27].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[27]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[2].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[2]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[3].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[3]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_4
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_7
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_3
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[12].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[12]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[13].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[13]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[14].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[14]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[15].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[15]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[20].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[20]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[21].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[21]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[22].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[22]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[23].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[23]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[10].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[10]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[11].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[11]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[16].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[16]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[17].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[17]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[18].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[18]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[19].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[19]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[8].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[8]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[9].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[9]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_8_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_8
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_3
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_5
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_5
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_4
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_7
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_5
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_7
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_8_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_8
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_4
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_3
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_3
+INFO: [Physopt 32-662] Processed net system_i/DataAcquisition/axis_red_pitaya_adc_0/inst/m_axis_tdata[7].  Did not re-place instance system_i/DataAcquisition/axis_red_pitaya_adc_0/inst/m_axis_tdata[7]_INST_0
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse[0]_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse[0]_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse[0].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_reg[0]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[1].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[1]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_7
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_14_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_14
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_3
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_5
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_7
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_5
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_12_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_12
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[0].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[0]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[2].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[2]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_3
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_4
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[5].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[5]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[4].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[4]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_9_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_9
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[6].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[6]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[3].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[3]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[9].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[9]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[7].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[7]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[10].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[10]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[8].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[8]
+INFO: [Physopt 32-661] Optimized 0 net.  Re-placed 0 instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1592.469 ; gain = 0.000
+Phase 9 Single Cell Placement Optimization | Checksum: 2b1be8e04
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 10 Multi Cell Placement Optimization
+INFO: [Physopt 32-660] Identified 90 candidate nets for placement-based optimization.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse[0]_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse[0]_i_1/O
+INFO: [Physopt 32-661] Optimized 0 net.  Re-placed 0 instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1592.469 ; gain = 0.000
+Phase 10 Multi Cell Placement Optimization | Checksum: 2b1be8e04
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 11 Rewire
+INFO: [Physopt 32-246] Starting Signal Push optimization...
+INFO: [Physopt 32-241] No nets found for rewiring () optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1592.469 ; gain = 0.000
+Phase 11 Rewire | Checksum: 2b1be8e04
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 12 Critical Cell Optimization
+INFO: [Physopt 32-68] No nets found for critical-cell optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 12 Critical Cell Optimization | Checksum: 2b1be8e04
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 13 SLR Crossing Optimization
+Phase 13 SLR Crossing Optimization | Checksum: 2b1be8e04
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 14 Fanout Optimization
+INFO: [Physopt 32-64] No nets found for fanout-optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 14 Fanout Optimization | Checksum: 2b1be8e04
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 15 Single Cell Placement Optimization
+INFO: [Physopt 32-660] Identified 94 candidate nets for placement-based optimization.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_8_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_8
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_11_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_11
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[28].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[28]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[29].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[29]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[30].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[30]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[31].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[31]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[4].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[4]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[5].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[5]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[6].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[6]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[7].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[7]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_5
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[0].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[0]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[1].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[1]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[24].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[24]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[25].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[25]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[26].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[26]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[27].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[27]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[2].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[2]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[3].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[3]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_4
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_7
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_3
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[12].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[12]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[13].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[13]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[14].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[14]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[15].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[15]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[20].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[20]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[21].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[21]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[22].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[22]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[23].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[23]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[10].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[10]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[11].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[11]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[16].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[16]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[17].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[17]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[18].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[18]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[19].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[19]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[8].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[8]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[9].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[9]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_8_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_8
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_3
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_5
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_5
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_4
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_7
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_5
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_7
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_8_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_8
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_4
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_3
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_3
+INFO: [Physopt 32-662] Processed net system_i/DataAcquisition/axis_red_pitaya_adc_0/inst/m_axis_tdata[7].  Did not re-place instance system_i/DataAcquisition/axis_red_pitaya_adc_0/inst/m_axis_tdata[7]_INST_0
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse[0]_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse[0]_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse[0].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_reg[0]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[1].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[1]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_7
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_14_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_14
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_3
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_5
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_7
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_5
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_12_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_12
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[0].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[0]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[2].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[2]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_3
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_4
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[5].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[5]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[4].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[4]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_9_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_9
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[6].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[6]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[3].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[3]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[9].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[9]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[7].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[7]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[10].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[10]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[8].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[8]
+INFO: [Physopt 32-661] Optimized 0 net.  Re-placed 0 instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1592.469 ; gain = 0.000
+Phase 15 Single Cell Placement Optimization | Checksum: 2b1be8e04
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 16 Multi Cell Placement Optimization
+INFO: [Physopt 32-660] Identified 90 candidate nets for placement-based optimization.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse[0]_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse[0]_i_1/O
+INFO: [Physopt 32-661] Optimized 0 net.  Re-placed 0 instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1592.469 ; gain = 0.000
+Phase 16 Multi Cell Placement Optimization | Checksum: 2b1be8e04
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 17 Rewire
+INFO: [Physopt 32-246] Starting Signal Push optimization...
+INFO: [Physopt 32-241] No nets found for rewiring () optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1592.469 ; gain = 0.000
+Phase 17 Rewire | Checksum: 2b1be8e04
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 18 Critical Cell Optimization
+INFO: [Physopt 32-68] No nets found for critical-cell optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 18 Critical Cell Optimization | Checksum: 2b1be8e04
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 19 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 19 DSP Register Optimization | Checksum: 2b1be8e04
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 20 BRAM Register Optimization
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 20 BRAM Register Optimization | Checksum: 2b1be8e04
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 21 URAM Register Optimization
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 21 URAM Register Optimization | Checksum: 2b1be8e04
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 22 Shift Register Optimization
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 22 Shift Register Optimization | Checksum: 2b1be8e04
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 23 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 23 DSP Register Optimization | Checksum: 2b1be8e04
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 24 BRAM Register Optimization
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 24 BRAM Register Optimization | Checksum: 2b1be8e04
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 25 URAM Register Optimization
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 25 URAM Register Optimization | Checksum: 2b1be8e04
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 26 Shift Register Optimization
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 26 Shift Register Optimization | Checksum: 2b1be8e04
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 27 Critical Pin Optimization
+INFO: [Physopt 32-606] Identified 29 candidate nets for critical-pin optimization.
+INFO: [Physopt 32-608] Optimized 5 nets.  Swapped 103 pins.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 5 nets or cells. Created 0 new cell, deleted 0 existing cell and moved 103 existing cells
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.197 | TNS=-4.475 |
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1592.469 ; gain = 0.000
+Phase 27 Critical Pin Optimization | Checksum: 2b1be8e04
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 28 Very High Fanout Optimization
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 28 Very High Fanout Optimization | Checksum: 2b1be8e04
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 29 Single Cell Placement Optimization
+INFO: [Physopt 32-660] Identified 103 candidate nets for placement-based optimization.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[1].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[1]
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_6_n_0.  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_6
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_14_n_0.  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_14
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_8_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_8
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_11_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_11
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[0].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[0]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[1].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[1]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[24].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[24]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[25].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[25]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[26].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[26]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[27].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[27]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[2].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[2]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[3].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[3]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_5
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_7
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_4
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[28].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[28]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[29].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[29]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[30].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[30]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[31].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[31]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[4].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[4]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[5].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[5]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[6].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[6]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[7].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[7]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_1
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_5_n_0.  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_5
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_12_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_12
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_7
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[0].  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[0]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[10].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[10]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[11].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[11]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[16].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[16]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[17].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[17]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[18].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[18]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[19].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[19]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[8].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[8]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[9].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[9]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[2].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[2]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[12].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[12]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[13].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[13]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[14].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[14]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[15].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[15]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[20].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[20]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[21].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[21]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[22].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[22]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[23].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[23]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_8_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_8
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_3
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[5].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[5]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_5
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[4].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[4]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_4
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_7
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_9_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_9
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_8_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_8
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[6].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[6]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_4
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_3
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[3].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[3]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_5
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_3
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_7
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[9].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[9]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse[0]_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse[0]_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse[0].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_reg[0]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[7].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[7]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_3
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[10].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[10]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_5
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[8].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[8]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_7
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[13].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[13]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[11].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[11]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_3
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[14].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[14]
+INFO: [Physopt 32-662] Processed net system_i/DataAcquisition/axis_red_pitaya_adc_0/inst/m_axis_tdata[7].  Did not re-place instance system_i/DataAcquisition/axis_red_pitaya_adc_0/inst/m_axis_tdata[7]_INST_0
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[12].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[12]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[17].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[17]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_5
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[15].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[15]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_2
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_3_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_3
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[18].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[18]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[16].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[16]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_1_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_1
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[19].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[19]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry_i_4
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[21].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[21]
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_2_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/state_next1_carry__0_i_2
+INFO: [Physopt 32-661] Optimized 4 nets.  Re-placed 4 instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 4 nets or cells. Created 0 new cell, deleted 0 existing cell and moved 4 existing cells
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.174 | TNS=-3.740 |
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1592.469 ; gain = 0.000
+Phase 29 Single Cell Placement Optimization | Checksum: 1b7be8781
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 30 Multi Cell Placement Optimization
+INFO: [Physopt 32-660] Identified 98 candidate nets for placement-based optimization.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4/O
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_7/O
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_6/O
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_14_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_14/O
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10/O
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_5_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_5/O
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_12_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_12/O
+INFO: [Physopt 32-661] Optimized 0 net.  Re-placed 0 instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1592.469 ; gain = 0.000
+Phase 30 Multi Cell Placement Optimization | Checksum: 2b3a8920d
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 31 SLR Crossing Optimization
+Phase 31 SLR Crossing Optimization | Checksum: 2b3a8920d
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1592.469 ; gain = 0.020
+
+Phase 32 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.174 | TNS=-3.740 |
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[0].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[0]
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[1].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[1]
+INFO: [Physopt 32-572] Net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[1] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/clock_counter_next[24]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4/O
+INFO: [Physopt 32-572] Net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_7
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_7_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_7/O
+INFO: [Physopt 32-710] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0. Critical path length was reduced through logic transformation on cell system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_comp.
+INFO: [Physopt 32-735] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_7_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.140 | TNS=-2.652 |
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_6
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_6_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_6/O
+INFO: [Physopt 32-572] Net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_6_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_14_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_14
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_14_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_14/O
+INFO: [Physopt 32-710] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_6_n_0. Critical path length was reduced through logic transformation on cell system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_6_comp.
+INFO: [Physopt 32-735] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_14_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.118 | TNS=-1.947 |
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10/O
+INFO: [Physopt 32-735] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.103 | TNS=-1.561 |
+INFO: [Physopt 32-663] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_14_n_0.  Re-placed instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_14_comp
+INFO: [Physopt 32-735] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_14_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.064 | TNS=-0.838 |
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10/O
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_next[9]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[31]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[31]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/DataAcquisition/axis_red_pitaya_adc_0/inst/int_clk0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net adc_clk_p_i. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[0].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[0]
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[1].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[1]
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/clock_counter_next[24]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_comp
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_comp/O
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10/O
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_next[9]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/DataAcquisition/axis_red_pitaya_adc_0/inst/int_clk0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net adc_clk_p_i. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.064 | TNS=-0.838 |
+Phase 32 Critical Path Optimization | Checksum: 1e2b7fbb8
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1601.273 ; gain = 8.824
+
+Phase 33 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.064 | TNS=-0.838 |
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[0].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[0]
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[1].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[1]
+INFO: [Physopt 32-572] Net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[1] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/clock_counter_next[24]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__1_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__0_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_comp
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_comp/O
+INFO: [Physopt 32-134] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10/O
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_next[9]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[31]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[31]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/DataAcquisition/axis_red_pitaya_adc_0/inst/int_clk0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net adc_clk_p_i. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[0].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[0]
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count_reg[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[1].  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_reg[1]
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/clock_counter_next[24]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_comp
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_comp/O
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10
+INFO: [Physopt 32-662] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10_n_0.  Did not re-place instance system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10/O
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output[31]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/counter_output_next[9]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/FrequencyCounter/frequency_counter_0/inst/pulse_count0_carry__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net system_i/DataAcquisition/axis_red_pitaya_adc_0/inst/int_clk0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net adc_clk_p_i. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.064 | TNS=-0.838 |
+Phase 33 Critical Path Optimization | Checksum: 1635012f6
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1601.273 ; gain = 8.824
+
+Phase 34 BRAM Enable Optimization
+Phase 34 BRAM Enable Optimization | Checksum: 1635012f6
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1601.273 ; gain = 8.824
+INFO: [Physopt 32-960] Skip hold-fix as initial WHS does not violate hold threshold 250 ps
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1601.273 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-0.064 | TNS=-0.838 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization            |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Fanout                  |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           3  |  00:00:00  |
+|  Single Cell Placement   |          0.235  |          5.340  |            0  |              0  |                    32  |           0  |           4  |  00:00:12  |
+|  Multi Cell Placement    |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           4  |  00:00:01  |
+|  Rewire                  |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           3  |  00:00:00  |
+|  Critical Cell           |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           3  |  00:00:00  |
+|  SLR Crossing            |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           3  |  00:00:00  |
+|  DSP Register            |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           2  |  00:00:00  |
+|  BRAM Register           |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           2  |  00:00:00  |
+|  URAM Register           |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           2  |  00:00:00  |
+|  Shift Register          |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           2  |  00:00:00  |
+|  Critical Pin            |          0.112  |          3.787  |            0  |              0  |                     5  |           0  |           1  |  00:00:00  |
+|  Very High Fanout        |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Enable             |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path           |          0.110  |          2.902  |            0  |              0  |                     4  |           0  |           2  |  00:00:07  |
+|  Total                   |          0.457  |         12.029  |            0  |              0  |                    41  |           0  |          33  |  00:00:19  |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1601.273 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 191032238
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1601.273 ; gain = 8.824
 INFO: [Common 17-83] Releasing license: Implementation
-82 Infos, 60 Warnings, 37 Critical Warnings and 0 Errors encountered.
+684 Infos, 60 Warnings, 37 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1601.273 ; gain = 23.656
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.129 . Memory (MB): peak = 1597.898 ; gain = 17.832
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.153 . Memory (MB): peak = 1610.117 ; gain = 8.844
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.runs/impl_1/system_wrapper_physopt.dcp' has been generated.
 Command: route_design -directive NoTimingRelaxation
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 Running DRC as a precondition to command route_design
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
@@ -544,41 +1382,41 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 Starting Routing Task
 INFO: [Route 35-270] Using Router directive 'NoTimingRelaxation'.
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: ea51ea23 ConstDB: 0 ShapeSum: 75585967 RouteDB: 0
+Checksum: PlaceDB: f1ee7ba6 ConstDB: 0 ShapeSum: 6ac7e29b RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: beace303
+Phase 1 Build RT Design | Checksum: 1406ae6c5
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1660.438 ; gain = 47.516
-Post Restoration Checksum: NetGraph: 74378528 NumContArr: 4a755ddb Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1667.883 ; gain = 47.727
+Post Restoration Checksum: NetGraph: 54015517 NumContArr: ec6991ae Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: beace303
+Phase 2.1 Create Timer | Checksum: 1406ae6c5
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1660.438 ; gain = 47.516
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1667.898 ; gain = 47.742
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: beace303
+Phase 2.2 Fix Topology Constraints | Checksum: 1406ae6c5
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1666.457 ; gain = 53.535
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1673.895 ; gain = 53.738
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: beace303
+Phase 2.3 Pre Route Cleanup | Checksum: 1406ae6c5
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1666.457 ; gain = 53.535
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1673.895 ; gain = 53.738
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 194bb4e89
+Phase 2.4 Update Timing | Checksum: 1b661edd0
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1672.387 ; gain = 59.465
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.872  | TNS=0.000  | WHS=-0.143 | THS=-17.086|
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1679.723 ; gain = 59.566
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.073 | TNS=-1.070 | WHS=-0.146 | THS=-22.191|
 
-Phase 2 Router Initialization | Checksum: 190041952
+Phase 2 Router Initialization | Checksum: 21527d0bb
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1672.820 ; gain = 59.898
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1681.129 ; gain = 60.973
 
 Router Utilization Summary
   Global Vertical Routing Utilization    = 0 %
@@ -586,78 +1424,106 @@ Router Utilization Summary
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 1242
+  Number of Failed Nets               = 1647
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 1242
+  Number of Unrouted Nets             = 1647
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 173964d08
+Phase 3 Initial Routing | Checksum: 22e9ecdac
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1674.352 ; gain = 61.430
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1682.285 ; gain = 62.129
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 100
- Number of Nodes with overlaps = 18
+ Number of Nodes with overlaps = 157
+ Number of Nodes with overlaps = 44
+ Number of Nodes with overlaps = 14
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 5
  Number of Nodes with overlaps = 4
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.945  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.702 | TNS=-21.313| WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: ff6857da
+Phase 4.1 Global Iteration 0 | Checksum: 223a4f259
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1674.355 ; gain = 61.434
-Phase 4 Rip-up And Reroute | Checksum: ff6857da
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1682.289 ; gain = 62.133
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1674.355 ; gain = 61.434
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 30
+ Number of Nodes with overlaps = 19
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.702 | TNS=-21.313| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 1ba4141ea
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1682.289 ; gain = 62.133
+Phase 4 Rip-up And Reroute | Checksum: 1ba4141ea
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1682.289 ; gain = 62.133
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 12deb217f
+Phase 5.1.1 Update Timing | Checksum: 15a00bbc4
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1674.355 ; gain = 61.434
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.060  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1682.289 ; gain = 62.133
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.579 | TNS=-16.926| WHS=N/A    | THS=N/A    |
 
-Phase 5.1 Delay CleanUp | Checksum: 12deb217f
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 1fa6cd009
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1674.355 ; gain = 61.434
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1683.344 ; gain = 63.188
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 12deb217f
+Phase 5.2 Clock Skew Optimization | Checksum: 1fa6cd009
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1674.355 ; gain = 61.434
-Phase 5 Delay and Skew Optimization | Checksum: 12deb217f
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1683.344 ; gain = 63.188
+Phase 5 Delay and Skew Optimization | Checksum: 1fa6cd009
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1674.355 ; gain = 61.434
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1683.344 ; gain = 63.188
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: af3242cf
+Phase 6.1.1 Update Timing | Checksum: 209e9e9d8
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1674.355 ; gain = 61.434
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=2.060  | TNS=0.000  | WHS=0.076  | THS=0.000  |
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1683.344 ; gain = 63.188
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.576 | TNS=-16.827| WHS=0.060  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: f2a751b2
+Phase 6.1 Hold Fix Iter | Checksum: 23ad6ef89
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1674.355 ; gain = 61.434
-Phase 6 Post Hold Fix | Checksum: f2a751b2
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1683.344 ; gain = 63.188
+Phase 6 Post Hold Fix | Checksum: 23ad6ef89
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1674.355 ; gain = 61.434
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1683.344 ; gain = 63.188
 
-Phase 7 Route finalize
+Phase 7 Timing Verification
+
+Phase 7.1 Update Timing
+Phase 7.1 Update Timing | Checksum: 22d9643e0
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1683.344 ; gain = 63.188
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.576 | TNS=-16.827| WHS=N/A    | THS=N/A    |
+
+Phase 7 Timing Verification | Checksum: 22d9643e0
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1683.344 ; gain = 63.188
+
+Phase 8 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.32911 %
-  Global Horizontal Routing Utilization  = 0.59421 %
+  Global Vertical Routing Utilization    = 0.498029 %
+  Global Horizontal Routing Utilization  = 0.8017 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -667,44 +1533,234 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 1707b5b7b
+Congestion Report
+North Dir 1x1 Area, Max Cong = 33.3333%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 26.1261%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 44.1176%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 38.2353%, No Congested Regions.
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1674.355 ; gain = 61.434
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 
-Phase 8 Verifying routed nets
+Phase 8 Route finalize | Checksum: 22d9643e0
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1683.344 ; gain = 63.188
+
+Phase 9 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 1707b5b7b
+Phase 9 Verifying routed nets | Checksum: 22d9643e0
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1676.414 ; gain = 63.492
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1684.316 ; gain = 64.160
 
-Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 1b7eed647
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 1a89428bf
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1676.414 ; gain = 63.492
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1684.316 ; gain = 64.160
 
-Phase 10 Post Router Timing
-INFO: [Route 35-20] Post Routing Timing Summary | WNS=2.062  | TNS=0.000  | WHS=0.076  | THS=0.000  |
+Phase 11 Incr Placement Change
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1684.316 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.585. For the most accurate timing information please run report_timing.
+Ending IncrPlace Task | Checksum: 17fff2cb6
 
-INFO: [Route 35-61] The design met the timing requirement.
-Phase 10 Post Router Timing | Checksum: 1c31ed35f
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1684.316 ; gain = 0.000
+Phase 11 Incr Placement Change | Checksum: 1a89428bf
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1676.414 ; gain = 63.492
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1684.316 ; gain = 64.160
+
+Phase 12 Build RT Design
+Phase 12 Build RT Design | Checksum: 4ced9383
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1684.316 ; gain = 64.160
+Post Restoration Checksum: NetGraph: e8885cff NumContArr: b79c34db Constraints: 0 Timing: 0
+
+Phase 13 Router Initialization
+
+Phase 13.1 Create Timer
+Phase 13.1 Create Timer | Checksum: 1a02491da
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1684.316 ; gain = 64.160
+
+Phase 13.2 Fix Topology Constraints
+Phase 13.2 Fix Topology Constraints | Checksum: 1a02491da
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1684.316 ; gain = 64.160
+
+Phase 13.3 Pre Route Cleanup
+Phase 13.3 Pre Route Cleanup | Checksum: 1a02491da
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1684.316 ; gain = 64.160
+
+Phase 13.4 Timing Verification
+
+Phase 13.4.1 Update Timing
+Phase 13.4.1 Update Timing | Checksum: 1b99d12f3
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1684.316 ; gain = 64.160
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.577 | TNS=-16.853| WHS=0.060  | THS=0.000  |
+
+Phase 13.4 Timing Verification | Checksum: 1b99d12f3
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1684.316 ; gain = 64.160
+ Number of Nodes with overlaps = 0
+
+Phase 13.5 Update Timing
+Phase 13.5 Update Timing | Checksum: 19fe5a7f1
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1684.316 ; gain = 64.160
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.701 | TNS=-21.296| WHS=-0.146 | THS=-22.055|
+
+Phase 13 Router Initialization | Checksum: 1a6e83948
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1684.316 ; gain = 64.160
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.498029 %
+  Global Horizontal Routing Utilization  = 0.8017 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+
+Phase 14 Initial Routing
+ Number of Nodes with overlaps = 0
+Phase 14 Initial Routing | Checksum: f84ab1b3
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1684.316 ; gain = 64.160
+
+Phase 15 Rip-up And Reroute
+
+Phase 15.1 Global Iteration 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.699 | TNS=-21.214| WHS=N/A    | THS=N/A    |
+
+Phase 15.1 Global Iteration 0 | Checksum: 11d586053
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1684.316 ; gain = 64.160
+
+Phase 15.2 Global Iteration 1
+ Number of Nodes with overlaps = 53
+ Number of Nodes with overlaps = 35
+ Number of Nodes with overlaps = 27
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.702 | TNS=-21.313| WHS=N/A    | THS=N/A    |
+
+Phase 15.2 Global Iteration 1 | Checksum: 135298b16
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1684.316 ; gain = 64.160
+Phase 15 Rip-up And Reroute | Checksum: 135298b16
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1684.316 ; gain = 64.160
+
+Phase 16 Delay and Skew Optimization
+
+Phase 16.1 Delay CleanUp
+
+Phase 16.1.1 Update Timing
+Phase 16.1.1 Update Timing | Checksum: 108e80d37
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1684.316 ; gain = 64.160
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.576 | TNS=-16.827| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 16.1 Delay CleanUp | Checksum: 13350a159
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1685.125 ; gain = 64.969
+
+Phase 16.2 Clock Skew Optimization
+Phase 16.2 Clock Skew Optimization | Checksum: 13350a159
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1685.125 ; gain = 64.969
+Phase 16 Delay and Skew Optimization | Checksum: 13350a159
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1685.125 ; gain = 64.969
+
+Phase 17 Post Hold Fix
+
+Phase 17.1 Hold Fix Iter
+
+Phase 17.1.1 Update Timing
+Phase 17.1.1 Update Timing | Checksum: 19d1a1600
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1685.125 ; gain = 64.969
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.576 | TNS=-16.827| WHS=0.060  | THS=0.000  |
+
+Phase 17.1 Hold Fix Iter | Checksum: 19d1a1600
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1685.125 ; gain = 64.969
+Phase 17 Post Hold Fix | Checksum: 19d1a1600
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1685.125 ; gain = 64.969
+
+Phase 18 Timing Verification
+
+Phase 18.1 Update Timing
+Phase 18.1 Update Timing | Checksum: 14b218dba
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1685.125 ; gain = 64.969
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.576 | TNS=-16.827| WHS=N/A    | THS=N/A    |
+
+Phase 18 Timing Verification | Checksum: 14b218dba
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1685.125 ; gain = 64.969
+
+Phase 19 Reset Design
+INFO: [Route 35-307] 1653 nets already restored were skipped.
+Post Restoration Checksum: NetGraph: 691b8daa NumContArr: 50b4c433 Constraints: 0 Timing: eec3d6e2
+Phase 19 Reset Design | Checksum: 1a89428bf
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1690.402 ; gain = 70.246
+
+Phase 20 Post Router Timing
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=-0.577 | TNS=-16.853| WHS=0.060  | THS=0.000  |
+
+CRITICAL WARNING: [Route 35-39] The design did not meet timing requirements. Please run report_timing_summary for detailed reports.
+Resolution: Verify that the timing was met or had small violations at all previous steps (synthesis, placement, power_opt, and phys_opt). Run report_timing_summary and analyze individual timing paths.
+INFO: [Route 35-253] TNS is the sum of the worst slack violation on every endpoint in the design. Review the paths with the biggest WNS violations in the timing reports and modify your constraints or your design to improve both WNS and TNS.
+Phase 20 Post Router Timing | Checksum: fbb19162
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1690.402 ; gain = 70.246
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1676.414 ; gain = 63.492
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1690.402 ; gain = 70.246
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-98 Infos, 60 Warnings, 37 Critical Warnings and 0 Errors encountered.
+714 Infos, 60 Warnings, 38 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1676.414 ; gain = 78.516
+route_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 1690.402 ; gain = 80.285
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.153 . Memory (MB): peak = 1683.113 ; gain = 6.699
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.177 . Memory (MB): peak = 1693.160 ; gain = 2.758
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.runs/impl_1/system_wrapper_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file system_wrapper_drc_routed.rpt -pb system_wrapper_drc_routed.pb -rpx system_wrapper_drc_routed.rpx
 Command: report_drc -file system_wrapper_drc_routed.rpt -pb system_wrapper_drc_routed.pb -rpx system_wrapper_drc_routed.rpx
@@ -724,12 +1780,13 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-110 Infos, 60 Warnings, 37 Critical Warnings and 0 Errors encountered.
+726 Infos, 60 Warnings, 38 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file system_wrapper_route_status.rpt -pb system_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file system_wrapper_timing_summary_routed.rpt -pb system_wrapper_timing_summary_routed.pb -rpx system_wrapper_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
 INFO: [runtcl-4] Executing : report_incremental_reuse -file system_wrapper_incremental_reuse_routed.rpt
 INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
 INFO: [runtcl-4] Executing : report_clock_utilization -file system_wrapper_clock_utilization_routed.rpt
@@ -756,7 +1813,7 @@ Writing bitstream ./system_wrapper.bin...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
 INFO: [Common 17-83] Releasing license: Implementation
-129 Infos, 60 Warnings, 37 Critical Warnings and 0 Errors encountered.
+745 Infos, 60 Warnings, 39 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2019.664 ; gain = 318.523
-INFO: [Common 17-206] Exiting Vivado at Wed Aug  7 13:20:54 2024...
+write_bitstream: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2037.676 ; gain = 326.473
+INFO: [Common 17-206] Exiting Vivado at Wed Aug  7 17:36:25 2024...
