@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2024 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2025 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -90,8 +90,8 @@ output wire [13 : 0] data_access;
 
   frequency_counter #(
     .COUNT_WIDTH(32),
-    .HIGH_THRESHOLD(14'B01011101110000),
-    .LOW_THRESHOLD(14'B00011111010000),
+    .HIGH_THRESHOLD(8000),
+    .LOW_THRESHOLD(4000),
     .PULSE_DURATION(100000000),
     .ADC_WIDTH(14),
     .AXIS_TDATA_WIDTH(32)

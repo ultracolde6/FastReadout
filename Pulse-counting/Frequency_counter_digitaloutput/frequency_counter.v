@@ -4,8 +4,8 @@
 module frequency_counter #
 (
     parameter COUNT_WIDTH = 32,
-    parameter signed [13:0] HIGH_THRESHOLD = 14'd6000,
-    parameter signed [13:0] LOW_THRESHOLD = 14'd2000,
+    parameter signed [13:0] HIGH_THRESHOLD = 8000,
+    parameter signed [13:0] LOW_THRESHOLD = 4000,
     parameter PULSE_DURATION = 100000000,
     parameter ADC_WIDTH = 14,
     parameter AXIS_TDATA_WIDTH = 32
@@ -112,7 +112,7 @@ module frequency_counter #
     begin
         counter_output_next = counter_output;
         clock_counter_next = clock_counter;
-        if (state < state_next) // high to low signal transition
+        if (state < state_next) //count on rising signal transition
         begin
            // increment counter_output_next
             counter_output_next = counter_output + 1;    

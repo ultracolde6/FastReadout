@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xFEB3AE125AC584A",
+      "boundary_crc": "0x8B3B17A0313ADE27",
       "device": "xc7z010clg400-1",
       "name": "system",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -269,6 +269,9 @@
         "direction": "O",
         "left": "0",
         "right": "0"
+      },
+      "reset": {
+        "direction": "I"
       }
     },
     "components": {
@@ -304,7 +307,7 @@
             "value": "1"
           },
           "C_GPIO2_WIDTH": {
-            "value": "1"
+            "value": "14"
           },
           "C_GPIO_WIDTH": {
             "value": "32"
@@ -2725,30 +2728,6 @@
               }
             },
             "interface_nets": {
-              "m01_couplers_to_ps7_0_axi_periph": {
-                "interface_ports": [
-                  "M01_AXI",
-                  "m01_couplers/M_AXI"
-                ]
-              },
-              "xbar_to_m00_couplers": {
-                "interface_ports": [
-                  "xbar/M00_AXI",
-                  "m00_couplers/S_AXI"
-                ]
-              },
-              "xbar_to_m01_couplers": {
-                "interface_ports": [
-                  "xbar/M01_AXI",
-                  "m01_couplers/S_AXI"
-                ]
-              },
-              "m00_couplers_to_ps7_0_axi_periph": {
-                "interface_ports": [
-                  "M00_AXI",
-                  "m00_couplers/M_AXI"
-                ]
-              },
               "ps7_0_axi_periph_to_s00_couplers": {
                 "interface_ports": [
                   "S00_AXI",
@@ -2759,6 +2738,30 @@
                 "interface_ports": [
                   "s00_couplers/M_AXI",
                   "xbar/S00_AXI"
+                ]
+              },
+              "m00_couplers_to_ps7_0_axi_periph": {
+                "interface_ports": [
+                  "M00_AXI",
+                  "m00_couplers/M_AXI"
+                ]
+              },
+              "xbar_to_m00_couplers": {
+                "interface_ports": [
+                  "xbar/M00_AXI",
+                  "m00_couplers/S_AXI"
+                ]
+              },
+              "m01_couplers_to_ps7_0_axi_periph": {
+                "interface_ports": [
+                  "M01_AXI",
+                  "m01_couplers/M_AXI"
+                ]
+              },
+              "xbar_to_m01_couplers": {
+                "interface_ports": [
+                  "xbar/M01_AXI",
+                  "m01_couplers/S_AXI"
                 ]
               }
             },
@@ -2797,28 +2800,28 @@
               "processing_system7_0/FIXED_IO"
             ]
           },
-          "processing_system7_0_M_AXI_GP0": {
-            "interface_ports": [
-              "processing_system7_0/M_AXI_GP0",
-              "ps7_0_axi_periph/S00_AXI"
-            ]
-          },
-          "processing_system7_0_DDR": {
-            "interface_ports": [
-              "DDR",
-              "processing_system7_0/DDR"
-            ]
-          },
           "ps7_0_axi_periph_M00_AXI": {
             "interface_ports": [
               "M00_AXI",
               "ps7_0_axi_periph/M00_AXI"
             ]
           },
+          "processing_system7_0_M_AXI_GP0": {
+            "interface_ports": [
+              "processing_system7_0/M_AXI_GP0",
+              "ps7_0_axi_periph/S00_AXI"
+            ]
+          },
           "Conn1": {
             "interface_ports": [
               "M01_AXI",
               "ps7_0_axi_periph/M01_AXI"
+            ]
+          },
+          "processing_system7_0_DDR": {
+            "interface_ports": [
+              "DDR",
+              "processing_system7_0/DDR"
             ]
           }
         },
@@ -2856,16 +2859,16 @@
       }
     },
     "interface_nets": {
-      "signal_split_0_M_AXIS_PORT1": {
-        "interface_ports": [
-          "FrequencyCounter/S_AXIS_IN",
-          "DataAcquisition/M_AXIS_PORT1"
-        ]
-      },
       "processing_system7_0_DDR": {
         "interface_ports": [
           "DDR",
           "PS7/DDR"
+        ]
+      },
+      "signal_split_0_M_AXIS_PORT1": {
+        "interface_ports": [
+          "FrequencyCounter/S_AXIS_IN",
+          "DataAcquisition/M_AXIS_PORT1"
         ]
       },
       "processing_system7_0_FIXED_IO": {
@@ -2975,8 +2978,13 @@
       "FrequencyCounter_pulse": {
         "ports": [
           "FrequencyCounter/pulse",
-          "axi_gpio_0/gpio2_io_i",
           "pulse"
+        ]
+      },
+      "FrequencyCounter_data_access": {
+        "ports": [
+          "FrequencyCounter/data_access",
+          "axi_gpio_0/gpio2_io_i"
         ]
       }
     },

@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Fri Aug  9 13:42:25 2024
+//Date        : Mon May 26 17:38:29 2025
 //Host        : DESKTOP-RDVR7FP running 64-bit major release  (build 9200)
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
@@ -51,7 +51,8 @@ module system_wrapper
     exp_n_tri_io,
     exp_p_tri_io,
     led_o,
-    pulse);
+    pulse,
+    reset);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -94,6 +95,7 @@ module system_wrapper
   inout [7:0]exp_p_tri_io;
   output [1:0]led_o;
   output [0:0]pulse;
+  input reset;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -137,6 +139,7 @@ module system_wrapper
   wire [7:0]exp_p_tri_io;
   wire [1:0]led_o;
   wire [0:0]pulse;
+  wire reset;
 
   system system_i
        (.DDR_addr(DDR_addr),
@@ -180,5 +183,6 @@ module system_wrapper
         .exp_n_tri_io(exp_n_tri_io),
         .exp_p_tri_io(exp_p_tri_io),
         .led_o(led_o),
-        .pulse(pulse));
+        .pulse(pulse),
+        .reset(reset));
 endmodule

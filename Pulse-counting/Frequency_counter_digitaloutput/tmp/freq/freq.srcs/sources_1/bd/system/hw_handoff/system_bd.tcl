@@ -1078,6 +1078,7 @@ proc create_root_design { parentCell } {
   set exp_p_tri_io [ create_bd_port -dir IO -from 7 -to 0 exp_p_tri_io ]
   set led_o [ create_bd_port -dir O -from 1 -to 0 led_o ]
   set pulse [ create_bd_port -dir O -from 0 -to 0 pulse ]
+  set reset [ create_bd_port -dir I reset ]
 
   # Create instance: DataAcquisition
   create_hier_cell_DataAcquisition [current_bd_instance .] DataAcquisition
@@ -1094,7 +1095,7 @@ proc create_root_design { parentCell } {
    CONFIG.C_ALL_INPUTS {1} \
    CONFIG.C_ALL_INPUTS_2 {1} \
    CONFIG.C_ALL_OUTPUTS_2 {0} \
-   CONFIG.C_GPIO2_WIDTH {1} \
+   CONFIG.C_GPIO2_WIDTH {14} \
    CONFIG.C_GPIO_WIDTH {32} \
    CONFIG.C_IS_DUAL {1} \
  ] $axi_gpio_0
@@ -1124,7 +1125,8 @@ proc create_root_design { parentCell } {
   # Create port connections
   connect_bd_net -net DataAcquisition_adc_clk [get_bd_pins DataAcquisition/adc_clk] [get_bd_pins FrequencyCounter/clk]
   connect_bd_net -net FrequencyCounter_counter_output [get_bd_pins FrequencyCounter/counter_output] [get_bd_pins axi_gpio_0/gpio_io_i]
-  connect_bd_net -net FrequencyCounter_pulse [get_bd_ports pulse] [get_bd_pins FrequencyCounter/pulse] [get_bd_pins axi_gpio_0/gpio2_io_i]
+  connect_bd_net -net FrequencyCounter_data_access [get_bd_pins FrequencyCounter/data_access] [get_bd_pins axi_gpio_0/gpio2_io_i]
+  connect_bd_net -net FrequencyCounter_pulse [get_bd_ports pulse] [get_bd_pins FrequencyCounter/pulse]
   connect_bd_net -net adc_clk_n_i_1 [get_bd_ports adc_clk_n_i] [get_bd_pins DataAcquisition/adc_clk_n_i]
   connect_bd_net -net adc_clk_p_i_1 [get_bd_ports adc_clk_p_i] [get_bd_pins DataAcquisition/adc_clk_p_i]
   connect_bd_net -net adc_dat_a_i_1 [get_bd_ports adc_dat_a_i] [get_bd_pins DataAcquisition/adc_dat_a_i]

@@ -404,7 +404,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:07aadafe</spirit:value>
+            <spirit:value>9:0a203a2b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -415,7 +415,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:07aadafe</spirit:value>
+            <spirit:value>9:0a203a2b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -431,11 +431,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Aug 09 20:41:03 UTC 2024</spirit:value>
+            <spirit:value>Tue May 27 00:38:29 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:07aadafe</spirit:value>
+            <spirit:value>9:0a203a2b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -447,7 +447,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:0ab9b4e0</spirit:value>
+            <spirit:value>9:98363c2d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -463,11 +463,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Aug 09 20:41:03 UTC 2024</spirit:value>
+            <spirit:value>Tue May 27 00:38:29 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:0ab9b4e0</spirit:value>
+            <spirit:value>9:98363c2d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -481,11 +481,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Aug 09 20:43:31 UTC 2024</spirit:value>
+            <spirit:value>Tue May 27 00:39:11 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:07aadafe</spirit:value>
+            <spirit:value>9:0a203a2b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -658,12 +658,12 @@
       <spirit:modelParameter spirit:dataType="signed(13 0)">
         <spirit:name>HIGH_THRESHOLD</spirit:name>
         <spirit:displayName>High Threshold</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.HIGH_THRESHOLD" spirit:bitStringLength="14">&quot;01011101110000&quot;</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.HIGH_THRESHOLD">8000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="signed(13 0)">
         <spirit:name>LOW_THRESHOLD</spirit:name>
         <spirit:displayName>Low Threshold</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.LOW_THRESHOLD" spirit:bitStringLength="14">&quot;00011111010000&quot;</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.LOW_THRESHOLD">4000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>PULSE_DURATION</spirit:name>
@@ -746,12 +746,12 @@
     <spirit:parameter>
       <spirit:name>HIGH_THRESHOLD</spirit:name>
       <spirit:displayName>High Threshold</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.HIGH_THRESHOLD" spirit:bitStringLength="14">&quot;01011101110000&quot;</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.HIGH_THRESHOLD">8000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>LOW_THRESHOLD</spirit:name>
       <spirit:displayName>Low Threshold</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.LOW_THRESHOLD" spirit:bitStringLength="14">&quot;00011111010000&quot;</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.LOW_THRESHOLD">4000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PULSE_DURATION</spirit:name>

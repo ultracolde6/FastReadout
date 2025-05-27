@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Fri Aug  9 16:05:57 2024
+| Date         : Mon May 26 17:43:53 2025
 | Host         : DESKTOP-RDVR7FP running 64-bit major release  (build 9200)
 | Command      : report_methodology -file system_wrapper_methodology_drc_routed.rpt -pb system_wrapper_methodology_drc_routed.pb -rpx system_wrapper_methodology_drc_routed.rpx
 | Design       : system_wrapper
@@ -111,29 +111,29 @@ Related violations: <none>
 XDCC-5#1 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on dac_pwm_o[0] overrides a previous user property.
-New Source: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 111)
-Previous Source: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 99)
+New Source: C:/Users/Purcell/Documents/RedPitayaProjects/adaptive readout/FastReadout/Pulse-counting/Frequency_counter_digitaloutput/cfg/ports.xdc (Line: 111)
+Previous Source: C:/Users/Purcell/Documents/RedPitayaProjects/adaptive readout/FastReadout/Pulse-counting/Frequency_counter_digitaloutput/cfg/ports.xdc (Line: 99)
 Related violations: <none>
 
 XDCC-5#2 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on dac_pwm_o[1] overrides a previous user property.
-New Source: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 111)
-Previous Source: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 99)
+New Source: C:/Users/Purcell/Documents/RedPitayaProjects/adaptive readout/FastReadout/Pulse-counting/Frequency_counter_digitaloutput/cfg/ports.xdc (Line: 111)
+Previous Source: C:/Users/Purcell/Documents/RedPitayaProjects/adaptive readout/FastReadout/Pulse-counting/Frequency_counter_digitaloutput/cfg/ports.xdc (Line: 99)
 Related violations: <none>
 
 XDCC-5#3 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on dac_pwm_o[2] overrides a previous user property.
-New Source: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 111)
-Previous Source: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 99)
+New Source: C:/Users/Purcell/Documents/RedPitayaProjects/adaptive readout/FastReadout/Pulse-counting/Frequency_counter_digitaloutput/cfg/ports.xdc (Line: 111)
+Previous Source: C:/Users/Purcell/Documents/RedPitayaProjects/adaptive readout/FastReadout/Pulse-counting/Frequency_counter_digitaloutput/cfg/ports.xdc (Line: 99)
 Related violations: <none>
 
 XDCC-5#4 Warning
 User Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on dac_pwm_o[3] overrides a previous user property.
-New Source: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 111)
-Previous Source: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/cfg/ports.xdc (Line: 99)
+New Source: C:/Users/Purcell/Documents/RedPitayaProjects/adaptive readout/FastReadout/Pulse-counting/Frequency_counter_digitaloutput/cfg/ports.xdc (Line: 111)
+Previous Source: C:/Users/Purcell/Documents/RedPitayaProjects/adaptive readout/FastReadout/Pulse-counting/Frequency_counter_digitaloutput/cfg/ports.xdc (Line: 99)
 Related violations: <none>
 
 

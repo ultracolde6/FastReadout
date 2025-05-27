@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Fri Aug  9 13:43:31 2024
+-- Date        : Mon May 26 17:39:10 2025
 -- Host        : DESKTOP-RDVR7FP running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ system_frequency_counter_0_0_sim_netlist.vhdl
@@ -413,6 +413,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_co
   signal state_next1_carry_i_4_n_0 : STD_LOGIC;
   signal state_next1_carry_i_5_n_0 : STD_LOGIC;
   signal state_next1_carry_i_6_n_0 : STD_LOGIC;
+  signal state_next1_carry_i_7_n_0 : STD_LOGIC;
   signal state_next1_carry_n_0 : STD_LOGIC;
   signal state_next1_carry_n_1 : STD_LOGIC;
   signal state_next1_carry_n_2 : STD_LOGIC;
@@ -3047,7 +3048,7 @@ state_i_1: unisim.vcomponents.LUT4
     );
 \state_next1__6_carry_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"1"
+      INIT => X"7"
     )
         port map (
       I0 => S_AXIS_IN_tdata(10),
@@ -3063,27 +3064,25 @@ state_i_1: unisim.vcomponents.LUT4
       I1 => S_AXIS_IN_tdata(9),
       O => \state_next1__6_carry_i_2_n_0\
     );
-\state_next1__6_carry_i_3\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"7"
-    )
-        port map (
-      I0 => S_AXIS_IN_tdata(6),
-      I1 => S_AXIS_IN_tdata(7),
-      O => \state_next1__6_carry_i_3_n_0\
-    );
-\state_next1__6_carry_i_4\: unisim.vcomponents.LUT2
+\state_next1__6_carry_i_3\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => S_AXIS_IN_tdata(4),
-      I1 => S_AXIS_IN_tdata(5),
+      I0 => S_AXIS_IN_tdata(7),
+      O => \state_next1__6_carry_i_3_n_0\
+    );
+\state_next1__6_carry_i_4\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => S_AXIS_IN_tdata(5),
       O => \state_next1__6_carry_i_4_n_0\
     );
 \state_next1__6_carry_i_5\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"2"
+      INIT => X"8"
     )
         port map (
       I0 => S_AXIS_IN_tdata(10),
@@ -3101,11 +3100,11 @@ state_i_1: unisim.vcomponents.LUT4
     );
 \state_next1__6_carry_i_7\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"8"
+      INIT => X"2"
     )
         port map (
-      I0 => S_AXIS_IN_tdata(6),
-      I1 => S_AXIS_IN_tdata(7),
+      I0 => S_AXIS_IN_tdata(7),
+      I1 => S_AXIS_IN_tdata(6),
       O => \state_next1__6_carry_i_7_n_0\
     );
 \state_next1__6_carry_i_8\: unisim.vcomponents.LUT2
@@ -3113,8 +3112,8 @@ state_i_1: unisim.vcomponents.LUT4
       INIT => X"2"
     )
         port map (
-      I0 => S_AXIS_IN_tdata(4),
-      I1 => S_AXIS_IN_tdata(5),
+      I0 => S_AXIS_IN_tdata(5),
+      I1 => S_AXIS_IN_tdata(4),
       O => \state_next1__6_carry_i_8_n_0\
     );
 state_next1_carry: unisim.vcomponents.CARRY4
@@ -3126,14 +3125,14 @@ state_next1_carry: unisim.vcomponents.CARRY4
       CO(0) => state_next1_carry_n_3,
       CYINIT => '0',
       DI(3) => S_AXIS_IN_tdata(7),
-      DI(2) => '0',
-      DI(1) => state_next1_carry_i_1_n_0,
-      DI(0) => state_next1_carry_i_2_n_0,
+      DI(2) => state_next1_carry_i_1_n_0,
+      DI(1) => state_next1_carry_i_2_n_0,
+      DI(0) => state_next1_carry_i_3_n_0,
       O(3 downto 0) => NLW_state_next1_carry_O_UNCONNECTED(3 downto 0),
-      S(3) => state_next1_carry_i_3_n_0,
-      S(2) => state_next1_carry_i_4_n_0,
-      S(1) => state_next1_carry_i_5_n_0,
-      S(0) => state_next1_carry_i_6_n_0
+      S(3) => state_next1_carry_i_4_n_0,
+      S(2) => state_next1_carry_i_5_n_0,
+      S(1) => state_next1_carry_i_6_n_0,
+      S(0) => state_next1_carry_i_7_n_0
     );
 \state_next1_carry__0\: unisim.vcomponents.CARRY4
      port map (
@@ -3143,9 +3142,7 @@ state_next1_carry: unisim.vcomponents.CARRY4
       CO(1) => \state_next1_carry__0_n_2\,
       CO(0) => \state_next1_carry__0_n_3\,
       CYINIT => '0',
-      DI(3 downto 2) => B"00",
-      DI(1) => S_AXIS_IN_tdata(11),
-      DI(0) => '0',
+      DI(3 downto 0) => B"0000",
       O(3 downto 0) => \NLW_state_next1_carry__0_O_UNCONNECTED\(3 downto 0),
       S(3) => '0',
       S(2) => \state_next1_carry__0_i_1_n_0\,
@@ -3163,7 +3160,7 @@ state_next1_carry: unisim.vcomponents.CARRY4
     );
 \state_next1_carry__0_i_2\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"2"
+      INIT => X"8"
     )
         port map (
       I0 => S_AXIS_IN_tdata(10),
@@ -3184,8 +3181,8 @@ state_next1_carry_i_1: unisim.vcomponents.LUT2
       INIT => X"E"
     )
         port map (
-      I0 => S_AXIS_IN_tdata(2),
-      I1 => S_AXIS_IN_tdata(3),
+      I0 => S_AXIS_IN_tdata(4),
+      I1 => S_AXIS_IN_tdata(5),
       O => state_next1_carry_i_1_n_0
     );
 state_next1_carry_i_2: unisim.vcomponents.LUT2
@@ -3193,26 +3190,26 @@ state_next1_carry_i_2: unisim.vcomponents.LUT2
       INIT => X"E"
     )
         port map (
-      I0 => S_AXIS_IN_tdata(0),
-      I1 => S_AXIS_IN_tdata(1),
+      I0 => S_AXIS_IN_tdata(2),
+      I1 => S_AXIS_IN_tdata(3),
       O => state_next1_carry_i_2_n_0
     );
 state_next1_carry_i_3: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => S_AXIS_IN_tdata(0),
+      I1 => S_AXIS_IN_tdata(1),
+      O => state_next1_carry_i_3_n_0
+    );
+state_next1_carry_i_4: unisim.vcomponents.LUT2
     generic map(
       INIT => X"2"
     )
         port map (
       I0 => S_AXIS_IN_tdata(6),
       I1 => S_AXIS_IN_tdata(7),
-      O => state_next1_carry_i_3_n_0
-    );
-state_next1_carry_i_4: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => S_AXIS_IN_tdata(4),
-      I1 => S_AXIS_IN_tdata(5),
       O => state_next1_carry_i_4_n_0
     );
 state_next1_carry_i_5: unisim.vcomponents.LUT2
@@ -3220,8 +3217,8 @@ state_next1_carry_i_5: unisim.vcomponents.LUT2
       INIT => X"1"
     )
         port map (
-      I0 => S_AXIS_IN_tdata(2),
-      I1 => S_AXIS_IN_tdata(3),
+      I0 => S_AXIS_IN_tdata(4),
+      I1 => S_AXIS_IN_tdata(5),
       O => state_next1_carry_i_5_n_0
     );
 state_next1_carry_i_6: unisim.vcomponents.LUT2
@@ -3229,9 +3226,18 @@ state_next1_carry_i_6: unisim.vcomponents.LUT2
       INIT => X"1"
     )
         port map (
+      I0 => S_AXIS_IN_tdata(2),
+      I1 => S_AXIS_IN_tdata(3),
+      O => state_next1_carry_i_6_n_0
+    );
+state_next1_carry_i_7: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"1"
+    )
+        port map (
       I0 => S_AXIS_IN_tdata(0),
       I1 => S_AXIS_IN_tdata(1),
-      O => state_next1_carry_i_6_n_0
+      O => state_next1_carry_i_7_n_0
     );
 state_reg: unisim.vcomponents.FDRE
     generic map(

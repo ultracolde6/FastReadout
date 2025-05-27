@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Fri Aug  9 13:43:31 2024
+// Date        : Mon May 26 17:39:11 2025
 // Host        : DESKTOP-RDVR7FP running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/ip/system_frequency_counter_0_0/system_frequency_counter_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim {c:/Users/Purcell/Documents/RedPitayaProjects/adaptive
+//               readout/FastReadout/Pulse-counting/Frequency_counter_digitaloutput/tmp/freq/freq.srcs/sources_1/bd/system/ip/system_frequency_counter_0_0/system_frequency_counter_0_0_sim_netlist.v}
 // Design      : system_frequency_counter_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -487,6 +487,7 @@ module system_frequency_counter_0_0_frequency_counter
   wire state_next1_carry_i_4_n_0;
   wire state_next1_carry_i_5_n_0;
   wire state_next1_carry_i_6_n_0;
+  wire state_next1_carry_i_7_n_0;
   wire state_next1_carry_n_0;
   wire state_next1_carry_n_1;
   wire state_next1_carry_n_2;
@@ -2231,7 +2232,7 @@ module system_frequency_counter_0_0_frequency_counter
         .I1(S_AXIS_IN_tdata[13]),
         .O(state_next1__6_carry__0_i_1_n_0));
   LUT2 #(
-    .INIT(4'h1)) 
+    .INIT(4'h7)) 
     state_next1__6_carry_i_1
        (.I0(S_AXIS_IN_tdata[10]),
         .I1(S_AXIS_IN_tdata[11]),
@@ -2242,20 +2243,18 @@ module system_frequency_counter_0_0_frequency_counter
        (.I0(S_AXIS_IN_tdata[8]),
         .I1(S_AXIS_IN_tdata[9]),
         .O(state_next1__6_carry_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h7)) 
+  LUT1 #(
+    .INIT(2'h1)) 
     state_next1__6_carry_i_3
-       (.I0(S_AXIS_IN_tdata[6]),
-        .I1(S_AXIS_IN_tdata[7]),
+       (.I0(S_AXIS_IN_tdata[7]),
         .O(state_next1__6_carry_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h1)) 
+  LUT1 #(
+    .INIT(2'h1)) 
     state_next1__6_carry_i_4
-       (.I0(S_AXIS_IN_tdata[4]),
-        .I1(S_AXIS_IN_tdata[5]),
+       (.I0(S_AXIS_IN_tdata[5]),
         .O(state_next1__6_carry_i_4_n_0));
   LUT2 #(
-    .INIT(4'h2)) 
+    .INIT(4'h8)) 
     state_next1__6_carry_i_5
        (.I0(S_AXIS_IN_tdata[10]),
         .I1(S_AXIS_IN_tdata[11]),
@@ -2267,31 +2266,31 @@ module system_frequency_counter_0_0_frequency_counter
         .I1(S_AXIS_IN_tdata[9]),
         .O(state_next1__6_carry_i_6_n_0));
   LUT2 #(
-    .INIT(4'h8)) 
+    .INIT(4'h2)) 
     state_next1__6_carry_i_7
-       (.I0(S_AXIS_IN_tdata[6]),
-        .I1(S_AXIS_IN_tdata[7]),
+       (.I0(S_AXIS_IN_tdata[7]),
+        .I1(S_AXIS_IN_tdata[6]),
         .O(state_next1__6_carry_i_7_n_0));
   LUT2 #(
     .INIT(4'h2)) 
     state_next1__6_carry_i_8
-       (.I0(S_AXIS_IN_tdata[4]),
-        .I1(S_AXIS_IN_tdata[5]),
+       (.I0(S_AXIS_IN_tdata[5]),
+        .I1(S_AXIS_IN_tdata[4]),
         .O(state_next1__6_carry_i_8_n_0));
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 state_next1_carry
        (.CI(1'b0),
         .CO({state_next1_carry_n_0,state_next1_carry_n_1,state_next1_carry_n_2,state_next1_carry_n_3}),
         .CYINIT(1'b0),
-        .DI({S_AXIS_IN_tdata[7],1'b0,state_next1_carry_i_1_n_0,state_next1_carry_i_2_n_0}),
+        .DI({S_AXIS_IN_tdata[7],state_next1_carry_i_1_n_0,state_next1_carry_i_2_n_0,state_next1_carry_i_3_n_0}),
         .O(NLW_state_next1_carry_O_UNCONNECTED[3:0]),
-        .S({state_next1_carry_i_3_n_0,state_next1_carry_i_4_n_0,state_next1_carry_i_5_n_0,state_next1_carry_i_6_n_0}));
+        .S({state_next1_carry_i_4_n_0,state_next1_carry_i_5_n_0,state_next1_carry_i_6_n_0,state_next1_carry_i_7_n_0}));
   (* COMPARATOR_THRESHOLD = "11" *) 
   CARRY4 state_next1_carry__0
        (.CI(state_next1_carry_n_0),
         .CO({NLW_state_next1_carry__0_CO_UNCONNECTED[3],state_next1_carry__0_n_1,state_next1_carry__0_n_2,state_next1_carry__0_n_3}),
         .CYINIT(1'b0),
-        .DI({1'b0,1'b0,S_AXIS_IN_tdata[11],1'b0}),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(NLW_state_next1_carry__0_O_UNCONNECTED[3:0]),
         .S({1'b0,state_next1_carry__0_i_1_n_0,state_next1_carry__0_i_2_n_0,state_next1_carry__0_i_3_n_0}));
   LUT2 #(
@@ -2301,7 +2300,7 @@ module system_frequency_counter_0_0_frequency_counter
         .I1(S_AXIS_IN_tdata[13]),
         .O(state_next1_carry__0_i_1_n_0));
   LUT2 #(
-    .INIT(4'h2)) 
+    .INIT(4'h8)) 
     state_next1_carry__0_i_2
        (.I0(S_AXIS_IN_tdata[10]),
         .I1(S_AXIS_IN_tdata[11]),
@@ -2315,39 +2314,45 @@ module system_frequency_counter_0_0_frequency_counter
   LUT2 #(
     .INIT(4'hE)) 
     state_next1_carry_i_1
-       (.I0(S_AXIS_IN_tdata[2]),
-        .I1(S_AXIS_IN_tdata[3]),
+       (.I0(S_AXIS_IN_tdata[4]),
+        .I1(S_AXIS_IN_tdata[5]),
         .O(state_next1_carry_i_1_n_0));
   LUT2 #(
     .INIT(4'hE)) 
     state_next1_carry_i_2
-       (.I0(S_AXIS_IN_tdata[0]),
-        .I1(S_AXIS_IN_tdata[1]),
+       (.I0(S_AXIS_IN_tdata[2]),
+        .I1(S_AXIS_IN_tdata[3]),
         .O(state_next1_carry_i_2_n_0));
   LUT2 #(
-    .INIT(4'h2)) 
+    .INIT(4'hE)) 
     state_next1_carry_i_3
-       (.I0(S_AXIS_IN_tdata[6]),
-        .I1(S_AXIS_IN_tdata[7]),
+       (.I0(S_AXIS_IN_tdata[0]),
+        .I1(S_AXIS_IN_tdata[1]),
         .O(state_next1_carry_i_3_n_0));
   LUT2 #(
-    .INIT(4'h8)) 
+    .INIT(4'h2)) 
     state_next1_carry_i_4
-       (.I0(S_AXIS_IN_tdata[4]),
-        .I1(S_AXIS_IN_tdata[5]),
+       (.I0(S_AXIS_IN_tdata[6]),
+        .I1(S_AXIS_IN_tdata[7]),
         .O(state_next1_carry_i_4_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     state_next1_carry_i_5
-       (.I0(S_AXIS_IN_tdata[2]),
-        .I1(S_AXIS_IN_tdata[3]),
+       (.I0(S_AXIS_IN_tdata[4]),
+        .I1(S_AXIS_IN_tdata[5]),
         .O(state_next1_carry_i_5_n_0));
   LUT2 #(
     .INIT(4'h1)) 
     state_next1_carry_i_6
+       (.I0(S_AXIS_IN_tdata[2]),
+        .I1(S_AXIS_IN_tdata[3]),
+        .O(state_next1_carry_i_6_n_0));
+  LUT2 #(
+    .INIT(4'h1)) 
+    state_next1_carry_i_7
        (.I0(S_AXIS_IN_tdata[0]),
         .I1(S_AXIS_IN_tdata[1]),
-        .O(state_next1_carry_i_6_n_0));
+        .O(state_next1_carry_i_7_n_0));
   FDRE #(
     .INIT(1'b0)) 
     state_reg
