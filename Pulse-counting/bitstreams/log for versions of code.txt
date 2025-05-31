@@ -1,0 +1,3 @@
+1. AdaptiveReadout_LV_800ns.bit.bin: threshold values: HS = 8000 (about 1.1 V), LS = 3500 (about 0.6 V). this outputs a digital low for 800 ns for every two photons received, jumper should be on low voltage gain setting. This code setup is used for debugging. It has only one-channel and outputs a short pulse with no reset feature
+2. AdaptiveReadout_LV_800ns_HS7000.bit.bin: same as above. but with slighlt lower HS
+3

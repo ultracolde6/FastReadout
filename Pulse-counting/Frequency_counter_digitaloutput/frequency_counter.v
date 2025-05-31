@@ -4,9 +4,9 @@
 module frequency_counter #
 (
     parameter COUNT_WIDTH = 32,
-    parameter signed [13:0] HIGH_THRESHOLD = 8000,
-    parameter signed [13:0] LOW_THRESHOLD = 4000,
-    parameter PULSE_DURATION = 100000000,
+    parameter signed [13:0] HIGH_THRESHOLD = 7000,
+    parameter signed [13:0] LOW_THRESHOLD = 3500,
+    parameter PULSE_DURATION = 100,
     parameter ADC_WIDTH = 14,
     parameter AXIS_TDATA_WIDTH = 32
 )
@@ -116,7 +116,7 @@ module frequency_counter #
         begin
            // increment counter_output_next
             counter_output_next = counter_output + 1;    
-            if (counter_output_next >= 2)
+            if (counter_output_next >= 1)
             begin
               clock_counter_next = clock_counter + 1;
               counter_output_next = 0;

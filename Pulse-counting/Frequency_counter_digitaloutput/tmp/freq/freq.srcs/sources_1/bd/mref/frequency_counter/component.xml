@@ -113,7 +113,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9be9af16</spirit:value>
+            <spirit:value>ca9f9b34</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -126,7 +126,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9be9af16</spirit:value>
+            <spirit:value>ca9f9b34</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -307,17 +307,17 @@
       <spirit:modelParameter spirit:dataType="signed(13 0)">
         <spirit:name>HIGH_THRESHOLD</spirit:name>
         <spirit:displayName>High Threshold</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.HIGH_THRESHOLD">8000</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.HIGH_THRESHOLD">7000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="signed(13 0)">
         <spirit:name>LOW_THRESHOLD</spirit:name>
         <spirit:displayName>Low Threshold</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.LOW_THRESHOLD">4000</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.LOW_THRESHOLD">3500</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>PULSE_DURATION</spirit:name>
         <spirit:displayName>Pulse Duration</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.PULSE_DURATION">100000000</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.PULSE_DURATION">100</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>ADC_WIDTH</spirit:name>
@@ -352,17 +352,17 @@
     <spirit:parameter>
       <spirit:name>HIGH_THRESHOLD</spirit:name>
       <spirit:displayName>High Threshold</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.HIGH_THRESHOLD">8000</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.HIGH_THRESHOLD">7000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>LOW_THRESHOLD</spirit:name>
       <spirit:displayName>Low Threshold</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.LOW_THRESHOLD">4000</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.LOW_THRESHOLD">3500</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PULSE_DURATION</spirit:name>
       <spirit:displayName>Pulse Duration</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PULSE_DURATION">100000000</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PULSE_DURATION">100</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>ADC_WIDTH</spirit:name>
@@ -394,7 +394,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2025-05-27T00:38:11Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2025-05-31T16:22:12Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
