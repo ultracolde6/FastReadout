@@ -1,0 +1,31 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-350,-113",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port M_AXIS_PORT1 -pg 1 -lvl 3 -x 630 -y 60 -defaultsOSRD
+preplace port M_AXIS_PORT2 -pg 1 -lvl 3 -x 630 -y 90 -defaultsOSRD
+preplace port adc_clk -pg 1 -lvl 3 -x 630 -y 180 -defaultsOSRD
+preplace port adc_csn_o -pg 1 -lvl 3 -x 630 -y 200 -defaultsOSRD
+preplace port adc_clk_p_i -pg 1 -lvl 0 -x -100 -y 80 -defaultsOSRD
+preplace port adc_clk_n_i -pg 1 -lvl 0 -x -100 -y 100 -defaultsOSRD
+preplace portBus adc_dat_a_i -pg 1 -lvl 0 -x -100 -y 120 -defaultsOSRD
+preplace portBus adc_dat_b_i -pg 1 -lvl 0 -x -100 -y 140 -defaultsOSRD
+preplace inst axis_red_pitaya_adc_0 -pg 1 -lvl 1 -x 70 -y 120 -defaultsOSRD
+preplace inst signal_split_0 -pg 1 -lvl 2 -x 420 -y 110 -defaultsOSRD
+preplace netloc axis_red_pitaya_adc_0_adc_clk 1 1 2 230J 220 600J
+preplace netloc axis_red_pitaya_adc_0_adc_csn 1 1 2 220J 230 610J
+preplace netloc adc_clk_p_i_1 1 0 1 -80J 80n
+preplace netloc adc_clk_n_i_1 1 0 1 -80J 100n
+preplace netloc adc_dat_a_i_1 1 0 1 -80J 120n
+preplace netloc adc_dat_b_i_1 1 0 1 -80J 140n
+preplace netloc signal_split_0_M_AXIS_PORT1 1 2 1 NJ 60
+preplace netloc axis_red_pitaya_adc_0_M_AXIS 1 1 1 230J 80n
+preplace netloc signal_split_0_M_AXIS_PORT2 1 2 1 600 90n
+levelinfo -pg 1 -100 70 420 630
+pagesize -pg 1 -db -bbox -sgen -270 -20 790 250
+"
+}
+0

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat May 31 09:56:01 2025
+# Process ID: 28616
+# Current directory: C:/Users/Purcell/Documents/RedPitayaProjects/adaptive readout/FastReadout/Pulse-counting/Adaptive_Readout/tmp/freq
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent30900 C:\Users\Purcell\Documents\RedPitayaProjects\adaptive readout\FastReadout\Pulse-counting\Adaptive_Readout\tmp\freq\freq.xpr
+# Log file: C:/Users/Purcell/Documents/RedPitayaProjects/adaptive readout/FastReadout/Pulse-counting/Adaptive_Readout/tmp/freq/vivado.log
+# Journal file: C:/Users/Purcell/Documents/RedPitayaProjects/adaptive readout/FastReadout/Pulse-counting/Adaptive_Readout/tmp/freq\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Purcell/Documents/RedPitayaProjects/adaptive readout/FastReadout/Pulse-counting/Adaptive_Readout/tmp/freq/freq.xpr}

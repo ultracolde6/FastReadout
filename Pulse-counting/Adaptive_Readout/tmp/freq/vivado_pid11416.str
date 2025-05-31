@@ -1,0 +1,1083 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:49 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 11416
+License: Customer
+
+Current time: 	Thu Aug 08 16:58:35 PDT 2024
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2020.1/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2020.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Purcell
+User home directory: C:/Users/Purcell
+User working directory: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2020.1
+RDI_DATADIR: C:/Xilinx/Vivado/2020.1/data
+RDI_BINDIR: C:/Xilinx/Vivado/2020.1/bin
+
+Vivado preferences file location: C:/Users/Purcell/AppData/Roaming/Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: C:/Users/Purcell/AppData/Roaming/Xilinx/Vivado/2020.1/
+Vivado layouts directory: C:/Users/Purcell/AppData/Roaming/Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/vivado.log
+Vivado journal file location: 	C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/vivado.jou
+Engine tmp dir: 	C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/.Xil/Vivado-11416-DESKTOP-RDVR7FP
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2020.1
+XILINX_VIVADO: C:/Xilinx/Vivado/2020.1
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2020.1
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,016 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Purcell\Documents\RedPitayaPractice\Pulse-counting\Frequency_counter\tmp\freq\freq.xpr. Version: Vivado v2020.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq' 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,016 MB. GUI used memory: 51 MB. Current time: 8/8/24, 4:58:36 PM PDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 63 MB (+63641kb) [00:00:13]
+// [Engine Memory]: 1,016 MB (+914332kb) [00:00:13]
+// [GUI Memory]: 71 MB (+5056kb) [00:00:13]
+// [GUI Memory]: 81 MB (+6419kb) [00:00:14]
+// [GUI Memory]: 86 MB (+1357kb) [00:00:14]
+// [GUI Memory]: 95 MB (+4896kb) [00:00:15]
+// [GUI Memory]: 104 MB (+4424kb) [00:00:15]
+// WARNING: HEventQueue.dispatchEvent() is taking  2885 ms.
+// Tcl Message: open_project C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq' 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/cores'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'. 
+// WARNING: HEventQueue.dispatchEvent() is taking  1335 ms.
+// Tcl Message: open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1026.457 ; gain = 0.000 
+// Project name: freq; location: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq; part: xc7z010clg400-1
+dismissDialog("Open Project"); // bz (cs)
+// [Engine Memory]: 1,092 MB (+26227kb) [00:00:21]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// [GUI Memory]: 137 MB (+28876kb) [00:00:27]
+// [GUI Memory]: 147 MB (+3779kb) [00:00:33]
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 142 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bz (cs):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: open_bd_design {C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd} 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - util_ds_buf_1 Adding component instance block -- xilinx.com:ip:util_ds_buf:2.1 - util_ds_buf_2 Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0 Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlc_reset Adding component instance block -- pavel-demin:user:axis_red_pitaya_adc:1.0 - axis_red_pitaya_adc_0 Adding component instance block -- xilinx.com:module_ref:signal_split:1.0 - signal_split_0 Adding component instance block -- xilinx.com:module_ref:frequency_counter:1.0 - frequency_counter_0 Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_125M Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc Adding component instance block -- pavel-demin:user:axis_red_pitaya_adc:1.0 - axis_red_pitaya_adc_0 Adding component instance block -- pavel-demin:user:axis_constant:1.0 - axis_constant_0 Successfully read diagram <system> from BD file <C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd> 
+// TclEventType: RSB_OPEN_DIAGRAM
+// WARNING: HEventQueue.dispatchEvent() is taking  1055 ms.
+// TclEventType: RSB_CONNECTION_CHANGE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: RSB_LOCK_CHANGE
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1239.293 ; gain = 0.000 
+// 'bJ' command handler elapsed time: 5 seconds
+dismissDialog("Open Block Design"); // bz (cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 84 MB. Current time: 8/8/24, 5:01:11 PM PDT
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m (l, cs)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cs): Re-customize Module Reference: addNotify
+// Elapsed time: 18 seconds
+dismissDialog("Re-customize Module Reference"); // r (cs)
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL (aI, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, frequency_counter (frequency_counter.v)]", 4, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, frequency_counter (frequency_counter.v)]", 4, false, false, false, false, false, true); // B (F, cs) - Double Click
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pulse", true); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pulse"); // l (au, cs)
+selectCodeEditor("frequency_counter.v", 115, 402); // bP (w, cs)
+// Elapsed time: 10 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E (g, cs)
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_CHANGED_MODULES, "Refresh Changed Modules"); // h (ds, cs)
+// TclEventType: IP_LOCK_CHANGE
+// Tcl Message: update_module_reference system_frequency_counter_0_0 
+// bz (cs):  Refresh Changed Modules : addNotify
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: Upgrading 'C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/system.bd' 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: INFO: [IP_Flow 19-1972] Upgraded system_frequency_counter_0_0 from frequency_counter_v1_0 1.0 to frequency_counter_v1_0 1.0 
+// Tcl Message: Wrote  : <C:\Users\Purcell\Documents\RedPitayaPractice\Pulse-counting\Frequency_counter\tmp\freq\freq.srcs\sources_1\bd\system\system.bd>  Wrote  : <C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/ui/bd_c954508f.ui>  Wrote  : <C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/ui/bd_8707aecf.ui>  
+// Tcl Message: update_module_reference: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1239.293 ; gain = 0.000 
+// a (cs): Critical Messages: addNotify
+dismissDialog("Refresh Changed Modules"); // bz (cs)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cs)
+// Elapsed time: 19 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 624, 39, 1224, 530, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Delete"); // ai (ao, cs)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_cells Output_pulse] 
+// Elapsed time: 56 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 8); // B (F, cs)
+// Elapsed time: 43 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 790, 350, 1224, 530, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Delete"); // ai (ao, Popup.HeavyWeightWindow)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets FrequencyCounter_pulse] [get_bd_nets FrequencyCounter/frequency_counter_0_pulse] [get_bd_pins FrequencyCounter/pulse] 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m (l, cs)
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: connect_bd_net [get_bd_pins axi_gpio_0/gpio2_io_i] [get_bd_pins FrequencyCounter/frequency_counter_0/pulse] 
+// Elapsed time: 29 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 10, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 9, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, clocks.xdc]", 10, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, ports.xdc]", 11, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, ports.xdc]", 11, false, false, false, false, false, true); // B (F, cs) - Double Click
+// Elapsed time: 191 seconds
+selectCodeEditor("ports.xdc", 313, 182); // bP (w, cs)
+// Elapsed time: 29 seconds
+selectCodeEditor("ports.xdc", 301, 378); // bP (w, cs)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "h17", true); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "h17"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "h17"); // l (au, cs)
+// Elapsed time: 12 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "h17"); // l (au, cs)
+selectCodeEditor("ports.xdc", 287, 29); // bP (w, cs)
+// Elapsed time: 26 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System (2)", 2); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "frequency_counter.v", 3); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ports.xdc", 4); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "frequency_counter.v", 3); // m (l, cs)
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ports.xdc", 4); // m (l, cs)
+selectCodeEditor("ports.xdc", 331, 20); // bP (w, cs)
+typeControlKey((HResource) null, "ports.xdc", 'c'); // bP (w, cs)
+selectCodeEditor("ports.xdc", 388, 334); // bP (w, cs)
+typeControlKey((HResource) null, "ports.xdc", 'v'); // bP (w, cs)
+selectCodeEditor("ports.xdc", 94, 356); // bP (w, cs)
+selectCodeEditor("ports.xdc", 197, 344); // bP (w, cs)
+selectCodeEditor("ports.xdc", 89, 331); // bP (w, cs)
+typeControlKey((HResource) null, "ports.xdc", 'c'); // bP (w, cs)
+selectCodeEditor("ports.xdc", 95, 351); // bP (w, cs)
+typeControlKey((HResource) null, "ports.xdc", 'v'); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 92 MB. Current time: 8/8/24, 5:31:12 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 84 MB. Current time: 8/8/24, 6:01:12 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 82 MB. Current time: 8/8/24, 6:31:12 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 83 MB. Current time: 8/8/24, 7:01:12 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 83 MB. Current time: 8/8/24, 7:31:13 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 83 MB. Current time: 8/8/24, 8:01:15 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 82 MB. Current time: 8/8/24, 8:31:18 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 82 MB. Current time: 8/8/24, 9:01:22 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 82 MB. Current time: 8/8/24, 9:31:25 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 82 MB. Current time: 8/8/24, 10:01:29 PM PDT
+// Elapsed time: 18356 seconds
+selectButton(PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN, "save_rsb_design"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : <C:\Users\Purcell\Documents\RedPitayaPractice\Pulse-counting\Frequency_counter\tmp\freq\freq.srcs\sources_1\bd\system\system.bd>  Wrote  : <C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/ui/bd_c954508f.ui>  Wrote  : <C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/ui/bd_8707aecf.ui>  
+// Elapsed time: 30 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E (g, cs)
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m (l, cs)
+// Elapsed time: 113 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 699, 139, 1224, 530, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_SEARCH, "Search..."); // ai (ao, cs)
+// Elapsed time: 10 seconds
+setText("PAResourceQtoS.SystemTreePopup_DESIGN_HIERARCHY_TREE_SEARCH_FIELD", "gpio"); // OverlayTextField (n, ResizableWindow)
+selectTree(PAResourceQtoS.SystemTreePopup_DESIGN_HIERARCHY_TREE, "[system, External Interfaces]", 1, true); // iX (J, ResizableWindow) - Node
+expandTree(PAResourceQtoS.SystemTreePopup_DESIGN_HIERARCHY_TREE, "[system, External Interfaces]", 1); // iX (J, ResizableWindow)
+expandTree(PAResourceQtoS.SystemTreePopup_DESIGN_HIERARCHY_TREE, "[system, External Interfaces, DDR]", 2); // iX (J, ResizableWindow)
+// Elapsed time: 77 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 780, 149, 1224, 530, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_IP, "Add IP..."); // ai (ao, cs)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "gpio"); // OverlayTextField (az, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI GPIO", 0, "AXI GPIO", 0, false); // L (J, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI GPIO", 0, "AXI GPIO", 0, false); // L (J, ResizableWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI GPIO", 0); // L (J, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI GPIO", 0, "AXI GPIO", 0, false, false, false, false, false, true); // L (J, ResizableWindow) - Double Click
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_1 
+// Tcl Message: endgroup 
+// Tcl Command: 'set_property location {3.5 2458 197} [get_bd_cells axi_gpio_1]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {3.5 2458 197} [get_bd_cells axi_gpio_1] 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 660, 123, 1224, 530, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cs): Re-customize IP: addNotify
+// Elapsed time: 81 seconds
+dismissDialog("Re-customize IP"); // r (cs)
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // h (dq, cs)
+// ai (cs): Run Connection Automation: addNotify
+selectCheckBoxTree(PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE, "[All Automation (0 out of 2 selected), axi_gpio_1, GPIO]", 2, false, false, ui.utils.collection.couples.TriState.False); // aw (J, ai)
+selectCheckBoxTree(PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE, "[All Automation (1 out of 2 selected), axi_gpio_1, GPIO]", 2, false, true, ui.utils.collection.couples.TriState.True); // aw (J, ai)
+selectCheckBoxTree(PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE, "[All Automation (2 out of 2 selected), axi_gpio_1, S_AXI]", 3, false, true, ui.utils.collection.couples.TriState.True); // aw (J, ai)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ai)
+dismissDialog("Run Connection Automation"); // ai (cs)
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_ADD_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// bz (cs):  Run Connection Automation : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_intf_pins axi_gpio_1/GPIO] 
+// Tcl Message: INFO: [BoardRule 102-8] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpio_rtl_0 INFO: [BoardRule 102-9] connect_bd_intf_net /gpio_rtl_0 /axi_gpio_1/GPIO 
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/PS7/processing_system7_0/FCLK_CLK0 (125 MHz)} Clk_slave {Auto} Clk_xbar {/PS7/processing_system7_0/FCLK_CLK0 (125 MHz)} Master {/PS7/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_1/S_AXI} ddr_seg {Auto} intc_ip {/PS7/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_1/S_AXI] 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Tcl Message: Slave segment '/axi_gpio_1/S_AXI/Reg' is being assigned into address space '/PS7/processing_system7_0/Data' at <0x4120_0000 [ 64K ]>. 
+// Tcl Message: endgroup 
+dismissDialog("Run Connection Automation"); // bz (cs)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 724, 127, 1224, 530, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cs)
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Delete"); // ai (ao, cs)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_intf_nets axi_gpio_1_GPIO] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins axi_gpio_1/gpio_io_i] [get_bd_pins FrequencyCounter/pulse] 
+// Elapsed time: 33 seconds
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Properties", 1); // i (c, cs)
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Interface", 2); // i (c, cs)
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "General", 0); // i (c, cs)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cs): Re-customize IP: addNotify
+// Elapsed time: 20 seconds
+selectButton(PAResourceAtoD.CustomizeCoreDialog_IP_LOCATION, "IP Location"); // E (g, r)
+selectButton(PAResourceAtoD.CustomizeCoreDialog_DOCUMENTATION, "Documentation"); // E (g, r)
+dismissDialog("Re-customize IP"); // r (cs)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cs): Re-customize IP: addNotify
+dismissDialog("Re-customize IP"); // r (cs)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cs): Re-customize IP: addNotify
+// Elapsed time: 91 seconds
+setText("GPIO Width", "1"); // D (bj, r)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+dismissDialog("Re-customize IP"); // r (cs)
+// Tcl Command: 'set_property -dict [list CONFIG.C_GPIO_WIDTH {1}] [get_bd_cells axi_gpio_1]'
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.C_GPIO_WIDTH {1}] [get_bd_cells axi_gpio_1] 
+// Tcl Message: endgroup 
+// Elapsed time: 34 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 627, 124, 1224, 530, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectButton(PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN, "save_rsb_design"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : <C:\Users\Purcell\Documents\RedPitayaPractice\Pulse-counting\Frequency_counter\tmp\freq\freq.srcs\sources_1\bd\system\system.bd>  Wrote  : <C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/ui/bd_c954508f.ui>  Wrote  : <C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/ui/bd_8707aecf.ui>  
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 89 MB. Current time: 8/8/24, 10:31:30 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 89 MB. Current time: 8/8/24, 11:01:31 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/8/24, 11:31:31 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 12:01:31 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 12:31:32 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 1:01:32 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 1:31:33 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 87 MB. Current time: 8/9/24, 2:01:33 AM PDT
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1108 ms. Increasing delay to 3324 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 2:31:33 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 3:01:33 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 3:31:34 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 4:01:34 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 4:31:34 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 5:01:35 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 5:31:35 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 6:01:35 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 6:31:35 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 7:01:36 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 7:31:36 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 8:01:36 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 8:31:37 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 9:01:37 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 9:31:37 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 10:01:37 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 10:31:38 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 11:01:38 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 11:31:38 AM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 12:01:38 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 12:31:39 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 88 MB. Current time: 8/9/24, 1:01:39 PM PDT
+// Elapsed time: 54073 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "frequency_counter.v", 3); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ports.xdc", 4); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System (2)", 2); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m (l, cs)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1025, 223, 1224, 530, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_IP, "Add IP..."); // ai (ao, cs)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", (String) null); // OverlayTextField (az)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1026, 205, 1224, 530, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // af (ao, cs)
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_CREATE_PORT, "Create Port..."); // ai (ao, cs)
+// bM (cs): Create Port: addNotify
+setText(PAResourceAtoD.CreateRSBPortDialog_PORT_NAME, "pulse"); // ac (Q, bM)
+selectComboBox(PAResourceAtoD.CreateRSBPortDialog_DIRECTION, "Output", 1); // e (Q, bM)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (bM)
+// TclEventType: RSB_ADD_OBJECT
+dismissDialog("Create Port"); // bM (cs)
+// Tcl Message: create_bd_port -dir O pulse 
+// Tcl Command: 'set_property location {3020 279} [get_bd_ports pulse]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {3020 279} [get_bd_ports pulse] 
+// Tcl Command: 'set_property location {3025 283} [get_bd_ports pulse]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {3025 283} [get_bd_ports pulse] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_ports pulse] [get_bd_pins FrequencyCounter/pulse] 
+// Elapsed time: 77 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 884, 117, 1224, 530, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cs)
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Delete"); // ai (ao, cs)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_intf_nets PS7_M01_AXI] [get_bd_cells axi_gpio_1] 
+// Elapsed time: 29 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, ports.xdc]", 11, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, ports.xdc]", 11, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("ports.xdc", 338, 162); // bP (w, cs)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac", true); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+// Elapsed time: 43 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System (2)", 2); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ports.xdc", 4); // m (l, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "dac"); // l (au, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "frequency_counter.v", 3); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System (2)", 2); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m (l, cs)
+selectButton(PAResourceQtoS.SystemBuilderView_OPTIMIZE_ROUTING, "System_RSB_OPTIMIZE_LAYOUT"); // E (g, cs)
+// Tcl Command: 'regenerate_bd_layout -routing'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_ROUTE_LAYOUT
+// Tcl Message: regenerate_bd_layout -routing 
+// Elapsed time: 20 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 740, 311, 1224, 530, false, false, false, true, false); // hq (m, cs) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Delete"); // ai (ao, Popup.HeavyWeightWindow)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets FrequencyCounter/frequency_counter_0_pulse_count] [get_bd_pins FrequencyCounter/pulse_count] 
+// Elapsed time: 25 seconds
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "System_zoom_in"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// HMemoryUtils.trashcanNow. Engine heap size: 1,113 MB. GUI used memory: 89 MB. Current time: 8/9/24, 1:31:39 PM PDT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "System_zoom_in"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+// Tcl Command: 'set_property location {3.5 993 322} [get_bd_cells axi_gpio_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {3.5 993 322} [get_bd_cells axi_gpio_0] 
+// Tcl Command: 'set_property location {3 916 326} [get_bd_cells axi_gpio_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {3 916 326} [get_bd_cells axi_gpio_0] 
+// Tcl Command: 'set_property location {3 1087 521} [get_bd_cells util_ds_buf_2]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {3 1087 521} [get_bd_cells util_ds_buf_2] 
+// Elapsed time: 11 seconds
+selectButton(PAResourceQtoS.SystemBuilderView_OPTIMIZE_ROUTING, "System_RSB_OPTIMIZE_LAYOUT"); // E (g, cs)
+// Tcl Command: 'regenerate_bd_layout -routing'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_ROUTE_LAYOUT
+// Tcl Message: regenerate_bd_layout -routing 
+// Elapsed time: 66 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// am (cs): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_CANCEL, "Cancel"); // a (am)
+// 'cD' command handler elapsed time: 3 seconds
+dismissDialog("Save Project"); // am (cs)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cs): Re-customize Module Reference: addNotify
+dismissDialog("Re-customize Module Reference"); // r (cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "frequency_counter.v", 3); // m (l, cs)
+// Elapsed time: 48 seconds
+selectCodeEditor("frequency_counter.v", 258, 260); // bP (w, cs)
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1004 ms. Increasing delay to 3000 ms.
+// Elapsed time: 210 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System (2)", 2); // m (l, cs)
+// Elapsed time: 191 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "frequency_counter.v", 3); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m (l, cs)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// am (cs): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (am)
+// bz (cs):  Save Constraints : addNotify
+dismissDialog("Save Project"); // am (cs)
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : <C:\Users\Purcell\Documents\RedPitayaPractice\Pulse-counting\Frequency_counter\tmp\freq\freq.srcs\sources_1\bd\system\system.bd>  Wrote  : <C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/ui/bd_c954508f.ui>  Wrote  : <C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/ui/bd_8707aecf.ui>  
+// A (cs): Synthesis is Out-of-date: addNotify
+dismissDialog("Save Constraints"); // bz (cs)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Resetting Runs"); // bz (cs)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// bz (cs):  Generate Bitstream : addNotify
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : <C:\Users\Purcell\Documents\RedPitayaPractice\Pulse-counting\Frequency_counter\tmp\freq\freq.srcs\sources_1\bd\system\system.bd>  Wrote  : <C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/ui/bd_c954508f.ui>  Wrote  : <C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/ui/bd_8707aecf.ui>  
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// [Engine Memory]: 1,212 MB (+68060kb) [20:42:39]
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: VHDL Output written to : C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/synth/system.v 
+// Tcl Message: VHDL Output written to : C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/sim/system.v VHDL Output written to : C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/hdl/system_wrapper.v Wrote  : <C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/ui/bd_c954508f.ui>  Wrote  : <C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/ui/bd_8707aecf.ui>  
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block FrequencyCounter/frequency_counter_0 . 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// HMemoryUtils.trashcanNow. Engine heap size: 1,216 MB. GUI used memory: 87 MB. Current time: 8/9/24, 1:41:05 PM PDT
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block PS7/ps7_0_axi_periph/xbar . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block PS7/ps7_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block PS7/ps7_0_axi_periph/m00_couplers/auto_pc . 
+// Tcl Message: Exporting to file C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/hw_handoff/system.hwh Generated Block Design Tcl file C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl Generated Hardware Definition File C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/synth/system.hwdef 
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:25 . Memory (MB): peak = 1239.293 ; gain = 0.000 
+// aZ (cs): Launch Run Critical Messages: addNotify
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 31 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (aZ)
+dismissDialog("Launch Run Critical Messages"); // aZ (cs)
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // h (Q, cs)
+// bz (cs):  Resetting Runs : addNotify
+selectButton("OptionPane.button", "Cancel Process"); // JButton (v, B)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run system_frequency_counter_0_0_synth_1 
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run system_auto_pc_1_synth_1 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run system_xbar_0_synth_1 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run system_auto_pc_0_synth_1 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // bz (cs)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cs): Re-customize IP: addNotify
+setText("GPIO Width", "1"); // D (bj, r)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+dismissDialog("Re-customize IP"); // r (cs)
+// Tcl Command: 'set_property -dict [list CONFIG.C_GPIO2_WIDTH {1}] [get_bd_cells axi_gpio_0]'
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.C_GPIO2_WIDTH {1}] [get_bd_cells axi_gpio_0] 
+// Tcl Message: endgroup 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,242 MB. GUI used memory: 87 MB. Current time: 8/9/24, 1:41:50 PM PDT
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "frequency_counter.v", 3); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m (l, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // af (cs)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // af (cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false, false, true, false, false, false); // u (J, cs) - Control Key
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// am (cs): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (am)
+// bz (cs):  Save Constraints : addNotify
+// TclEventType: RSB_SAVE_DIAGRAM
+dismissDialog("Save Project"); // am (cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : <C:\Users\Purcell\Documents\RedPitayaPractice\Pulse-counting\Frequency_counter\tmp\freq\freq.srcs\sources_1\bd\system\system.bd>  Wrote  : <C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/ui/bd_c954508f.ui>  Wrote  : <C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/ui/bd_8707aecf.ui>  
+// A (cs): No Implementation Results Available: addNotify
+dismissDialog("Save Constraints"); // bz (cs)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// 'cD' command handler elapsed time: 3 seconds
+dismissDialog("No Implementation Results Available"); // A (cs)
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Resetting Runs"); // bz (cs)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RUN_DELETE
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// bz (cs):  Generate Bitstream : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,262 MB. GUI used memory: 88 MB. Current time: 8/9/24, 1:42:20 PM PDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block PS7/ps7_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block PS7/ps7_0_axi_periph/m00_couplers/auto_pc . 
+// Tcl Message: Exporting to file C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/hw_handoff/system.hwh Generated Block Design Tcl file C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl Generated Hardware Definition File C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.srcs/sources_1/bd/system/synth/system.hwdef 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_axi_gpio_0_0, cache-ID = 84c82e6404ee847b; cache size = 9.966 MB. 
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// Elapsed time: 20 seconds
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a (bz)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: INFO: [Common 17-41] Interrupt caught. Command should exit soon. 
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 1252.270 ; gain = 12.977 
+// CommandFailedException: ERROR: [Common 17-69] Command failed:  
+// Tcl Message: INFO: [Common 17-344] 'launch_runs' was cancelled 
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "frequency_counter.v", 3); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ports.xdc", 4); // m (l, cs)
+// Elapsed time: 12 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pulse"); // l (au, cs)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // A (cs)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bz (cs)
+// TclEventType: RUN_RESET
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// bz (cs):  Generate Bitstream : addNotify
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+dismissDialog("Generate Bitstream"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ports.xdc", 4); // m (l, cs)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led", true); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led"); // l (au, cs)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "led"); // l (au, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m (l, cs)
+// [GUI Memory]: 160 MB (+5336kb) [20:45:17]
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ports.xdc", 4); // m (l, cs)
+selectCodeEditor("ports.xdc", 568, 104); // bP (w, cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// [Engine Memory]: 1,275 MB (+2306kb) [20:45:31]
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "ddr"); // l (au, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ports.xdc", 4); // m (l, cs)
+// Elapsed time: 12 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "adc_clk"); // l (au, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m (l, cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ports.xdc", 4); // m (l, cs)
+// Elapsed time: 10 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "pulse", true); // l (au, cs)
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 54 seconds
+selectCodeEditor("ports.xdc", 331, 243); // bP (w, cs)
+typeControlKey((HResource) null, "ports.xdc", 'c'); // bP (w, cs)
+// Elapsed time: 13 seconds
+selectCodeEditor("ports.xdc", 389, 487); // bP (w, cs)
+selectCodeEditor("ports.xdc", 373, 498); // bP (w, cs)
+selectCodeEditor("ports.xdc", 7, 489); // bP (w, cs)
+selectCodeEditor("ports.xdc", 354, 508); // bP (w, cs)
+typeControlKey((HResource) null, "ports.xdc", 'c'); // bP (w, cs)
+// Elapsed time: 64 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "frequency_counter.v", 3); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System (2)", 2); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m (l, cs)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,277 MB. GUI used memory: 103 MB. Current time: 8/9/24, 2:12:20 PM PDT
+// Elapsed time: 2103 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ag)
+dismissDialog("Bitstream Generation Completed"); // ag (cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,277 MB. GUI used memory: 101 MB. Current time: 8/9/24, 2:42:22 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,277 MB. GUI used memory: 101 MB. Current time: 8/9/24, 3:12:24 PM PDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,277 MB. GUI used memory: 101 MB. Current time: 8/9/24, 3:42:27 PM PDT
+// Elapsed time: 5865 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "frequency_counter.v", 3); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ports.xdc", 4); // m (l, cs)
+// Elapsed time: 53 seconds
+selectCodeEditor("ports.xdc", 203, 265); // bP (w, cs)
+selectCodeEditor("ports.xdc", 282, 315); // bP (w, cs)
+// Elapsed time: 21 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E (g, cs)
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cs): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bz (cs):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cs)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bz (cs)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri Aug  9 16:01:29 2024] Launched synth_1... Run output will be captured here: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.runs/synth_1/runme.log [Fri Aug  9 16:01:29 2024] Launched impl_1... Run output will be captured here: C:/Users/Purcell/Documents/RedPitayaPractice/Pulse-counting/Frequency_counter/tmp/freq/freq.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// ag (cs): Bitstream Generation Completed: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,277 MB. GUI used memory: 102 MB. Current time: 8/9/24, 4:12:29 PM PDT
+// Elapsed time: 1785 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ag)
+dismissDialog("Bitstream Generation Completed"); // ag (cs)
+// Elapsed time: 23 seconds
+selectCodeEditor("ports.xdc", 186, 173); // bP (w, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,277 MB. GUI used memory: 100 MB. Current time: 8/9/24, 4:42:31 PM PDT
+// Elapsed time: 1607 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m (l, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,277 MB. GUI used memory: 100 MB. Current time: 8/9/24, 5:12:34 PM PDT
+// Elapsed time: 2603 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cs)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cs)
+selectMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // aa (q, cs)
+dismissMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // aa (q, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,277 MB. GUI used memory: 99 MB. Current time: 8/9/24, 5:42:38 PM PDT
