@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Sat May 31 15:04:36 2025
+// Date        : Fri Oct  3 09:09:27 2025
 // Host        : DESKTOP-RDVR7FP running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub {c:/Users/Purcell/Documents/RedPitayaProjects/adaptive
 //               readout/FastReadout/Pulse-counting/Adaptive_Readout/tmp/freq/freq.srcs/sources_1/bd/system/ip/system_frequency_counter_0_0/system_frequency_counter_0_0_stub.v}
@@ -16,9 +16,9 @@
 (* X_CORE_INFO = "frequency_counter,Vivado 2020.1" *)
 module system_frequency_counter_0_0(S_AXIS_IN_tdata, S_AXIS_IN_tvalid, 
   S_AXIS_IN_tdata_2, S_AXIS_IN_tvalid_2, clk, rst, M_AXIS_OUT_tdata, M_AXIS_OUT_tvalid, 
-  M_AXIS_OUT_tdata_2, M_AXIS_OUT_tvalid_2, counter_output, counter1_output, 
-  counter2_output, clock_counter, pulse, data_access, data_access_2)
-/* synthesis syn_black_box black_box_pad_pin="S_AXIS_IN_tdata[31:0],S_AXIS_IN_tvalid,S_AXIS_IN_tdata_2[31:0],S_AXIS_IN_tvalid_2,clk,rst,M_AXIS_OUT_tdata[31:0],M_AXIS_OUT_tvalid,M_AXIS_OUT_tdata_2[31:0],M_AXIS_OUT_tvalid_2,counter_output[31:0],counter1_output[31:0],counter2_output[31:0],clock_counter[31:0],pulse[0:0],data_access[13:0],data_access_2[13:0]" */;
+  M_AXIS_OUT_tdata_2, M_AXIS_OUT_tvalid_2, ttl_out, counter_output, counter1_output, 
+  counter2_output, clock_counter, pulse, data_access, data_access_2, state, state_2)
+/* synthesis syn_black_box black_box_pad_pin="S_AXIS_IN_tdata[31:0],S_AXIS_IN_tvalid,S_AXIS_IN_tdata_2[31:0],S_AXIS_IN_tvalid_2,clk,rst,M_AXIS_OUT_tdata[31:0],M_AXIS_OUT_tvalid,M_AXIS_OUT_tdata_2[31:0],M_AXIS_OUT_tvalid_2,ttl_out,counter_output[31:0],counter1_output[31:0],counter2_output[31:0],clock_counter[31:0],pulse[0:0],data_access[13:0],data_access_2[13:0],state,state_2" */;
   input [31:0]S_AXIS_IN_tdata;
   input S_AXIS_IN_tvalid;
   input [31:0]S_AXIS_IN_tdata_2;
@@ -29,6 +29,7 @@ module system_frequency_counter_0_0(S_AXIS_IN_tdata, S_AXIS_IN_tvalid,
   output M_AXIS_OUT_tvalid;
   output [31:0]M_AXIS_OUT_tdata_2;
   output M_AXIS_OUT_tvalid_2;
+  output ttl_out;
   output [31:0]counter_output;
   output [31:0]counter1_output;
   output [31:0]counter2_output;
@@ -36,4 +37,6 @@ module system_frequency_counter_0_0(S_AXIS_IN_tdata, S_AXIS_IN_tvalid,
   output [0:0]pulse;
   output [13:0]data_access;
   output [13:0]data_access_2;
+  output state;
+  output state_2;
 endmodule

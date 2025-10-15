@@ -4,9 +4,9 @@
 module frequency_counter #
 (
     parameter COUNT_WIDTH = 32,
-    parameter signed [13:0] HIGH_THRESHOLD = 7000,
+    parameter signed [13:0] HIGH_THRESHOLD = 6000,
     parameter signed [13:0] LOW_THRESHOLD = 3500,
-    parameter signed [13:0] HIGH_THRESHOLD_2 = 7000,
+    parameter signed [13:0] HIGH_THRESHOLD_2 = 6000,
     parameter signed [13:0] LOW_THRESHOLD_2 = 3500,
     parameter PULSE_DURATION = 1000000000, // 8s
     parameter ADC_WIDTH = 14,
@@ -24,6 +24,7 @@ module frequency_counter #
     output                         M_AXIS_OUT_tvalid,
     output [AXIS_TDATA_WIDTH-1:0]  M_AXIS_OUT_tdata_2,
     output                         M_AXIS_OUT_tvalid_2,
+    output reg                        ttl_out,
         // ADC data that contains info on the input pulse
     
     // Ncounts can be set by the user to see how many photons counted will trigger the output
@@ -36,12 +37,15 @@ module frequency_counter #
 	output reg [31:0] clock_counter, //testing
 	output reg [0:0]                   pulse,  //high voltage pulse here
 	output reg signed [ADC_WIDTH-1:0]            data_access,
-	output reg signed [ADC_WIDTH-1:0]            data_access_2
+	output reg signed [ADC_WIDTH-1:0]            data_access_2,
+	output reg state,
+    output reg state_2
 	//output reg  [0:0]                          state, state_next
 );
     // registers used to perform thresholding
-    reg                            state, state_next;
-    reg                            state_2, state_next_2;
+
+    reg                           state_next;
+    reg                           state_next_2;
     // registers used to store and update counts
     reg [COUNT_WIDTH-1:0]           counter_output_next=0, counter1_output_next = 0, counter2_output_next = 0;
     reg [COUNT_WIDTH-1:0]          cycle=0, cycle_next=0;
@@ -110,33 +114,34 @@ module frequency_counter #
     begin
         counter1_output_next = counter1_output;
         counter2_output_next = counter2_output;
-        if ((state < state_next)&& (pulse)&& (~rst) ) //count on rising signal transition
+        if ((state < state_next)&& (pulse)&& (rst) ) //count on rising signal transition
         begin
            // increment counter_output_next
             counter1_output_next = counter1_output + 1;    
         end
-        if ((state_2 < state_next_2) && (pulse)&& (~rst) )//count on rising signal transition
+        if ((state_2 < state_next_2) && (pulse)&& (rst) )//count on rising signal transition
         begin
            // increment counter_output_next
             counter2_output_next = counter2_output + 1;    
         end
-    end  
-    
-    // Handling of counts
-    always @* // update counter_next, which listens to the state. In this logic, if there are more than 1 count for each SPCM in 8ns, the red pitaya will not count more than 1
-    begin
+        
+ // update counter_next, which listens to the state. In this logic, if there are more than 1 count for each SPCM in 8ns, the red pitaya will not count more than 1
+      
         counter_output_next = counter1_output_next + counter2_output_next;
         clock_counter_next = clock_counter;
-        if ((counter_output_next >= 2) && (~rst) && pulse)  //if reset, the counter_output_next are not doing anything, so no counting, no outputting pulses/
+        if ((counter_output_next >= 4) && (rst) && pulse)  //if reset is off, the counter_output_next are not doing anything, so no counting, no outputting pulses/
             begin
               clock_counter_next = clock_counter + 1;
               counter_output_next = 0;
+              counter1_output_next = 0;
+              counter2_output_next = 0;
             end   
-    end    
+    end  
+      
     // Handling of counter, counter_output and cycle buffer
     always @(posedge clk)
     begin
-        if (rst)
+        if (~rst)
         begin
             counter_output <= 0;
             counter1_output <= 0;
@@ -157,27 +162,45 @@ module frequency_counter #
         end
     end
     
-    //generating pulse, setting pulse count
-    always @(posedge clk)
+    //generating pulse, setting pulse count, for finite pulse duration case
+//    always @(posedge clk)
+//    begin
+//        if (~rst) begin
+//            if (clock_counter_next > clock_counter) begin
+//                pulse_count <= PULSE_DURATION;
+//                pulse <= 0;          
+//                end else if (pulse_count > 0) begin
+//                pulse_count <= pulse_count - 1;
+//                pulse <= 0;           
+//                end     
+//                else begin
+//                pulse <= 1;
+//                pulse_count <= pulse_count;
+//                end
+//         end else begin //when it's being reset
+//            pulse_count <= 0;
+//            pulse <=1 ;
+//            end
+//     end
+        always @(posedge clk)
     begin
-        if (~rst) begin
+        if (rst) begin
             if (clock_counter_next > clock_counter) begin
                 pulse_count <= PULSE_DURATION;
-                pulse <= 0;          
-                end else if (pulse_count > 0) begin
-                pulse_count <= pulse_count - 1;
-                pulse <= 0;           
+                pulse <= 0;                    
                 end     
-                else begin
-                pulse <= 1;
-                pulse_count <= pulse_count;
+             else begin
+                pulse <= pulse;
                 end
          end else begin //when it's being reset
             pulse_count <= 0;
             pulse <=1 ;
             end
      end
-    
+     
+     always @* begin
+          ttl_out = rst && pulse ;
+        end
 endmodule
 
  

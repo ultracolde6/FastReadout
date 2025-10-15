@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Sat May 31 15:03:51 2025
+//Date        : Fri Oct  3 09:08:31 2025
 //Host        : DESKTOP-RDVR7FP running 64-bit major release  (build 9200)
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
@@ -51,9 +51,12 @@ module system_wrapper
     exp_n_tri_io,
     exp_p_tri_io,
     led_o,
+    output_ttl,
     pulse,
     pulse_check,
-    reset);
+    reset,
+    state,
+    state2);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -95,9 +98,12 @@ module system_wrapper
   inout [7:0]exp_n_tri_io;
   inout [7:0]exp_p_tri_io;
   output [1:0]led_o;
+  output output_ttl;
   output [0:0]pulse;
   output [0:0]pulse_check;
   input reset;
+  output state;
+  output state2;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -140,9 +146,12 @@ module system_wrapper
   wire [7:0]exp_n_tri_io;
   wire [7:0]exp_p_tri_io;
   wire [1:0]led_o;
+  wire output_ttl;
   wire [0:0]pulse;
   wire [0:0]pulse_check;
   wire reset;
+  wire state;
+  wire state2;
 
   system system_i
        (.DDR_addr(DDR_addr),
@@ -186,7 +195,10 @@ module system_wrapper
         .exp_n_tri_io(exp_n_tri_io),
         .exp_p_tri_io(exp_p_tri_io),
         .led_o(led_o),
+        .output_ttl(output_ttl),
         .pulse(pulse),
         .pulse_check(pulse_check),
-        .reset(reset));
+        .reset(reset),
+        .state(state),
+        .state2(state2));
 endmodule

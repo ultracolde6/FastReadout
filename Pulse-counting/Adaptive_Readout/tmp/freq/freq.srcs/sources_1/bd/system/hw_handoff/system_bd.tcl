@@ -904,8 +904,11 @@ proc create_hier_cell_FrequencyCounter { parentCell nameHier } {
   create_bd_pin -dir O -from 31 -to 0 counter_output
   create_bd_pin -dir O -from 13 -to 0 data_access
   create_bd_pin -dir O -from 13 -to 0 data_access_2
+  create_bd_pin -dir O output_ttl
   create_bd_pin -dir O -from 0 -to 0 pulse
   create_bd_pin -dir I -type rst rst
+  create_bd_pin -dir O state
+  create_bd_pin -dir O state2
 
   # Create instance: frequency_counter_0, and set properties
   set block_name frequency_counter
@@ -930,6 +933,9 @@ proc create_hier_cell_FrequencyCounter { parentCell nameHier } {
   connect_bd_net -net frequency_counter_0_data_access [get_bd_pins data_access] [get_bd_pins frequency_counter_0/data_access]
   connect_bd_net -net frequency_counter_0_data_access_2 [get_bd_pins data_access_2] [get_bd_pins frequency_counter_0/data_access_2]
   connect_bd_net -net frequency_counter_0_pulse [get_bd_pins pulse] [get_bd_pins frequency_counter_0/pulse]
+  connect_bd_net -net frequency_counter_0_state [get_bd_pins state] [get_bd_pins frequency_counter_0/state]
+  connect_bd_net -net frequency_counter_0_state_2 [get_bd_pins state2] [get_bd_pins frequency_counter_0/state_2]
+  connect_bd_net -net frequency_counter_0_ttl_out [get_bd_pins output_ttl] [get_bd_pins frequency_counter_0/ttl_out]
   connect_bd_net -net rst_1 [get_bd_pins rst] [get_bd_pins frequency_counter_0/rst]
 
   # Restore current instance
@@ -1087,9 +1093,12 @@ proc create_root_design { parentCell } {
   set exp_n_tri_io [ create_bd_port -dir IO -from 7 -to 0 exp_n_tri_io ]
   set exp_p_tri_io [ create_bd_port -dir IO -from 7 -to 0 exp_p_tri_io ]
   set led_o [ create_bd_port -dir O -from 1 -to 0 led_o ]
+  set output_ttl [ create_bd_port -dir O output_ttl ]
   set pulse [ create_bd_port -dir O -from 0 -to 0 pulse ]
   set pulse_check [ create_bd_port -dir O -from 0 -to 0 pulse_check ]
   set reset [ create_bd_port -dir I reset ]
+  set state [ create_bd_port -dir O state ]
+  set state2 [ create_bd_port -dir O state2 ]
 
   # Create instance: DataAcquisition
   create_hier_cell_DataAcquisition [current_bd_instance .] DataAcquisition
@@ -1135,7 +1144,10 @@ proc create_root_design { parentCell } {
   connect_bd_net -net DataAcquisition_adc_clk [get_bd_pins DataAcquisition/adc_clk] [get_bd_pins FrequencyCounter/clk]
   connect_bd_net -net FrequencyCounter_counter_output [get_bd_pins FrequencyCounter/counter_output] [get_bd_pins axi_gpio_0/gpio_io_i]
   connect_bd_net -net FrequencyCounter_data_access_2 [get_bd_pins FrequencyCounter/data_access_2] [get_bd_pins axi_gpio_0/gpio2_io_i]
+  connect_bd_net -net FrequencyCounter_output_ttl [get_bd_ports output_ttl] [get_bd_pins FrequencyCounter/output_ttl]
   connect_bd_net -net FrequencyCounter_pulse [get_bd_ports pulse] [get_bd_ports pulse_check] [get_bd_pins FrequencyCounter/pulse]
+  connect_bd_net -net FrequencyCounter_state [get_bd_ports state] [get_bd_pins FrequencyCounter/state]
+  connect_bd_net -net FrequencyCounter_state2 [get_bd_ports state2] [get_bd_pins FrequencyCounter/state2]
   connect_bd_net -net adc_clk_n_i_1 [get_bd_ports adc_clk_n_i] [get_bd_pins DataAcquisition/adc_clk_n_i]
   connect_bd_net -net adc_clk_p_i_1 [get_bd_ports adc_clk_p_i] [get_bd_pins DataAcquisition/adc_clk_p_i]
   connect_bd_net -net adc_dat_a_i_1 [get_bd_ports adc_dat_a_i] [get_bd_pins DataAcquisition/adc_dat_a_i]

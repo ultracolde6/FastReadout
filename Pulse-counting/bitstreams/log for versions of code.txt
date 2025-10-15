@@ -1,3 +1,7 @@
 1. AdaptiveReadout_LV_800ns.bit.bin: threshold values: HS = 8000 (about 1.1 V), LS = 3500 (about 0.6 V). this outputs a digital low for 800 ns for every two photons received, jumper should be on low voltage gain setting. This code setup is used for debugging. It has only one-channel and outputs a short pulse with no reset feature
 2. AdaptiveReadout_LV_800ns_HS7000.bit.bin: same as above. but with slighlt lower HS
-3
+3. AdaptiveReadout_LV_.bit.bin: HS = 7000 (1V or so), LS = 3500, finite pulse with pulse duration ~ 8s
+We are not doing pulses anymore. Now I will shut down the digital probe.
+Latest versions:
+Adaptive_Readout_LV_twochannel.bit.bin
+AdaptiveReadout_LV_twochannel_HT5000.bit.bin

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat May 31 15:03:52 2025" VIVADOVERSION="2020.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Oct  3 09:08:32 2025" VIVADOVERSION="2020.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="system" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -73,6 +73,11 @@
     <PORT DIR="O" LEFT="0" NAME="pulse_check" RIGHT="0" SIGIS="undef" SIGNAME="FrequencyCounter_frequency_counter_0_pulse">
       <CONNECTIONS>
         <CONNECTION INSTANCE="FrequencyCounter_frequency_counter_0" PORT="pulse"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="output_ttl" SIGIS="undef" SIGNAME="FrequencyCounter_frequency_counter_0_ttl_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="FrequencyCounter_frequency_counter_0" PORT="ttl_out"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="IO" NAME="DDR_cas_n" SIGIS="undef" SIGNAME="PS7_processing_system7_0_DDR_CAS_n">
@@ -178,6 +183,16 @@
     <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef" SIGNAME="PS7_processing_system7_0_PS_PORB">
       <CONNECTIONS>
         <CONNECTION INSTANCE="PS7_processing_system7_0" PORT="PS_PORB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="state" SIGIS="undef" SIGNAME="FrequencyCounter_frequency_counter_0_state">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="FrequencyCounter_frequency_counter_0" PORT="state"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="state2" SIGIS="undef" SIGNAME="FrequencyCounter_frequency_counter_0_state_2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="FrequencyCounter_frequency_counter_0" PORT="state_2"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -424,9 +439,9 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="COUNT_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="HIGH_THRESHOLD" VALUE="7000"/>
+        <PARAMETER NAME="HIGH_THRESHOLD" VALUE="6000"/>
         <PARAMETER NAME="LOW_THRESHOLD" VALUE="3500"/>
-        <PARAMETER NAME="HIGH_THRESHOLD_2" VALUE="7000"/>
+        <PARAMETER NAME="HIGH_THRESHOLD_2" VALUE="6000"/>
         <PARAMETER NAME="LOW_THRESHOLD_2" VALUE="3500"/>
         <PARAMETER NAME="PULSE_DURATION" VALUE="1000000000"/>
         <PARAMETER NAME="ADC_WIDTH" VALUE="14"/>
@@ -469,6 +484,11 @@
         <PORT DIR="O" NAME="M_AXIS_OUT_tvalid" SIGIS="undef"/>
         <PORT DIR="O" LEFT="31" NAME="M_AXIS_OUT_tdata_2" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" NAME="M_AXIS_OUT_tvalid_2" SIGIS="undef"/>
+        <PORT DIR="O" NAME="ttl_out" SIGIS="undef" SIGNAME="FrequencyCounter_frequency_counter_0_ttl_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="output_ttl"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="31" NAME="counter_output" RIGHT="0" SIGIS="undef" SIGNAME="FrequencyCounter_frequency_counter_0_counter_output">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_i"/>
@@ -487,6 +507,16 @@
         <PORT DIR="O" LEFT="13" NAME="data_access_2" RIGHT="0" SIGIS="undef" SIGNAME="FrequencyCounter_frequency_counter_0_data_access_2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio2_io_i"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="state" SIGIS="undef" SIGNAME="FrequencyCounter_frequency_counter_0_state">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="state"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="state_2" SIGIS="undef" SIGNAME="FrequencyCounter_frequency_counter_0_state_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="state2"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -2508,45 +2538,6 @@
             <CONNECTION INSTANCE="PS7_rst_ps7_0_125M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M01_AXI_awid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_awaddr" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_awlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_awsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_awburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_awlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_awcache" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_awregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_awqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_awvalid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M01_AXI_awready" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_wdata" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_wstrb" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_wlast" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_wvalid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M01_AXI_wready" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M01_AXI_bid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M01_AXI_bresp" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M01_AXI_bvalid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_bready" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_arid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_araddr" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_arlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_arsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_arburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_arlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_arcache" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_arqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_arvalid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M01_AXI_arready" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M01_AXI_rid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M01_AXI_rdata" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M01_AXI_rresp" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M01_AXI_rlast" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M01_AXI_rvalid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_rready" SIGIS="undef"/>
         <PORT DIR="I" LEFT="11" NAME="S00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="PS7_processing_system7_0_M_AXI_GP0_AWID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="PS7_processing_system7_0" PORT="M_AXI_GP0_AWID"/>
@@ -2824,6 +2815,45 @@
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" NAME="M01_AXI_awid" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awaddr" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awlen" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awsize" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awburst" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awlock" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awcache" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awregion" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awqos" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M01_AXI_awready" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_wdata" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_wstrb" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_wlast" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_wvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M01_AXI_wready" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M01_AXI_bid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M01_AXI_bresp" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M01_AXI_bvalid" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_bready" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arid" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_araddr" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arlen" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arsize" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arburst" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arlock" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arcache" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arregion" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arqos" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M01_AXI_arready" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M01_AXI_rid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M01_AXI_rdata" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M01_AXI_rresp" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M01_AXI_rlast" SIGIS="undef"/>
+        <PORT DIR="I" NAME="M01_AXI_rvalid" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_rready" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="PS7_processing_system7_0_M_AXI_GP0" DATAWIDTH="32" NAME="S00_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">

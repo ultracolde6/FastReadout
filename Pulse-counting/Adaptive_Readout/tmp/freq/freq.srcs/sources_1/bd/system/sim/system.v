@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Sat May 31 15:03:51 2025
+//Date        : Fri Oct  3 09:08:31 2025
 //Host        : DESKTOP-RDVR7FP running 64-bit major release  (build 9200)
 //Command     : generate_target system.bd
 //Design      : system
@@ -84,8 +84,11 @@ module FrequencyCounter_imp_MPHDEJ
     counter_output,
     data_access,
     data_access_2,
+    output_ttl,
     pulse,
-    rst);
+    rst,
+    state,
+    state2);
   output M_AXIS_OUT_tdata;
   output M_AXIS_OUT_tvalid;
   input [31:0]S_AXIS_IN_2_tdata;
@@ -97,8 +100,11 @@ module FrequencyCounter_imp_MPHDEJ
   output [31:0]counter_output;
   output [13:0]data_access;
   output [13:0]data_access_2;
+  output output_ttl;
   output [0:0]pulse;
   input rst;
+  output state;
+  output state2;
 
   wire [31:0]Conn1_TDATA;
   wire Conn1_TVALID;
@@ -112,6 +118,9 @@ module FrequencyCounter_imp_MPHDEJ
   wire [13:0]frequency_counter_0_data_access;
   wire [13:0]frequency_counter_0_data_access_2;
   wire [0:0]frequency_counter_0_pulse;
+  wire frequency_counter_0_state;
+  wire frequency_counter_0_state_2;
+  wire frequency_counter_0_ttl_out;
   wire rst_1;
 
   assign Conn1_TDATA = S_AXIS_IN_2_tdata[31:0];
@@ -125,8 +134,11 @@ module FrequencyCounter_imp_MPHDEJ
   assign counter_output[31:0] = frequency_counter_0_counter_output;
   assign data_access[13:0] = frequency_counter_0_data_access;
   assign data_access_2[13:0] = frequency_counter_0_data_access_2;
+  assign output_ttl = frequency_counter_0_ttl_out;
   assign pulse[0] = frequency_counter_0_pulse;
   assign rst_1 = rst;
+  assign state = frequency_counter_0_state;
+  assign state2 = frequency_counter_0_state_2;
   system_frequency_counter_0_0 frequency_counter_0
        (.M_AXIS_OUT_tdata(frequency_counter_0_M_AXIS_OUT_TDATA),
         .M_AXIS_OUT_tvalid(frequency_counter_0_M_AXIS_OUT_TVALID),
@@ -140,7 +152,10 @@ module FrequencyCounter_imp_MPHDEJ
         .data_access(frequency_counter_0_data_access),
         .data_access_2(frequency_counter_0_data_access_2),
         .pulse(frequency_counter_0_pulse),
-        .rst(rst_1));
+        .rst(rst_1),
+        .state(frequency_counter_0_state),
+        .state_2(frequency_counter_0_state_2),
+        .ttl_out(frequency_counter_0_ttl_out));
 endmodule
 
 module PS7_imp_1QJPAX8
@@ -1715,9 +1730,12 @@ module system
     exp_n_tri_io,
     exp_p_tri_io,
     led_o,
+    output_ttl,
     pulse,
     pulse_check,
-    reset);
+    reset,
+    state,
+    state2);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -1759,16 +1777,22 @@ module system
   inout [7:0]exp_n_tri_io;
   inout [7:0]exp_p_tri_io;
   output [1:0]led_o;
+  output output_ttl;
   output [0:0]pulse;
   output [0:0]pulse_check;
   input reset;
+  output state;
+  output state2;
 
   wire [31:0]DataAcquisition_M_AXIS_PORT2_TDATA;
   wire DataAcquisition_M_AXIS_PORT2_TVALID;
   wire DataAcquisition_adc_clk;
   wire [31:0]FrequencyCounter_counter_output;
   wire [13:0]FrequencyCounter_data_access_2;
+  wire FrequencyCounter_output_ttl;
   wire [0:0]FrequencyCounter_pulse;
+  wire FrequencyCounter_state;
+  wire FrequencyCounter_state2;
   wire adc_clk_n_i_1;
   wire adc_clk_p_i_1;
   wire [13:0]adc_dat_a_i_1;
@@ -1832,9 +1856,12 @@ module system
   assign daisy_n_o[1:0] = util_ds_buf_2_OBUF_DS_N;
   assign daisy_p_i_1 = daisy_p_i[1:0];
   assign daisy_p_o[1:0] = util_ds_buf_2_OBUF_DS_P;
+  assign output_ttl = FrequencyCounter_output_ttl;
   assign pulse[0] = FrequencyCounter_pulse;
   assign pulse_check[0] = FrequencyCounter_pulse;
   assign reset_1 = reset;
+  assign state = FrequencyCounter_state;
+  assign state2 = FrequencyCounter_state2;
   DataAcquisition_imp_11FS564 DataAcquisition
        (.M_AXIS_PORT1_tdata(signal_split_0_M_AXIS_PORT1_TDATA),
         .M_AXIS_PORT1_tvalid(signal_split_0_M_AXIS_PORT1_TVALID),
@@ -1854,8 +1881,11 @@ module system
         .clk(DataAcquisition_adc_clk),
         .counter_output(FrequencyCounter_counter_output),
         .data_access_2(FrequencyCounter_data_access_2),
+        .output_ttl(FrequencyCounter_output_ttl),
         .pulse(FrequencyCounter_pulse),
-        .rst(reset_1));
+        .rst(reset_1),
+        .state(FrequencyCounter_state),
+        .state2(FrequencyCounter_state2));
   PS7_imp_1QJPAX8 PS7
        (.DDR_addr(DDR_addr[14:0]),
         .DDR_ba(DDR_ba[2:0]),

@@ -690,7 +690,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b202e2d1</spirit:value>
+            <spirit:value>9:668239c6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -701,7 +701,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b202e2d1</spirit:value>
+            <spirit:value>9:668239c6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -717,11 +717,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat May 31 22:03:51 UTC 2025</spirit:value>
+            <spirit:value>Fri Oct 03 16:08:31 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b202e2d1</spirit:value>
+            <spirit:value>9:668239c6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -733,7 +733,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f84e5b57</spirit:value>
+            <spirit:value>9:72382740</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -749,11 +749,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat May 31 22:03:51 UTC 2025</spirit:value>
+            <spirit:value>Fri Oct 03 16:08:31 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f84e5b57</spirit:value>
+            <spirit:value>9:72382740</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -767,11 +767,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat May 31 22:04:36 UTC 2025</spirit:value>
+            <spirit:value>Fri Oct 03 16:09:27 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b202e2d1</spirit:value>
+            <spirit:value>9:668239c6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -930,6 +930,19 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+        <spirit:name>ttl_out</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>reg</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
         <spirit:name>counter_output</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
@@ -1048,6 +1061,32 @@
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
+      <spirit:port>
+        <spirit:name>state</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>reg</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>state_2</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>reg</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
     </spirit:ports>
     <spirit:modelParameters>
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
@@ -1058,7 +1097,7 @@
       <spirit:modelParameter spirit:dataType="signed(13 0)">
         <spirit:name>HIGH_THRESHOLD</spirit:name>
         <spirit:displayName>High Threshold</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.HIGH_THRESHOLD">7000</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.HIGH_THRESHOLD">6000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="signed(13 0)">
         <spirit:name>LOW_THRESHOLD</spirit:name>
@@ -1068,7 +1107,7 @@
       <spirit:modelParameter spirit:dataType="signed(13 0)">
         <spirit:name>HIGH_THRESHOLD_2</spirit:name>
         <spirit:displayName>High Threshold 2</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.HIGH_THRESHOLD_2">7000</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.HIGH_THRESHOLD_2">6000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="signed(13 0)">
         <spirit:name>LOW_THRESHOLD_2</spirit:name>
@@ -1156,7 +1195,7 @@
     <spirit:parameter>
       <spirit:name>HIGH_THRESHOLD</spirit:name>
       <spirit:displayName>High Threshold</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.HIGH_THRESHOLD">7000</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.HIGH_THRESHOLD">6000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>LOW_THRESHOLD</spirit:name>
@@ -1166,7 +1205,7 @@
     <spirit:parameter>
       <spirit:name>HIGH_THRESHOLD_2</spirit:name>
       <spirit:displayName>High Threshold 2</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.HIGH_THRESHOLD_2">7000</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.HIGH_THRESHOLD_2">6000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>LOW_THRESHOLD_2</spirit:name>

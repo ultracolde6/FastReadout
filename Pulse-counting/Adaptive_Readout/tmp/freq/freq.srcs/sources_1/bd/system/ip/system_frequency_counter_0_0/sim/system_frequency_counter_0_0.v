@@ -65,13 +65,16 @@ module system_frequency_counter_0_0 (
   M_AXIS_OUT_tvalid,
   M_AXIS_OUT_tdata_2,
   M_AXIS_OUT_tvalid_2,
+  ttl_out,
   counter_output,
   counter1_output,
   counter2_output,
   clock_counter,
   pulse,
   data_access,
-  data_access_2
+  data_access_2,
+  state,
+  state_2
 );
 
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S_AXIS_IN TDATA" *)
@@ -100,6 +103,7 @@ output wire [31 : 0] M_AXIS_OUT_tdata_2;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS_OUT_2, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 125000000, PHASE 0.000, CLK_DOMAIN system_axis_red_pitaya_adc_0_0_adc_clk, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS_OUT_2 TVALID" *)
 output wire M_AXIS_OUT_tvalid_2;
+output wire ttl_out;
 output wire [31 : 0] counter_output;
 output wire [31 : 0] counter1_output;
 output wire [31 : 0] counter2_output;
@@ -107,12 +111,14 @@ output wire [31 : 0] clock_counter;
 output wire [0 : 0] pulse;
 output wire [13 : 0] data_access;
 output wire [13 : 0] data_access_2;
+output wire state;
+output wire state_2;
 
   frequency_counter #(
     .COUNT_WIDTH(32),
-    .HIGH_THRESHOLD(7000),
+    .HIGH_THRESHOLD(6000),
     .LOW_THRESHOLD(3500),
-    .HIGH_THRESHOLD_2(7000),
+    .HIGH_THRESHOLD_2(6000),
     .LOW_THRESHOLD_2(3500),
     .PULSE_DURATION(1000000000),
     .ADC_WIDTH(14),
@@ -128,12 +134,15 @@ output wire [13 : 0] data_access_2;
     .M_AXIS_OUT_tvalid(M_AXIS_OUT_tvalid),
     .M_AXIS_OUT_tdata_2(M_AXIS_OUT_tdata_2),
     .M_AXIS_OUT_tvalid_2(M_AXIS_OUT_tvalid_2),
+    .ttl_out(ttl_out),
     .counter_output(counter_output),
     .counter1_output(counter1_output),
     .counter2_output(counter2_output),
     .clock_counter(clock_counter),
     .pulse(pulse),
     .data_access(data_access),
-    .data_access_2(data_access_2)
+    .data_access_2(data_access_2),
+    .state(state),
+    .state_2(state_2)
   );
 endmodule
