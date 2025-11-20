@@ -1,0 +1,75 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat May 31 09:56:01 2025
+# Process ID: 28616
+# Current directory: C:/Users/Purcell/Documents/RedPitayaProjects/adaptive readout/FastReadout/Pulse-counting/Adaptive_Readout/tmp/freq
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent30900 C:\Users\Purcell\Documents\RedPitayaProjects\adaptive readout\FastReadout\Pulse-counting\Adaptive_Readout\tmp\freq\freq.xpr
+# Log file: C:/Users/Purcell/Documents/RedPitayaProjects/adaptive readout/FastReadout/Pulse-counting/Adaptive_Readout/tmp/freq/vivado.log
+# Journal file: C:/Users/Purcell/Documents/RedPitayaProjects/adaptive readout/FastReadout/Pulse-counting/Adaptive_Readout/tmp/freq\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Purcell/Documents/RedPitayaProjects/adaptive readout/FastReadout/Pulse-counting/Adaptive_Readout/tmp/freq/freq.xpr}
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/Purcell/Documents/RedPitayaProjects/adaptive readout/FastReadout/Pulse-counting/Adaptive_Readout/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
+create_bd_pin -dir O DataAcquisition/M_AXIS_PORT2
+connect_bd_net [get_bd_pins DataAcquisition/M_AXIS_PORT2] [get_bd_pins DataAcquisition/signal_split_0/M_AXIS_PORT2_tvalid]
+delete_bd_objs [get_bd_nets DataAcquisition/signal_split_0_M_AXIS_PORT2_tvalid]
+regenerate_bd_layout -hierarchy [get_bd_cells DataAcquisition]
+set_property location {664 90} [get_bd_pins DataAcquisition/M_AXIS_PORT2]
+delete_bd_objs [get_bd_pins DataAcquisition/M_AXIS_PORT2]
+copy_bd_objs DataAcquisition  [get_bd_intf_pins {DataAcquisition/M_AXIS_PORT1}]
+set_property location {671 90} [get_bd_intf_pins DataAcquisition/M_AXIS_PORT2]
+connect_bd_intf_net [get_bd_intf_pins DataAcquisition/M_AXIS_PORT2] [get_bd_intf_pins DataAcquisition/signal_split_0/M_AXIS_PORT2]
+update_module_reference system_frequency_counter_0_0
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins DataAcquisition/M_AXIS_PORT2] [get_bd_intf_pins FrequencyCounter/frequency_counter_0/S_AXIS_IN_2]
+update_module_reference system_frequency_counter_0_0
+update_module_reference system_frequency_counter_0_0
+update_module_reference system_frequency_counter_0_0
+update_compile_order -fileset sources_1
+update_module_reference system_frequency_counter_0_0
+update_compile_order -fileset sources_1
+set_property location {1 679 -10} [get_bd_cells FrequencyCounter/frequency_counter_0]
+create_bd_pin -dir I FrequencyCounter/data_access2
+delete_bd_objs [get_bd_pins FrequencyCounter/data_access2]
+copy_bd_objs FrequencyCounter  [get_bd_pins {FrequencyCounter/data_access}]
+set_property name data_access_2 [get_bd_pins FrequencyCounter/data_access1]
+connect_bd_net [get_bd_pins FrequencyCounter/data_access_2] [get_bd_pins FrequencyCounter/frequency_counter_0/data_access_2]
+delete_bd_objs [get_bd_nets FrequencyCounter_data_access]
+connect_bd_net [get_bd_pins axi_gpio_0/gpio2_io_i] [get_bd_pins FrequencyCounter/data_access_2]
+delete_bd_objs [get_bd_nets xlc_reset_dout] [get_bd_cells xlc_reset]
+connect_bd_net [get_bd_ports reset] [get_bd_pins FrequencyCounter/rst]
+save_bd_design
+update_module_reference system_frequency_counter_0_0
+reset_run synth_1
+reset_run system_xbar_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+update_module_reference system_frequency_counter_0_0
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+close_design
+update_module_reference system_frequency_counter_0_0
+reset_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+update_module_reference system_frequency_counter_0_0
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_bd_design {C:/Users/Purcell/Documents/RedPitayaProjects/adaptive readout/FastReadout/Pulse-counting/Adaptive_Readout/tmp/freq/freq.srcs/sources_1/bd/system/system.bd}
+update_module_reference system_frequency_counter_0_0
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1

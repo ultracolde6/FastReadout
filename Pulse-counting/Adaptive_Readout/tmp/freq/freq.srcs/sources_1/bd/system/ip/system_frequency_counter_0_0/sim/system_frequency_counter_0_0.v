@@ -122,7 +122,8 @@ output wire state_2;
     .LOW_THRESHOLD_2(3500),
     .PULSE_DURATION(1000000000),
     .ADC_WIDTH(14),
-    .AXIS_TDATA_WIDTH(32)
+    .AXIS_TDATA_WIDTH(32),
+    .nph(2)
   ) inst (
     .S_AXIS_IN_tdata(S_AXIS_IN_tdata),
     .S_AXIS_IN_tvalid(S_AXIS_IN_tvalid),

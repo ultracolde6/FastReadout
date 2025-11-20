@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x183021236A7DAE5C",
+      "boundary_crc": "0x1830212311D3C25E",
       "device": "xc7z010clg400-1",
       "name": "system",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -33,6 +33,11 @@
           },
           "m01_couplers": {}
         }
+      },
+      "signal_gen": {
+        "axis_red_pitaya_dac_0": "",
+        "clk_wiz_0": "",
+        "axis_constant_0": ""
       }
     },
     "interface_ports": {
@@ -185,10 +190,30 @@
         "right": "0"
       },
       "dac_clk_o": {
-        "direction": "O"
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "system_axis_red_pitaya_dac_0_2_dac_clk",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default_prop"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default_prop"
+          }
+        }
       },
       "dac_rst_o": {
-        "direction": "O"
+        "direction": "O",
+        "parameters": {
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default_prop"
+          }
+        }
       },
       "dac_sel_o": {
         "direction": "O"
@@ -323,6 +348,9 @@
             "value": "1"
           },
           "C_ALL_INPUTS_2": {
+            "value": "0"
+          },
+          "C_ALL_OUTPUTS_2": {
             "value": "1"
           },
           "C_GPIO2_WIDTH": {
@@ -2770,16 +2798,16 @@
                   }
                 },
                 "interface_nets": {
-                  "s00_couplers_to_auto_pc": {
-                    "interface_ports": [
-                      "S_AXI",
-                      "auto_pc/S_AXI"
-                    ]
-                  },
                   "auto_pc_to_s00_couplers": {
                     "interface_ports": [
                       "M_AXI",
                       "auto_pc/M_AXI"
+                    ]
+                  },
+                  "s00_couplers_to_auto_pc": {
+                    "interface_ports": [
+                      "S_AXI",
+                      "auto_pc/S_AXI"
                     ]
                   }
                 },
@@ -2868,16 +2896,16 @@
                   }
                 },
                 "interface_nets": {
-                  "m00_couplers_to_auto_pc": {
-                    "interface_ports": [
-                      "S_AXI",
-                      "auto_pc/S_AXI"
-                    ]
-                  },
                   "auto_pc_to_m00_couplers": {
                     "interface_ports": [
                       "M_AXI",
                       "auto_pc/M_AXI"
+                    ]
+                  },
+                  "m00_couplers_to_auto_pc": {
+                    "interface_ports": [
+                      "S_AXI",
+                      "auto_pc/S_AXI"
                     ]
                   }
                 },
@@ -2952,6 +2980,12 @@
               }
             },
             "interface_nets": {
+              "xbar_to_m01_couplers": {
+                "interface_ports": [
+                  "xbar/M01_AXI",
+                  "m01_couplers/S_AXI"
+                ]
+              },
               "ps7_0_axi_periph_to_s00_couplers": {
                 "interface_ports": [
                   "S00_AXI",
@@ -2970,22 +3004,16 @@
                   "m00_couplers/M_AXI"
                 ]
               },
-              "m01_couplers_to_ps7_0_axi_periph": {
-                "interface_ports": [
-                  "M01_AXI",
-                  "m01_couplers/M_AXI"
-                ]
-              },
               "xbar_to_m00_couplers": {
                 "interface_ports": [
                   "xbar/M00_AXI",
                   "m00_couplers/S_AXI"
                 ]
               },
-              "xbar_to_m01_couplers": {
+              "m01_couplers_to_ps7_0_axi_periph": {
                 "interface_ports": [
-                  "xbar/M01_AXI",
-                  "m01_couplers/S_AXI"
+                  "M01_AXI",
+                  "m01_couplers/M_AXI"
                 ]
               }
             },
@@ -3077,6 +3105,115 @@
               "ps7_0_axi_periph/M00_ARESETN",
               "ps7_0_axi_periph/ARESETN",
               "ps7_0_axi_periph/M01_ARESETN"
+            ]
+          }
+        }
+      },
+      "signal_gen": {
+        "ports": {
+          "clk_in": {
+            "direction": "I"
+          },
+          "dac_clk": {
+            "direction": "O"
+          },
+          "dac_rst": {
+            "direction": "O"
+          },
+          "dac_wrt": {
+            "direction": "O"
+          },
+          "dac_sel": {
+            "direction": "O"
+          },
+          "dac_dat": {
+            "direction": "O",
+            "left": "13",
+            "right": "0"
+          },
+          "constant_voltage": {
+            "direction": "I",
+            "left": "13",
+            "right": "0"
+          }
+        },
+        "components": {
+          "axis_red_pitaya_dac_0": {
+            "vlnv": "pavel-demin:user:axis_red_pitaya_dac:1.0",
+            "xci_name": "system_axis_red_pitaya_dac_0_2"
+          },
+          "clk_wiz_0": {
+            "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+            "xci_name": "system_clk_wiz_0_0"
+          },
+          "axis_constant_0": {
+            "vlnv": "pavel-demin:user:axis_constant:1.0",
+            "xci_name": "system_axis_constant_0_0"
+          }
+        },
+        "interface_nets": {
+          "axis_constant_0_M_AXIS": {
+            "interface_ports": [
+              "axis_constant_0/M_AXIS",
+              "axis_red_pitaya_dac_0/S_AXIS"
+            ]
+          }
+        },
+        "nets": {
+          "clk_in_1": {
+            "ports": [
+              "clk_in",
+              "clk_wiz_0/clk_in1",
+              "axis_red_pitaya_dac_0/aclk",
+              "axis_constant_0/aclk"
+            ]
+          },
+          "clk_wiz_0_locked": {
+            "ports": [
+              "clk_wiz_0/locked",
+              "axis_red_pitaya_dac_0/locked"
+            ]
+          },
+          "clk_wiz_0_clk_out1": {
+            "ports": [
+              "clk_wiz_0/clk_out1",
+              "axis_red_pitaya_dac_0/ddr_clk"
+            ]
+          },
+          "axis_red_pitaya_dac_0_dac_clk": {
+            "ports": [
+              "axis_red_pitaya_dac_0/dac_clk",
+              "dac_clk"
+            ]
+          },
+          "axis_red_pitaya_dac_0_dac_rst": {
+            "ports": [
+              "axis_red_pitaya_dac_0/dac_rst",
+              "dac_rst"
+            ]
+          },
+          "axis_red_pitaya_dac_0_dac_sel": {
+            "ports": [
+              "axis_red_pitaya_dac_0/dac_sel",
+              "dac_sel"
+            ]
+          },
+          "axis_red_pitaya_dac_0_dac_wrt": {
+            "ports": [
+              "axis_red_pitaya_dac_0/dac_wrt",
+              "dac_wrt"
+            ]
+          },
+          "axis_red_pitaya_dac_0_dac_dat": {
+            "ports": [
+              "axis_red_pitaya_dac_0/dac_dat",
+              "dac_dat"
+            ]
+          },
+          "constant_voltage_1": {
+            "ports": [
+              "constant_voltage",
+              "axis_constant_0/cfg_data"
             ]
           }
         }
@@ -3190,7 +3327,8 @@
       "DataAcquisition_adc_clk": {
         "ports": [
           "DataAcquisition/adc_clk",
-          "FrequencyCounter/clk"
+          "FrequencyCounter/clk",
+          "signal_gen/clk_in"
         ]
       },
       "FrequencyCounter_pulse": {
@@ -3204,12 +3342,6 @@
         "ports": [
           "FrequencyCounter/counter_output",
           "axi_gpio_0/gpio_io_i"
-        ]
-      },
-      "FrequencyCounter_data_access_2": {
-        "ports": [
-          "FrequencyCounter/data_access_2",
-          "axi_gpio_0/gpio2_io_i"
         ]
       },
       "reset_1": {
@@ -3234,6 +3366,42 @@
         "ports": [
           "FrequencyCounter/state2",
           "state2"
+        ]
+      },
+      "signal_gen_dac_clk": {
+        "ports": [
+          "signal_gen/dac_clk",
+          "dac_clk_o"
+        ]
+      },
+      "signal_gen_dac_dat": {
+        "ports": [
+          "signal_gen/dac_dat",
+          "dac_dat_o"
+        ]
+      },
+      "signal_gen_dac_sel": {
+        "ports": [
+          "signal_gen/dac_sel",
+          "dac_sel_o"
+        ]
+      },
+      "signal_gen_dac_wrt": {
+        "ports": [
+          "signal_gen/dac_wrt",
+          "dac_wrt_o"
+        ]
+      },
+      "signal_gen_dac_rst": {
+        "ports": [
+          "signal_gen/dac_rst",
+          "dac_rst_o"
+        ]
+      },
+      "constant_voltage_1": {
+        "ports": [
+          "axi_gpio_0/gpio2_io_o",
+          "signal_gen/constant_voltage"
         ]
       }
     },

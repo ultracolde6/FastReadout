@@ -847,6 +847,23 @@
 						"WSTRB": { "actual": "s_axi_wstrb"},
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
+				},
+				"/signal_gen/axis_constant_0/M_AXIS": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "aclk"},
+						"TDATA": { "actual": "m_axis_tdata"},
+						"TVALID": { "actual": "m_axis_tvalid"}
+					}
+				},
+				"/signal_gen/axis_red_pitaya_dac_0/S_AXIS": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "aclk"},
+						"TDATA": { "actual": "s_axis_tdata"},
+						"TREADY": { "actual": "s_axis_tready"},
+						"TVALID": { "actual": "s_axis_tvalid"}
+					}
 				}
 			}
 		}

@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Fri Oct  3 09:08:31 2025
+//Date        : Wed Oct 15 18:45:14 2025
 //Host        : DESKTOP-RDVR7FP running 64-bit major release  (build 9200)
 //Command     : generate_target system.bd
 //Design      : system
@@ -1687,7 +1687,65 @@ module s00_couplers_imp_15HE6GA
         .s_axi_wvalid(s00_couplers_to_auto_pc_WVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=18,numReposBlks=11,numNonXlnxBlks=1,numHierBlks=7,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_board_cnt=1,da_clkrst_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "system.hwdef" *) 
+module signal_gen_imp_PIZ899
+   (clk_in,
+    constant_voltage,
+    dac_clk,
+    dac_dat,
+    dac_rst,
+    dac_sel,
+    dac_wrt);
+  input clk_in;
+  input [13:0]constant_voltage;
+  output dac_clk;
+  output [13:0]dac_dat;
+  output dac_rst;
+  output dac_sel;
+  output dac_wrt;
+
+  wire [31:0]axis_constant_0_M_AXIS_TDATA;
+  wire axis_constant_0_M_AXIS_TVALID;
+  wire axis_red_pitaya_dac_0_dac_clk;
+  wire [13:0]axis_red_pitaya_dac_0_dac_dat;
+  wire axis_red_pitaya_dac_0_dac_rst;
+  wire axis_red_pitaya_dac_0_dac_sel;
+  wire axis_red_pitaya_dac_0_dac_wrt;
+  wire clk_in_1;
+  wire clk_wiz_0_clk_out1;
+  wire clk_wiz_0_locked;
+  wire [13:0]constant_voltage_1;
+
+  assign clk_in_1 = clk_in;
+  assign constant_voltage_1 = constant_voltage[13:0];
+  assign dac_clk = axis_red_pitaya_dac_0_dac_clk;
+  assign dac_dat[13:0] = axis_red_pitaya_dac_0_dac_dat;
+  assign dac_rst = axis_red_pitaya_dac_0_dac_rst;
+  assign dac_sel = axis_red_pitaya_dac_0_dac_sel;
+  assign dac_wrt = axis_red_pitaya_dac_0_dac_wrt;
+  system_axis_constant_0_0 axis_constant_0
+       (.aclk(clk_in_1),
+        .cfg_data({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,constant_voltage_1}),
+        .m_axis_tdata(axis_constant_0_M_AXIS_TDATA),
+        .m_axis_tvalid(axis_constant_0_M_AXIS_TVALID));
+  system_axis_red_pitaya_dac_0_2 axis_red_pitaya_dac_0
+       (.aclk(clk_in_1),
+        .dac_clk(axis_red_pitaya_dac_0_dac_clk),
+        .dac_dat(axis_red_pitaya_dac_0_dac_dat),
+        .dac_rst(axis_red_pitaya_dac_0_dac_rst),
+        .dac_sel(axis_red_pitaya_dac_0_dac_sel),
+        .dac_wrt(axis_red_pitaya_dac_0_dac_wrt),
+        .ddr_clk(clk_wiz_0_clk_out1),
+        .locked(clk_wiz_0_locked),
+        .s_axis_tdata(axis_constant_0_M_AXIS_TDATA),
+        .s_axis_tvalid(axis_constant_0_M_AXIS_TVALID));
+  system_clk_wiz_0_0 clk_wiz_0
+       (.clk_in1(clk_in_1),
+        .clk_out1(clk_wiz_0_clk_out1),
+        .locked(clk_wiz_0_locked),
+        .reset(1'b0));
+endmodule
+
+(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=22,numReposBlks=14,numNonXlnxBlks=3,numHierBlks=8,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_board_cnt=1,da_clkrst_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "system.hwdef" *) 
 module system
    (DDR_addr,
     DDR_ba,
@@ -1788,7 +1846,6 @@ module system
   wire DataAcquisition_M_AXIS_PORT2_TVALID;
   wire DataAcquisition_adc_clk;
   wire [31:0]FrequencyCounter_counter_output;
-  wire [13:0]FrequencyCounter_data_access_2;
   wire FrequencyCounter_output_ttl;
   wire [0:0]FrequencyCounter_pulse;
   wire FrequencyCounter_state;
@@ -1798,6 +1855,7 @@ module system
   wire [13:0]adc_dat_a_i_1;
   wire [13:0]adc_dat_b_i_1;
   wire axis_red_pitaya_adc_0_adc_csn;
+  wire [13:0]constant_voltage_1;
   wire [1:0]daisy_n_i_1;
   wire [1:0]daisy_p_i_1;
   wire [14:0]processing_system7_0_DDR_ADDR;
@@ -1841,6 +1899,11 @@ module system
   wire ps7_0_axi_periph_M00_AXI_WVALID;
   wire reset_1;
   wire [0:0]rst_ps7_0_125M_peripheral_aresetn;
+  wire signal_gen_dac_clk;
+  wire [13:0]signal_gen_dac_dat;
+  wire signal_gen_dac_rst;
+  wire signal_gen_dac_sel;
+  wire signal_gen_dac_wrt;
   wire [31:0]signal_split_0_M_AXIS_PORT1_TDATA;
   wire signal_split_0_M_AXIS_PORT1_TVALID;
   wire [1:0]util_ds_buf_1_IBUF_OUT;
@@ -1852,6 +1915,11 @@ module system
   assign adc_csn_o = axis_red_pitaya_adc_0_adc_csn;
   assign adc_dat_a_i_1 = adc_dat_a_i[13:0];
   assign adc_dat_b_i_1 = adc_dat_b_i[13:0];
+  assign dac_clk_o = signal_gen_dac_clk;
+  assign dac_dat_o[13:0] = signal_gen_dac_dat;
+  assign dac_rst_o = signal_gen_dac_rst;
+  assign dac_sel_o = signal_gen_dac_sel;
+  assign dac_wrt_o = signal_gen_dac_wrt;
   assign daisy_n_i_1 = daisy_n_i[1:0];
   assign daisy_n_o[1:0] = util_ds_buf_2_OBUF_DS_N;
   assign daisy_p_i_1 = daisy_p_i[1:0];
@@ -1880,7 +1948,6 @@ module system
         .S_AXIS_IN_tvalid(signal_split_0_M_AXIS_PORT1_TVALID),
         .clk(DataAcquisition_adc_clk),
         .counter_output(FrequencyCounter_counter_output),
-        .data_access_2(FrequencyCounter_data_access_2),
         .output_ttl(FrequencyCounter_output_ttl),
         .pulse(FrequencyCounter_pulse),
         .rst(reset_1),
@@ -1939,7 +2006,7 @@ module system
         .M01_AXI_wready(1'b0),
         .S00_ARESETN(rst_ps7_0_125M_peripheral_aresetn));
   system_axi_gpio_0_0 axi_gpio_0
-       (.gpio2_io_i(FrequencyCounter_data_access_2),
+       (.gpio2_io_o(constant_voltage_1),
         .gpio_io_i(FrequencyCounter_counter_output),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(ps7_0_axi_periph_M00_AXI_ARADDR[8:0]),
@@ -1960,6 +2027,14 @@ module system
         .s_axi_wready(ps7_0_axi_periph_M00_AXI_WREADY),
         .s_axi_wstrb(ps7_0_axi_periph_M00_AXI_WSTRB),
         .s_axi_wvalid(ps7_0_axi_periph_M00_AXI_WVALID));
+  signal_gen_imp_PIZ899 signal_gen
+       (.clk_in(DataAcquisition_adc_clk),
+        .constant_voltage(constant_voltage_1),
+        .dac_clk(signal_gen_dac_clk),
+        .dac_dat(signal_gen_dac_dat),
+        .dac_rst(signal_gen_dac_rst),
+        .dac_sel(signal_gen_dac_sel),
+        .dac_wrt(signal_gen_dac_wrt));
   system_util_ds_buf_1_0 util_ds_buf_1
        (.IBUF_DS_N(daisy_n_i_1),
         .IBUF_DS_P(daisy_p_i_1),

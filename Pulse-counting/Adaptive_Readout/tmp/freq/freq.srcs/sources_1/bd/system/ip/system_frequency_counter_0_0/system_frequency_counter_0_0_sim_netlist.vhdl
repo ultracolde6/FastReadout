@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Fri Oct  3 09:09:27 2025
+-- Date        : Wed Oct 15 18:46:07 2025
 -- Host        : DESKTOP-RDVR7FP running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim {c:/Users/Purcell/Documents/RedPitayaProjects/adaptive
 --               readout/FastReadout/Pulse-counting/Adaptive_Readout/tmp/freq/freq.srcs/sources_1/bd/system/ip/system_frequency_counter_0_0/system_frequency_counter_0_0_sim_netlist.vhdl}
@@ -235,6 +235,7 @@ architecture STRUCTURE of system_frequency_counter_0_0_frequency_counter is
   signal \counter2_output_reg[7]_i_1_n_6\ : STD_LOGIC;
   signal \counter2_output_reg[7]_i_1_n_7\ : STD_LOGIC;
   signal counter_output0 : STD_LOGIC;
+  signal \counter_output[31]_i_10_n_0\ : STD_LOGIC;
   signal \counter_output[31]_i_1_n_0\ : STD_LOGIC;
   signal \counter_output[31]_i_3_n_0\ : STD_LOGIC;
   signal \counter_output[31]_i_4_n_0\ : STD_LOGIC;
@@ -1803,6 +1804,19 @@ begin
       I2 => counter_output0,
       O => \counter_output[31]_i_1_n_0\
     );
+\counter_output[31]_i_10\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFFE"
+    )
+        port map (
+      I0 => counter_output_next(19),
+      I1 => counter_output_next(20),
+      I2 => counter_output_next(21),
+      I3 => counter_output_next(22),
+      I4 => counter_output_next(1),
+      I5 => counter_output_next(31),
+      O => \counter_output[31]_i_10_n_0\
+    );
 \counter_output[31]_i_2\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"00000000FFFFFFFE"
@@ -1833,11 +1847,11 @@ begin
     )
         port map (
       I0 => \counter_output[31]_i_7_n_0\,
-      I1 => counter_output_next(14),
-      I2 => counter_output_next(13),
-      I3 => counter_output_next(12),
-      I4 => counter_output_next(11),
-      I5 => \counter_output[31]_i_8_n_0\,
+      I1 => \counter_output[31]_i_8_n_0\,
+      I2 => counter_output_next(4),
+      I3 => counter_output_next(3),
+      I4 => counter_output_next(15),
+      I5 => \counter_output[31]_i_9_n_0\,
       O => \counter_output[31]_i_4_n_0\
     );
 \counter_output[31]_i_5\: unisim.vcomponents.LUT5
@@ -1845,7 +1859,7 @@ begin
       INIT => X"FFFFFFFE"
     )
         port map (
-      I0 => \counter_output[31]_i_9_n_0\,
+      I0 => \counter_output[31]_i_10_n_0\,
       I1 => counter_output_next(27),
       I2 => counter_output_next(28),
       I3 => counter_output_next(29),
@@ -1866,36 +1880,32 @@ begin
       INIT => X"FFFE"
     )
         port map (
-      I0 => counter_output_next(10),
-      I1 => counter_output_next(9),
-      I2 => counter_output_next(8),
-      I3 => counter_output_next(7),
+      I0 => counter_output_next(9),
+      I1 => counter_output_next(12),
+      I2 => counter_output_next(7),
+      I3 => counter_output_next(10),
       O => \counter_output[31]_i_7_n_0\
     );
-\counter_output[31]_i_8\: unisim.vcomponents.LUT6
+\counter_output[31]_i_8\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFFFFFFFFFFFFE"
+      INIT => X"FFFE"
     )
         port map (
-      I0 => counter_output_next(3),
-      I1 => counter_output_next(4),
-      I2 => counter_output_next(5),
-      I3 => counter_output_next(6),
-      I4 => counter_output_next(16),
-      I5 => counter_output_next(15),
+      I0 => counter_output_next(13),
+      I1 => counter_output_next(16),
+      I2 => counter_output_next(11),
+      I3 => counter_output_next(14),
       O => \counter_output[31]_i_8_n_0\
     );
-\counter_output[31]_i_9\: unisim.vcomponents.LUT6
+\counter_output[31]_i_9\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFFFFFFFFFFFFE"
+      INIT => X"FFFE"
     )
         port map (
-      I0 => counter_output_next(19),
-      I1 => counter_output_next(20),
-      I2 => counter_output_next(21),
-      I3 => counter_output_next(22),
-      I4 => counter_output_next(2),
-      I5 => counter_output_next(31),
+      I0 => counter_output_next(5),
+      I1 => counter_output_next(8),
+      I2 => counter_output_next(2),
+      I3 => counter_output_next(6),
       O => \counter_output[31]_i_9_n_0\
     );
 counter_output_next0_carry: unisim.vcomponents.CARRY4

@@ -1,0 +1,32 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-399,-140",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port clk_in -pg 1 -lvl 0 -x -20 -y 30 -defaultsOSRD
+preplace port constant_voltage -pg 1 -lvl 0 -x -20 -y 140 -defaultsOSRD
+preplace port dac_clk_o -pg 1 -lvl 3 -x 530 -y 50 -defaultsOSRD
+preplace port dac_rst_o -pg 1 -lvl 3 -x 530 -y 70 -defaultsOSRD
+preplace port dac_sel_o -pg 1 -lvl 3 -x 530 -y 90 -defaultsOSRD
+preplace port dac_wrt_o -pg 1 -lvl 3 -x 530 -y 110 -defaultsOSRD
+preplace portBus dac_dat_o -pg 1 -lvl 3 -x 530 -y 130 -defaultsOSRD
+preplace inst axis_red_pitaya_dac_0 -pg 1 -lvl 2 -x 390 -y 90 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 130 -y 270 -defaultsOSRD
+preplace inst axis_constant_0 -pg 1 -lvl 1 -x 130 -y 110 -defaultsOSRD
+preplace netloc clk_wiz_0_clk_out1 1 1 1 260 100n
+preplace netloc clk_wiz_0_locked 1 1 1 270 120n
+preplace netloc Net 1 0 2 0 40 260
+preplace netloc constant_voltage_1 1 0 1 10 120n
+preplace netloc axis_red_pitaya_dac_0_dac_clk 1 2 1 N 50
+preplace netloc axis_red_pitaya_dac_0_dac_rst 1 2 1 N 70
+preplace netloc axis_red_pitaya_dac_0_dac_sel 1 2 1 N 90
+preplace netloc axis_red_pitaya_dac_0_dac_wrt 1 2 1 N 110
+preplace netloc axis_red_pitaya_dac_0_dac_dat 1 2 1 N 130
+preplace netloc axis_constant_0_M_AXIS 1 1 1 250 60n
+levelinfo -pg 1 -20 130 390 530
+pagesize -pg 1 -db -bbox -sgen -180 -20 690 430
+"
+}
+0

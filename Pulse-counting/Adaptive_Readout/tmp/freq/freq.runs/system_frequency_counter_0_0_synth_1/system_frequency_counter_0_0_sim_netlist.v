@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Fri Oct  3 09:09:27 2025
+// Date        : Wed Oct 15 18:46:07 2025
 // Host        : DESKTOP-RDVR7FP running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ system_frequency_counter_0_0_sim_netlist.v
@@ -245,6 +245,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_counter
   wire \counter2_output_reg[7]_i_1_n_7 ;
   wire [31:0]counter_output;
   wire counter_output0;
+  wire \counter_output[31]_i_10_n_0 ;
   wire \counter_output[31]_i_1_n_0 ;
   wire \counter_output[31]_i_3_n_0 ;
   wire \counter_output[31]_i_4_n_0 ;
@@ -1358,6 +1359,16 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_counter
         .I2(counter_output0),
         .O(\counter_output[31]_i_1_n_0 ));
   LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    \counter_output[31]_i_10 
+       (.I0(counter_output_next[19]),
+        .I1(counter_output_next[20]),
+        .I2(counter_output_next[21]),
+        .I3(counter_output_next[22]),
+        .I4(counter_output_next[1]),
+        .I5(counter_output_next[31]),
+        .O(\counter_output[31]_i_10_n_0 ));
+  LUT6 #(
     .INIT(64'h00000000FFFFFFFE)) 
     \counter_output[31]_i_2 
        (.I0(\counter_output[31]_i_3_n_0 ),
@@ -1379,16 +1390,16 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_counter
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \counter_output[31]_i_4 
        (.I0(\counter_output[31]_i_7_n_0 ),
-        .I1(counter_output_next[14]),
-        .I2(counter_output_next[13]),
-        .I3(counter_output_next[12]),
-        .I4(counter_output_next[11]),
-        .I5(\counter_output[31]_i_8_n_0 ),
+        .I1(\counter_output[31]_i_8_n_0 ),
+        .I2(counter_output_next[4]),
+        .I3(counter_output_next[3]),
+        .I4(counter_output_next[15]),
+        .I5(\counter_output[31]_i_9_n_0 ),
         .O(\counter_output[31]_i_4_n_0 ));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     \counter_output[31]_i_5 
-       (.I0(\counter_output[31]_i_9_n_0 ),
+       (.I0(\counter_output[31]_i_10_n_0 ),
         .I1(counter_output_next[27]),
         .I2(counter_output_next[28]),
         .I3(counter_output_next[29]),
@@ -1403,30 +1414,26 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_frequency_counter
   LUT4 #(
     .INIT(16'hFFFE)) 
     \counter_output[31]_i_7 
-       (.I0(counter_output_next[10]),
-        .I1(counter_output_next[9]),
-        .I2(counter_output_next[8]),
-        .I3(counter_output_next[7]),
+       (.I0(counter_output_next[9]),
+        .I1(counter_output_next[12]),
+        .I2(counter_output_next[7]),
+        .I3(counter_output_next[10]),
         .O(\counter_output[31]_i_7_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
     \counter_output[31]_i_8 
-       (.I0(counter_output_next[3]),
-        .I1(counter_output_next[4]),
-        .I2(counter_output_next[5]),
-        .I3(counter_output_next[6]),
-        .I4(counter_output_next[16]),
-        .I5(counter_output_next[15]),
+       (.I0(counter_output_next[13]),
+        .I1(counter_output_next[16]),
+        .I2(counter_output_next[11]),
+        .I3(counter_output_next[14]),
         .O(\counter_output[31]_i_8_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
     \counter_output[31]_i_9 
-       (.I0(counter_output_next[19]),
-        .I1(counter_output_next[20]),
-        .I2(counter_output_next[21]),
-        .I3(counter_output_next[22]),
-        .I4(counter_output_next[2]),
-        .I5(counter_output_next[31]),
+       (.I0(counter_output_next[5]),
+        .I1(counter_output_next[8]),
+        .I2(counter_output_next[2]),
+        .I3(counter_output_next[6]),
         .O(\counter_output[31]_i_9_n_0 ));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY4 counter_output_next0_carry

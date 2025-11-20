@@ -38,6 +38,15 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_frequenc
 # IP: bd/system/ip/system_xbar_0/system_xbar_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_xbar_0 || ORIG_REF_NAME==system_xbar_0} -quiet] -quiet
 
+# IP: bd/system/ip/system_axis_red_pitaya_dac_0_2/system_axis_red_pitaya_dac_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axis_red_pitaya_dac_0_2 || ORIG_REF_NAME==system_axis_red_pitaya_dac_0_2} -quiet] -quiet
+
+# IP: bd/system/ip/system_clk_wiz_0_0_1/system_clk_wiz_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_clk_wiz_0_0 || ORIG_REF_NAME==system_clk_wiz_0_0} -quiet] -quiet
+
+# IP: bd/system/ip/system_axis_constant_0_0/system_axis_constant_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axis_constant_0_0 || ORIG_REF_NAME==system_axis_constant_0_0} -quiet] -quiet
+
 # IP: bd/system/ip/system_auto_pc_1/system_auto_pc_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_pc_1 || ORIG_REF_NAME==system_auto_pc_1} -quiet] -quiet
 

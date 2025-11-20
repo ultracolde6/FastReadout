@@ -1,0 +1,15 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-476,-137",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port clk_in -pg 1 -lvl 0 -x -10 -y 30 -defaultsOSRD
+preplace inst axis_red_pitaya_dac_0 -pg 1 -lvl 1 -x 130 -y 90 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 130 -y 240 -defaultsOSRD
+levelinfo -pg 1 -10 130 260
+pagesize -pg 1 -db -bbox -sgen -100 -10 260 310
+"
+}
+
